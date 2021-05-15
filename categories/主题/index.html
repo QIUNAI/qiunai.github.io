@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>友情链接 | Qiunai Monster</title>
+  <title>category: 主题 | Qiunai Monster</title>
 
   
     
@@ -392,431 +392,89 @@
 </header>
     <main class="main" style="margin-top: 60px;">
       
- <!-- prismjs 代码高亮 -->
- 
 
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
-<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
-    <transition-group tag="ul" :name="names">
-        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
-            <img :src="image" class="bg-swiper-img">
-        </li>
-    </transition-group>
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="lazyload category-header" data-original="https://qiunai.github.io/image/a14.jpeg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
+background-position: center center;">
 </div>
-<script>
-    var vm = new Vue({
-        el: '#appBgSwiper',
-        data: {
-            names: '' || 'fade' || 'fade', // translate-fade fade
-            mark: 0,
-            img: [],
-            bgColor: '',
-            time: null
-        },
-        methods: {   //添加方法
-            change(i, m) {
-                if (i > m) {
-                    // this.names = 'fade';
-                } else if (i < m) {
-                    // this.names = 'fade';
-                } else {
-                    return;
-                }
-                this.mark = i;
-            },
-            prev() {
-                // this.names = 'fade';
-                this.mark--;
-                if (this.mark === -1) {
-                    this.mark = 3;
-                    return
-                }
-            },
-            next() {
-                // this.names = 'fade';
-                this.mark++;
-                if (this.mark === this.img.length) {
-                    this.mark = 0;
-                    return
-                }
-            },
-            autoPlay() {
-                // this.names = 'fade';
-                this.mark++;
-                if (this.mark === this.img.length) {
-                    this.mark = 0;
-                    return
-                }
-            },
-            play() {
-                let bgImgDelay = '' || '60000'
-                let delay = parseInt(bgImgDelay) || 180000;
-                this.time = setInterval(this.autoPlay, delay);
-            },
-            enter() {
-                clearInterval(this.time);
-            },
-            leave() {
-                this.play();
-            }
-        },
-        created() {
-            this.play()
-        },
-        beforeDestroy() {
-            clearInterval(this.time);
-        },
-        mounted() {
-            let prop = ''|| 'https://qiunai.github.io/image/a1.jpeg,https://qiunai.github.io/image/a2.jpeg,https://qiunai.github.io/image/a3.jpeg,https://qiunai.github.io/image/a4.jpeg,https://qiunai.github.io/image/a5.jpeg,https://qiunai.github.io/image/a6.jpeg,https://qiunai.github.io/image/a7.jpeg,https://qiunai.github.io/image/a8.jpeg,https://qiunai.github.io/image/a9.jpeg,https://qiunai.github.io/image/a10.jpeg,https://qiunai.github.io/image/a11.jpeg,https://qiunai.github.io/image/a12.jpeg,https://qiunai.github.io/image/a13.jpeg,https://qiunai.github.io/image/a14.jpeg,https://qiunai.github.io/image/a15.jpeg,https://qiunai.github.io/image/a16.jpeg,https://qiunai.github.io/image/a17.jpeg,https://qiunai.github.io/image/a18.jpeg,https://qiunai.github.io/image/a19.jpeg,https://qiunai.github.io/image/a20.jpeg,https://qiunai.github.io/image/a21.jpeg,https://qiunai.github.io/image/a22.jpeg,https://qiunai.github.io/image/a23.jpeg,https://qiunai.github.io/image/a24.jpeg,https://qiunai.github.io/image/a25.jpeg,https://qiunai.github.io/image/a26.jpeg,https://qiunai.github.io/image/a27.jpeg,https://qiunai.github.io/image/a28.jpeg,https://qiunai.github.io/image/a29.jpeg,https://qiunai.github.io/image/a30.jpeg,https://qiunai.github.io/image/a31.jpeg,https://qiunai.github.io/image/a32.jpeg,https://qiunai.github.io/image/a33.jpeg,https://qiunai.github.io/image/a34.jpeg,https://qiunai.github.io/image/a35.jpeg,https://qiunai.github.io/image/a36.jpeg,https://qiunai.github.io/image/a37.jpeg,https://qiunai.github.io/image/a38.jpeg,https://qiunai.github.io/image/a39.jpeg,https://qiunai.github.io/image/a40.jpeg,https://qiunai.github.io/image/a41.jpeg,https://qiunai.github.io/image/a42.jpeg,https://qiunai.github.io/image/a43.jpeg,https://qiunai.github.io/image/a44.jpeg,https://qiunai.github.io/image/a45.jpeg,https://qiunai.github.io/image/a46.jpeg,https://qiunai.github.io/image/a47.jpeg,https://qiunai.github.io/image/a48.jpeg,https://qiunai.github.io/image/a49.jpeg,https://qiunai.github.io/image/a50.jpeg,https://qiunai.github.io/image/a51.jpeg,https://qiunai.github.io/image/a52.jpeg,https://qiunai.github.io/image/a53.jpeg,https://qiunai.github.io/image/a54.jpeg,https://qiunai.github.io/image/a55.jpeg,https://qiunai.github.io/image/a56.jpeg,https://qiunai.github.io/image/a57.jpeg,https://qiunai.github.io/image/a58.jpeg,https://qiunai.github.io/image/a59.jpeg';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
-            if (isImg) {
-                let img = prop.split(',');
-                let configRoot = '/'
-                let arrImg = [];
-                img.forEach(el => {
-                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
-			        var objExp = new RegExp(Expression);
-
-                    if(objExp.test(el)) {
-                        // http or https
-                        arrImg.push(el);
-                    } else {
-                        // 非http or https开头
-                        // 本地文件
-                        let firstStr = el.charAt(0);
-                        if (firstStr == '/') {
-                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
-                        }
-                        el = configRoot + el;
-                        arrImg.push(el);
-                    }
-                })
-                this.img = arrImg;
-            } else {
-                this.bgColor = prop;
-            }
-        }
-    })
-</script>
-
-<style>
-    .bg-swiper-box {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    .bg-swiper-img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-</style>
-
-
-
-
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="https://qiunai.github.io/image/a97.jpeg" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;">
-  <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0"></canvas>
-  
-    <div class="title-box">
-      
-        <span class="title" id="post-detail-header-title"></span>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-          <script>
-            var typed = new Typed("#post-detail-header-title", {
-              strings: ['友情链接'],
-              startDelay: 100,
-              typeSpeed: 100,
-              loop: false,
-              backSpeed: 50,
-              showCursor: false
-            });
-          </script>
-        
-    </div>
-  
-  
-  
-    <script src="/js/bubble/bubble.js"></script>
-  
+<div class="category">
+  <div class="category-name">
+    <div class="name" style="background-color: #A3E4D7;">主题 category</div>
+  </div>
+  <section class="posts">
+    
+    <article class="post" data-aos="fade-up"
+      style="flex-direction: row-reverse;">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-05-15</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/05/15/bamboo/">bamboo</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              
+            </div>
+            <div class="post-categories">
+              
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E4%B8%BB%E9%A2%98/">主题</a>
 </div>
 
-
-<div class="row justify-position">
-  <div class="main-content">
-    <article class="post post-detail">
-      
-      
-      <div class="post-meta">
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2020-01-01</span>
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              
+              <a href="/2021/05/15/bamboo/" class="lazyload" data-original="https://qiunai.github.io/image/a2.jpeg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            <h1 id="hexo-theme-bamboo"><a href="#hexo-theme-bamboo" class="headerlink" title="hexo-theme-bamboo"></a>hexo-theme-bamboo</h1><p><img src="https://img.shields.io/github/package-json/v/yuang01/hexo-theme-bamboo/dev?label=dev" alt="master version"><br><img src="https://img.shields.io/npm/v/hexo-theme-bamboo?color=%09%23bf00ff" alt="https://img.shields.io/npm/v/hexo-theme-bamboo?color=%09%23bf00ff"><br><img src="https://img.shields.io/badge/hexo-5.0+-0e83c" alt="hexo version"></p>
+<p>最新文档，请<a target="_blank" rel="noopener" href="https://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/">点击这个查看（github）</a>，或者<a target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/">点击这个查看（gitee）</a>，</p>
+<table>
+    <tr>
+            <th>首页轮播(支持三种显示方式)</th>
+            <th>首页内容</th>
+    </tr>
+    <tr>
+        <td><img src="https://img11.360buyimg.com/ddimg/jfs/t1/186409/13/3127/2116584/609e272eE21314c58/17d1dc0bc257fefb.png" /></td>
+        <td><img src="https://img14.360buyimg.com/ddimg/jfs/t1/181291/12/4004/1573843/609e272cE973c9c76/0d1d36d2e85b4231.png" /></td>
+    </tr>
+  <tr>
+            <th>暗黑模式</th>
+            <th>文章内容</th>
+    </tr>
+    <tr>
+        <td><img src="https://img12.360buyimg.com/ddimg/jfs/t1/182808/27/4130/743199/609e2728Edd209b4b/30dc231a7446a625.png" /></td>
+        <td><img src="https://img11.360buyimg.com/ddimg/jfs/t1/180598/31/4047/606158/609e2929E85cd5694/4f91990995bc1931.png" /></td>
+    </tr>
+</table>
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/05/15/bamboo/">
+            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
       </div>
-      
-      <div class="post-tags-categories">
+      <div class="post-img">
         
+          <a href="/2021/05/15/bamboo/" class="lazyload" data-original="https://qiunai.github.io/image/a2.jpeg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
         
       </div>
-      <div class="post-content">
-        
-      </div>
-      
-        <div class="copyright">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-    <strong>author:  </strong>Qiunai Monster</a>
-    </li>
-    <li class="post-copyright-link">
-    <strong>link:  </strong>
-    <a href="/friends/index.html" target="_blank" title="友情链接">http://example.com/friends/index.html</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>Copyright notice:   </strong>
-      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      reprint polocy. If reproduced, please indicate source!
-    </li>
-  </ul>
-<div>
-      
     </article>
-    <!-- 上一篇文章和下一篇文章 -->
     
-      
-<div class="post-nav">
-
-
-
-
-
+  </section>
 </div>
-
-    
-    
-
-    <!-- 打赏 -->
-    
-      <div id="appDonate" class="post-donate">
-  <div id="donate_board" class="donate_bar center" ref="donate">
-    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
-  </div>
-  <transition name="fade">
-    <div 
-      class="donate-box-mask"
-      v-cloak 
-      v-if="visible"
-      @click="cancelDialogDrawer()"
-    >
-    </div>
-  </transition>
-  <transition name="bounce">
-    <div class="donate-box" v-cloak v-if="visible">
-      <div class="donate-box_close">
-        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
-      </div>
-      <div class="donate-box_title">
-        <h4>
-          谢谢你的赏识！
-        </h4>
-      </div>
-      <div class="donate-box_tab">
-        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
-          支付宝
-        </div>
-        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
-          微信
-        </div>
-      </div>
-      <div class="donate-box_img">
-        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
-          <img src="https://qiunai.github.io/image/alipay.jpg" alt="支付宝打赏" />
-        </div> 
-        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
-          <img src="https://qiunai.github.io/image/wechat.jpg" alt="微信打赏" />
-        </div>
-      </div>
-    </div>
-  </transition>
-</div>
-
-<script>
-  var body = document.body || document.documentElement || window;
-  var vm = new Vue({
-    el: '#appDonate',
-    data: {
-      visible: false,
-      tabActive: 'Alipay',
-      top: 0,
-    },
-    computed: {
-    },
-    mounted() {
-    },
-    methods: {
-      showDialogDrawer() {
-        this.visible = true;
-        // 防止页面滚动，只能让弹框滚动
-        // function getScroll() {
-        //   return {
-        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
-        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-        //   };
-        // }
-        this.top = $(document).scrollTop() // or getScroll().top
-        // console.log('aa', $('.main-content'));
-        body.style.cssText = 'overflow: hidden;';
-      },
-      cancelDialogDrawer() {
-        this.visible = false;
-        body.removeAttribute('style');
-        $(document).scrollTop(this.top)
-      },
-      changeTabActive(name) {
-        this.tabActive = name;
-      }
-    },
-    created() {}
-  })
-</script>
-    
-
-    <!-- 分享 -->
-    
-      <!-- https://github.com/overtrue/share.js -->
-
-<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-
-<script src="/js/shareJs/social-share.min.js"></script>
-</script>
-
-<style>
-  .social-share {
-    margin: 20px 0;
-  }
-</style>
-
-
-    
-    
-    <!-- 评论 -->
-      
-  </div>
-
-  
-    <div class="toc-aside">
-      <div class="toc-main">
-        <div class="toc-aside-title">
-          <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
-          <div class="toc-open-close">catalog</div>
-        </div>
-        <div class="toc-content">
-          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
-<script src="/js/tocbot/tocbot.min.js"></script>
-<div class="toc"></div>
-
-<script>
-  if ($('.toc').length > 0) {
-    var headerEl = 'h2, h3, h4',  //headers 
-      content = '.post-detail',//文章容器
-      idArr = {};  //标题数组以确定是否增加索引id
-      //add #id
-
-    $(content).children(headerEl).each(function () {
-      //去除空格以及多余标点
-      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
-
-      headerId = headerId.toLowerCase();
-      if (idArr[headerId]) {
-        //id已经存在
-        $(this).attr('id', headerId + '-' + idArr[headerId]);
-        idArr[headerId]++;
-      }
-      else {
-        //id未存在
-        idArr[headerId] = 1;
-        $(this).attr('id', headerId);
-      }
-    });
-
-    tocbot.init({
-      // Where to render the table of contents.
-      tocSelector: '.toc',
-      // Where to grab the headings to build the table of contents.
-      contentSelector: content,
-      // Which headings to grab inside of the contentSelector element.
-      headingSelector: headerEl,
-      scrollSmooth: true,
-      scrollSmoothOffset: -80,
-      headingsOffset: 130,
-      positionFixedSelector: '.toc-main',
-      positionFixedClass: 'is-position-fixed',
-      fixedSidebarOffset: 'auto',
-    });
-  }
-
-</script>
-
-<style>
-.is-position-fixed {
-  position:fixed !important;
-  top: 64px;
-}
-.toc-main ul {
-  counter-reset: show-list;
-}
-.toc-main ul li::before {
-  content: counter(item)".";
-  display: block;
-  position: absolute;
-  left: 12px;
-  top:0;
-}
-.toc > .toc-list {
-  padding-left: 35px;
-}
-.toc>.toc-list li {
-  list-style: decimal;
-}
-.toc-list {
-  padding-left: 25px;
-}
-</style>
-        </div>
-      </div>
-    </div>
-
-    
-      <script>
-          $(".toc-aside").css({'width': 0, 'padding': 0});
-          $(".toc-content").css({'width': 0});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
-      </script>
-    
-
-    <script>
-      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-      let open = eval('' || 'false');
-      openOrCloseBtn.click(function() {
-        if (open === true) {
-          $(".toc-aside").css({'width': 0, 'padding': 0});
-          $(".toc-content").css({'width': 0});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
-          open = false;
-        } else {
-          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
-          $(".toc-content").css({'width': '300px'});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-          open = true;
-        }
-      });
-    </script>
-  
-</div>
-
 
     </main>
     <div class="footer bg-color">
