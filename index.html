@@ -20,7 +20,7 @@
 
                         
 
-                            <link rel="icon" type="image/jpeg" href="https://qiunai.github.io/image/purpose.jpg">
+                            <link rel="icon" type="image/jpeg" href="/../image/purpose.jpg">
                             <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
                             <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -34,7 +34,7 @@
 
                                 <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
                                 <script>
-                                    var live2dOpen = eval('true') || false;
+                                    var live2dOpen = eval('false') || false;
                                     if (!live2dOpen) {
                                         localStorage.setItem('waifu-display', 1609323474481);
                                     }
@@ -113,41 +113,164 @@
                 
                   <i class="fa fa-home" aria-hidden="true"></i>
                 
-                <span class="name">Home</span>
+                <span class="name">首页</span>
               </a>
             
           </li>
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="/archive" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-archive" aria-hidden="true"></i>
-                
-                <span class="name">Archives</span>
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(1)">
+                <span>
+                  
+                    <i class="fa fa-archive"></i>
+                  
+                  <span class="name">归档</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
               </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(1)">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="/tags" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-tags" aria-hidden="true"></i>
-                
-                <span class="name">Tags</span>
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
+                <span>
+                  
+                    <i class="fa fa-tags"></i>
+                  
+                  <span class="name">标签</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
               </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(2)">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5">
+                    
+                    <span>青春</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E7%B2%BE%E7%BE%8E">
+                    
+                    <span>精美</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%81%90%E6%80%96">
+                    
+                    <span>恐怖</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E5%8A%B1%E5%BF%97">
+                    
+                    <span>励志</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="/categories" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
-                
-                <span class="name">Categories</span>
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
+                <span>
+                  
+                    <i class="fa fa-bookmark"></i>
+                  
+                  <span class="name">分类</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
               </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(3)">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B">
+                    
+                    <span>鬼故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6">
+                    
+                    <span>灵异事件</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%BF%83%E6%83%85%E5%88%86%E4%BA%AB">
+                    
+                    <span>心情分享</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
@@ -157,7 +280,7 @@
                 
                   <i class="fa fa-user" aria-hidden="true"></i>
                 
-                <span class="name">About</span>
+                <span class="name">关于</span>
               </a>
             
           </li>
@@ -167,9 +290,7 @@
               <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
                 <span>
                   
-                    <i class="fa fa-link"></i>
-                  
-                  <span class="name">更多</span>
+                  <span class="name">娱乐</span>
                 </span>
                 <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
               </a>
@@ -178,8 +299,6 @@
                 <li>
                   <a href="/gallery">
                     
-                    <i class="fa fa-music" style="margin-top: -20px;"></i>
-                    
                     <span>图库</span>
                   </a>
                 </li>
@@ -187,27 +306,86 @@
                 <li>
                   <a href="/video">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>video</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/about">
-                    
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>关于我</span>
                   </a>
                 </li>
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://baidu.com">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                  <span class="name">视频</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wubai.tv/">
+                    
+                    <span>五百影视</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+                <span>
+                  
+                  <span class="name">游戏</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(7)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.4399.com/">
+                    
+                    <span>4399</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
                   </a>
                 </li>
                 
@@ -289,41 +467,158 @@
                 
                   <i class="fa fa-home" aria-hidden="true"></i>
                 
-                <span class="name">Home</span>
+                <span class="name">首页</span>
               </a>
             
           </li>
         
           <li class="menu-item" style="position: relative;">
             
-              <a href="/archive" class="menu-item-link">
+              <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-archive" aria-hidden="true"></i>
+                  <i class="fa fa-archive"></i>
                 
-                <span class="name">Archives</span>
+                <span class="name">归档</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="menu-item" style="position: relative;">
             
-              <a href="/tags" class="menu-item-link">
+              <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  <i class="fa fa-tags"></i>
                 
-                <span class="name">Tags</span>
+                <span class="name">标签</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5">
+                    
+                    <span>青春</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E7%B2%BE%E7%BE%8E">
+                    
+                    <span>精美</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%81%90%E6%80%96">
+                    
+                    <span>恐怖</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E5%8A%B1%E5%BF%97">
+                    
+                    <span>励志</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="menu-item" style="position: relative;">
             
-              <a href="/categories" class="menu-item-link">
+              <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  <i class="fa fa-bookmark"></i>
                 
-                <span class="name">Categories</span>
+                <span class="name">分类</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B">
+                    
+                    <span>鬼故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6">
+                    
+                    <span>灵异事件</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%BF%83%E6%83%85%E5%88%86%E4%BA%AB">
+                    
+                    <span>心情分享</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
@@ -333,7 +628,7 @@
                 
                   <i class="fa fa-user" aria-hidden="true"></i>
                 
-                <span class="name">About</span>
+                <span class="name">关于</span>
               </a>
             
           </li>
@@ -342,17 +637,13 @@
             
               <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-link"></i>
-                
-                <span class="name">更多</span>
+                <span class="name">娱乐</span>
                 <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
               <ul class="sub-menu">
                 
                 <li>
                   <a href="/gallery">
-                    
-                    <i class="fa fa-music" style="margin-top: -20px;"></i>
                     
                     <span>图库</span>
                   </a>
@@ -361,27 +652,82 @@
                 <li>
                   <a href="/video">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>video</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/about">
-                    
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>关于我</span>
                   </a>
                 </li>
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://baidu.com">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">视频</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wubai.tv/">
+                    
+                    <span>五百影视</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">游戏</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.4399.com/">
+                    
+                    <span>4399</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
                   </a>
                 </li>
                 
@@ -562,9 +908,9 @@
 
 
 
-<div class="swiper-length" style="display: none;">1</div>
+<div class="swiper-length" style="display: none;">4</div>
 <div id="appSwiper"
-  class="swiper-no-swiping"
+  class=""
   @mouseenter="stopAutoPlay()" 
   @mouseleave="startAutoPlay()"
 >
@@ -572,11 +918,11 @@
     
       
         <swiper-slide>
-          <div class="item swiper-lazy" data-background="/../image/a31.jpeg" style="background-size: 90000px; 
+          <div class="item swiper-lazy" data-background="/../image/a27.jpeg" style="background-size: 90000px; 
             background-position: left center;" style="position: relative;">
             <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag">
-                <div class="img-mask swiper-lazy" data-background="/../image/a31.jpeg" style="height: 100%; background-size: cover; 
+                <div class="img-mask swiper-lazy" data-background="/../image/a27.jpeg" style="height: 100%; background-size: cover; 
                   background-position: center center;">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
                 </div>
@@ -593,7 +939,7 @@
                   </div>
                   <div style="display: flex;" class="flag-text-btns">
                     
-                      <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://qq.com" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">上网冲浪</a></div>
+                      <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2Fu%2F7479361306%2Fhome%3Fwvr%3D5" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">微博冲浪</a></div>
                     
                     
                       <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://www.baidu.com" class="read-more border-color swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">百度一下</a></div>
@@ -646,125 +992,124 @@
       
         
         
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
           
           <swiper-slide>
-            <div class="item swiper-lazy" data-background="/../image/a3.jpeg" style=" background-size: 90000px; 
+            <div class="item swiper-lazy" data-background="/../image/a20.jpeg" style=" background-size: 90000px; 
             background-position: left center;" style="position: relative;">
             <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/../image/a3.jpeg" style="height: 100%; background-size: cover; 
+                <div class="img-mask swiper-lazy" data-background="/../image/a20.jpeg" style="height: 100%; background-size: cover; 
                   background-position: center center;">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                 </div>
                 <div class="flag-text">
                   <div class="flag-text-content">
                     <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                      <a href="/2021/05/03/image/">
-                        image
+                      <a href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/">
+                        把失败写在手背
                       </a>
                     </div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">把失败写在背后　　有一个年轻人，从很小的时候起，他就有一个梦想，希望自己能够成为一名出色的赛车手。他在军队服役的时候，曾开过卡车，这对他熟练驾驶技术起到了很大的帮助作用。
+　　退役之后，他选择到一家农场里开车。在工作之余，他仍一直坚持参加一</div>
                   </div>
-                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/image/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="/../image/a98.jpeg" style=" background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="/../image/a98.jpeg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/">
+                        简短故事
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">简短的故事 感动心灵　　　1、 她很胖，胖到所有人都觉得不会有人娶她。他很瘦，却鬼使神差般娶了她。结婚那夜，她在他面前宽衣，随着衣服脱落的，还有一层肉皮。其实她是个美人，只因厌倦人们对外貌的严苛，于是费尽心机想找个能容忍她丑陋的人托付终身。</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="/../image/a50.jpeg" style=" background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="/../image/a50.jpeg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/">
+                        成功的主流是我们的心态
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">成功的主流是我们的心态　　在我身边总会听到这样那样的抱怨：抱怨自己家境差，不能让自己上一所好的学校；抱怨老师给自己安排的座位不好，总让自己坐在人渣堆里；抱怨学校的设备太差，不能让自己得到更好的学习环境······这些话虽有些道理，其实不难发</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
                 </div>
               </div>
             </div>
@@ -784,9 +1129,41 @@
         
         
       
-    <div class="swiper-pagination" slot="pagination" style="display: none;"></div>
-    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style="display: none;"></div>
-    <div class="swiper-button-next swiper-button-white" slot="button-next" style="display: none;"></div>
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="/../image/a23.jpeg" style=" background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="/../image/a23.jpeg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/">
+                        从一颗螺丝钉做起
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">从一颗螺丝钉做起　　从打工仔到成功人士的创业故事，他，只有中专学历，起步时给别人打工，一步步建立了电梯生产销售企业，又进军地下停车场新产业，甚至还梦想建产业链条完整的汽车工业园……他用真诚和勤奋演绎了成功，成为新一代晋商创业骄子，他就是皇冠</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+      
+    <div class="swiper-pagination" slot="pagination" style=""></div>
+    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style=""></div>
+    <div class="swiper-button-next swiper-button-white" slot="button-next" style=""></div>
     
   </swiper>
   
@@ -810,12 +1187,12 @@
 
 
 <script>
-  let autoplay = JSON.parse('false');
-  let delay = '5000';
+  let autoplay = JSON.parse('true');
+  let delay = '30000';
   let loop = JSON.parse('true') ? false : JSON.parse('true');
-  let effect = 'slide';
+  let effect = 'fade';
   let swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  let defaultDesc = '一个怪物秋萘，奇奇怪怪！';
+  let defaultDesc = '一个奇奇怪怪的人！';
   defaultDesc = defaultDesc.split(',');
   let defaultDescTypedLoop = JSON.parse('false');
   var vm = new Vue({
@@ -1308,224 +1685,258 @@
 </style>
     
   <div class="motto">
-      <h3 class="motto-title">座右铭</h3>
+      <h3 class="motto-title">语录</h3>
       <div class="motto-content">
         <p>
-          沉淀后我愿意做个温暖的人，有自己的喜好，有自己的原则，有自己的信仰，不急功近利，不浮夸轻薄。宠辱不惊，淡定安逸，心静如水，不忘初心，方得始终。——凌茜  
+          胆小鬼连幸福都害怕,碰到棉花也会受伤。——太宰治  
         </p> 
       </div>
   </div>
 
         
-<style>
-  .index-notice-content {
-    margin-top: 10px;
-  }
-  .warp {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .index-notice-content__ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-  }
-  .index-notice-content__ul li,
-  .index-notice-content__ul a {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-  }
-  .index-notice-content__title {
-    flex: 1;
-    overflow: hidden;
-  }
-  .index-notice-content__title a,
-  .index-notice-content__title span {
-    overflow: hidden;
-    display: block;
-    text-overflow:ellipsis; 
-    white-space: nowrap;
-    height: 100%;
-    width: 100%;
-    color: #000;
-  }
-  .index-notice-content__title a:hover,
-  .index-notice-content__title span:hover {
-    text-decoration: underline;
-  }
-  .index-notice-content__date {
-    min-width: 80px;
-    margin-left: 5px;
-    color: #000;
-  }
-</style>
-<div class="index-notice" id="appIndexNotice">
-    <h3>
-      <i class="fa fa-bullhorn index-notice-icon"></i>公告
-    </h3>
-    <div class="index-notice-content">
-      
-      <vue-seamless-scroll
-        :data="listData"
-        :class-option="classOption"
-        class="warp"
-        style="height: 180px"
-      >
-        <ul class="index-notice-content__ul">
-          
-          
-            <li>
-              
-                <div class="index-notice-content__title">
-                  
-                    <a href="/archives" title="#博客更新到2.0了" style="color:red">
-                      #博客更新到2.0了
-                    </a>
-                  
-                </div>
-                
-                  <div class="index-notice-content__date" style="color:red">
-                    2021-04-28
-                  </div>
-                
-              
-            </li>
-          
-            <li>
-              
-                <div class="index-notice-content__title">
-                  
-                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 轮播图支持三种模式了，功能也增强了 ~" style="color:red">
-                      #新增 轮播图支持三种模式了，功能也增强了 ~
-                    </a>
-                  
-                </div>
-                
-                  <div class="index-notice-content__date" style="color:red">
-                    2021-04-28
-                  </div>
-                
-              
-            </li>
-          
-            <li>
-              
-                <div class="index-notice-content__title">
-                  
-                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 支持二级导航" style="color:blue">
-                      #新增 支持二级导航
-                    </a>
-                  
-                </div>
-                
-                  <div class="index-notice-content__date" style="color:blue">
-                    2021-04-28
-                  </div>
-                
-              
-            </li>
-          
-            <li>
-              
-                <div class="index-notice-content__title">
-                  
-                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 归档，分类等页面头部图片位置可以设置为视频 ~" style="color:#42b983">
-                      #新增 归档，分类等页面头部图片位置可以设置为视频 ~
-                    </a>
-                  
-                </div>
-                
-                  <div class="index-notice-content__date" style="color:#42b983">
-                    2021-04-28
-                  </div>
-                
-              
-            </li>
-          
-            <li>
-              
-                <div class="index-notice-content__title">
-                  
-                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 头部导航可以设置为在顶部透明，并且可以任意设置背景颜色了 ~" style="">
-                      #新增 头部导航可以设置为在顶部透明，并且可以任意设置背景颜色了 ~
-                    </a>
-                  
-                </div>
-                
-                  <div class="index-notice-content__date" style="">
-                    2021-04-28
-                  </div>
-                
-              
-            </li>
-          
-            <li>
-              
-                <div class="index-notice-content__title">
-                  
-                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 首页增加了座右铭和公告栏目 ~" style="">
-                      #新增 首页增加了座右铭和公告栏目 ~
-                    </a>
-                  
-                </div>
-                
-                  <div class="index-notice-content__date" style="">
-                    2021-04-28
-                  </div>
-                
-              
-            </li>
-           
-        </ul>
-      </vue-seamless-scroll>
-    </div>
-</div>
-<script src="/js/vue-seamless-scroll/index.js"></script>
+    <style>
+        .index-notice-content {
+            margin-top: 10px;
+        }
+        
+        .warp {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .index-notice-content__ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+        
+        .index-notice-content__ul li,
+        .index-notice-content__ul a {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+        
+        .index-notice-content__title {
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .index-notice-content__title a,
+        .index-notice-content__title span {
+            overflow: hidden;
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            height: 100%;
+            width: 100%;
+            color: #000;
+        }
+        
+        .index-notice-content__title a:hover,
+        .index-notice-content__title span:hover {
+            text-decoration: none;
+        }
+        
+        .index-notice-content__date {
+            min-width: 80px;
+            margin-left: 5px;
+            color: #000;
+        }
+    </style>
+    <div class="index-notice" id="appIndexNotice">
+        <h3>
+            <i class="fa fa-bullhorn index-notice-icon"></i>
+            公告
+        </h3>
+        <div class="index-notice-content">
+            
+                <vue-seamless-scroll :data="listData" :class-option="classOption" class="warp" style="height: 180px">
+                    <ul class="index-notice-content__ul">
 
-<!-- 滚动插件采用 vue-seamless-scroll
+                        
+                            <li>
+                                
+                                    <div class="index-notice-content__title">
+                                        
+                                            <a href="/archive" title="归档" style="color:yellow">
+                                                归档
+                                            </a>
+                                            
+                                    </div>
+                                    
+                                        <div class="index-notice-content__date" style="color:yellow">
+                                            2021-04-28
+                                        </div>
+                                        
+                                            
+                            </li>
+                            
+                            <li>
+                                
+                                    <div class="index-notice-content__title">
+                                        
+                                            <a href="/categories/鬼故事" title="鬼故事" style="color:green">
+                                                鬼故事
+                                            </a>
+                                            
+                                    </div>
+                                    
+                                        <div class="index-notice-content__date" style="color:green">
+                                            2021-04-28
+                                        </div>
+                                        
+                                            
+                            </li>
+                            
+                            <li>
+                                
+                                    <div class="index-notice-content__title">
+                                        
+                                            <a href="/categories/灵异事件" title="灵异事件" style="color:green">
+                                                灵异事件
+                                            </a>
+                                            
+                                    </div>
+                                    
+                                        <div class="index-notice-content__date" style="color:green">
+                                            2021-04-28
+                                        </div>
+                                        
+                                            
+                            </li>
+                            
+                            <li>
+                                
+                                    <div class="index-notice-content__title">
+                                        
+                                            <a href="/categories/story" title="励志故事" style="color:yellow">
+                                                励志故事
+                                            </a>
+                                            
+                                    </div>
+                                    
+                                        <div class="index-notice-content__date" style="color:yellow">
+                                            2021-04-28
+                                        </div>
+                                        
+                                            
+                            </li>
+                            
+                            <li>
+                                
+                                    <div class="index-notice-content__title">
+                                        
+                                            <a href="/categories/story" title="小说" style="color:blue">
+                                                小说
+                                            </a>
+                                            
+                                    </div>
+                                    
+                                        <div class="index-notice-content__date" style="color:blue">
+                                            2021-04-28
+                                        </div>
+                                        
+                                            
+                            </li>
+                            
+                            <li>
+                                
+                                    <div class="index-notice-content__title">
+                                        
+                                            <a href="/categories/story" title="心情分享" style="color:orange">
+                                                心情分享
+                                            </a>
+                                            
+                                    </div>
+                                    
+                                        <div class="index-notice-content__date" style="color:orange">
+                                            2021-04-28
+                                        </div>
+                                        
+                                            
+                            </li>
+                            
+                    </ul>
+                </vue-seamless-scroll>
+        </div>
+    </div>
+    <script src="/js/vue-seamless-scroll/index.js"></script>
+
+    <!-- 滚动插件采用 vue-seamless-scroll
   https://chenxuan0000.github.io/vue-seamless-scroll/zh/guide/06-singleStop.html 
 -->
 
-<script>
-  let seamless = JSON.parse('false');
-  seamless = seamless ? 0 : 30;
-  let listData = '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]';
-  listData = listData.split(',');
-  var vm = new Vue({
-    el: '#appIndexNotice',
-    data: {
-      listData: listData,
-      moveNum: 2,
-      classOption: {
-        singleHeight: seamless,
-        limitMoveNum: listData.length
-      },
-    },
-    computed: {
-    },
-    mounted() {
-    },
-    methods: {
-    },
-    created() {
-      this.moveNum = parseInt(this.listData.length);
-    }
-  })
-</script>
+    <script>
+        let seamless = JSON.parse('false');
+        seamless = seamless ? 0 : 30;
+        let listData = '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]';
+        listData = listData.split(',');
+        var vm = new Vue({
+            el: '#appIndexNotice',
+            data: {
+                listData: listData,
+                moveNum: 2,
+                classOption: {
+                    singleHeight: seamless,
+                    limitMoveNum: listData.length
+                },
+            },
+            computed: {},
+            mounted() {},
+            methods: {},
+            created() {
+                this.moveNum = parseInt(this.listData.length);
+            }
+        })
+    </script>
 
 
-
+    
             
 
 
 <div class="topArticle" data-aos="fade-up">
 	<h3><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Recommend Articles</h3>
 	<div class="articles">
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
 		
 			
 		
@@ -1576,42 +1987,52 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-15</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/15/bilibili/">
-                                                bilibili
+                                            <a class="post-title-link" href="/2021/05/16/%E9%82%A3%E5%A5%B3%E5%AD%A9%E5%AF%B9%E6%88%91%E8%AF%B4/">
+                                                只有傻子才会在爱情路上比输赢
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%92%E6%98%A5/" rel="tag">青春</a></li></ul>
+
                                             </div>
                                             <div class="post-categories">
                                                 
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B/">校园故事</a>
+</div>
+
                                             </div>
                                         </div>
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/15/bilibili/" class="lazyload" data-original="https://qiunai.github.io/image/a84.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E9%82%A3%E5%A5%B3%E5%AD%A9%E5%AF%B9%E6%88%91%E8%AF%B4/" class="lazyload" data-original="/../image/a3.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            
+                                               紫苏一直觉得自己能赢得左放，就像拔河，紫苏始终占着上风，左放一直往回拉，紫苏却纹丝不动，最终等左放只好放弃，而紫苏赢的，除了一个华丽的转身，什么都没有。
+   如果说年少时我们不懂爱情，可长大后的我们为什么迷失在爱情里。
+   紫苏和
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/15/bilibili/">
+                                        <a href="/2021/05/16/%E9%82%A3%E5%A5%B3%E5%AD%A9%E5%AF%B9%E6%88%91%E8%AF%B4/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/15/bilibili/" class="lazyload" data-original="https://qiunai.github.io/image/a84.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E9%82%A3%E5%A5%B3%E5%AD%A9%E5%AF%B9%E6%88%91%E8%AF%B4/" class="lazyload" data-original="/../image/a3.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1623,42 +2044,53 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-15</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/">
-                                                腾讯视频
+                                            <a class="post-title-link" href="/2021/05/16/%E7%BA%B8%E4%B8%8A%E7%9A%84%E6%97%A7%E9%98%B3%E5%85%89/">
+                                                信纸上的旧时光
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%92%E6%98%A5/" rel="tag">青春</a></li></ul>
+
                                             </div>
                                             <div class="post-categories">
                                                 
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B/">校园故事</a>
+</div>
+
                                             </div>
                                         </div>
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E7%BA%B8%E4%B8%8A%E7%9A%84%E6%97%A7%E9%98%B3%E5%85%89/" class="lazyload" data-original="/../image/a22.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            
+                                            时光，缓缓流淌在泛黄的信纸上。一沓一沓的，薄薄的写起来沙沙作响的信纸，承载着我们青春时代最隐秘最美好的记忆。生活中的春花秋月和脉脉流沙，一一抒发在笔下，在相传和等待中，寄给另一个人。
+　　同桌的他
+　　高一时，我和番薯是同桌。
+　　当别人都
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/">
+                                        <a href="/2021/05/16/%E7%BA%B8%E4%B8%8A%E7%9A%84%E6%97%A7%E9%98%B3%E5%85%89/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E7%BA%B8%E4%B8%8A%E7%9A%84%E6%97%A7%E9%98%B3%E5%85%89/" class="lazyload" data-original="/../image/a22.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1670,22 +2102,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-15</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/15/bamboo/">
-                                                bamboo
+                                            <a class="post-title-link" href="/2021/05/16/%E5%A5%94%E8%B7%91%E5%9C%A8%E7%88%B1%E6%83%85%E7%9A%84%E9%AB%98%E9%80%9F%E8%B7%AF%E4%B8%8A/">
+                                                奔跑在爱情的高速路上
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%92%E6%98%A5/" rel="tag">青春</a></li></ul>
+
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E4%B8%BB%E9%A2%98/">主题</a>
+  <a class="article-category-link" href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B/">校园故事</a>
 </div>
 
                                             </div>
@@ -1693,43 +2128,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/15/bamboo/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E5%A5%94%E8%B7%91%E5%9C%A8%E7%88%B1%E6%83%85%E7%9A%84%E9%AB%98%E9%80%9F%E8%B7%AF%E4%B8%8A/" class="lazyload" data-original="/../image/a44.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            <h1 id="hexo-theme-bamboo"><a href="#hexo-theme-bamboo" class="headerlink" title="hexo-theme-bamboo"></a>hexo-theme-bamboo</h1><p><img src="https://img.shields.io/github/package-json/v/yuang01/hexo-theme-bamboo/dev?label=dev" alt="master version"><br><img src="https://img.shields.io/npm/v/hexo-theme-bamboo?color=%09%23bf00ff" alt="https://img.shields.io/npm/v/hexo-theme-bamboo?color=%09%23bf00ff"><br><img src="https://img.shields.io/badge/hexo-5.0+-0e83c" alt="hexo version"></p>
-<p>最新文档，请<a target="_blank" rel="noopener" href="https://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/">点击这个查看（github）</a>，或者<a target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/">点击这个查看（gitee）</a>，</p>
-<table>
-    <tr>
-            <th>首页轮播(支持三种显示方式)</th>
-            <th>首页内容</th>
-    </tr>
-    <tr>
-        <td><img src="https://img11.360buyimg.com/ddimg/jfs/t1/186409/13/3127/2116584/609e272eE21314c58/17d1dc0bc257fefb.png" /></td>
-        <td><img src="https://img14.360buyimg.com/ddimg/jfs/t1/181291/12/4004/1573843/609e272cE973c9c76/0d1d36d2e85b4231.png" /></td>
-    </tr>
-  <tr>
-            <th>暗黑模式</th>
-            <th>文章内容</th>
-    </tr>
-    <tr>
-        <td><img src="https://img12.360buyimg.com/ddimg/jfs/t1/182808/27/4130/743199/609e2728Edd209b4b/30dc231a7446a625.png" /></td>
-        <td><img src="https://img11.360buyimg.com/ddimg/jfs/t1/180598/31/4047/606158/609e2929E85cd5694/4f91990995bc1931.png" /></td>
-    </tr>
-</table>
+                                            我是从一所农村中学考上那所著名大学的。刚上大学的时候，我身上有着农村学生的典型特征：衣着寒酸，胆小怕事，沉默寡言，并且深深地自卑。一开始我就为自己的大学生活做了安排：努力学习，争取奖学金；周末做家教，挣生活费；多余的时间就靠坐图书馆打发时间
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/15/bamboo/">
+                                        <a href="/2021/05/16/%E5%A5%94%E8%B7%91%E5%9C%A8%E7%88%B1%E6%83%85%E7%9A%84%E9%AB%98%E9%80%9F%E8%B7%AF%E4%B8%8A/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/15/bamboo/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E5%A5%94%E8%B7%91%E5%9C%A8%E7%88%B1%E6%83%85%E7%9A%84%E9%AB%98%E9%80%9F%E8%B7%AF%E4%B8%8A/" class="lazyload" data-original="/../image/a44.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1741,43 +2157,52 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-04</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/">
-                                                美图帅锅
+                                            <a class="post-title-link" href="/2021/05/16/%E8%AF%B4%E5%A5%BD%E6%AF%95%E4%B8%9A%E4%B8%8D%E5%88%86%E6%89%8B%E7%9A%84/">
+                                                说好毕业不分手的
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%92%E6%98%A5/" rel="tag">青春</a></li></ul>
+
                                             </div>
                                             <div class="post-categories">
                                                 
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B/">校园故事</a>
+</div>
+
                                             </div>
                                         </div>
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/" class="lazyload" data-original="https://qiunai.github.io/image/a86.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E8%AF%B4%E5%A5%BD%E6%AF%95%E4%B8%9A%E4%B8%8D%E5%88%86%E6%89%8B%E7%9A%84/" class="lazyload" data-original="/../image/a67.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            
-1https://qiunai.github.io
+                                            那年，还是乍暖还寒的季节，一个活泼的女孩悄然走进了我的生活，令人促不及防，三年平静生活顿时激起了无限的涟漪。
+　　从此，告别了一个人孤单的生活，校园里又多了一对甜蜜的恋人，在每一个日落十分，我们会牵手漫步在校园的每一个角落 。
+　　非典的恐
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/">
+                                        <a href="/2021/05/16/%E8%AF%B4%E5%A5%BD%E6%AF%95%E4%B8%9A%E4%B8%8D%E5%88%86%E6%89%8B%E7%9A%84/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/" class="lazyload" data-original="https://qiunai.github.io/image/a86.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E8%AF%B4%E5%A5%BD%E6%AF%95%E4%B8%9A%E4%B8%8D%E5%88%86%E6%89%8B%E7%9A%84/" class="lazyload" data-original="/../image/a67.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1789,44 +2214,51 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/video/">
-                                                video
+                                            <a class="post-title-link" href="/2021/05/16/%E8%87%AA%E8%A1%8C%E8%BD%A6%E4%B8%8A%E7%9A%84%E5%8D%95%E6%81%8B/">
+                                                自行车上的单恋
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%92%E6%98%A5/" rel="tag">青春</a></li></ul>
+
                                             </div>
                                             <div class="post-categories">
                                                 
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B/">校园故事</a>
+</div>
+
                                             </div>
                                         </div>
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/video/" class="lazyload" data-original="https://qiunai.github.io/image/a38.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E8%87%AA%E8%A1%8C%E8%BD%A6%E4%B8%8A%E7%9A%84%E5%8D%95%E6%81%8B/" class="lazyload" data-original="/../image/a40.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            
-
-
+                                            高中的我是校园里的一只流浪猫，逃课迟到是我的家常便饭，天天抱着一本世界名著，任凭我作家的梦想轻舞飞扬。
+　　班主任几次找我谈话，问我到底住不住校？我告诉班主任，寝室那些臭袜子臭鞋子，还有如雷贯耳的打呼噜声我无法忍受，所以，我依然做我的走读生
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/video/">
+                                        <a href="/2021/05/16/%E8%87%AA%E8%A1%8C%E8%BD%A6%E4%B8%8A%E7%9A%84%E5%8D%95%E6%81%8B/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/video/" class="lazyload" data-original="https://qiunai.github.io/image/a38.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E8%87%AA%E8%A1%8C%E8%BD%A6%E4%B8%8A%E7%9A%84%E5%8D%95%E6%81%8B/" class="lazyload" data-original="/../image/a40.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1838,25 +2270,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E6%A2%A6%E6%83%B3%E6%97%A0%E4%BB%B7/">
-                                                梦想无价
+                                            <a class="post-title-link" href="/2021/05/16/%E7%BB%99%E9%9D%92%E6%98%A5%E4%B8%80%E4%B8%AA%E5%8F%B0%E9%98%B6/">
+                                                给青春一个台阶
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%92%E6%98%A5/" rel="tag">青春</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B/">校园故事</a>
 </div>
 
                                             </div>
@@ -1864,25 +2296,26 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E6%A2%A6%E6%83%B3%E6%97%A0%E4%BB%B7/" class="lazyload" data-original="https://qiunai.github.io/image/a60.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E7%BB%99%E9%9D%92%E6%98%A5%E4%B8%80%E4%B8%AA%E5%8F%B0%E9%98%B6/" class="lazyload" data-original="/../image/a17.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            梦想无价　　从小到大，马克家里一直都很穷——马克有6个兄弟，3个妹妹，还有别人寄养在他家的一个孩子。虽然马克没有什么钱，家里的东西也都很破旧，但是家里充满了爱和关心。
-　　马克是快乐而有朝气的。马克知道不管一个人有多穷，他仍然可以做自己的梦
+                                            　青春的岁月里，原是少不了一些台阶的，得用理解、用宽容、用真诚去堆砌，一级一级，都是成长的阶梯。
+　　忘不了我一伸手，她脸上的惊慌，像只受惊的兔子。一抹潮红，像水滴在宣纸上似的，迅捷滴满她青春的脸庞。
+　　那是高考前，学生们都低头在自修，我
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E6%A2%A6%E6%83%B3%E6%97%A0%E4%BB%B7/">
+                                        <a href="/2021/05/16/%E7%BB%99%E9%9D%92%E6%98%A5%E4%B8%80%E4%B8%AA%E5%8F%B0%E9%98%B6/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E6%A2%A6%E6%83%B3%E6%97%A0%E4%BB%B7/" class="lazyload" data-original="https://qiunai.github.io/image/a60.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E7%BB%99%E9%9D%92%E6%98%A5%E4%B8%80%E4%B8%AA%E5%8F%B0%E9%98%B6/" class="lazyload" data-original="/../image/a17.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1894,25 +2327,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/">
-                                                把失败写在手背
+                                            <a class="post-title-link" href="/2021/05/16/%E4%B8%8A%E5%AD%A6%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%AC%BC%E6%89%93%E5%A2%99/">
+                                                上学时遇到的鬼打墙
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/">灵异事件</a>
 </div>
 
                                             </div>
@@ -1920,25 +2353,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/" class="lazyload" data-original="https://qiunai.github.io/image/a20.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E4%B8%8A%E5%AD%A6%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%AC%BC%E6%89%93%E5%A2%99/" class="lazyload" data-original="/../image/a41.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            把失败写在背后　　有一个年轻人，从很小的时候起，他就有一个梦想，希望自己能够成为一名出色的赛车手。他在军队服役的时候，曾开过卡车，这对他熟练驾驶技术起到了很大的帮助作用。
-　　退役之后，他选择到一家农场里开车。在工作之余，他仍一直坚持参加一
+                                             我上初中的时候，要跑到离家五六里的镇子上，那是镇上唯一的一所中学。那时的学校条件差，宿舍不够用，分给我们班的几个床位都留给了更远的同学，我每天上学来回都得骑自行车。那时晚上有夜自习，放学时天都已经很黑了。上完夜自习时，每次都是和几个关系不
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/">
+                                        <a href="/2021/05/16/%E4%B8%8A%E5%AD%A6%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%AC%BC%E6%89%93%E5%A2%99/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/" class="lazyload" data-original="https://qiunai.github.io/image/a20.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E4%B8%8A%E5%AD%A6%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%AC%BC%E6%89%93%E5%A2%99/" class="lazyload" data-original="/../image/a41.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1950,25 +2382,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%9A%84%E6%9B%B4%E5%A5%BD/">
-                                                你可以做的更好
+                                            <a class="post-title-link" href="/2021/05/16/%E5%90%8C%E6%A0%B7%E7%9A%84%E8%A1%A3%E6%9C%8D/">
+                                                同样的衣服
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/">灵异事件</a>
 </div>
 
                                             </div>
@@ -1976,25 +2408,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%9A%84%E6%9B%B4%E5%A5%BD/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E5%90%8C%E6%A0%B7%E7%9A%84%E8%A1%A3%E6%9C%8D/" class="lazyload" data-original="/../image/a77.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            你可以站得很好　　“嗨嗨嗨，你们快看，跛子来了，跛子来了。”
-　　一群小孩都来看热闹，小丰喜不说话，只是埋着头，一边费力在地上爬，一边手里挎着个水壶，他要把水壶送到在田间干活的爷爷那里。那些讨嫌的小孩把他的水壶踢开，他并没有哭泣，只是郑重其
+                                              那是两年前的冬季的一个晚上，小张显得无聊，就拽上几个人去饭店吃火锅，冬天吃火锅的那种滋味别提有多享受了，而小张每次吃火锅都必定喝多，今天也不例外，晚上十点多离开饭店，因为喝酒而没法开车的小张只能一个人步行往家走，这家火锅店是最近新开的，
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%9A%84%E6%9B%B4%E5%A5%BD/">
+                                        <a href="/2021/05/16/%E5%90%8C%E6%A0%B7%E7%9A%84%E8%A1%A3%E6%9C%8D/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%9A%84%E6%9B%B4%E5%A5%BD/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E5%90%8C%E6%A0%B7%E7%9A%84%E8%A1%A3%E6%9C%8D/" class="lazyload" data-original="/../image/a77.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -2006,25 +2437,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/">
-                                                简短故事
+                                            <a class="post-title-link" href="/2021/05/16/%E4%BA%91%E5%8D%97%E5%90%AC%E6%9D%A5%E7%9A%84%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/">
+                                                云南听来的灵异事件
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E4%BA%BA/" rel="tag">感人</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/">灵异事件</a>
 </div>
 
                                             </div>
@@ -2032,24 +2463,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/" class="lazyload" data-original="https://qiunai.github.io/image/a98.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E4%BA%91%E5%8D%97%E5%90%AC%E6%9D%A5%E7%9A%84%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/" class="lazyload" data-original="/../image/a37.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            简短的故事 感动心灵　　　1、 她很胖，胖到所有人都觉得不会有人娶她。他很瘦，却鬼使神差般娶了她。结婚那夜，她在他面前宽衣，随着衣服脱落的，还有一层肉皮。其实她是个美人，只因厌倦人们对外貌的严苛，于是费尽心机想找个能容忍她丑陋的人托付终身。
+                                              前些日子因为工作去了一趟云南，干脆就给大家说说在那边的故事吧！    云南和四川接壤，我家正好离那边境不过十多公里，以前一直待在成都工作，偶尔去趟云南不过也就去了边境上水富市里逛逛，这进入云南大山里还是第一次。    云南的山区，放眼望
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/">
+                                        <a href="/2021/05/16/%E4%BA%91%E5%8D%97%E5%90%AC%E6%9D%A5%E7%9A%84%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/" class="lazyload" data-original="https://qiunai.github.io/image/a98.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E4%BA%91%E5%8D%97%E5%90%AC%E6%9D%A5%E7%9A%84%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/" class="lazyload" data-original="/../image/a37.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -2061,42 +2492,50 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E5%A5%BD%E7%9A%84%E9%80%89%E6%8B%A9%20%E7%AD%89%E4%BA%8E%E6%88%90%E5%8A%9F%E4%BA%86%E4%B8%80%E5%8D%8A/">
-                                                好的选择 等于成功了一半
+                                            <a class="post-title-link" href="/2021/05/16/%E8%80%81%E5%A4%AA%E7%BB%99%E7%9A%84%E7%8E%89%E4%BD%A9/">
+                                                老太给的玉佩
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
+
                                             </div>
                                             <div class="post-categories">
                                                 
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/">灵异事件</a>
+</div>
+
                                             </div>
                                         </div>
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E5%A5%BD%E7%9A%84%E9%80%89%E6%8B%A9%20%E7%AD%89%E4%BA%8E%E6%88%90%E5%8A%9F%E4%BA%86%E4%B8%80%E5%8D%8A/" class="lazyload" data-original="https://qiunai.github.io/image/a24.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E8%80%81%E5%A4%AA%E7%BB%99%E7%9A%84%E7%8E%89%E4%BD%A9/" class="lazyload" data-original="/../image/a7.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            好的选择 等于成功了一半　　我喜欢把人生的成功，比喻成一次旅行，起点是自己出生的地方，终点比如说是北京。只要我走到了北京，就代表我成功了，不管这个过程当中发生了什么事，遇到了什么困难或危险，只要我一直朝着北京这个方向走，终有一天我会走到终点
+                                              李家村的阿玲，一个月前嫁到十里地外的王家湾，王家湾背靠青山，三面环水。    这天晚饭后，阿玲的丈夫李海波从外面喝酒回来，小两口因为一点小事拌了嘴，阿玲一气之下出了门，负气要回娘家。    阿玲拎着一个花布包袱就冲入了夜色之中，留下醉醺
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E5%A5%BD%E7%9A%84%E9%80%89%E6%8B%A9%20%E7%AD%89%E4%BA%8E%E6%88%90%E5%8A%9F%E4%BA%86%E4%B8%80%E5%8D%8A/">
+                                        <a href="/2021/05/16/%E8%80%81%E5%A4%AA%E7%BB%99%E7%9A%84%E7%8E%89%E4%BD%A9/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E5%A5%BD%E7%9A%84%E9%80%89%E6%8B%A9%20%E7%AD%89%E4%BA%8E%E6%88%90%E5%8A%9F%E4%BA%86%E4%B8%80%E5%8D%8A/" class="lazyload" data-original="https://qiunai.github.io/image/a24.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E8%80%81%E5%A4%AA%E7%BB%99%E7%9A%84%E7%8E%89%E4%BD%A9/" class="lazyload" data-original="/../image/a7.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -2106,12 +2545,12 @@
                     </section>
                     
   <!-- <nav class="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next</a>
   </nav> -->
   <div class="page-nav">
     
     <div class="page-info">
-        <div class="page-info-text">1 / 2</div>
+        <div class="page-info-text">1 / 4</div>
     </div>
     
       <a href="/page/2/"
@@ -2125,8 +2564,14 @@
                         <!-- 雪花和花瓣特效 -->
                         
                             
-                                    <script src="/js/snow.js"></script>
-                                    
+                                <script type="text/javascript">
+                                    //只在桌面版网页启用特效
+                                    var windowWidth = $(window).width();
+                                    if (windowWidth > 768) {
+                                        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+                                    }
+                                </script>
+                                
                                         
 
                                                             

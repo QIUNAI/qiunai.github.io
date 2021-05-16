@@ -20,7 +20,7 @@
 
                         
 
-                            <link rel="icon" type="image/jpeg" href="https://qiunai.github.io/image/purpose.jpg">
+                            <link rel="icon" type="image/jpeg" href="/../image/purpose.jpg">
                             <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
                             <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -34,7 +34,7 @@
 
                                 <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
                                 <script>
-                                    var live2dOpen = eval('true') || false;
+                                    var live2dOpen = eval('false') || false;
                                     if (!live2dOpen) {
                                         localStorage.setItem('waifu-display', 1609323474481);
                                     }
@@ -113,41 +113,164 @@
                 
                   <i class="fa fa-home" aria-hidden="true"></i>
                 
-                <span class="name">Home</span>
+                <span class="name">首页</span>
               </a>
             
           </li>
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="/archive" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-archive" aria-hidden="true"></i>
-                
-                <span class="name">Archives</span>
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(1)">
+                <span>
+                  
+                    <i class="fa fa-archive"></i>
+                  
+                  <span class="name">归档</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
               </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(1)">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="/tags" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-tags" aria-hidden="true"></i>
-                
-                <span class="name">Tags</span>
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
+                <span>
+                  
+                    <i class="fa fa-tags"></i>
+                  
+                  <span class="name">标签</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
               </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(2)">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5">
+                    
+                    <span>青春</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E7%B2%BE%E7%BE%8E">
+                    
+                    <span>精美</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%81%90%E6%80%96">
+                    
+                    <span>恐怖</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E5%8A%B1%E5%BF%97">
+                    
+                    <span>励志</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="/categories" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
-                
-                <span class="name">Categories</span>
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
+                <span>
+                  
+                    <i class="fa fa-bookmark"></i>
+                  
+                  <span class="name">分类</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
               </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(3)">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B">
+                    
+                    <span>鬼故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6">
+                    
+                    <span>灵异事件</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%BF%83%E6%83%85%E5%88%86%E4%BA%AB">
+                    
+                    <span>心情分享</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
@@ -157,7 +280,7 @@
                 
                   <i class="fa fa-user" aria-hidden="true"></i>
                 
-                <span class="name">About</span>
+                <span class="name">关于</span>
               </a>
             
           </li>
@@ -167,9 +290,7 @@
               <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
                 <span>
                   
-                    <i class="fa fa-link"></i>
-                  
-                  <span class="name">更多</span>
+                  <span class="name">娱乐</span>
                 </span>
                 <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
               </a>
@@ -178,8 +299,6 @@
                 <li>
                   <a href="/gallery">
                     
-                    <i class="fa fa-music" style="margin-top: -20px;"></i>
-                    
                     <span>图库</span>
                   </a>
                 </li>
@@ -187,27 +306,86 @@
                 <li>
                   <a href="/video">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>video</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/about">
-                    
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>关于我</span>
                   </a>
                 </li>
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://baidu.com">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                  <span class="name">视频</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wubai.tv/">
+                    
+                    <span>五百影视</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+                <span>
+                  
+                  <span class="name">游戏</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(7)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.4399.com/">
+                    
+                    <span>4399</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
                   </a>
                 </li>
                 
@@ -289,41 +467,158 @@
                 
                   <i class="fa fa-home" aria-hidden="true"></i>
                 
-                <span class="name">Home</span>
+                <span class="name">首页</span>
               </a>
             
           </li>
         
           <li class="menu-item" style="position: relative;">
             
-              <a href="/archive" class="menu-item-link">
+              <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-archive" aria-hidden="true"></i>
+                  <i class="fa fa-archive"></i>
                 
-                <span class="name">Archives</span>
+                <span class="name">归档</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="menu-item" style="position: relative;">
             
-              <a href="/tags" class="menu-item-link">
+              <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  <i class="fa fa-tags"></i>
                 
-                <span class="name">Tags</span>
+                <span class="name">标签</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5">
+                    
+                    <span>青春</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E7%B2%BE%E7%BE%8E">
+                    
+                    <span>精美</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%81%90%E6%80%96">
+                    
+                    <span>恐怖</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E5%8A%B1%E5%BF%97">
+                    
+                    <span>励志</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
           <li class="menu-item" style="position: relative;">
             
-              <a href="/categories" class="menu-item-link">
+              <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  <i class="fa fa-bookmark"></i>
                 
-                <span class="name">Categories</span>
+                <span class="name">分类</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B">
+                    
+                    <span>鬼故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6">
+                    
+                    <span>灵异事件</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%BF%83%E6%83%85%E5%88%86%E4%BA%AB">
+                    
+                    <span>心情分享</span>
+                  </a>
+                </li>
+                
+              </ul>
             
           </li>
         
@@ -333,7 +628,7 @@
                 
                   <i class="fa fa-user" aria-hidden="true"></i>
                 
-                <span class="name">About</span>
+                <span class="name">关于</span>
               </a>
             
           </li>
@@ -342,17 +637,13 @@
             
               <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-link"></i>
-                
-                <span class="name">更多</span>
+                <span class="name">娱乐</span>
                 <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
               <ul class="sub-menu">
                 
                 <li>
                   <a href="/gallery">
-                    
-                    <i class="fa fa-music" style="margin-top: -20px;"></i>
                     
                     <span>图库</span>
                   </a>
@@ -361,27 +652,82 @@
                 <li>
                   <a href="/video">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>video</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/about">
-                    
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>关于我</span>
                   </a>
                 </li>
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://baidu.com">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
                     <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">视频</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wubai.tv/">
+                    
+                    <span>五百影视</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">游戏</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.4399.com/">
+                    
+                    <span>4399</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
                   </a>
                 </li>
                 
@@ -562,9 +908,9 @@
 
 
 
-<div class="swiper-length" style="display: none;">1</div>
+<div class="swiper-length" style="display: none;">4</div>
 <div id="appSwiper"
-  class="swiper-no-swiping"
+  class=""
   @mouseenter="stopAutoPlay()" 
   @mouseleave="startAutoPlay()"
 >
@@ -572,11 +918,11 @@
     
       
         <swiper-slide>
-          <div class="item swiper-lazy" data-background="/../image/a31.jpeg" style="background-size: 90000px; 
+          <div class="item swiper-lazy" data-background="/../image/a27.jpeg" style="background-size: 90000px; 
             background-position: left center;" style="position: relative;">
             <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag">
-                <div class="img-mask swiper-lazy" data-background="/../image/a31.jpeg" style="height: 100%; background-size: cover; 
+                <div class="img-mask swiper-lazy" data-background="/../image/a27.jpeg" style="height: 100%; background-size: cover; 
                   background-position: center center;">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
                 </div>
@@ -593,7 +939,7 @@
                   </div>
                   <div style="display: flex;" class="flag-text-btns">
                     
-                      <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://qq.com" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">上网冲浪</a></div>
+                      <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2Fu%2F7479361306%2Fhome%3Fwvr%3D5" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">微博冲浪</a></div>
                     
                     
                       <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://www.baidu.com" class="read-more border-color swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">百度一下</a></div>
@@ -646,125 +992,124 @@
       
         
         
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
           
           <swiper-slide>
-            <div class="item swiper-lazy" data-background="/../image/a3.jpeg" style=" background-size: 90000px; 
+            <div class="item swiper-lazy" data-background="/../image/a20.jpeg" style=" background-size: 90000px; 
             background-position: left center;" style="position: relative;">
             <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/../image/a3.jpeg" style="height: 100%; background-size: cover; 
+                <div class="img-mask swiper-lazy" data-background="/../image/a20.jpeg" style="height: 100%; background-size: cover; 
                   background-position: center center;">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                 </div>
                 <div class="flag-text">
                   <div class="flag-text-content">
                     <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                      <a href="/2021/05/03/image/">
-                        image
+                      <a href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/">
+                        把失败写在手背
                       </a>
                     </div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">把失败写在背后　　有一个年轻人，从很小的时候起，他就有一个梦想，希望自己能够成为一名出色的赛车手。他在军队服役的时候，曾开过卡车，这对他熟练驾驶技术起到了很大的帮助作用。
+　　退役之后，他选择到一家农场里开车。在工作之余，他仍一直坚持参加一</div>
                   </div>
-                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/image/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/%E6%8A%8A%E5%A4%B1%E8%B4%A5%E5%86%99%E5%9C%A8%E6%89%8B%E8%83%8C/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="/../image/a98.jpeg" style=" background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="/../image/a98.jpeg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/">
+                        简短故事
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">简短的故事 感动心灵　　　1、 她很胖，胖到所有人都觉得不会有人娶她。他很瘦，却鬼使神差般娶了她。结婚那夜，她在他面前宽衣，随着衣服脱落的，还有一层肉皮。其实她是个美人，只因厌倦人们对外貌的严苛，于是费尽心机想找个能容忍她丑陋的人托付终身。</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/%E7%AE%80%E7%9F%AD%E6%95%85%E4%BA%8B/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="/../image/a50.jpeg" style=" background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="/../image/a50.jpeg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/">
+                        成功的主流是我们的心态
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">成功的主流是我们的心态　　在我身边总会听到这样那样的抱怨：抱怨自己家境差，不能让自己上一所好的学校；抱怨老师给自己安排的座位不好，总让自己坐在人渣堆里；抱怨学校的设备太差，不能让自己得到更好的学习环境······这些话虽有些道理，其实不难发</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
                 </div>
               </div>
             </div>
@@ -784,9 +1129,41 @@
         
         
       
-    <div class="swiper-pagination" slot="pagination" style="display: none;"></div>
-    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style="display: none;"></div>
-    <div class="swiper-button-next swiper-button-white" slot="button-next" style="display: none;"></div>
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="/../image/a23.jpeg" style=" background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="/../image/a23.jpeg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/">
+                        从一颗螺丝钉做起
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">从一颗螺丝钉做起　　从打工仔到成功人士的创业故事，他，只有中专学历，起步时给别人打工，一步步建立了电梯生产销售企业，又进军地下停车场新产业，甚至还梦想建产业链条完整的汽车工业园……他用真诚和勤奋演绎了成功，成为新一代晋商创业骄子，他就是皇冠</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">Read more</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+      
+    <div class="swiper-pagination" slot="pagination" style=""></div>
+    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style=""></div>
+    <div class="swiper-button-next swiper-button-white" slot="button-next" style=""></div>
     
   </swiper>
   
@@ -810,12 +1187,12 @@
 
 
 <script>
-  let autoplay = JSON.parse('false');
-  let delay = '5000';
+  let autoplay = JSON.parse('true');
+  let delay = '30000';
   let loop = JSON.parse('true') ? false : JSON.parse('true');
-  let effect = 'slide';
+  let effect = 'fade';
   let swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  let defaultDesc = '一个怪物秋萘，奇奇怪怪！';
+  let defaultDesc = '一个奇奇怪怪的人！';
   defaultDesc = defaultDesc.split(',');
   let defaultDescTypedLoop = JSON.parse('false');
   var vm = new Vue({
@@ -1321,25 +1698,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E5%AD%A6%E4%BC%9A%E9%80%86%E5%90%91%E6%80%9D%E8%80%83/">
-                                                学会逆向思考
+                                            <a class="post-title-link" href="/2021/05/16/%E9%AC%BC%E7%8C%AB/">
+                                                鬼猫
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E7%81%B5%E5%BC%82%E4%BA%8B%E4%BB%B6/">灵异事件</a>
 </div>
 
                                             </div>
@@ -1347,25 +1724,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E5%AD%A6%E4%BC%9A%E9%80%86%E5%90%91%E6%80%9D%E8%80%83/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E9%AC%BC%E7%8C%AB/" class="lazyload" data-original="/../image/a65.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            学会逆向思考　   有一个推销员，他以能够卖出任何东西而闻名。他已经卖给牙医一支牙刷，卖给面包师一个面包，卖给瞎子一台电视机……但他的朋友对他说：“只有卖给驼鹿一个防毒面具，你才算是一个优秀的推销员。”
-　　于是，这位推销员不远千里来到北方
+                                              晚上十二点到一点。我怕黑。我怕猫。这三个句子本来毫无关联，但是在我这儿却关联了我十多年，以至于十多年后的今天想起来还仍觉玄幻。    我生在农村，一个普通的郊区的农村。    那年我十岁，住在家里的老屋子，矮矮的房子房梁上经常有老鼠窜来
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E5%AD%A6%E4%BC%9A%E9%80%86%E5%90%91%E6%80%9D%E8%80%83/">
+                                        <a href="/2021/05/16/%E9%AC%BC%E7%8C%AB/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E5%AD%A6%E4%BC%9A%E9%80%86%E5%90%91%E6%80%9D%E8%80%83/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E9%AC%BC%E7%8C%AB/" class="lazyload" data-original="/../image/a65.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1377,25 +1753,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E5%A6%82%E4%BD%95%E5%85%85%E5%AE%9E%E8%87%AA%E5%B7%B1/">
-                                                如何充实自己
+                                            <a class="post-title-link" href="/2021/05/16/%E8%80%81%E5%AE%85%E6%83%8A%E9%AD%82/">
+                                                老宅惊魂
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B/">鬼故事</a>
 </div>
 
                                             </div>
@@ -1403,27 +1779,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E5%A6%82%E4%BD%95%E5%85%85%E5%AE%9E%E8%87%AA%E5%B7%B1/" class="lazyload" data-original="https://qiunai.github.io/image/a51.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E8%80%81%E5%AE%85%E6%83%8A%E9%AD%82/" class="lazyload" data-original="/../image/a21.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            如何充实自己　　如果对工作所在行业满意，就学行业内的知识，如果对行业不满，就学你喜欢的行业的知识
-　　如何充实自己
-　　自古以来世界上就有上下左右，东南西北。中国四大发明中，发明了指南针。指引路人要走自己的方向。
-　　活着，就是要善待自己，
+                                            第一章 海边老宅   苏安妮是一位小有名气的女作家，然而，最近一段时间她的写作却陷入了瓶颈期，为了能够创作出一部令人满意的作品，她准备离开喧嚣的城市，去宁静的村庄静下心来写作。不久之后，她便在地处偏僻的回龙村租下了一栋荒废已久的老宅。   
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E5%A6%82%E4%BD%95%E5%85%85%E5%AE%9E%E8%87%AA%E5%B7%B1/">
+                                        <a href="/2021/05/16/%E8%80%81%E5%AE%85%E6%83%8A%E9%AD%82/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E5%A6%82%E4%BD%95%E5%85%85%E5%AE%9E%E8%87%AA%E5%B7%B1/" class="lazyload" data-original="https://qiunai.github.io/image/a51.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E8%80%81%E5%AE%85%E6%83%8A%E9%AD%82/" class="lazyload" data-original="/../image/a21.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1435,25 +1808,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/">
-                                                成功的主流是我们的心态
+                                            <a class="post-title-link" href="/2021/05/16/%E4%B8%80%E4%B8%AA%E8%80%81%E7%8C%8E%E4%BA%BA%E7%9A%84%E8%AF%A1%E5%BC%82%E7%BB%8F%E5%8E%86/">
+                                                一个老猎人的诡异经历
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B/">鬼故事</a>
 </div>
 
                                             </div>
@@ -1461,24 +1834,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/" class="lazyload" data-original="https://qiunai.github.io/image/a50.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E4%B8%80%E4%B8%AA%E8%80%81%E7%8C%8E%E4%BA%BA%E7%9A%84%E8%AF%A1%E5%BC%82%E7%BB%8F%E5%8E%86/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            成功的主流是我们的心态　　在我身边总会听到这样那样的抱怨：抱怨自己家境差，不能让自己上一所好的学校；抱怨老师给自己安排的座位不好，总让自己坐在人渣堆里；抱怨学校的设备太差，不能让自己得到更好的学习环境······这些话虽有些道理，其实不难发
+                                            （一）：双头蛇   在我的家乡，猎人这个职业一直到上世纪九十年代才消失，我小时候还能常常在集市上遇见扛着土枪售卖野兔野鸡之类野物的猎人。    现在国家管得很严，农村的土枪猎枪早就被收缴完了。谁要是偷偷打猎被林业派出所逮住，那是要坐牢的。 
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/">
+                                        <a href="/2021/05/16/%E4%B8%80%E4%B8%AA%E8%80%81%E7%8C%8E%E4%BA%BA%E7%9A%84%E8%AF%A1%E5%BC%82%E7%BB%8F%E5%8E%86/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E6%88%90%E5%8A%9F%E7%9A%84%E4%B8%BB%E6%B5%81%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E5%BF%83%E6%80%81/" class="lazyload" data-original="https://qiunai.github.io/image/a50.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E4%B8%80%E4%B8%AA%E8%80%81%E7%8C%8E%E4%BA%BA%E7%9A%84%E8%AF%A1%E5%BC%82%E7%BB%8F%E5%8E%86/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1490,25 +1863,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/image/">
-                                                image
+                                            <a class="post-title-link" href="/2021/05/16/%E6%97%85%E6%B8%B8%E6%97%B6%E7%9A%84%E7%A6%BB%E5%A5%87%E7%BB%8F%E5%8E%86/">
+                                                旅游时的离奇经历
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%B2%BE%E7%BE%8E/" rel="tag">精美</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/image/">image</a>
+  <a class="article-category-link" href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B/">鬼故事</a>
 </div>
 
                                             </div>
@@ -1516,123 +1889,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/image/" class="lazyload" data-original="/../image/a3.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E6%97%85%E6%B8%B8%E6%97%B6%E7%9A%84%E7%A6%BB%E5%A5%87%E7%BB%8F%E5%8E%86/" class="lazyload" data-original="/../image/a53.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                            上 对于我们这种写恐怖小说的人来说，在没有灵感的时候，总是喜欢外出走走，去看看广袤的天空，感受自然的韵律，有的时候令人难忘的故事就藏匿在这大千山河之内，而我接下来所要讲的这个故事，就是我在外出旅游的时候，从一个山村的年迈老者的嘴巴里听来的。
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/image/">
+                                        <a href="/2021/05/16/%E6%97%85%E6%B8%B8%E6%97%B6%E7%9A%84%E7%A6%BB%E5%A5%87%E7%BB%8F%E5%8E%86/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/image/" class="lazyload" data-original="/../image/a3.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E6%97%85%E6%B8%B8%E6%97%B6%E7%9A%84%E7%A6%BB%E5%A5%87%E7%BB%8F%E5%8E%86/" class="lazyload" data-original="/../image/a53.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1644,25 +1918,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-03</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/03/%E9%80%89%E6%8B%A9%E4%B8%80%E6%9D%A1%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%B7%AF/">
-                                                选择一条正确的路
+                                            <a class="post-title-link" href="/2021/05/16/%E5%9C%B0%E7%8B%B1%E5%9B%9E%E5%BF%86/">
+                                                地狱回忆
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B/">鬼故事</a>
 </div>
 
                                             </div>
@@ -1670,26 +1944,28 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/03/%E9%80%89%E6%8B%A9%E4%B8%80%E6%9D%A1%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%B7%AF/" class="lazyload" data-original="/../image/a9.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E5%9C%B0%E7%8B%B1%E5%9B%9E%E5%BF%86/" class="lazyload" data-original="/../image/a99.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            选择一条正确的路　   高三那年暑假，我一个人去位于胶东半岛的崑嵛山区旅游。
-　　那天我遇到一座不高的小山，经过与地图的仔细对照后，我知道这座山的顶部有“老子道德经”的石刻。
-　　于是我决定爬上去，凭感觉，我认为自己完全可以用半天的时间到达
+                                            1.游戏开始
+祁天睁开双眼时，发现自己正置身于一个陌生的空间。
+他似乎刚从一个冗长的噩梦中醒来，那个梦令他疲惫不堪，但他却记不起梦的内容了。
+狭小的正方形房间没有门窗，局促到只够伸展开双腿。四周是雪白的墙壁，干净得没有一粒尘埃。地狱回忆
+密
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/03/%E9%80%89%E6%8B%A9%E4%B8%80%E6%9D%A1%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%B7%AF/">
+                                        <a href="/2021/05/16/%E5%9C%B0%E7%8B%B1%E5%9B%9E%E5%BF%86/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/03/%E9%80%89%E6%8B%A9%E4%B8%80%E6%9D%A1%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%B7%AF/" class="lazyload" data-original="/../image/a9.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E5%9C%B0%E7%8B%B1%E5%9B%9E%E5%BF%86/" class="lazyload" data-original="/../image/a99.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1701,25 +1977,25 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-02</span>
+                                            <span class="post-time">2021-05-16</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/02/%E8%A6%81%E6%83%B3%E6%88%90%E5%8A%9F%20%E5%B0%B1%E8%A6%81%E6%88%98%E8%83%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%9F%E6%83%85/">
-                                                要想成功 就要战胜自己的感情
+                                            <a class="post-title-link" href="/2021/05/16/%E9%BE%99%E5%87%A4%E7%8E%89%E4%BD%A9/">
+                                                龙凤玉佩
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%81%90%E6%80%96/" rel="tag">恐怖</a></li></ul>
 
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E9%AC%BC%E6%95%85%E4%BA%8B/">鬼故事</a>
 </div>
 
                                             </div>
@@ -1727,24 +2003,24 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/02/%E8%A6%81%E6%83%B3%E6%88%90%E5%8A%9F%20%E5%B0%B1%E8%A6%81%E6%88%98%E8%83%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%9F%E6%83%85/" class="lazyload" data-original="https://qiunai.github.io/image/a48.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/16/%E9%BE%99%E5%87%A4%E7%8E%89%E4%BD%A9/" class="lazyload" data-original="/../image/a29.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            要想成功 就要战胜自己的感情　　细节也是一个很需要注意的事情，我们在做无论什么事时，常常会忽略细节，总以为这是小问题。其实这才是很容易出现问题的问题。注重细节，从小事做起。看不到细节，或者不把细节当回事的人，对工作缺乏认真的态度，对事情只能
+                                            1.玉佩现身   两千多年前的盘龙玉佩现身了！   说起这件盘龙玉佩，来头可不小。它本是上世纪八十年代考古专家在新疆罗布泊腹地的一座汉代古墓发掘的一件陪葬品，后来竟不知为何流落到海外。近年来，这件珍宝在海外一个拍卖会上出现，被一名华侨重金收
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/02/%E8%A6%81%E6%83%B3%E6%88%90%E5%8A%9F%20%E5%B0%B1%E8%A6%81%E6%88%98%E8%83%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%9F%E6%83%85/">
+                                        <a href="/2021/05/16/%E9%BE%99%E5%87%A4%E7%8E%89%E4%BD%A9/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/02/%E8%A6%81%E6%83%B3%E6%88%90%E5%8A%9F%20%E5%B0%B1%E8%A6%81%E6%88%98%E8%83%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%9F%E6%83%85/" class="lazyload" data-original="https://qiunai.github.io/image/a48.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/16/%E9%BE%99%E5%87%A4%E7%8E%89%E4%BD%A9/" class="lazyload" data-original="/../image/a29.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1756,50 +2032,42 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-02</span>
+                                            <span class="post-time">2021-05-15</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/02/%E7%AB%99%E7%9D%80%E6%80%9D%E8%80%83/">
-                                                站着思考
+                                            <a class="post-title-link" href="/2021/05/15/bilibili/">
+                                                bilibili
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
-
                                             </div>
                                             <div class="post-categories">
                                                 
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
-</div>
-
                                             </div>
                                         </div>
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/02/%E7%AB%99%E7%9D%80%E6%80%9D%E8%80%83/" class="lazyload" data-original="https://qiunai.github.io/image/a74.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/15/bilibili/" class="lazyload" data-original="/../image/a84.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            站着思考　　在远古的时候，有两个朋友，相伴一起去遥远的地方寻找人生的幸福和快乐，一路上风餐露宿，在即将到达目标的时候，遇到了一条风急浪高的大河，而河的彼岸就是幸福和快乐的天堂，关于如何渡过这条河，两个人产生了不同的意见，一个建议采伐附近的树
+                                            
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/02/%E7%AB%99%E7%9D%80%E6%80%9D%E8%80%83/">
+                                        <a href="/2021/05/15/bilibili/">
             <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/02/%E7%AB%99%E7%9D%80%E6%80%9D%E8%80%83/" class="lazyload" data-original="https://qiunai.github.io/image/a74.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/15/bilibili/" class="lazyload" data-original="/../image/a84.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1811,25 +2079,69 @@
                                     <div class="post-info">
                                         <div class="post-time">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span class="post-time">2021-05-01</span>
+                                            <span class="post-time">2021-05-15</span>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/">
-                                                从一颗螺丝钉做起
+                                            <a class="post-title-link" href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/">
+                                                腾讯视频
                                             </a>
                                         </div>
                                         <div class="post-meta">
                                             <div class="post-tags">
                                                 
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li></ul>
-
+                                            </div>
+                                            <div class="post-categories">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="post-img-mobile">
+                                            
+                                                    
+                                                        <a href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+                background-position: center center;">
+                                                        </a>
+                                                        
+                                        </div>
+                                        <div class="post-content">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="post-more">
+                                        <a href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/">
+            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
+          </a>
+                                    </div>
+                                </div>
+                                <div class="post-img">
+                                    
+                                            <a href="/2021/05/15/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+            background-position: center center;">
+                                            </a>
+                                            
+                                </div>
+                            </article>
+                            
+                            <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
+                                <div class="post-main">
+                                    <div class="post-info">
+                                        <div class="post-time">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <span class="post-time">2021-05-15</span>
+                                        </div>
+                                        <div class="post-title">
+                                            <a class="post-title-link" href="/2021/05/15/bamboo/">
+                                                bamboo
+                                            </a>
+                                        </div>
+                                        <div class="post-meta">
+                                            <div class="post-tags">
+                                                
                                             </div>
                                             <div class="post-categories">
                                                 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/story/">story</a>
+  <a class="article-category-link" href="/categories/%E4%B8%BB%E9%A2%98/">主题</a>
 </div>
 
                                             </div>
@@ -1837,24 +2149,91 @@
                                         <div class="post-img-mobile">
                                             
                                                     
-                                                        <a href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/" class="lazyload" data-original="https://qiunai.github.io/image/a23.jpeg" style="background-size: cover; 
+                                                        <a href="/2021/05/15/bamboo/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
                 background-position: center center;">
                                                         </a>
                                                         
                                         </div>
                                         <div class="post-content">
-                                            从一颗螺丝钉做起　　从打工仔到成功人士的创业故事，他，只有中专学历，起步时给别人打工，一步步建立了电梯生产销售企业，又进军地下停车场新产业，甚至还梦想建产业链条完整的汽车工业园……他用真诚和勤奋演绎了成功，成为新一代晋商创业骄子，他就是皇冠
+                                            <h1 id="hexo-theme-bamboo"><a href="#hexo-theme-bamboo" class="headerlink" title="hexo-theme-bamboo"></a>hexo-theme-bamboo</h1><p><img src="https://img.shields.io/github/package-json/v/yuang01/hexo-theme-bamboo/dev?label=dev" alt="master version"><br><img src="https://img.shields.io/npm/v/hexo-theme-bamboo?color=%09%23bf00ff" alt="https://img.shields.io/npm/v/hexo-theme-bamboo?color=%09%23bf00ff"><br><img src="https://img.shields.io/badge/hexo-5.0+-0e83c" alt="hexo version"></p>
+<p>最新文档，请<a target="_blank" rel="noopener" href="https://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/">点击这个查看（github）</a>，或者<a target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/">点击这个查看（gitee）</a>，</p>
+<table>
+    <tr>
+            <th>首页轮播(支持三种显示方式)</th>
+            <th>首页内容</th>
+    </tr>
+    <tr>
+        <td><img src="https://img11.360buyimg.com/ddimg/jfs/t1/186409/13/3127/2116584/609e272eE21314c58/17d1dc0bc257fefb.png" /></td>
+        <td><img src="https://img14.360buyimg.com/ddimg/jfs/t1/181291/12/4004/1573843/609e272cE973c9c76/0d1d36d2e85b4231.png" /></td>
+    </tr>
+  <tr>
+            <th>暗黑模式</th>
+            <th>文章内容</th>
+    </tr>
+    <tr>
+        <td><img src="https://img12.360buyimg.com/ddimg/jfs/t1/182808/27/4130/743199/609e2728Edd209b4b/30dc231a7446a625.png" /></td>
+        <td><img src="https://img11.360buyimg.com/ddimg/jfs/t1/180598/31/4047/606158/609e2929E85cd5694/4f91990995bc1931.png" /></td>
+    </tr>
+</table>
                                         </div>
                                     </div>
                                     <div class="post-more">
-                                        <a href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/">
+                                        <a href="/2021/05/15/bamboo/">
+            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
+          </a>
+                                    </div>
+                                </div>
+                                <div class="post-img">
+                                    
+                                            <a href="/2021/05/15/bamboo/" class="lazyload" data-original="/../image/a2.jpeg" style="background-size: cover; 
+            background-position: center center;">
+                                            </a>
+                                            
+                                </div>
+                            </article>
+                            
+                            <article class="post" data-aos="fade-up" style="   ">
+                                <div class="post-main">
+                                    <div class="post-info">
+                                        <div class="post-time">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <span class="post-time">2021-05-04</span>
+                                        </div>
+                                        <div class="post-title">
+                                            <a class="post-title-link" href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/">
+                                                美图帅锅
+                                            </a>
+                                        </div>
+                                        <div class="post-meta">
+                                            <div class="post-tags">
+                                                
+                                            </div>
+                                            <div class="post-categories">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="post-img-mobile">
+                                            
+                                                    
+                                                        <a href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/" class="lazyload" data-original="/../image/a86.jpeg" style="background-size: cover; 
+                background-position: center center;">
+                                                        </a>
+                                                        
+                                        </div>
+                                        <div class="post-content">
+                                            
+1https://qiunai.github.io
+                                        </div>
+                                    </div>
+                                    <div class="post-more">
+                                        <a href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/">
             <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
                                     </div>
                                 </div>
                                 <div class="post-img">
                                     
-                                            <a href="/2021/05/01/%E4%BB%8E%E4%B8%80%E9%A2%97%E8%9E%BA%E4%B8%9D%E9%92%89%E5%81%9A%E8%B5%B7/" class="lazyload" data-original="https://qiunai.github.io/image/a23.jpeg" style="background-size: cover; 
+                                            <a href="/2021/05/04/%E7%BE%8E%E5%9B%BE%E5%B8%85%E9%94%85/" class="lazyload" data-original="/../image/a86.jpeg" style="background-size: cover; 
             background-position: center center;">
                                             </a>
                                             
@@ -1864,7 +2243,7 @@
                     </section>
                     
   <!-- <nav class="page-nav">
-    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next</a>
   </nav> -->
   <div class="page-nav">
     
@@ -1874,17 +2253,28 @@
       </a>
     
     <div class="page-info">
-        <div class="page-info-text">2 / 2</div>
+        <div class="page-info-text">2 / 4</div>
     </div>
     
+      <a href="/page/3/"
+         class="page-nav-next">
+          <span class="mr-5">下一页</span><i class="fa fa-angle-right"></i>
+      </a>
+      
   </div>
 
 
                         <!-- 雪花和花瓣特效 -->
                         
                             
-                                    <script src="/js/snow.js"></script>
-                                    
+                                <script type="text/javascript">
+                                    //只在桌面版网页启用特效
+                                    var windowWidth = $(window).width();
+                                    if (windowWidth > 768) {
+                                        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+                                    }
+                                </script>
+                                
                                         
 
                                                             
