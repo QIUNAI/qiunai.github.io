@@ -19,14 +19,17 @@ $(window).on('scroll', function() {
 
                 // nav.removeClass('header-bg-color');
                 nav.removeClass('header1');
+                //$('dark').fadeOut();
                 $('header').fadeIn();
+                //nav.removeClass('header2');
+
                 //nav.removeClass('header2');
             }
             if (e.wheelDelta < 0) { //当滑轮向下滚动时 
 
                 //nav.addClass('header-bg-color');
                 nav.addClass('header1');
-
+                //nav.addClass('header2');
                 $('header').fadeOut(1000);
                 //nav.addClass('header2');
             }
