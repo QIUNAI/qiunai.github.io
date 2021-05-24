@@ -1,0 +1,3073 @@
+<!DOCTYPE html>
+<html>
+
+
+    
+
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8">
+            <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+                <title>
+                    第7章 调整：一站式在线生活 | Qiunai Monster
+                </title>
+
+                
+                    
+<link rel="stylesheet" href="/js/aos/aos.css">
+
+                        
+
+                            <link rel="icon" type="image/jpeg" href="/../image/purpose.jpg">
+                            <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+                            <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+                            
+                                    
+<link rel="stylesheet" href="/css/animate.min.css">
+
+                                        
+<link rel="stylesheet" href="/css/style.css">
+
+
+                                            
+                                                
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+                                                    
+                                                        
+                                                            
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+                                                                
+                                                                    <style>
+                                                                        @media (max-width: 992px) {
+                                                                            #waifu {
+                                                                                display: none;
+                                                                            }
+                                                                        }
+                                                                    </style>
+                                                                    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+                                                                    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+        <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Qiunai Monster" type="application/atom+xml">
+</head>
+    <script src="/js/jquery3.5.1.js"></script>
+    <script src="/js/vue2.6.11.js"></script>
+    <link href="/js/danmu/barrager.css" rel="stylesheet">
+    <script src="/js/danmu/jquery.barrager.js"></script>
+
+    <body>
+        <!-- 页面预加载动画 -->
+
+            <!-- 判断是否为黑夜模式 -->
+            <script>
+                let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+                if (isDark) {
+                    $(document.body).addClass('darkModel');
+                }
+            </script>
+
+            
+<header class="header " id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/../image/purpose.jpg" alt="logo">
+      <h3 class="drawer-box-head_title">Qiunai Monster</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(1)">
+                <span>
+                  
+                    <i class="fa fa-archive"></i>
+                  
+                  <span class="name">归档</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(1)">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
+                <span>
+                  
+                    <i class="fa fa-tags"></i>
+                  
+                  <span class="name">标签</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(2)">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85">
+                    
+                    <span>青春爱情</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F">
+                    
+                    <span>故事人生</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F">
+                    
+                    <span>人生感悟</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87">
+                    
+                    <span>耽美甜文</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%96%87%E5%AD%A6">
+                    
+                    <span>文学</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
+                <span>
+                  
+                    <i class="fa fa-list"></i>
+                  
+                  <span class="name">分类</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(3)">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%9B%BE%E5%BA%93">
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B">
+                    
+                    <span>亲情故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%BA%E7%94%9F%E6%95%85%E4%BA%8B">
+                    
+                    <span>人生故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C">
+                    
+                    <span>未解之谜</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                <span class="name">关于</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
+                <span>
+                  
+                  <span class="name">BLOG</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(5)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://aatrowen.gitee.io/">
+                    
+                    <span>Aattrowen</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.zwying.com/">
+                    
+                    <span>秦枫鸢梦</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.cutewo.com">
+                    
+                    <span>萌宇</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://shoka.lostyu.me/">
+                    
+                    <span>Yume Shoke</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                  <span class="name">社区</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.chzu.edu.cn/">
+                    
+                    <span>滁州学院</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://210.45.160.108/">
+                    
+                    <span>CHZUOJ</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://github.com/">
+                    
+                    <span>github</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://gitee.com/">
+                    
+                    <span>gitee</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
+                    
+                    <span>简书</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.csdn.net/">
+                    
+                    <span>CSDN</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.oschina.net/">
+                    
+                    <span>OSCHINA</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://segmentfault.com/">
+                    
+                    <span>segmentfault</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://juejin.cn/">
+                    
+                    <span>掘金</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+                <span>
+                  
+                  <span class="name">娱乐</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(7)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2Fu%2F7479361306%2Fhome%3Fwvr%3D5">
+                    
+                    <span>微博</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/">
+                    
+                    <span>w3cschool</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.runoob.com/">
+                    
+                    <span>菜鸟编程</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
+                <span>
+                  
+                  <span class="name">视频</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(8)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://video.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(9)">
+                <span>
+                  
+                  <span class="name">游戏</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(9)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(9)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>游侠网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.962.net/">
+                    
+                    <span>乐游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://2048game.com/">
+                    
+                    <span>2048</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(10)">
+                <span>
+                  
+                  <span class="name">more</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(10)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(10)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.iloveimg.com/zh-cn">
+                    
+                    <span>iloveimg</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ilovepdf.com/zh-cn">
+                    
+                    <span>ilovepdf</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.addog.vip/">
+                    
+                    <span>addog</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wannengrun.com/zh/#seeSome">
+                    
+                    <span>工具</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.imcloudapp.com/">
+                    
+                    <span>云上应用</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wht.im/">
+                    
+                    <span>万花筒</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ifanr.com">
+                    
+                    <span>爱范儿</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://m.zcool.com.cn">
+                    
+                    <span>站酷</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.uisdc.com/">
+                    
+                    <span>优设</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+        <li class="drawer-box-content_item">
+          <a target="_blank" rel="noopener" href="https://github.com">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span>Github</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/../image/purpose.jpg" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">Qiunai Monster</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/" class="menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-archive"></i>
+                
+                <span class="name">归档</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-tags"></i>
+                
+                <span class="name">标签</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85">
+                    
+                    <span>青春爱情</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F">
+                    
+                    <span>故事人生</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F">
+                    
+                    <span>人生感悟</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87">
+                    
+                    <span>耽美甜文</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%96%87%E5%AD%A6">
+                    
+                    <span>文学</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-list"></i>
+                
+                <span class="name">分类</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%9B%BE%E5%BA%93">
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B">
+                    
+                    <span>亲情故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%BA%E7%94%9F%E6%95%85%E4%BA%8B">
+                    
+                    <span>人生故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C">
+                    
+                    <span>未解之谜</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                <span class="name">关于</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">BLOG</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://aatrowen.gitee.io/">
+                    
+                    <span>Aattrowen</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.zwying.com/">
+                    
+                    <span>秦枫鸢梦</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.cutewo.com">
+                    
+                    <span>萌宇</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://shoka.lostyu.me/">
+                    
+                    <span>Yume Shoke</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">社区</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.chzu.edu.cn/">
+                    
+                    <span>滁州学院</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://210.45.160.108/">
+                    
+                    <span>CHZUOJ</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://github.com/">
+                    
+                    <span>github</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://gitee.com/">
+                    
+                    <span>gitee</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
+                    
+                    <span>简书</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.csdn.net/">
+                    
+                    <span>CSDN</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.oschina.net/">
+                    
+                    <span>OSCHINA</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://segmentfault.com/">
+                    
+                    <span>segmentfault</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://juejin.cn/">
+                    
+                    <span>掘金</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">娱乐</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2Fu%2F7479361306%2Fhome%3Fwvr%3D5">
+                    
+                    <span>微博</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/">
+                    
+                    <span>w3cschool</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.runoob.com/">
+                    
+                    <span>菜鸟编程</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">视频</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://video.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">游戏</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>游侠网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.962.net/">
+                    
+                    <span>乐游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://2048game.com/">
+                    
+                    <span>2048</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">more</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.iloveimg.com/zh-cn">
+                    
+                    <span>iloveimg</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ilovepdf.com/zh-cn">
+                    
+                    <span>ilovepdf</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.addog.vip/">
+                    
+                    <span>addog</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wannengrun.com/zh/#seeSome">
+                    
+                    <span>工具</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.imcloudapp.com/">
+                    
+                    <span>云上应用</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wht.im/">
+                    
+                    <span>万花筒</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ifanr.com">
+                    
+                    <span>爱范儿</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://m.zcool.com.cn">
+                    
+                    <span>站酷</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.uisdc.com/">
+                    
+                    <span>优设</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+      </ul>
+      
+        <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+        
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <!-- <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div> -->
+        <h2>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">Search</span>
+          </span>
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="Please enter keywords"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+  <a target="_blank" rel="noopener" href="https://github.com" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
+</header>
+                <main class="main" style="margin-top: 0;">
+                    
+ <!-- prismjs 代码高亮 -->
+ 
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'scale' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '600000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| '../image/a38.jpeg,../image/a22.jpeg,../image/a29.jpeg,../image/a38.jpeg,../image/a52.jpeg,../image/a61.jpeg,../image/a66.jpeg,../image/a94.jpeg';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/../image/d93.jpeg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+    <div class="title-box">
+      
+        <span class="title" id="post-detail-header-title"></span>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+          <script>
+            var typed = new Typed("#post-detail-header-title", {
+              strings: ['第7章 调整：一站式在线生活'],
+              startDelay: 100,
+              typeSpeed: 100,
+              loop: false,
+              backSpeed: 50,
+              showCursor: false
+            });
+          </script>
+        
+    </div>
+  
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2021-05-19</span>
+      </div>
+      
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          <i class="iconfont icontag"></i>
+          
+            <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BC%A0/" class="">
+              腾讯传
+            </a>
+          
+        </div>
+        
+        
+      </div>
+      <div class="post-content">
+        <p>战略性决策的最终产物是虚假而单纯的，企业将市场与产品结合起来，通过新的要素组合，抛弃一些旧东西，并从现有的地位扩张而达成新目标。</p>
+<p>——伊戈尔·安索夫（美国管理学家）</p>
+<p>在未来几年，马化腾试图全面接管中国网民的网络生活。</p>
+<p>——《互联网周刊》，2006年1月</p>
+<p>“虚拟电信运营商”的幻灭</p>
+<p>在相当长的时间里，马化腾对腾讯的战略规划是建立在“想象”基础上的。</p>
+<p>随着QQ用户数的增加，他一度试图搭建一个开放式的“黄金平台”。2001年1月，在QQ注册用户超过4000万之际，马化腾对《中国计算机报》记者说：“腾讯的战略是架构一个平台，欢迎各个垂直行业，如游戏、资讯、电子商务、ISP、IP电话等架构在上面，构成一个包罗万象的应用环境。到那时，QQ既是一个即时通信工具，又能给它的用户提供更多实用的商业资讯，这样，QQ就成了一个‘黄金平台’。”</p>
+<p>这个战略还没有来得及实施，中国电信产业的变局就为腾讯打开了另外一扇门，对于在“移动梦网”业务中大获其利的腾讯，外界猜测其会很快进入电信领域，实行“虚拟电信运营商”战略。</p>
+<p>早在2000年9月，为了推进固定电话与移动电话的业务分家，信息产业部颁布《电信管理条例》，将电子邮件、语音信箱、在线信息存储和检索、电子数据交换、在线数据处理与交易处理、增值传真、互联网接入与信息服务、可视电话会议服务等列为电信增值服务的内容，将转售电信业务列为基础电信业务的一类。这一新条例被认为是电信管制开放的一个信号，北京邮电大学教授吕廷杰在当时便评论说：“新条例是向网络元素出租的方向发展，这就导致了虚拟运营商的出现成为不可避免的潮流，有可能促成中国电信产业可操作性的竞争。”</p>
+<p>不久之后，“一无所有”的中国移动公司便以不寻常的开放姿态，推出“移动梦网”业务，轰开了短信增值服务的大门。到2003年前后，通过梦网项目“曲线”进入电信领域的民间公司清晰地看到了一种新的可能性。网易和腾讯相继提出成为“虚拟电信运营商”的战略目标。</p>
+<p>2003年9月，腾讯与上海电信合作，推出“电话QQ”业务，用户拨通96069或上网登录“电话QQ”的网站页面，获取QQ账号后，根据语音提示，便可以与普通电话相联通，公告称：“这一业务的开放范围包括上海电信所属的所有电话门类，以及移动和联通的手机用户、铁通和网通的固定电话用户。电话QQ业务免收开户费和信息费，使用固定电话或卡类电话的资费分别与现行普通电话、卡类电话的资费标准相同。”也就是说，腾讯通过与上海电信的合作，进入了最核心的话音业务领域，由QQ直拨普通电话，只剩一步之遥。</p>
+<p>2004年，丁磊在网易泡泡的新版本中植入了网络电话的技术，媒体报道认为：“一旦政策允许，网易可以通过点数卡或泡泡‘金币’支付通话费用。这时候，点数卡就变成了电话充值卡，网易将有机会成为一个真正意义上的虚拟电信运营商。”</p>
+<p>腾讯、网易的这些行动引起了垄断的国有电信企业的集体警惕。2005年7月，信产部下发通知，明确规定：“除中国电信和中国网通能够在部分地区进行电脑到电话（PC to Phone）方式的网络电话商用试验外，任何单位和个人都不得从事这项业务。”</p>
+<p>民间互联网企业的“虚拟运营商”之梦就此破灭。</p>
+<p>通过“移动梦网”实现了阶段性战略目的的中国移动也开始“收网”。后来的事实表明，开始于2004年下半年的内容服务商整顿，最终成为一次清逐行动，中国移动从此关闭了合作开放的大门。当国有的电信运营商用政策管制的手段，将网易和腾讯阻挡在门外的同时，它们自身其实也“自我阉割”了创新进取的动力。在未来的几年里，它们靠政策的庇护赚得盆满钵满，一直到2012年年底，腾讯用微信再次从一个意想不到的角度对它们的电信垄断提出了挑战。</p>
+<p>被中国移动“驱逐”的日子</p>
+<p>从2004年下半年开始，腾讯的无线增值业务就遭受到严重的冲击。马化腾后来说：“无线增值业务在腾讯的业务收入中占比太高，而我们与电信运营商的业务关系又很紧密，在清理过程中，我们的压力也许是最大的。”</p>
+<p>在持续的“不活跃用户”清理行动中，短信用户数量出现了急剧的缩水。</p>
+<p>很多年后，刘成敏仍对当时的景象心有余悸，他谈到了一个细节：“2004年10月，我们突然接到中国移动数据部的电话，要求立即到京谈事。到了北京，他们就把一张新的协议书递到了我们面前。中国移动提出要重新商议‘161移动聊天’的分成比例，否则就中止这一项目的合作。‘161移动聊天’是无线增值业务中的一个明星项目，占到了业务总收入的三成左右。因为所有的通道资源都在对方那里，我们几乎没有任何讨价还价的余地。”</p>
+<p>12月，中国移动宣布与腾讯合作开展的“161移动聊天”业务协议到期，分成比例重新商议，根据新的规则，腾讯每月净利润将大幅减少约400万元人民币，一年高达4800万元。此外，中国移动还逼迫腾讯调整了短信收入的分成比例，从15比85调整为5比5，进一步压缩了腾讯的利润空间。</p>
+<p>受到这些不利消息的影响，联交所的腾讯股价在低位徘徊，投资人信心缺失。2005年4月，腾讯董事会为了表达信心，不得不宣布回购占已发行股本10%的股票，按当时股价计算需要约9.74亿港元。到11月，腾讯又宣布了一项金额最高为3000万美元的股票回购计划。</p>
+<p>到2006年，中国移动再出“撒手锏”，直接对移动QQ动手。</p>
+<p>腾讯之所以能够在“移动梦网”项目中获得最大、最稳定的收益，关键在于庞大的QQ用户基数，因此它对运营商的依赖度比其他内容服务商都要小得多。其中，移动QQ是最核心的产品，拥有700万的用户，占到了腾讯全部短信用户的七成左右。过去几年里，中国移动对即时通信工具一直垂涎三尺，在它的规划中，如果能够拥有一款属于自己的、类似于QQ的产品，便可以顺利地向运营商与内容供应商的结合转型，由此形成一个闭环的、无须与任何其他公司分利的业务模型。</p>
+<p>到2006年年初，两家终于到了摊牌的时刻。中国移动自行外包开发了一款名为“飞信”的即时通信工具，同时向腾讯提出了两个强制性要求：第一，移动QQ与飞信进行“业务合并”，否则，将把移动QQ从梦网业务中踢出；第二，整个QQ体系与飞信“互联互通”。</p>
+<p>由于担心用户体验不佳，而且成本费用也难以分摊，腾讯以条件不成熟为理由拒绝了中国移动。</p>
+<p>6月，飞信测试版上线，中国移动宣布：“飞信绝非只是一个产品那么简单。它是未来战略的重要一步，通过飞信平台，中国移动可以推出许多增值服务，如在线游戏、在线购物、虚拟社区、手机支付等。”同时，中国移动发布了《关于规范“移动梦网”聊天类业务的通知》，内容是：对于现存的聊天社区类梦网业务，不再与此类业务开展任何形式的营销合作；移动QQ、网易泡泡将被允许开展到2006年年底，相关SP的合作协议续签到这一时间点终止。</p>
+<p>2006年12月29日，就在终止合作的最后一天，腾讯在香港发布公告，移动QQ将与飞信在6个月内“合并”，其业务将逐步过渡到飞信平台，过渡期的产品被称为“飞信QQ”。</p>
+<p>在历时两年半的清逐行动中，腾讯赖以为获利之本的无线增值业务遭遇到了空前的打击。</p>
+<p>在整个2005年度，腾讯总收入同比增长24.7%，至人民币14.264亿元；净利润增长10%，至人民币4.854亿元。其中，互联网增值服务收入同比增长79.2%，在总收入中的占比由38.4%上升到了55.1%，而无线增值服务收入则同比下降了19.3%，在总收入中的占比从上一年的55.6%下降到了36.3%，首次被互联网增值业务超过。</p>
+<p>到2006年3月，腾讯宣布第三次回购股票，回购金额最高达3000万美元。为了增加收入，腾讯还收购了无线增值服务提供商卓意麦斯（Joyman）科技有限公司100%的股权。到年底，无线增值业务的收入由5.17亿元增到7亿元，其中卓意麦斯贡献了1亿元，年度财报承认“收入增加主要反映来自卓意麦斯所提供的基于内容的短信服务收入的增加”。而在公司的全部收入中，无线增值业务的占比继续下滑到25.0%，互联网增值业务的占比则上升到了65.2%。</p>
+<p>在手机上“自立门户”</p>
+<p>中国移动对昔日合作伙伴的“清逐”，再一次证明了“入口”在信息产业中的不可挑战的地位：谁拥有了“入口”，谁就拥有了话语权和资源配置权。马化腾在后来对拥有入口级产品的企业十分警惕，其教训及心得应是得自于此。</p>
+<p>在政策性排挤之下，“寄生”于梦网的内容服务商出现了集体雪崩的景象，各家慌乱纷飞，作鸟兽散。其中最为坚决的是丁磊，网易及早撤出，躲进了网络游戏的“避风港”。最为狼狈不堪的是“SP之王”、在香港上市不久的TOM，在短信收入大幅下滑的时刻，它“剑走偏锋”，推出了一些灰色业务，调查记者赵何娟在《天下有贼》一书中披露：“TOM最出名的就是在北京郊外租了一栋房子，雇用了上百个女子，通过1259∗的电话号码进行陪聊，聊的都是黄色内容。”这种黄色陪聊有一个非常文雅的专业名称：互动式语音应答（IVR）业务。几年后，TOM一蹶不振，其他的内容服务商，譬如空中网、掌上灵通等也相继衰落。</p>
+<p>与网易或TOM相比，腾讯的处境稍稍好一些，然而也可谓危急。</p>
+<p>在过去的几年里，腾讯决策层一直对SP业务保持着一种克制的态度，马化腾之所以“一意孤行”，相继投入游戏、门户等业务也与内心的恐惧有关。然而，无线业务部门表现出强烈的自救欲望，在巨大的业绩压力之下，市场营销部提出了一个折中的方案：“如果担心灰色收入影响到腾讯的声誉，那么，是否可以在体系之外收购或另建一家新的公司，即便出问题，也能起到防火墙的作用？”这一提议在总办会上引起了激烈的争执，马化腾在2005年年底下决心制止了这一计划，其直接后果是导致了部门负责人唐欣的离职。</p>
+<p>“那时真的很艰难，看上去几乎无路可走。短信是我们当时主要的收费渠道。”马化腾日后回忆说。在再三斟酌之后，他决定“回到腾讯的核心能力”，利用QQ资源，在移动市场上重新布局。</p>
+<p>2006年年初，顶替唐欣主管营销业务的刘成敏陪同马化腾秘密会晤中国联通总裁，试图改换门庭，另谋战略合作。马化腾向联通高层演示了一款新研发成功的一键通（PTT，Push-to-Talk）功能，这是一种新的移动技术，在美国高通提供的Brew移动平台上运行，可以快速地进行“一对一”或者“一对多”通话，就像使用对讲通话机一样——这便是2012年的微信“对讲”功能的雏形。马化腾希望与联通合作，在联通手机中内置QQ，向用户提供一键通服务，以此与中国移动形成差异化竞争。联通拒绝了腾讯的建议，它当时的战略重心是CDMA业务，而联通版的即时通信工具“超信”也发布在即，QQ对联通的利用价值似乎不大。</p>
+<p>在合作未果的情况下，马化腾迅速做出了自立门户的决策。2006年，腾讯相继推出超级QQ和手机QQ两大产品。</p>
+<p>超级QQ是进化版的移动QQ，它对用户提供短信包月服务，每月费用为10元，腾讯将它与电脑端的QQ号码实现了无缝对接，提供菜单式服务，用户可以在手机上累积QQ在线时长、短信设置QQ资料，此外则有收看资讯、天气、笑话等。后来，腾讯更把QQ会员的特权功能植入，推出了QQ特权、游戏特权、休闲特权和生活特权等4大类100多项VIP特权服务。刘成敏称之为“短信门户”。</p>
+<p>手机QQ是安装在手机上的QQ软件，操作界面类似电脑版QQ。腾讯与诺基亚、摩托罗拉等手机制造商合作，在其手机中预装软件。在一开始，手机QQ收取每月5元的服务费，后来取消，所有用户均可以免费下载和使用。腾讯的收入主要来自于简单的手机游戏和短信增值服务。</p>
+<p>超级QQ和手机QQ在2006年的出现，有相当重要的战略意义。</p>
+<p>腾讯借此摆脱了对中国移动的“入口”依赖，建立了完全属于自己的两个移动门户。到2007年年底，腾讯终于走出了“移动梦网”的清理阴影，移动增值业务收入恢复性地突破8亿元人民币。在圣诞晚会上，无线业务部门的员工表演了一个小品，“地主傻儿子企图强娶喜儿，最后喜儿家里凭借家资殷实、财大气粗，拒掉了这桩不对等的婚事”。据员工回忆：“剧情高潮处，大屏幕镜头切换到了正在台下观看节目的无线业务高级执行副总裁刘成敏脸上，刘成敏咧着嘴开怀大笑。”</p>
+<p>另外一个尤为深远的意义是，手机QQ为腾讯在日后的智能手机时代赢得了战略性的先机，在后来的几年里，无线业务部门下属的3G产品中心相继开发出手机QQ游戏大厅（2006年）、手机腾讯网（2006年）、手机QQ浏览器（2007年）以及手机安全管家（2010年），形成了一个成体系的移动门户矩阵。2013年5月，已经退休的刘成敏在他的北京寓所对我说：“腾讯在手机端的布局和投入比所有的互联网公司都要早，而且要早很多年。在当年，乔布斯的iPhone还在实验室里，很多人看到了智能手机的未来，可是谁也不知道它将以怎样的方式引爆。我们是被逼到了一条正确的道路上。”</p>
+<p>新战略：“像水和电一样融入生活当中”</p>
+<p>在更多的时候，战略转型是激烈竞争的结果，而未必是事先成熟规划的产物。</p>
+<p>与中国移动在梦网项目上的争执，让马化腾不得不放弃了“虚拟电信运营商”的战略企图，转而回到互联网，重新寻找定位。这时候，他非常需要在腾讯内部找到一个可以谈战略的人。</p>
+<p>刘炽平正式到飞亚达大厦上班，是2005年春节过后。他搬进一间空旷的办公室，除了一个秘书，没有人向他汇报任何事宜，连马化腾也不清楚，“首席战略投资官”的日常工作是什么。刘炽平说：“我管三件没有人管的事情，一是战略，二是并购，三是投资者关系。”</p>
+<p>他的作用很快显现出来，在腾讯股价风雨飘摇的时候，他多次到香港向机构投资人阐述公司的前景。“把投资者关系做好，你的股价就会有一个比较好的反应，认受度就会提高。”在2005年，在他的建议下，腾讯两次回购股票，以显示信心。他还帮助公司完成了一系列的收购案，其中包括邮箱公司Foxmail、网络游戏公司网域以及内容增值服务商卓意麦斯、网典和英克必成等。“我们还跟金山有接触，我们看好他们在网络游戏和杀毒软件上的能力。”这些都是腾讯之前从来没有尝试，也非常不熟悉的工作。</p>
+<p>“5年商业计划”是初进腾讯的刘炽平拿给外界的第一张证明。2006年年初，他提出了腾讯的“5年商业计划”，描绘了腾讯每一个业务的发展蓝图，制定了一个在当时看来遥不可及的目标，即未来5年内腾讯公司年收入将达到100亿元人民币。</p>
+<p>一组可以类比的数据是，2005年腾讯年收入只有14亿元人民币，在纳斯达克上市的百度年收入为3亿元人民币。当时发展势头最好的是三大门户网站，其中新浪年收入为1.9亿美元，网易为2.1亿美元，搜狐为1.08亿美元。</p>
+<p>后来的事实是，腾讯完成了刘炽平定下的目标，还提前了一年。财报显示，2009年，腾讯公司全年收入突破124亿元人民币。</p>
+<p>更多的时候，刘炽平陪着马化腾“坐而论道”。“常常是我在说，他在听，当时他对很多战略概念并不是非常熟悉，但他有很好的感悟力，往往能举一反三，直接到达问题的核心。”在无数次交流之后，他们达成的共识是，腾讯唯一的核心能力是掌握了人际关系网络，由此出发，向用户提供各种在线生活服务，也许是一条走得通的道路。</p>
+<p>那么如何定义“在线生活”？马化腾与刘炽平创造出了一个新的英文单词——ICEC。I代表Information（信息），C代表Communication（通信），E代表Entertainment（娱乐），C代表Commerce（商务）。“多元化的目的是提供在线生活，在线生活的背后则是社区，上述所有服务都将通过社区串起来。”</p>
+<p>到2005年8月，马化腾第一次向媒体宣布了腾讯的新战略主张：“腾讯希望能够全方位满足人们在线生活不同层次的需求，并希望自己的产品和服务像水和电一样融入生活当中。腾讯已经初步完成了面向在线生活产业模式的业务布局。”在接受《第一财经日报》的采访时，马化腾更具体地谈及了腾讯的企图心：“无线（增值）有100多亿元的盘子，我们必须进去；网游有70多亿元的盘子，腾讯不能放弃；广告有30多亿元的盘子，腾讯不能放弃；腾讯不能放弃的还有搜索、电子商务。”</p>
+<p>“在线生活”的提出，让人们看到了一个前所未见的中国互联网公司。不过，并不是所有人都看好马化腾的新战略，在当时的媒体评论中可以听到担忧的声音。</p>
+<p>《互联网周刊》在一篇题为“马化腾初显强悍：腾讯包办中国人的网络生活”的报道中认为：“马化腾的优势在于其手中相对忠诚的、数以亿计的QQ注册用户，但他的难度在于试图完全由自己提供所有的生活娱乐资源。这意味着手握庞大用户的马化腾有可能面临来自所有互联网公司的竞争，而且极易在多元化的扩张中迷失发展的焦点。”</p>
+<p>互联网评论员马旗戟则提出了两个问题：“第一个问题，‘在线生活’究竟是一个怎样的概念？它有边界吗？边界在哪里？腾讯离边界有多远？而且与其他旧门户相比，腾讯网也有极其明显的弱点，那么腾讯网准备如何让‘在线生活’更完美？第二个问题更抽象，现实生活本身就是大平台，但至今没有人，也没有机构可以实现“生活—营销”的全面融会贯通，那么‘在线生活’靠什么能够做到？”</p>
+<p>马化腾对此的解释是：“从表面上看，大家可能觉得腾讯什么都想做，但实际上，我们一切都是围绕着以即时通信工具QQ为基础形成的社区和平台来做的。”</p>
+<p>不过即便如此，在企业战略理论上，这仍然是非常危险的。迈克尔·波特在《竞争优势》一书中曾经对“战略性关联”提出过警告，他认为，某些看上去很美妙的关联并不增强竞争优势，即使关联能创造明显的优势，但是在实践中一系列难以克服的组织障碍也仍然会妨碍关联的获取，这些障碍包括组织结构、文化和管理结构等等。</p>
+<p>后来的事实也证明，腾讯将发生一系列的组织及管理变革，其主旨都是为了适应“在线生活”战略。</p>
+<p>第二次组织架构调整</p>
+<p>在新战略提出之后，首先面临挑战的便是现有的组织结构。</p>
+<p>在2001年的第一次架构调整中，公司的业务部门被切分为研发线（R线）和市场线（M线），但是随着产品类型的增加，这种模式已经变得不适应了，前线的项目越来越多，后方的研发挤成一团。刘炽平回忆说：“我那时粗粗算了一下，全公司比较重要的产品线就超过了60个，每家都对技术有适时性的需求，递交到R线之后，几乎无法安排，这已经影响到了正常运转。”在QQ秀项目中，R线与M线已被打通，实行了产品经理制，而之后的新闻门户、搜索以及网游，无一不是研发、内容与运营的重新人力组合。</p>
+<p>因此，腾讯在2005年10月24日下发“深腾人字38号”文件，宣布进行第二次架构调整。公司的组织架构被划分为8个序列，分别由5个业务部门和3个服务支持部门组成。</p>
+<p>B0：企业发展系统，下属国际业务部、电子商务部、战略发展部、投资并购部，负责战略、投资并购及相关业务，由首席战略投资官刘炽平兼管。</p>
+<p>B1：无线业务系统，下属无线产品部、移动通信部、电信事业部和各地办事机构，负责与电信运营商相关的业务，负责人为刘成敏。</p>
+<p>B2：互联网业务系统，下属互联网研发部、社区产品部和新成立的数字音乐部，负责QQ及相关业务，负责人为吴宵光。</p>
+<p>B3：互动娱乐业务系统，下属互娱研发部、互娱运营部、渠道营销部，负责网络游戏业务，负责人为任宇昕。</p>
+<p>B4：网络媒体业务系统，下属网站部、广告销售部、搜索产品中心，负责门户网站业务，由首席信息官许晨晔兼管。</p>
+<p>O线：运营支持系统，下属运营支持部、系统架构部、安全中心、管理工程部、研发管理部和客服部，负责服务器、数据库及安全业务，负责人为李海翔。</p>
+<p>R线：平台研发系统，下属即时通信产品部、深圳研发中心、广州研发中心，负责技术研发，由首席技术官张志东兼管。</p>
+<p>S线：职能系统，下属行政、人事、财务、法律、投资者关系、内审、公关及董事会办公室，由首席行政官陈一丹兼管。</p>
+<p>刘成敏、吴宵光、任宇昕和李海翔等人被提拔为执行副总裁。</p>
+<p>此次调整意味着事业部制度的形成。各事业部以产品为单位，专案开发，分工运营，从此，腾讯“一分为多”“兄弟爬山，各自努力”。从业务份额的构成来看，B1和B2为最主要的收入部门，几乎占到全公司总收入的八成以上。B4的新闻门户业务在此时尚不起眼，但因战略上的意义而受重视。比较特殊的是B3系统。在2005年10月前后，腾讯的棋牌游戏用户已经超过联众，但是并没有找到真正的爆发点。在决策层看来，网游的前景值得期待，因此将之独立成军，原本属于次级单位的互动娱乐事业部被整体提拔，日后证明，这是一个成功的战略安排。</p>
+<p>在五大业务系统之外，马化腾认为，电子商务和搜索也是腾讯必须涉足的领域，因此在2005年中期便悄悄组建团队，将之分别隶属于B0和B4系统，期待成熟之后，再行分离。</p>
+<p>在这个架构中有一个非常微妙的安排：腾讯所有的业务基础都来自于流量，然而，在组织架构中并没有一个类似于“总参谋部”这样的机构来进行流量的统筹配置。这一职权其实被掌握在了“总办”手上。也就是说，腾讯的组织架构颇类似于“大权独揽，小权分散”的模式，各事业群的负责人在业务拓展上被授予了最大的权限，但其命脉始终由最高决策层控制。</p>
+<p>在一次内部高管会上，马化腾谈及了调整后的管理理念，他说：“未来5年，腾讯最大的挑战就是执行力。市场怎么样，大家都看得见，但不一定都拿得住。通过完整的指标体系和组织结构保证压力的传导，通过严格考核和末位淘汰制留住好的人才，而所有这些，能把腾讯打造成一个不依赖个人精英，而是依靠体制化动力的成熟体系。”</p>
+<p>在这部不太长的腾讯史上，2005年是一个转折性的年份，在赖以为源的无线增值业务遭遇瓶颈的危急时刻，马化腾团队进行了激进的战略调整，“在线生活”战略的提出以及第二次组织架构调整带有标志性的意义。它意味着这家由即时通信工具起家的企业，在创业7年之后，携带着数亿用户、十几亿元现金以及他们年轻的雄心，踏上了一条充满了不确定性的多元化征途。从此之后，一个陌生的、野心勃勃的腾讯悄然呈现在人们的面前，它几乎涵盖了当时所有的互联网产品形态，在每一个细分领域都蓄势待发。5个业务系统可以被看成5家独立的公司，它们如同5只“章鱼之手”，各凭其力，伸向所有的竞争对手。在此之前，没有一家中国公司或美国公司达到过那个“提供一切在线生活服务”的目的地，它看上去更像是一个不可能的任务。随后腾讯所遭遇到的种种质疑、攻击均与此有关。</p>
+<p>为了实施“在线生活”的战略，腾讯自然进入了互联网的各个领域。而腾讯各业务系统强而有效的执行力，对业务产生了积极的推动，其“斐然成绩”不可避免地对同行产生了冲击。此时此刻，腾讯就像一个精力充沛的年轻人，活跃在互联网的各个领域。</p>
+<p>蚂蚁搬家：与淘宝的一场遭遇战</p>
+<p>“马化腾到底想要干什么？”这是很多人在问的问题。</p>
+<p>2005年9月10日，马化腾前往杭州参加第五届“西湖论剑”，马云、丁磊、马化腾、汪延和张朝阳出现在同一场论坛上，主持人、经济学家张维迎用他的陕北普通话问台上列位：“除了自己的企业之外，你最看好谁的企业？”这是一个很微妙的问题，沉吟片刻之后，马云选了丁磊，丁磊选了马化腾，马化腾选了汪延，汪延选了马化腾，张朝阳选了丁磊。这样的答案当然有游戏和情面的成分在内，不过，被选中两次的马化腾似乎已成了目标和“假想敌”之一。</p>
+<p>在当时同场的5人中，马化腾与丁磊、汪延、张朝阳均有竞争关系，看上去唯一与腾讯没有业务交集的是马云的阿里巴巴。然而，仅仅两天后，情势就发生了变化。</p>
+<p>9月12日，腾讯发布独立域名的电子商务交易平台拍拍网（<a target="_blank" rel="noopener" href="http://www.paipai.com),一个月后,与之配套的在线支付工具财付通上线运营,这被媒体看成是马化腾对马云的宣战.从拍拍上线开始,qq流量的导入效应就非常明显,有超过六成的拍拍用户是从qq的各个界面被吸引过去的.2006年3月13日,腾讯宣布拍拍网已拥有700万注册用户,并在这一天正式进入商业运营.同时,腾讯发布了搜索网站搜搜网(www.soso.com),这意味着腾讯在电子商务和搜索两大领域内均将推行封闭战略./">www.paipai.com），一个月后，与之配套的在线支付工具财付通上线运营，这被媒体看成是马化腾对马云的宣战。从拍拍上线开始，QQ流量的导入效应就非常明显，有超过六成的拍拍用户是从QQ的各个界面被吸引过去的。2006年3月13日，腾讯宣布拍拍网已拥有700万注册用户，并在这一天正式进入商业运营。同时，腾讯发布了搜索网站搜搜网（www.soso.com），这意味着腾讯在电子商务和搜索两大领域内均将推行封闭战略。</a></p>
+<p>两个月之后，拍拍与淘宝之间的一场遭遇战突然爆发。</p>
+<p>2006年5月10日，在与eBay的市场争夺中胜出的淘宝网急于变现，马云提出了一项名为“招财进宝”的收费服务，宣布将为那些愿意通过付费推广获得更多订单的淘宝卖家提供竞价排名服务，这一决定违背了马云在前一年做出的“淘宝三年免费”的承诺，引发淘宝卖家激烈反对，卖家自发组织了一个“反淘宝联盟”，鼓动在六一节举行万人集体罢市。</p>
+<p>5月15日，拍拍网推出了“蚂蚁搬家，搬出美好前程”的促销活动，卖家只要在拍拍网成功导入自己在第三方交易网站的参考信用度，铺货20款以上，就很有机会获得黄金推荐位。同时，买家在拍拍网购买任何商品并通过财付通完成付款，则可获得最高达600元的购物券奖励。针对淘宝的“招财进宝”计划，拍拍网宣布“未来三年完全免费”。</p>
+<p>拍拍的斜刺杀出，在焦头烂额的马云看来无异于“趁火打劫”。他表现得非常愤怒，在杭州的一次记者见面会上，他认定腾讯和eBay是这次罢市风波的幕后推手，他直接点出了马化腾的名字，说：“马化腾这招用得很好，这就是竞争的味道。”此外，他还披露“腾讯拍拍网成立之初大量向淘宝挖人”，当记者问及他对拍拍网的看法时，马云认为这是淘宝网的模仿品：“在C2C市场，腾讯拍拍网不过是业余选手，拍拍网走上了永远回不来的路（一味模仿），几年以后它会吞下这个苦果，马化腾也会有这样的后果。”</p>
+<p>对马云的指控，马化腾在接受记者电话采访时表示无辜：“我们私下是很好的朋友，不可能搞这种背后的恶性竞争。”对于腾讯挖淘宝网墙脚的事情，马化腾反驳说：“一来，这种人才流动很正常；二来，从淘宝网过来的人一共也才两三个，谈不上挖墙脚。”就在双方隔空交火的同时，网上开始大量流传《原来骂淘宝的声音是这么出来的！》等帖子，直接点名“腾讯公司雇公关公司攻击淘宝网”。腾讯以“名誉侵权”为由，将登载这一系列匿名文章的千橡公司告上法庭，要求赔礼道歉、消除影响，并索赔500万元。</p>
+<p>在淘宝卖家和拍拍网的双重打压之下，马云选择了妥协，在“‘六一’大罢市”的前夕，5月31日，淘宝网宣布通过全民公投决定“招财进宝”服务的去留，结果投反对票的比例高达63%，导致这一收费服务夭折。</p>
+<p>经此一役，拍拍网声名鹊起，到2007年3月，其交易额超过eBay成为第二大C2C网站。在后来的几年里，淘宝调整收费策略，再没有给拍拍以太多的进击机会，不过，阿里巴巴上下均视腾讯为自己最危险的敌人，马云曾对媒体说：“QQ的确有点可怕，它的攻击总是悄悄的。”</p>
+<p>“全民公敌”马化腾</p>
+<p>2006年5月24日，腾讯发布第一季度财报，显示调整中的公司正在走出“梦网困境”。在这一季度，其总收入为6.453亿元人民币，比上一季度增长50.3%，比去年同期增长114.8%；毛利为人民币4.696亿元，比上一季度增长62.4%，比去年同期增长136.5%；其即时通信注册账户总数达到5.315亿，比上一季度增长7.9%。</p>
+<p>漂亮的业绩令股价当日涨幅达到26%，一扫一年前的颓势。</p>
+<p>然而，就在业绩冲高的同时，质疑与指责也随之而至。</p>
+<p>5月25日，就在季报公布的第二天，《21世纪商业评论》主笔吴伯凡对马化腾进行了采访，写成《企鹅帝国的半径》一文。这是主流财经媒体较早以“帝国”一词来形容扩张中的腾讯，吴伯凡因而提出了一个“管理半径”的问题。</p>
+<p>他写道，腾讯的“事业”被界定为“在线生活”，这显然是一个无远弗届的事业，也意味着腾讯将会“全线开战”。一个僻居深圳、以单一的IM业务起家的小公司正在开疆辟土，建立虚拟世界里的中央帝国。最善意的评论者也会为它担心。正如我们从历史上一个个帝国的兴衰中看到的，开辟疆土是相对容易的，但如果统治能力的半径达不到疆域的半径的话，这样的帝国难以持久。腾讯有没有核心能力？如果有的话，它的核心能力的“发射功率”能够覆盖到它所有“从核心出发”的业务吗？从业务的“空间结构”而言，所有这些业务能相互关联且形成“众星参北斗”之势吗？从业务组合的“时间结构”而言，由“种子产业、苗圃产业、果木产业、枯木产业”形成的业务组合能相互接替、左右逢源吗？果木产业在成为枯木产业之前，能承受如此多的种子和苗圃产业之重吗？</p>
+<p>很显然，这都是一些没有标准答案的问题。彼得·德鲁克将企业管理视为“艺术”而非“科学”，其潜台词便是对不确定性的警告与尊重。在《企鹅帝国的半径》中，吴伯凡从经营战略、核心能力和管理能力三个方面对腾讯提出了疑问，他的结论是，“腾讯现在看上去没有劲敌，但其实有一个劲敌与它形影相随。这个劲敌就是腾讯自己，如果它把握不好它的业务半径和管理半径的话”。</p>
+<p>如果说吴伯凡是站在腾讯的立场上对其“全线开战”的战略提出了警示，那么，另一位财经记者则从行业的角度给予了一个新的、更具耸动性的定义。2006年6月，程苓峰在他供职的《中国企业家》杂志上把腾讯视为“全行业敌人”，他的文章标题是“‘全民公敌’马化腾”，这期杂志很快在互联网业界被广为传阅。</p>
+<p>程苓峰是一位年轻的互联网观察者，他后来入职腾讯，担任腾讯网科技频道的主编，接着又离职成为一个独立的自媒体人。他在6月发表的这篇报道“定义”了腾讯日后的舆论形象。</p>
+<p>程苓峰写道：“在中国互联网，有一个人跟陈天桥、马云、丁磊、张朝阳、李彦宏5个人同时过招。他长相斯文行止儒雅，却被叫作‘全民公敌’，他掌管着中国市值最高的互联网公司。”程苓峰在文章的“导读”部分就进行了这样的描述，进而他一一列举了腾讯所涉足的、几乎无所不包的领域，感叹道：“其实中国互联网横跨多个业务线的企业不在少数，但几乎没有一家互联网公司能在两条以上的业务线中同时做到领先，除了腾讯。”甚至如果把腾讯放置于全球互联网的范围内来观察，它的野心也是令人吃惊的。“互联网‘四大天王’谷歌、雅虎、eBay、MSN干的所有业务，腾讯都干了。”报道称。</p>
+<p>在这篇报道中，程苓峰敏锐地窥视出了腾讯多元化战略中的一个特征：紧盯市场动态，以最快的方式复制成功者模式，利用QQ用户优势进行后发超越。他引述马化腾的话说：“因为互联网市场太新太快，往哪里走都有很多可能。如果由自己来主导可能没有办法证明所选择的就是对的，几个月内都有很多新东西冒出来，凭什么判断哪个是热点？有竞争对手了，人就开始有了斗志；看看别人哪些做得好，哪些做得不好，如果别人杀过来，应该怎么办？是硬顶，还是去别的地方迂回作战？”</p>
+<p>马化腾后来将上述这段话概括为一个策略——“后发是最稳妥的方式”。</p>
+<p>这种后发策略，势必造成两种情形的出现。</p>
+<p>第一，腾讯会被认定为一个“模仿者”而非“创新者”。程苓峰写道：“马化腾不以为然。他说，我不盲目创新，微软、谷歌做的都是别人做过的东西。最聪明的方法肯定是学习最佳案例，然后再超越。我不争第一，没意义。新产品一出来就要保证稳定，不能想怎么改就怎么改，要慎重。”</p>
+<p>第二，腾讯以天下为敌，同时，天下以腾讯为敌。“无论马化腾愿不愿意，几乎所有互联网公司都在立稳脚跟、完成原始用户积累之后自动向腾讯宣战。IM对用户有着邮箱、游戏等其他任何服务都无法比拟的巨大黏性，谁不眼馋？”</p>
+<p>这两种情形在2006年初露端倪，不过日后的演进态势比程文所描述的还要激烈很多倍。程苓峰没有来得及揭示的另外一个事实是，腾讯为了保持后发进攻的优势，必然会在用户资源的垄断上不遗余力。“模仿而不创新”“以天下为敌”和“拒绝开放”便成为腾讯的“三宗罪”。</p>
+<p>曾李青的离开</p>
+<p>任何一家企业在其成长历程中，都会出现若干个“关键时刻”。它们出乎之前的规划，然而又是主动确定的结果，它们被呈现出来的时候往往是陌生的和不可靠的，因而充满了戏剧性。在这一“时刻”的选择，展现了企业家的个人魅力及特质，并决定了这家企业在未来一段时期的命运走向。</p>
+<p>在我看来，在这部腾讯史上，第一个“腾讯时刻”是1999年2月10日，OICQ的发布标志着企业找到了专注的方向，在厮杀激烈的互联网世界里觅到了一寸生存之地。第二个“腾讯时刻”应该是2005年8月，“在线生活”战略的提出意味着腾讯向全能性、生态型企业的重大转型，它日后的所有成就及争议均奠定于此。如果说，在第一个“腾讯时刻”中，马化腾展现了专业和敏锐的一面，那么，在第二个“腾讯时刻”则展现了他的大胆与谋略。</p>
+<p>在每一个“关键时刻”，企业组织内部的业务模块将发生权重变化，组织失衡和权力调整便必然随之出现。2005年秋季之后，随着新的公司战略的制定和第二次组织架构的调整，一场人事上的地震不可避免地发生了。2006年2月，腾讯发布公告，任命刘炽平接替马化腾担任公司总裁，马化腾仍保留董事会主席兼首席执行官职务。刘炽平的工作分工为日常管理和运营。</p>
+<p>这一任命出乎很多观察者的意外，这意味着之前长期负责市场和销售事务的曾李青被边缘化。到2006年的11月，曾李青向董事会提出退休，腾讯在2007年的6月对外宣布聘任他为终身顾问。在离开之前，曾李青请广东的一位知名画家画了一幅《五马图》送给他的伙伴们。五匹神态各异的骏马，绝尘于天地之间，寓意腾讯的五位创始人。马化腾将它挂在飞亚达大厦的三楼会议室里，腾讯内部很少有人知道它的来历。</p>
+<p>在过去的8个年头里，曾李青与马化腾、张志东一起构成腾讯的“铁三角”。他们个性迥异，特长鲜明，马化腾擅长产品，张志东擅长技术，曾李青擅长市场，而这三者几乎是一家创业企业必须拥有的核心能力。而陈一丹总掌公司后方，许晨晔则稳定门户网站，在中国的其他互联网企业中，如此互补的创业组合几乎没有出现过。</p>
+<p>尽管是电信专业的出身背景，不过曾李青在行事风格上，却更接近于传统的制造业或服务业人士，在与外界接触时，相比文静腼腆的马化腾，他更像是一个“做决定的人”。早年追随他开拓Q币业务的丁珂记得第一次见到曾李青时的景象：从大楼的另一头，一个硕大的身躯摇摇晃晃地逛了过来，他嗓门很大，套着一件西装，打着领带，可是下面却穿着一条齐膝蓝色短裤。在工程师文化浓烈的互联网公司，风格粗犷的曾李青是一个另类。</p>
+<p>曾李青一手打造了腾讯的市场和营销体系，其角色很像列宁时期的红军创建人托洛茨基，他所领导的无线增值业务团队一度贡献了超过六成的收入。当他离开的时候，腾讯与电信运营商的关系正降到冰点，无线增值业务收入在总收入中的比例已下滑到1/4。很显然，处在转型时期的马化腾更需要一位懂得战略、资本运营以及有国际化视野的助手。</p>
+<p>曾李青在腾讯的最后一项工作，是推荐了网域公司。网域的创始人张岩是他的大学同学：“他在大学时候就知道玩，没想到还玩出了名堂来。有一次我去湖南的网吧做调研，发现很多人在玩网域《华夏》，回来后就建议公司把它买下来。”腾讯以2990万元收购深圳网域19.9%的股权，将《华夏》改造成《QQ华夏》，这一团队后来又开发出《英雄岛》等网游产品。到2010年，腾讯收购网域的全部股份。</p>
+<p>离职后的曾李青在休息半年后复出，创办德迅投资，其英文名为Decent，留有很明显的Tencent痕迹。据说凡是从腾讯出来的人创办新公司，曾李青都愿意听一下他们的计划，有机会就投资一点。2013年5月，他在位于深圳CBD区的卓越中心德迅投资的办公室接待我，谈及马化腾时仍习惯用“大老板”来称呼，在我们交谈的身后书架上，站着一只硕大的布绒QQ企鹅。</p>
+
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>author:  </strong>Qiunai Monster</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>link:  </strong>
+    <a href="/2021/05/19/传奇传记/腾讯传/第7章-调整：一站式在线生活/" target="_blank" title="第7章 调整：一站式在线生活">http://example.com/2021/05/19/传奇传记/腾讯传/第7章-调整：一站式在线生活/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright notice:   </strong>
+      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      reprint polocy. If reproduced, please indicate source!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/../image/c49.jpeg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/05/19/%E4%BC%A0%E5%A5%87%E4%BC%A0%E8%AE%B0/%E8%85%BE%E8%AE%AF%E4%BC%A0/%E7%AC%AC6%E7%AB%A0-%E4%B8%8A%E5%B8%82%EF%BC%9A%E5%A4%B9%E5%87%BB%E4%B8%AD%E7%9A%84%E2%80%9C%E6%88%90%E4%BA%BA%E7%A4%BC%E2%80%9D/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> Prev:
+        <div>第6章 上市：夹击中的“成人礼”</div>
+      </div>
+      
+      <!-- <div class="content">
+        除非一个人摈弃细枝末节，具有更广阔的视野，否则，在科学中就不会有任何伟大的发现。
+——阿尔伯特·爱因斯坦（物理学家）
+上
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/../image/c54.jpeg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/05/19/%E4%BC%A0%E5%A5%87%E4%BC%A0%E8%AE%B0/%E8%85%BE%E8%AE%AF%E4%BC%A0/%E7%AC%AC8%E7%AB%A0-%E6%88%98MSN%EF%BC%9A%E8%8D%A3%E8%AA%89%E4%B8%8E%E5%91%BD%E8%BF%90/" class="post-nav-link">
+      <div class="title">
+        Next: <i class="fa fa-angle-right"></i>
+        <div>第8章 战MSN：荣誉与命运</div>
+      </div>
+      <!-- <div class="content">
+        出于战略上考虑，我选择的第一个征服目标往往不是不堪一击的小公司，而是最强劲的对手。
+——约翰·戴维森·洛克菲勒（美孚石油
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          谢谢你的赏识！
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/../image/alipay.jpg" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/../image/wechat.png" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+      
+        <div id="myComment">
+          
+            <section id="comments" style="padding: 1em; margin: 15px auto;" class="animated bounceInUp">
+    <div id="vcomment" class="comment"></div>
+    <script src="/js/valine/av-min@3.0.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+    <script>
+        var requiredFields = 'nick,mail';
+        requiredFields = requiredFields.split(',');
+
+        var valine = new Valine({
+            el: '#vcomment',
+            notify: false,
+            verify: false,
+            app_id: "qeoYFrrgRoq2HupjYtriKdyx-gzGzoHsz",
+            app_key: "guT4E386tr6xRAkbu99AfDn0",
+            placeholder: "客官，说点什么吧",
+            avatar: "",
+            master: "", //博主邮箱md5
+            tagMeta: ["博主", "小伙伴", "访客"], //标识字段名
+            friends: "",
+            metaPlaceholder: {
+                "nick": "昵称",
+                "mail": "邮箱"
+            },
+            requiredFields: requiredFields,
+            enableQQ: true,
+            // 设置Bilibili表情包地址
+            emojiCDN: '//i0.hdslb.com/bfs/emote/',
+            // 表情title和图片映射	
+            emojiMaps: {
+                "口罩": "https://i0.hdslb.com/bfs/emote/3ad2f66b151496d2a5fb0a8ea75f32265d778dd3.png",
+                "微笑": "https://i0.hdslb.com/bfs/emote/685612eadc33f6bc233776c6241813385844f182.png",
+                "笑": "https://i0.hdslb.com/bfs/emote/81edf17314cea3b48674312b4364df44d5c01f17.png",
+                "呲牙": "https://i0.hdslb.com/bfs/emote/b5a5898491944a4268360f2e7a84623149672eb6.png",
+                "OK": "https://i0.hdslb.com/bfs/emote/4683fd9ffc925fa6423110979d7dcac5eda297f4.png",
+                "星星眼": "https://i0.hdslb.com/bfs/emote/63c9d1a31c0da745b61cdb35e0ecb28635675db2.png",
+                "哦呼": "https://i0.hdslb.com/bfs/emote/362bded07ea5434886271d23fa25f5d85d8af06c.png",
+                "歪嘴": "https://i0.hdslb.com/bfs/emote/4384050fbab0586259acdd170b510fe262f08a17.png",
+                "嫌弃": "https://i0.hdslb.com/bfs/emote/de4c0783aaa60ec03de0a2b90858927bfad7154b.png",
+                "喜欢": "https://i0.hdslb.com/bfs/emote/8a10a4d73a89f665feff3d46ca56e83dc68f9eb8.png",
+                "酸了": "https://i0.hdslb.com/bfs/emote/92b1c8cbceea3ae0e8e32253ea414783e8ba7806.png",
+                "大哭": "https://i0.hdslb.com/bfs/emote/2caafee2e5db4db72104650d87810cc2c123fc86.png",
+                "害羞": "https://i0.hdslb.com/bfs/emote/9d2ec4e1fbd6cb1b4d12d2bbbdd124ccb83ddfda.png",
+                "无语": "https://i0.hdslb.com/bfs/emote/44667b7d9349957e903b1b62cb91fb9b13720f04.png",
+                "疑惑": "https://i0.hdslb.com/bfs/emote/b7840db4b1f9f4726b7cb23c0972720c1698d661.png",
+                "辣眼睛": "https://i0.hdslb.com/bfs/emote/35d62c496d1e4ea9e091243fa812866f5fecc101.png",
+                "调皮": "https://i0.hdslb.com/bfs/emote/8290b7308325e3179d2154327c85640af1528617.png",
+                "喜极而泣": "https://i0.hdslb.com/bfs/emote/485a7e0c01c2d70707daae53bee4a9e2e31ef1ed.png",
+                "奸笑": "https://i0.hdslb.com/bfs/emote/bb84906573472f0a84cebad1e9000eb6164a6f5a.png",
+                "偷笑": "https://i0.hdslb.com/bfs/emote/6c49d226e76c42cd8002abc47b3112bc5a92f66a.png",
+                "大笑": "https://i0.hdslb.com/bfs/emote/ca94ad1c7e6dac895eb5b33b7836b634c614d1c0.png",
+                "阴险": "https://i0.hdslb.com/bfs/emote/ba8d5f8e7d136d59aab52c40fd3b8a43419eb03c.png",
+                "捂脸": "https://i0.hdslb.com/bfs/emote/6921bb43f0c634870b92f4a8ad41dada94a5296d.png",
+                "囧": "https://i0.hdslb.com/bfs/emote/12e41d357a9807cc80ef1e1ed258127fcc791424.png",
+                "呆": "https://i0.hdslb.com/bfs/emote/33ad6000d9f9f168a0976bc60937786f239e5d8c.png",
+                "抠鼻": "https://i0.hdslb.com/bfs/emote/cb89184c97e3f6d50acfd7961c313ce50360d70f.png",
+                "惊喜": "https://i0.hdslb.com/bfs/emote/0afecaf3a3499479af946f29749e1a6c285b6f65.png",
+                "惊讶": "https://i0.hdslb.com/bfs/emote/f8e9a59cad52ae1a19622805696a35f0a0d853f3.png",
+                "笑哭": "https://i0.hdslb.com/bfs/emote/c3043ba94babf824dea03ce500d0e73763bf4f40.png",
+                "妙啊": "https://i0.hdslb.com/bfs/emote/b4cb77159d58614a9b787b91b1cd22a81f383535.png",
+                "doge": "https://i0.hdslb.com/bfs/emote/bba7c12aa51fed0199c241465560dfc2714c593e.png",
+                "滑稽": "https://i0.hdslb.com/bfs/emote/d15121545a99ac46774f1f4465b895fe2d1411c3.png",
+                "吃瓜": "https://i0.hdslb.com/bfs/emote/4191ce3c44c2b3df8fd97c33f85d3ab15f4f3c84.png",
+                "打call": "https://i0.hdslb.com/bfs/emote/431432c43da3ee5aab5b0e4f8931953e649e9975.png",
+                "点赞": "https://i0.hdslb.com/bfs/emote/1a67265993913f4c35d15a6028a30724e83e7d35.png",
+                "鼓掌": "https://i0.hdslb.com/bfs/emote/895d1fc616b4b6c830cf96012880818c0e1de00d.png",
+                "尴尬": "https://i0.hdslb.com/bfs/emote/cb321684ed5ce6eacdc2699092ab8fe7679e4fda.png",
+                "冷": "https://i0.hdslb.com/bfs/emote/cb0ebbd0668640f07ebfc0e03f7a18a8cd00b4ed.png",
+                "灵魂出窍": "https://i0.hdslb.com/bfs/emote/43d3db7d97343c01b47e22cfabeca84b4251f35a.png",
+                "委屈": "https://i0.hdslb.com/bfs/emote/d2f26cbdd6c96960320af03f5514c5b524990840.png",
+                "傲娇": "https://i0.hdslb.com/bfs/emote/010540d0f61220a0db4922e4a679a1d8eca94f4e.png",
+                "疼": "https://i0.hdslb.com/bfs/emote/905fd9a99ec316e353b9bd4ecd49a5f0a301eabf.png",
+                "吓": "https://i0.hdslb.com/bfs/emote/9c10c5ebc7bef27ec641b8a1877674e0c65fea5d.png",
+                "生病": "https://i0.hdslb.com/bfs/emote/0f25ce04ae1d7baf98650986454c634f6612cb76.png",
+                "吐": "https://i0.hdslb.com/bfs/emote/06946bfe71ac48a6078a0b662181bb5cad09decc.png",
+                "嘘声": "https://i0.hdslb.com/bfs/emote/e64af664d20716e090f10411496998095f62f844.png",
+                "捂眼": "https://i0.hdslb.com/bfs/emote/c5c6d6982e1e53e478daae554b239f2b227b172b.png",
+                "思考": "https://i0.hdslb.com/bfs/emote/cfa9b7e89e4bfe04bbcd34ccb1b0df37f4fa905c.png",
+                "再见": "https://i0.hdslb.com/bfs/emote/fc510306bae26c9aec7e287cdf201ded27b065b9.png",
+                "翻白眼": "https://i0.hdslb.com/bfs/emote/eba54707c7168925b18f6f8b1f48d532fe08c2b1.png",
+                "哈欠": "https://i0.hdslb.com/bfs/emote/888d877729cbec444ddbd1cf4c9af155a7a06086.png",
+                "奋斗": "https://i0.hdslb.com/bfs/emote/bb2060c15dba7d3fd731c35079d1617f1afe3376.png",
+                "墨镜": "https://i0.hdslb.com/bfs/emote/3a03aebfc06339d86a68c2d893303b46f4b85771.png",
+                "撇嘴": "https://i0.hdslb.com/bfs/emote/531863568e5668c5ac181d395508a0eeb1f0cda4.png",
+                "难过": "https://i0.hdslb.com/bfs/emote/a651db36701610aa70a781fa98c07c9789b11543.png",
+                "抓狂": "https://i0.hdslb.com/bfs/emote/4c87afff88c22439c45b79e9d2035d21d5622eba.png",
+                "生气": "https://i0.hdslb.com/bfs/emote/3195714219c4b582a4fb02033dd1519913d0246d.png",
+                "视频卫星": "https://i0.hdslb.com/bfs/emote/dce6fc7d6dfeafff01241924db60f8251cca5307.png",
+                "十周年": "https://i0.hdslb.com/bfs/emote/1eacd3f7816e70aff9c1b1a2e9605240466f599b.png",
+                "11周年": "https://i0.hdslb.com/bfs/emote/d3b2d5dc028c75ae4df379f4c3afbe186d0f6f9b.png",
+                "鸡腿": "https://i0.hdslb.com/bfs/emote/c7860392815d345fa69c4f00ef18d67dccfbd574.png",
+                "干杯": "https://i0.hdslb.com/bfs/emote/8da12d5f55a2c7e9778dcc05b40571979fe208e6.png",
+                "爱心": "https://i0.hdslb.com/bfs/emote/ed04066ea7124106d17ffcaf75600700e5442f5c.png",
+                "锦鲤": "https://i0.hdslb.com/bfs/emote/643d6c19c8164ffd89e3e9cdf093cf5d773d979c.png",
+                "胜利": "https://i0.hdslb.com/bfs/emote/b49fa9f4b1e7c3477918153b82c60b114d87347c.png",
+                "加油": "https://i0.hdslb.com/bfs/emote/c7aaeacb21e107292d3bb053e5abde4a4459ed30.png",
+                "保佑": "https://i0.hdslb.com/bfs/emote/fafe8d3de0dc139ebe995491d2dac458a865fb30.png",
+                "抱拳": "https://i0.hdslb.com/bfs/emote/89516218158dbea18ab78e8873060bf95d33bbbe.png",
+                "响指": "https://i0.hdslb.com/bfs/emote/1b5c53cf14336903e1d2ae3527ca380a1256a077.png",
+                "支持": "https://i0.hdslb.com/bfs/emote/3c210366a5585706c09d4c686a9d942b39feeb50.png",
+                "拥抱": "https://i0.hdslb.com/bfs/emote/41780a4254750cdaaccb20735730a36044e98ef3.png",
+                "怪我咯": "https://i0.hdslb.com/bfs/emote/07cc6077f7f7d75b8d2c722dd9d9828a9fb9e46d.png",
+                "跪了": "https://i0.hdslb.com/bfs/emote/f2b3aee7e521de7799d4e3aa379b01be032698ac.png",
+                "黑洞": "https://i0.hdslb.com/bfs/emote/e90ec4c799010f25391179118ccd9f66b3b279ba.png",
+                "老鼠": "https://i0.hdslb.com/bfs/emote/8e6fb491eb1bb0d5862e7ec8ccf9a3da12b6c155.png",
+                "2020": "https://i0.hdslb.com/bfs/emote/dc709fac0d361370bcf0d36d32adb97df7c95824.png",
+                "福到了": "https://i0.hdslb.com/bfs/emote/5de5373d354c373cf1617b6b836f3a8d53c5a655.png",
+                "加油武汉": "https://i0.hdslb.com/bfs/emote/eb966aaa5b690d3f9308a9f936f5b5a72a7f956b.png",
+                "粽子": "https://i0.hdslb.com/bfs/emote/177999fb7d70d891fbf63b161f26b272e08dc1de.png",
+                "月饼": "https://i0.hdslb.com/bfs/emote/89b19c5730e08d6f12fadf6996de5bc2e52f81fe.png",
+                "高兴": "https://i0.hdslb.com/bfs/emote/416570a8aca7be12fb2c36e4b846906653f6d294.png",
+                "气愤": "https://i0.hdslb.com/bfs/emote/069b029d17a086ab475fd331697a649e234850bb.png",
+                "耍帅": "https://i0.hdslb.com/bfs/emote/d7a38b08d1f1cc35b19c35041f29ffcc48808e87.png",
+                "酷仔": "https://i0.hdslb.com/bfs/emote/390100ada4659b4516984d386499fb22c0025084.png",
+                "画风突变": "https://i0.hdslb.com/bfs/emote/ba4de7a3f97644038b15195bdc9f82a8fd118e77.png",
+                "福": "https://i0.hdslb.com/bfs/emote/802429a301ac5b35a0480d9526a070ce67cd8097.png",
+                "赞了": "https://i0.hdslb.com/bfs/emote/40ded585bbd6328fc390076b5de224fd38b46793.png",
+                "暗中观察": "https://i0.hdslb.com/bfs/emote/80a752e0718db211e4135b4ba821813f4c151e2c.png",
+                "么么哒": "https://i0.hdslb.com/bfs/emote/2f418440776e88605ddc426eac898202c1f5fa4d.png",
+                "哭哭": "https://i0.hdslb.com/bfs/emote/cbf36e518f1d50618f6d054aa69993ecc339fe8f.png",
+                "饿了": "https://i0.hdslb.com/bfs/emote/ff91ea94adf7c5b04db305c18d17b444f7360059.png",
+                "问号": "https://i0.hdslb.com/bfs/emote/a905b58b32016a1f0ff7d9193b62749f0d491707.png",
+                "嘿嘿": "https://i0.hdslb.com/bfs/emote/8a15a45e228179f912ce11dbd5478f6ad54e9854.png",
+                "卖萌": "https://i0.hdslb.com/bfs/emote/a0d37b43d1e786ba811d9b0ae590c479dcce6c44.png",
+                "喵": "https://i0.hdslb.com/bfs/emote/eb46e78c9d86ccbe9842f0235c7cb4f4e0e80a57.png",
+                "tv-白眼": "https://i0.hdslb.com/bfs/emote/c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+                "tv-doge": "https://i0.hdslb.com/bfs/emote/6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+                "tv-坏笑": "https://i0.hdslb.com/bfs/emote/1f0b87f731a671079842116e0991c91c2c88645a.png",
+                "tv-难过": "https://i0.hdslb.com/bfs/emote/87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+                "tv-生气": "https://i0.hdslb.com/bfs/emote/26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+                "tv-委屈": "https://i0.hdslb.com/bfs/emote/d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+                "tv-斜眼笑": "https://i0.hdslb.com/bfs/emote/911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+                "tv-呆": "https://i0.hdslb.com/bfs/emote/fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+                "tv-发怒": "https://i0.hdslb.com/bfs/emote/34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+                "tv-惊吓": "https://i0.hdslb.com/bfs/emote/0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+                "tv-呕吐": "https://i0.hdslb.com/bfs/emote/9f996894a39e282ccf5e66856af49483f81870f3.png",
+                "tv-思考": "https://i0.hdslb.com/bfs/emote/90cf159733e558137ed20aa04d09964436f618a1.png",
+                "tv-微笑": "https://i0.hdslb.com/bfs/emote/70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+                "tv-疑问": "https://i0.hdslb.com/bfs/emote/0793d949b18d7be716078349c202c15ff166f314.png",
+                "tv-大哭": "https://i0.hdslb.com/bfs/emote/23269aeb35f99daee28dda129676f6e9ea87934f.png",
+                "tv-鼓掌": "https://i0.hdslb.com/bfs/emote/1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png",
+                "tv-抠鼻": "https://i0.hdslb.com/bfs/emote/c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+                "tv-亲亲": "https://i0.hdslb.com/bfs/emote/a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+                "tv-调皮": "https://i0.hdslb.com/bfs/emote/b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+                "tv-笑哭": "https://i0.hdslb.com/bfs/emote/1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+                "tv-晕": "https://i0.hdslb.com/bfs/emote/5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+                "tv-点赞": "https://i0.hdslb.com/bfs/emote/f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+                "tv-害羞": "https://i0.hdslb.com/bfs/emote/a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+                "tv-睡着": "https://i0.hdslb.com/bfs/emote/8b196675b53af58264f383c50ad0945048290b33.png",
+                "tv-色": "https://i0.hdslb.com/bfs/emote/61822c7e9aae5da76475e7892534545336b23a6f.png",
+                "tv-吐血": "https://i0.hdslb.com/bfs/emote/09dd16a7aa59b77baa1155d47484409624470c77.png",
+                "tv-无奈": "https://i0.hdslb.com/bfs/emote/ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+                "tv-再见": "https://i0.hdslb.com/bfs/emote/180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+                "tv-流汗": "https://i0.hdslb.com/bfs/emote/cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+                "tv-偷笑": "https://i0.hdslb.com/bfs/emote/bb690d4107620f1c15cff29509db529a73aee261.png",
+                "tv-抓狂": "https://i0.hdslb.com/bfs/emote/fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+                "tv-黑人问号": "https://i0.hdslb.com/bfs/emote/45821a01f51bc867da9edbaa2e070410819a95b2.png",
+                "tv-困": "https://i0.hdslb.com/bfs/emote/241ee304e44c0af029adceb294399391e4737ef2.png",
+                "tv-打脸": "https://i0.hdslb.com/bfs/emote/56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+                "tv-闭嘴": "https://i0.hdslb.com/bfs/emote/c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+                "tv-鄙视": "https://i0.hdslb.com/bfs/emote/6e72339f346a692a495b123174b49e4e8e781303.png",
+                "tv-腼腆": "https://i0.hdslb.com/bfs/emote/89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+                "tv-馋": "https://i0.hdslb.com/bfs/emote/fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+                "tv-可爱": "https://i0.hdslb.com/bfs/emote/9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+                "tv-发财": "https://i0.hdslb.com/bfs/emote/34db290afd2963723c6eb3c4560667db7253a21a.png",
+                "tv-生病": "https://i0.hdslb.com/bfs/emote/8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+                "tv-流鼻血": "https://i0.hdslb.com/bfs/emote/c32d39db2737f89b904ca32700d140a9241b0767.png",
+                "tv-尴尬": "https://i0.hdslb.com/bfs/emote/7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+                "tv-大佬": "https://i0.hdslb.com/bfs/emote/093c1e2c490161aca397afc45573c877cdead616.png",
+                "tv-流泪": "https://i0.hdslb.com/bfs/emote/7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+                "tv-冷漠": "https://i0.hdslb.com/bfs/emote/b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+                "tv-皱眉": "https://i0.hdslb.com/bfs/emote/72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+                "tv-鬼脸": "https://i0.hdslb.com/bfs/emote/0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+                "tv-调侃": "https://i0.hdslb.com/bfs/emote/4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+                "tv-目瞪口呆": "https://i0.hdslb.com/bfs/emote/0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+                "热词系列-知识增加": "https://i0.hdslb.com/bfs/emote/142409b595982b8210b2958f3d340f3b47942645.png",
+                "热词系列-好家伙": "https://i0.hdslb.com/bfs/emote/63ec80dea3066bd9f449ba999ba531fa61f7b4eb.png",
+                "热词系列-芜湖起飞": "https://i0.hdslb.com/bfs/emote/78d04c6ce78a613c90d510cd45fe7e25c57ba00b.png",
+                "热词系列-爷青回": "https://i0.hdslb.com/bfs/emote/a26189ff1e681bddef7f6533f9aabe7604731a3e.png",
+                "热词系列-梦幻联动": "https://i0.hdslb.com/bfs/emote/4809416be5ca787c2ec3e897e4fd022a58da6e0e.png",
+                "热词系列-泪目": "https://i0.hdslb.com/bfs/emote/bba3703ab90b7d16fe9dbcb85ed949db687f8331.png",
+                "热词系列-保护": "https://i0.hdslb.com/bfs/emote/55f8f6445ca7c3170cdfc5b16036abf639ce9b57.png",
+                "热词系列-害怕": "https://i0.hdslb.com/bfs/emote/d77e2de26da143249f0c0ad7a608c27152c985bf.png",
+                "热词系列-爱了爱了": "https://i0.hdslb.com/bfs/emote/2a165b555ba20391316366c664ed7891883dc5aa.png",
+                "热词系列-吹爆": "https://i0.hdslb.com/bfs/emote/b528220f9c37256ed6a37f05bf118e44b08b81e5.png",
+                "热词系列-三连": "https://i0.hdslb.com/bfs/emote/21f15fe11b7a84d2f2121c16dec50a4e4556f865.png",
+                "热词系列-可以": "https://i0.hdslb.com/bfs/emote/e08543c71202b36c590094417fcfbb80c3506cd8.png",
+                "热词系列-希望没事": "https://i0.hdslb.com/bfs/emote/6c0d2e6c486d1ba5afd6204a96e102652464a01d.png",
+                "热词系列-打卡": "https://i0.hdslb.com/bfs/emote/a9cf77c78e1b9b40aa3ed4862402fba008ee2f51.png",
+                "热词系列-skr": "https://i0.hdslb.com/bfs/emote/bd285ff94db16ad52557c3effe930d64663e8375.png",
+                "热词系列-battle": "https://i0.hdslb.com/bfs/emote/f2f81c8e47db6252becd633a5d1ee14e15df2ea8.png",
+                "热词系列-DNA": "https://i0.hdslb.com/bfs/emote/f6eb74f8230588f61a298af89061a7d75c5762e5.png",
+                "热词系列-妙啊": "https://i0.hdslb.com/bfs/emote/0e98299d7decf5eaffad854977946075c3e91cb8.png",
+                "热词系列-这次一定": "https://i0.hdslb.com/bfs/emote/a01ca28923daa7cc896c42f27deb4914e20dd572.png",
+                "热词系列-AWSL": "https://i0.hdslb.com/bfs/emote/c37f88cf799f9badf9d84b7671dc3dd98c0fc0c2.png",
+                "热词系列-递话筒": "https://i0.hdslb.com/bfs/emote/98e6950e39fbb4dd1c576042063ca632074070ba.png",
+                "热词系列-你细品": "https://i0.hdslb.com/bfs/emote/535e00658e7e47966f154d3a167fa2365ebc4321.png",
+                "热词系列-咕咕": "https://i0.hdslb.com/bfs/emote/d8065c2e7ce48c929317a94553499a46fecc262a.png",
+                "热词系列-标准结局": "https://i0.hdslb.com/bfs/emote/3de98174b510cf7dc5fd1bd08c5d881065e79137.png",
+                "热词系列-危": "https://i0.hdslb.com/bfs/emote/5cc6c3357c4df544dd8de9d5c5c0cec97c7c9a56.png",
+                "热词系列-张三": "https://i0.hdslb.com/bfs/emote/255a938f39cea625032b6650036b31aa26c50a3c.png",
+                "热词系列-害": "https://i0.hdslb.com/bfs/emote/cbe798a194612958537c5282fcca7c3bcd2aa15c.png",
+                "热词系列-我裂开了": "https://i0.hdslb.com/bfs/emote/29bd57ec4e8952880fea6c9e47aee924e91f10c4.png",
+                "热词系列-有内味了": "https://i0.hdslb.com/bfs/emote/7ca61680a905b5b6e2e335c630e725b648b03b4d.png",
+                "热词系列-猛男必看": "https://i0.hdslb.com/bfs/emote/c97064450528a0e45c7e7c365a15fbb13fd61d8c.png",
+                "热词系列-奥力给": "https://i0.hdslb.com/bfs/emote/c9b8683827ec6c00fea5327c9bec14f581cef2aa.png",
+                "热词系列-问号": "https://i0.hdslb.com/bfs/emote/c1d1e76c12180adc8558f47006fe0e7ded4154bb.png",
+                "热词系列-我哭了": "https://i0.hdslb.com/bfs/emote/9e0b3877d649aaf6538fbdd3f937e240a9d808e4.png",
+                "热词系列-高产": "https://i0.hdslb.com/bfs/emote/9db817cba4a7f4a42398f3b2ec7c0a8e0c247c42.png",
+                "热词系列-我酸了": "https://i0.hdslb.com/bfs/emote/a8cbf3f6b8cd9377eeb15b9172f3cd683b2e4650.png",
+                "热词系列-真香": "https://i0.hdslb.com/bfs/emote/e68497c775feaac1c3b1a6cd63a50cfb11b767c4.png",
+                "热词系列-我全都要": "https://i0.hdslb.com/bfs/emote/d424d1ad8d14c1c9b8367842bc68c658b9229bc1.png",
+                "热词系列-神仙UP": "https://i0.hdslb.com/bfs/emote/a49e0d0db1e7d35a0f7411be13208951ab448f03.png",
+                "热词系列-你币有了": "https://i0.hdslb.com/bfs/emote/84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png",
+                "热词系列-不愧是你": "https://i0.hdslb.com/bfs/emote/9ff2e356797c57ee3b1675ade0883d2d2247be9b.png",
+                "热词系列-锤": "https://i0.hdslb.com/bfs/emote/35668cc12ae25b9545420e4a85bf21a0bfc03e5d.png",
+                "热词系列-秀": "https://i0.hdslb.com/bfs/emote/50782fbf5d9b7f48f9467b5c53932981e321eedc.png",
+                "热词系列-爷关更": "https://i0.hdslb.com/bfs/emote/faad40c56447f1f8abcb4045c17ce159d113d1fd.png",
+                "热词系列-有生之年": "https://i0.hdslb.com/bfs/emote/f41fdafe2d0fbb8e8bc1598d2cf37e355560103a.png",
+                "热词系列-镇站之宝": "https://i0.hdslb.com/bfs/emote/24e7a6a6e6383c987215fb905e3ee070aca259b5.png",
+                "热词系列-我太南了": "https://i0.hdslb.com/bfs/emote/a523f3e4c63e4db1232365765d0ec452f83be97e.png",
+                "热词系列-完结撒花": "https://i0.hdslb.com/bfs/emote/ea9db62ff5bca8e069cd70c4233353a802835422.png",
+                "热词系列-大师球": "https://i0.hdslb.com/bfs/emote/f30089248dd137c568edabcb07cf67e0f6e98cf3.png",
+                "热词系列-知识盲区": "https://i0.hdslb.com/bfs/emote/ccc94600b321a28116081e49ecedaa4ee8728312.png",
+                "热词系列-“狼火”": "https://i0.hdslb.com/bfs/emote/33ccd3617bfa89e9d1498b13b7542b63f163e5de.png",
+                "热词系列-你可真星": "https://i0.hdslb.com/bfs/emote/54c8ddff400abfe388060cabfbb579280fdea1be.png",
+                "2233娘-大笑": "https://i0.hdslb.com/bfs/emote/16b8794be990cefa6caeba4d901b934a227ee3b8.png",
+                "2233娘-吃惊": "https://i0.hdslb.com/bfs/emote/d1628c43d35b1530c0504a643ff80b6189fa0a43.png",
+                "2233娘-大哭": "https://i0.hdslb.com/bfs/emote/476a2a60f6e337b8c0697a592e0aa82781f6b33b.png",
+                "2233娘-耶": "https://i0.hdslb.com/bfs/emote/d7178e258a0efc969b65ccc2b1322fb235f5dff4.png",
+                "2233娘-卖萌": "https://i0.hdslb.com/bfs/emote/ea893aa25355de95ab4f03c2dad3f0c58d0c159e.png",
+                "2233娘-疑问": "https://i0.hdslb.com/bfs/emote/0b41f509351958dbb63d472fec0132d1bd03bd14.png",
+                "2233娘-汗": "https://i0.hdslb.com/bfs/emote/247cd9df8cdf84b18368c21e3b2dd374e84c0927.png",
+                "2233娘-困惑": "https://i0.hdslb.com/bfs/emote/714eeb4eae0d0933b4ff08b7df788b1982f6b940.png",
+                "2233娘-怒": "https://i0.hdslb.com/bfs/emote/f31953119c51b9748016440ac0b632f779929b37.png",
+                "2233娘-委屈": "https://i0.hdslb.com/bfs/emote/d9d0bf9d358af8d5761093ec66d4e3f60d963a63.png",
+                "2233娘-郁闷": "https://i0.hdslb.com/bfs/emote/485203fe7100f2c8fc40b2800a18fe20b35f2f1a.png",
+                "2233娘-第一": "https://i0.hdslb.com/bfs/emote/3754ee6e5985bd0bd7dfb668981f2a8733398ebd.png",
+                "2233娘-喝水": "https://i0.hdslb.com/bfs/emote/695bf5429472049b52c1e0de586f8a2511195a23.png",
+                "2233娘-吐魂": "https://i0.hdslb.com/bfs/emote/e999af499edf38a91ca68b1a9d2f97042c1d6734.png",
+                "2233娘-无言": "https://i0.hdslb.com/bfs/emote/fdb5870f32cfaf7949e0f88a13f6feba4a48b719.png",
+                "小电视-笑": "https://i0.hdslb.com/bfs/emote/f80d384875183dfe2e24be13011c595c0210d273.png",
+                "小电视-发愁": "https://i0.hdslb.com/bfs/emote/05e279abbf3f72d5cc45548504a4220c5514b8b9.png",
+                "小电视-赞": "https://i0.hdslb.com/bfs/emote/86ccf6d0b5480169bf80f3582fae09d7ed455c06.png",
+                "小电视-差评": "https://i0.hdslb.com/bfs/emote/38456e3bde2839b00b536a8be13934fa57c8e298.png",
+                "小电视-嘟嘴": "https://i0.hdslb.com/bfs/emote/6fd437f547ef1e4f231ff475d02f58bb94cef5a5.png",
+                "小电视-汗": "https://i0.hdslb.com/bfs/emote/5c150cec77eae1b05d5ca46526450ff3beeb44d2.png",
+                "小电视-害羞": "https://i0.hdslb.com/bfs/emote/de3aee88f7b6cc20ba9480c96c02f83a844381a9.png",
+                "小电视-吃惊": "https://i0.hdslb.com/bfs/emote/05188008ea84c70d94e0076e28de15bf56f4c441.png",
+                "小电视-哭泣": "https://i0.hdslb.com/bfs/emote/938bdf98df945576ae88e2a22931db07ded9e663.png",
+                "小电视-太太喜欢": "https://i0.hdslb.com/bfs/emote/eb41a8c04840e4f77e76a4bff7a29ac89c432f4e.png",
+                "小电视-好怒啊": "https://i0.hdslb.com/bfs/emote/68d524b7e515396b6563d320fb710c64abfb1063.png",
+                "小电视-困惑": "https://i0.hdslb.com/bfs/emote/6853161f0eab3332b874ab7c6c0311035b7538f3.png",
+                "小电视-我好兴奋": "https://i0.hdslb.com/bfs/emote/a695fe1301aab2675ab6f6e34757c25a863a8617.png",
+                "小电视-思索": "https://i0.hdslb.com/bfs/emote/f8219e484d5a55787c3f1722dc3112d0eba03a69.png",
+                "小电视-无语": "https://i0.hdslb.com/bfs/emote/fbd12affebfdaadd3d721bffdb685a6b1ee71219.png",
+                "罗小黑-鼓掌": "https://i0.hdslb.com/bfs/emote/622ce9f5ec001269203aaaf8339dffdc7d67d2a3.png",
+                "罗小黑-你好呀": "https://i0.hdslb.com/bfs/emote/65728d4bedb13fd75c1555c9c4c9de67d276b153.png",
+                "罗小黑-加油": "https://i0.hdslb.com/bfs/emote/50d9d9e5f57c202be83cdfdba812a15524d02406.png",
+                "罗小黑-可可爱爱": "https://i0.hdslb.com/bfs/emote/bcdfa28cd019333cdb243c3a8d73374236924585.png",
+                "罗小黑-吃瓜": "https://i0.hdslb.com/bfs/emote/57d8965331c9fb87afa1756416b622a22e406c43.png",
+                "罗小黑-嗨": "https://i0.hdslb.com/bfs/emote/7f5e00355af3331964884f27611cc9a0c64e5ce7.png",
+                "罗小黑-大麦": "https://i0.hdslb.com/bfs/emote/0f5a51e0272c5fcc2c318e078e92e0f8fea77980.png",
+                "罗小黑-干杯": "https://i0.hdslb.com/bfs/emote/04cf6b7a2f0f24909e1894694daa5c6c668e1f17.png",
+                "罗小黑-找彩蛋": "https://i0.hdslb.com/bfs/emote/59e34db87c0cb601a5e100c2db0ccfb2894aa02f.png",
+                "罗小黑-撒花": "https://i0.hdslb.com/bfs/emote/bbaaaa40328f32f3e3e41ffc77a70c057d0a13ad.png",
+                "罗小黑-来了": "https://i0.hdslb.com/bfs/emote/fd1950da6509171ba144d138c4d0a81f0840794e.png",
+                "罗小黑-歪在吗": "https://i0.hdslb.com/bfs/emote/0caf23cc530b0e021c32c623dee045160a2449fa.png",
+                "罗小黑-求包养": "https://i0.hdslb.com/bfs/emote/2277c2b72646cf22a7217897f3cd62c5c80a6451.png",
+                "罗小黑-看电影": "https://i0.hdslb.com/bfs/emote/eedd49d8d1d6c5b0eafc3e0a10966f508a7ab6f1.png",
+                "罗小黑-真棒": "https://i0.hdslb.com/bfs/emote/f03fbb80a7939eafa4819388df80e9c777e8ab7d.png",
+                "罗小黑-自来水": "https://i0.hdslb.com/bfs/emote/4a0c602ed9d4f1e5550c0595ea63653a9cbf88bd.png",
+                "蛆音娘-卖萌": "https://i0.hdslb.com/bfs/emote/4cd1024d0c2ecee93224477946656d32c1705ccf.png",
+                "蛆音娘-吃瓜群众": "https://i0.hdslb.com/bfs/emote/5d0d6cc54b508d30b4f50b6b5f7b7e1e259d84ea.png",
+                "蛆音娘-吃惊": "https://i0.hdslb.com/bfs/emote/7a4cb0b644214d476ce198ddf6a7a0aa31311199.png",
+                "蛆音娘-害怕": "https://i0.hdslb.com/bfs/emote/7407634bf67bfe9d7806f15d57608a1b18c2b4c2.png",
+                "蛆音娘-扶额": "https://i0.hdslb.com/bfs/emote/a4d8f95baaa24821fd591a7dbeee1b869e760f59.png",
+                "蛆音娘-滑稽": "https://i0.hdslb.com/bfs/emote/d3717f10ffe9787336bc39a09214270988521a67.png",
+                "蛆音娘-哼": "https://i0.hdslb.com/bfs/emote/8854f1b8a82126e3b87f3a1563da5feb55b23e71.png",
+                "蛆音娘-机智": "https://i0.hdslb.com/bfs/emote/e543c0a823ca915df9362283f4ae950e9e9cc2e9.png",
+                "蛆音娘-哭泣": "https://i0.hdslb.com/bfs/emote/a23055546c19eba663b16370b8e072394d87ff53.png",
+                "蛆音娘-睡觉觉": "https://i0.hdslb.com/bfs/emote/40ef7e6d931acb37e5514b70d13663e86dc3698b.png",
+                "蛆音娘-生气": "https://i0.hdslb.com/bfs/emote/bf398cbbcfaae107d1b59aaf03895f38422e3d87.png",
+                "蛆音娘-偷看": "https://i0.hdslb.com/bfs/emote/52463ded4f23649db10ba3ced662ed946c5edf0b.png",
+                "蛆音娘-吐血": "https://i0.hdslb.com/bfs/emote/5772d22015e5b2b40a9fe302b5967ec7282ac848.png",
+                "蛆音娘-无语": "https://i0.hdslb.com/bfs/emote/b6c763c6484ce2e48299ceb21861e46318868871.png",
+                "蛆音娘-摇头": "https://i0.hdslb.com/bfs/emote/b7278f750c6f2235f41f37056d727f25d3bf781f.png",
+                "蛆音娘-疑问": "https://i0.hdslb.com/bfs/emote/7750b698d15a1b8e83c0f59106e8e9cd5cb57897.png",
+                "蛆音娘-die": "https://i0.hdslb.com/bfs/emote/52543025a070fde5c01a10320c9636ec3173ac99.png",
+                "蛆音娘-OK": "https://i0.hdslb.com/bfs/emote/52a0dcee66c91bf123bf53bd48a269b1317d17f9.png",
+                "蛆音娘-肥皂": "https://i0.hdslb.com/bfs/emote/7f1a857e9430dcf3050ce0ef5fa19aefebea6dc4.png",
+                "蛆音娘-大笑": "https://i0.hdslb.com/bfs/emote/1d3355fb89c24ab3c50e5c152d8b990a290dc63e.png",
+                "洛天依-傲娇": "https://i0.hdslb.com/bfs/emote/5d7c8307af10540909fce6121066249df3935a24.png",
+                "洛天依-吃包群众": "https://i0.hdslb.com/bfs/emote/f8cdabfc1b81fd25b85b8457ee49a20a4fc5d91b.png",
+                "洛天依-吃药": "https://i0.hdslb.com/bfs/emote/883e6654176ebcecafd3e52efa8ee842357e18a0.png",
+                "洛天依-滑稽": "https://i0.hdslb.com/bfs/emote/692cef7ca51f935aaa499de7e4d6048c53f42324.png",
+                "洛天依-哈哈哈": "https://i0.hdslb.com/bfs/emote/677c2f5555c1e79fc336a6283fdbbdc7ea88fec4.png",
+                "洛天依-看透一切": "https://i0.hdslb.com/bfs/emote/4fac414b5002c3739b1ae24f2fc27b5f150ade24.png",
+                "洛天依-打尻": "https://i0.hdslb.com/bfs/emote/2ab983b2519dc241666254de8e5352fbeedc96bb.png",
+                "洛天依-前排": "https://i0.hdslb.com/bfs/emote/fbbc45e7aee2f256f691df539db0cfcc35b3be7d.png",
+                "洛天依-去吧": "https://i0.hdslb.com/bfs/emote/0edeeb0d10d44302854e636c47f5dc3aa96a9206.png",
+                "洛天依-冷漠": "https://i0.hdslb.com/bfs/emote/5f4385db3c9806b08ea15bd9ff444af9d9fe0c3a.png",
+                "洛天依-可以": "https://i0.hdslb.com/bfs/emote/967377b83e37a0d5dd13bc0f4e4323abf10e4cbf.png",
+                "洛天依-掀桌": "https://i0.hdslb.com/bfs/emote/803129b7a1143faabc63c2648335b7d506229e7a.png",
+                "洛天依-消灭你": "https://i0.hdslb.com/bfs/emote/d96dccf8fa248ee34c7e4aba94e813bec28d2dd8.png",
+                "洛天依-阴阳先生": "https://i0.hdslb.com/bfs/emote/65e195a8ac54bb678dd1c1e6ce6c5d4ba02761b3.png",
+                "洛天依-无言以对": "https://i0.hdslb.com/bfs/emote/9cfd368b370acd40c1b8f933cec3fb24883356a5.png",
+                "洛天依-？？？": "https://i0.hdslb.com/bfs/emote/f5f1ebe50c26d5f6d4e17cb983bd5ae59f103dda.png",
+                "洛天依-爱你哦": "https://i0.hdslb.com/bfs/emote/7102c9e25359af8348489ff8529b3bb2c5bd05d0.png",
+                "小A和小B-喝茶": "https://i0.hdslb.com/bfs/emote/d2acc1227312dd64284d809ab66d3c7f7d8ec020.png",
+                "小A和小B-报警": "https://i0.hdslb.com/bfs/emote/7f482b82a3de44ae14537cbafcbc40cf65f7113e.png",
+                "小A和小B-大哭": "https://i0.hdslb.com/bfs/emote/77545a5e420e2c43e0e4a7996a71769638ae3f90.png",
+                "小A和小B-低头": "https://i0.hdslb.com/bfs/emote/0d23b726b084280f941f14919ce63c43f8bc724c.png",
+                "小A和小B-哈哈哈哈": "https://i0.hdslb.com/bfs/emote/6f5210b7d0a6b14f586df1f91f5c3a46c1296b43.png",
+                "小A和小B-司令": "https://i0.hdslb.com/bfs/emote/a594a91717e28bdcab82821086a41160a1345c45.png",
+                "小A和小B-撒花": "https://i0.hdslb.com/bfs/emote/874d2c39a0ca891abce5e65fafc287e0c2d3bbea.png",
+                "小A和小B-摊手": "https://i0.hdslb.com/bfs/emote/6f058f78bce5d1c9b370c3807c891e685bb68a17.png",
+                "小A和小B-问号": "https://i0.hdslb.com/bfs/emote/f077d5ecf0e86f24991a104f995b3a652091d529.png",
+                "小A和小B-躺": "https://i0.hdslb.com/bfs/emote/9038d450dbadaf132847d67cb26931aa5bf76d4c.png",
+                "小A和小B-无语": "https://i0.hdslb.com/bfs/emote/1a805b885a1691e9bf4425164a9400e2457f4d1b.png",
+                "小A和小B-应援": "https://i0.hdslb.com/bfs/emote/af8f017e383a1999e26a7f91c3ec3c83fbb7ba77.png",
+                "小A和小B-NO": "https://i0.hdslb.com/bfs/emote/ee0de8296b20d295b79ea9b70ca4f126eb4aff1d.png",
+                "小A和小B-OK": "https://i0.hdslb.com/bfs/emote/5ae25cc388c59192133f08345e461098fad4e63b.png",
+                "小A和小B-吃瓜": "https://i0.hdslb.com/bfs/emote/70776b579d2952580249ac6a52e724850d037591.png",
+                "小A和小B-捕捉": "https://i0.hdslb.com/bfs/emote/8bf33ff2f9699286102fb1a256a2523695c17d35.png",
+                "芮小凸小凹-嗯？": "https://i0.hdslb.com/bfs/emote/f3c72e045ebd2487a381f50291be15b053767a80.png",
+                "芮小凸小凹-超棒": "https://i0.hdslb.com/bfs/emote/987947c1bdac0bc10b684f28baaec78176023b83.png",
+                "芮小凸小凹-哎": "https://i0.hdslb.com/bfs/emote/38bcf3a53b34551e5efa0cd0ee84fc7faa477a49.png",
+                "芮小凸小凹-666": "https://i0.hdslb.com/bfs/emote/3e505cef421024a650b971c1f2db7f8ef1ad1840.png",
+                "芮小凸小凹-哼": "https://i0.hdslb.com/bfs/emote/92e4a9d422f1604f2b1b3ea3f6057636273db56e.png",
+                "芮小凸小凹-怀疑": "https://i0.hdslb.com/bfs/emote/587f22aa1cfaa4b2d91928998e023be29d8c3975.png",
+                "芮小凸小凹-发现": "https://i0.hdslb.com/bfs/emote/147b6ba27d5cbb90d155f34c41cb45f1f00b6007.png",
+                "芮小凸小凹-绝望": "https://i0.hdslb.com/bfs/emote/22ad072a785604f3bd8c1aae4ea1ceb1e4694cec.png",
+                "芮小凸小凹-可爱": "https://i0.hdslb.com/bfs/emote/8bddb47b5877fd79e937aafeb7f4d69f58a8b6e4.png",
+                "芮小凸小凹-警告": "https://i0.hdslb.com/bfs/emote/54607206c814409a99fac65fb3b780c6bbd1e60d.png",
+                "芮小凸小凹-呵呵": "https://i0.hdslb.com/bfs/emote/811aa3ba5809a8d5936f988f953e5af7fd7c5351.png",
+                "芮小凸小凹-膜拜": "https://i0.hdslb.com/bfs/emote/038c86c0e616f7ead667c6f7af32e54feac32965.png",
+                "芮小凸小凹-哭": "https://i0.hdslb.com/bfs/emote/000c0dddd08950133740487a57873b389a3af457.png",
+                "芮小凸小凹-无聊": "https://i0.hdslb.com/bfs/emote/62527ee5c4e80aad9b42069778c91f905c90d986.png",
+                "芮小凸小凹-围观": "https://i0.hdslb.com/bfs/emote/c9b4fe6161f4a3cc884a5b03e9674c8a58ee228f.png",
+                "芮小凸小凹-失落": "https://i0.hdslb.com/bfs/emote/813f98c0632587286c6e809a49eda15a2edfa447.png",
+                "芮小凸小凹-是吗": "https://i0.hdslb.com/bfs/emote/05b7153fb606e526ce8d102febd25889828ce425.png",
+                "芮小凸小凹-心动": "https://i0.hdslb.com/bfs/emote/24afe39fbf8755a28673bdf51bdf8ce72bc62d51.png",
+                "芮小凸小凹-喜欢": "https://i0.hdslb.com/bfs/emote/b389e30a3c7924ca2b59a5333412b8d92cad07df.png",
+                "芮小凸小凹-嘻嘻": "https://i0.hdslb.com/bfs/emote/b7a4a07a7c24f5fa23a99ca6749708fadfedf765.png",
+                "芮小凸小凹-震撼": "https://i0.hdslb.com/bfs/emote/79c8b68509a9d316618d61aedaae93097669dae6.png",
+                "芮小凸小凹-有见解": "https://i0.hdslb.com/bfs/emote/7f842228b9a2c36851cecab0527fca55a1f01b58.png",
+                "芮小凸小凹-震惊": "https://i0.hdslb.com/bfs/emote/be4b48350b817af496bdccba2ab85c77b711cec3.png",
+                "芮小凸小凹-心痛": "https://i0.hdslb.com/bfs/emote/b2217e8b81f122949f3960d99c08ac72eac5923b.png",
+                "灵笼-鄙视": "https://i0.hdslb.com/bfs/emote/20eda4b6b0074c6fb568e11698eb8dfc57011ac1.png",
+                "灵笼-不用了": "https://i0.hdslb.com/bfs/emote/a7a027228e024d13f743ee42d9be107d53464134.png",
+                "灵笼-吃瓜": "https://i0.hdslb.com/bfs/emote/2e0cab7ca9bedcb00830b483725fcc9c314faaf8.png",
+                "灵笼-吃糖": "https://i0.hdslb.com/bfs/emote/c65e3e8dd67a7a7ce438649d5d1544e4eba0c3a6.png",
+                "灵笼-机智": "https://i0.hdslb.com/bfs/emote/4e0e67f242b29c39bd9f8bbc03ab31e1ce232d37.png",
+                "灵笼-惊吓": "https://i0.hdslb.com/bfs/emote/7b7fd1cdaccb0a69c2cdfe2a5fe8b97524ebf1d8.png",
+                "灵笼-生闷气": "https://i0.hdslb.com/bfs/emote/9fe2340ff00fa447cac6ffd64650fc0842a2a4de.png",
+                "灵笼-玩手机": "https://i0.hdslb.com/bfs/emote/c40b4dc357514724eeabbc94b26e89a9850466b6.png",
+                "灵笼-问号": "https://i0.hdslb.com/bfs/emote/5b1a7af13e40057a9f48c802241e230bd0f3bcf4.png",
+                "灵笼-嫌弃": "https://i0.hdslb.com/bfs/emote/8386721ed1e19c7b1e268a6457bbd3463ab220c0.png",
+                "灵笼-笑哭": "https://i0.hdslb.com/bfs/emote/bfa87db44e8758701b7452f5b0aa2f107f69ec0f.png",
+                "灵笼-兴奋": "https://i0.hdslb.com/bfs/emote/b211b575c45d1f0ebb347e06999b3dbe7c256c64.png",
+                "灵笼-阴暗": "https://i0.hdslb.com/bfs/emote/92cd50cd6a4fd863751be57ef2b82e4d965955aa.png",
+                "灵笼-约吗": "https://i0.hdslb.com/bfs/emote/275c161b17c3a4bdda2833720989a67b2e5b264d.png",
+                "灵笼-boom": "https://i0.hdslb.com/bfs/emote/e27fbd34d8232f9c69b53a2b7013a3b597086444.png",
+                "灵笼-偷窥": "https://i0.hdslb.com/bfs/emote/4c1f0ba96b2baa6d44f33553d0298d63ec47bfbd.png",
+                "正经人-欢呼": "https://i0.hdslb.com/bfs/emote/3cd297676b2a08a896deab91ed7f139a8bc7c46c.png",
+                "正经人-火": "https://i0.hdslb.com/bfs/emote/78579a24b156501c0b5583121beb42a72e9229b5.png",
+                "正经人-挤": "https://i0.hdslb.com/bfs/emote/7a3e753fcb876753800424edd2fa3563005abf4a.png",
+                "正经人-惊": "https://i0.hdslb.com/bfs/emote/233b14fd3803a5078f79d31fecd5d7a60524e330.png",
+                "正经人-放屁": "https://i0.hdslb.com/bfs/emote/b590df4714084b012e9a5dfab03a3a13936dff48.png",
+                "正经人-ok": "https://i0.hdslb.com/bfs/emote/21e069065373be45b227a4ffdbe9570d309e3d05.png",
+                "正经人-趴": "https://i0.hdslb.com/bfs/emote/39156acb0afcbde9cf73ac1657adff62d3a84af7.png",
+                "正经人-开始": "https://i0.hdslb.com/bfs/emote/4f745fad9a77f2f41ea63c2214af0739ab7ea8f1.png",
+                "正经人-揉脸": "https://i0.hdslb.com/bfs/emote/a9d5376d6d79482c4447eb5a169385fa91f39ddd.png",
+                "正经人-躺": "https://i0.hdslb.com/bfs/emote/c135f76ad7ec50a7414095cf7c633eb5551c9fe3.png",
+                "正经人-拉": "https://i0.hdslb.com/bfs/emote/03e7319b34763e9c82c2ae93b1fd8f613335d90a.png",
+                "正经人-心": "https://i0.hdslb.com/bfs/emote/536561d0806f8b181473fd89bba15e71cb8d585e.png",
+                "正经人-悠闲": "https://i0.hdslb.com/bfs/emote/17542aaef102f28508e30fed8895cc1afeaf70f0.png",
+                "正经人-赞": "https://i0.hdslb.com/bfs/emote/589816d36c5b7c2f2bc78cb162d6ac90fda948f2.png",
+                "正经人-哭": "https://i0.hdslb.com/bfs/emote/b9882f0679b4ae24624660412464f1f88bda48fe.png",
+                "请吃红小豆吧！-wow": "https://i0.hdslb.com/bfs/emote/3392ba98d2bbdc4c1932952bf63796f7ac1b1f41.png",
+                "请吃红小豆吧！-吃包": "https://i0.hdslb.com/bfs/emote/f6cbadf8ff006c246c7bd583288587a6e20e6069.png",
+                "请吃红小豆吧！-倒地": "https://i0.hdslb.com/bfs/emote/5b7ede3d668a82ae9ef50d380bb41274757c7780.png",
+                "请吃红小豆吧！-盯": "https://i0.hdslb.com/bfs/emote/5c1cad1724fff3597913fe9a09bcb4b41b712ecf.png",
+                "请吃红小豆吧！-翻白眼": "https://i0.hdslb.com/bfs/emote/633249bc889384ab3f1e2bd45d578fb7dbe2e109.png",
+                "请吃红小豆吧！-好难": "https://i0.hdslb.com/bfs/emote/116cf8aff996554df096b9a1bdc59dd182fa8b22.png",
+                "请吃红小豆吧！-喝水": "https://i0.hdslb.com/bfs/emote/c227ab352460cab6af9e543811a3451d6aa63908.png",
+                "请吃红小豆吧！-嘿嘿嘿": "https://i0.hdslb.com/bfs/emote/b24f7db309a7ab96a00f81a1f26d1d4e06761c2d.png",
+                "请吃红小豆吧！-开心": "https://i0.hdslb.com/bfs/emote/0903bb143efa6ec71ce5eb91e1bcd9815028eace.png",
+                "请吃红小豆吧！-哭唧唧": "https://i0.hdslb.com/bfs/emote/516bc179c7312b7087573b5e2d7fc7b1ababa8e2.png",
+                "请吃红小豆吧！-略略略": "https://i0.hdslb.com/bfs/emote/8bd5c57cb9ef5f511b3cb8119072182e3029fddc.png",
+                "请吃红小豆吧！-么么": "https://i0.hdslb.com/bfs/emote/7a59397394b007fef659fc240bb2c3348930efb6.png",
+                "请吃红小豆吧！-哦": "https://i0.hdslb.com/bfs/emote/20bcbc681d217027f605c1d667332ecc45744569.png",
+                "请吃红小豆吧！-撒娇": "https://i0.hdslb.com/bfs/emote/74e611ffcd6702fce6e75bea435eb01744c503f8.png",
+                "请吃红小豆吧！-受到惊吓": "https://i0.hdslb.com/bfs/emote/ffe8b5af6c2e3baa13e8ba9bb5685896311cab84.png",
+                "请吃红小豆吧！-睡觉": "https://i0.hdslb.com/bfs/emote/f6098a8f9a77eb0753064aea2d17e9093d4ef8e0.png",
+                "请吃红小豆吧！-问号脸": "https://i0.hdslb.com/bfs/emote/c6fe095df24f3fbf27f2e0fbb4b6eb983cbd430f.png",
+                "请吃红小豆吧！-耶耶耶": "https://i0.hdslb.com/bfs/emote/973dd2de70275ec9f325ac8f64957f2e763c6ea3.png",
+                "请吃红小豆吧！-一脸懵逼": "https://i0.hdslb.com/bfs/emote/8f6e7d3128bbc070116617cf840ceccbf2412187.png",
+                "请吃红小豆吧！-眨眼": "https://i0.hdslb.com/bfs/emote/b2106dbba47b42276ea39a8d7d39b8cd21297485.png",
+                "异常生物见闻录-good": "https://i0.hdslb.com/bfs/emote/5ca4eda998ed16a5826e7f92ca2e3f3969889e63.png",
+                "异常生物见闻录-不信任": "https://i0.hdslb.com/bfs/emote/edb38ebc3b3be3583df4fd4c57e1b29347516d74.png",
+                "异常生物见闻录-财迷": "https://i0.hdslb.com/bfs/emote/c67bbb41136823e7a2847ce72480df0e870b4d88.png",
+                "异常生物见闻录-嘲讽": "https://i0.hdslb.com/bfs/emote/a061406fa8f03f619aa28d456f5a8fcf683b3fb7.png",
+                "异常生物见闻录-痴呆": "https://i0.hdslb.com/bfs/emote/1b3dba852ac79d76d8e8ff26d0b2839daf26adb9.png",
+                "异常生物见闻录-憧憬": "https://i0.hdslb.com/bfs/emote/1e932e3f290f5374a251b7d87af215e63e007c80.png",
+                "异常生物见闻录-道德标兵": "https://i0.hdslb.com/bfs/emote/eca679781792c534bfb7f918c35eb3c43153f5d1.png",
+                "异常生物见闻录-抵死不从": "https://i0.hdslb.com/bfs/emote/2f237e931a437308568ba7ca181320fc8ea800ce.png",
+                "异常生物见闻录-发现食物": "https://i0.hdslb.com/bfs/emote/5bc67e4826ba7e10cba116bd2c2ececd21cb1c42.png",
+                "异常生物见闻录-奸笑": "https://i0.hdslb.com/bfs/emote/038f3bda1084fa6908698697bb0fc2f059ff4b32.png",
+                "异常生物见闻录-绝望": "https://i0.hdslb.com/bfs/emote/2b4ba4af99f37b973d84f92fa7a27197812fa605.png",
+                "异常生物见闻录-开心": "https://i0.hdslb.com/bfs/emote/1942ee8a4df95e2f1f58202c92cda1dd06cc4816.png",
+                "异常生物见闻录-困倦": "https://i0.hdslb.com/bfs/emote/009cdfcf48cf227a2cc8da24958a8a5238053dc7.png",
+                "异常生物见闻录-冷汗": "https://i0.hdslb.com/bfs/emote/2dc15a9724034c1061fb0c884db17c2d45028ad8.png",
+                "异常生物见闻录-凉凉": "https://i0.hdslb.com/bfs/emote/8b2ec7e8bbcbfc5f752dbb4e4f3c1b5ce6681d86.png",
+                "异常生物见闻录-萌": "https://i0.hdslb.com/bfs/emote/cd7465b0bb19bdf89f057ba8c3f5c279375936aa.png",
+                "异常生物见闻录-请闭嘴": "https://i0.hdslb.com/bfs/emote/a8ab9e926321c865b9cb66e64668dbddb87a6b7b.png",
+                "异常生物见闻录-帅醒": "https://i0.hdslb.com/bfs/emote/93b1ff2409f733079ca1145e7add98fe6540a07c.png",
+                "异常生物见闻录-无语": "https://i0.hdslb.com/bfs/emote/d3d02774b35dcc6ef3483b1655d08e472e4ca3c7.png",
+                "异常生物见闻录-装傻": "https://i0.hdslb.com/bfs/emote/d81eba4cf9800a72a9b72a11ca00c4ad458a8bc8.png",
+                "异常生物见闻录-装文静": "https://i0.hdslb.com/bfs/emote/748ce4b0c5da67489f2ed070ccf9233293fedcd4.png",
+                "星梦手记-吃瓜": "https://i0.hdslb.com/bfs/emote/9227318a903c96e0e4a61f06ef208150ce470f66.png",
+                "星梦手记-薇薇惊吓": "https://i0.hdslb.com/bfs/emote/093634e9099f40f40886a83133de5a67ca148bce.png",
+                "星梦手记-惺梛认真": "https://i0.hdslb.com/bfs/emote/16fcbf1de40cb19d26a13552a3740150e45aa89f.png",
+                "星梦手记-石化": "https://i0.hdslb.com/bfs/emote/f6a6d33835a48e4141fb433bbd0215b1130cf681.png",
+                "星梦手记-问号": "https://i0.hdslb.com/bfs/emote/4ced3d8866f502487ec2e93b326f592f4c358fbf.png",
+                "星梦手记-卖萌": "https://i0.hdslb.com/bfs/emote/375e4296c26f65be888e86bea4af4f858642a7bb.png",
+                "星梦手记-尴尬": "https://i0.hdslb.com/bfs/emote/423347d687184c14d9ce8b47a8342fd8d23e99b9.png",
+                "星梦手记-要抱": "https://i0.hdslb.com/bfs/emote/c125f4fc66ac8587fe4dd264254aad5dc4b31bef.png",
+                "星梦手记-未来认真": "https://i0.hdslb.com/bfs/emote/330306ba001db1bd9f78bc99b8b6ec9341acbbcb.png",
+                "星梦手记-摊手": "https://i0.hdslb.com/bfs/emote/acd565a268f66fa27e0ccea409b3ff57c814b360.png",
+                "星梦手记-委屈": "https://i0.hdslb.com/bfs/emote/55f3974a6dded58365ef21e0a61d91725c3db431.png",
+                "星梦手记-轮胎": "https://i0.hdslb.com/bfs/emote/bc13e24a1a0b58d9ef826b38e45960bfb4a3e11c.png",
+                "星梦手记-没钱": "https://i0.hdslb.com/bfs/emote/e7d3feef58bf65441cbca1b8cd3c4b79cb923d15.png",
+                "星梦手记-无辜": "https://i0.hdslb.com/bfs/emote/0be73bd600367f162a2a14d48c11ad72b3527858.png",
+                "星梦手记-弃疗": "https://i0.hdslb.com/bfs/emote/fee923c0e57d1f1e3426b397edcfeac93d770b76.png",
+                "星梦手记-雨照惊吓": "https://i0.hdslb.com/bfs/emote/4b1316f5bfd5c1745f8c721d845a6917d663c715.png",
+                "冷兔-吃瓜": "https://i0.hdslb.com/bfs/emote/eed6831c5e3ceb1b23cb2ef0446b9c3c4d30f067.png",
+                "冷兔-233": "https://i0.hdslb.com/bfs/emote/a7375691637b59ccbf75059fca01d9f95727a98a.png",
+                "冷兔-这不科学": "https://i0.hdslb.com/bfs/emote/c9b24ea4f2e17d2faf88c0a2f1df367b135f45e7.png",
+                "冷兔-？？？": "https://i0.hdslb.com/bfs/emote/8871cfa274a50f913cae368aa2ae428fbefe42da.png",
+                "冷兔-等更": "https://i0.hdslb.com/bfs/emote/eb2763a2d48734d77327de5f57af43e155414b13.png",
+                "冷兔-丢你雷姆": "https://i0.hdslb.com/bfs/emote/7ff16758d617cd1455c5f717f9c5b6863105abc1.png",
+                "冷兔-耶": "https://i0.hdslb.com/bfs/emote/58b11a31381162761b3ebfb2e3e78bedf740cf17.png",
+                "冷兔-无语": "https://i0.hdslb.com/bfs/emote/a22b1afafdfbee8b60b918cefce27ebd0c5dc915.png",
+                "冷兔-额": "https://i0.hdslb.com/bfs/emote/805a33cfd96009f474ec2a7b6d0923e1a743aa29.png",
+                "冷兔-呵呵": "https://i0.hdslb.com/bfs/emote/f6a80eda4c0401c523fe9931297a132d2c5c41a6.png",
+                "冷兔-一无所知": "https://i0.hdslb.com/bfs/emote/d300fae68fa32dd918196e05f1d274e500a10087.png",
+                "冷兔-体前屈": "https://i0.hdslb.com/bfs/emote/0f04dc139d9dd38e7b2f8db72c71f5ce89f60ac7.png",
+                "冷兔-喜欢": "https://i0.hdslb.com/bfs/emote/4eda384b1e97430e48cd2faa28454f08f6daa70a.png",
+                "冷兔-哭": "https://i0.hdslb.com/bfs/emote/bec3a906385324a4b472f0ed3b5323f905ae0f6b.png",
+                "冷兔-赞": "https://i0.hdslb.com/bfs/emote/b001a8210f1c2166f436c8de080a76c33637036e.png",
+                "冷兔-低头": "https://i0.hdslb.com/bfs/emote/ebe445da276339c0506267b0bb59a0b5ea3300d3.png",
+                "冷兔-卖萌": "https://i0.hdslb.com/bfs/emote/4d9f8b35f0789afa40a48b0ce06769e5b4e60cb0.png",
+                "冷兔-扶额": "https://i0.hdslb.com/bfs/emote/ff5c34e9072a83b56c2f2648cfe6ecf11b92f7be.png",
+                "冷兔-掀桌": "https://i0.hdslb.com/bfs/emote/50d837346517f128442702eb7df04a82d20dbe89.png",
+                "冷兔-吸欧气": "https://i0.hdslb.com/bfs/emote/16e696a795186a7ca2a4aeaa1dafcf225246add4.png",
+                "那兔-合个影": "https://i0.hdslb.com/bfs/emote/0c12e40154dd0c73e2dd5e02ab8315bbaf905aec.png",
+                "那兔-囧": "https://i0.hdslb.com/bfs/emote/0a6519dc3f8b4b58fea10e3b8a26d700728f95bf.png",
+                "那兔-。。。": "https://i0.hdslb.com/bfs/emote/f5968dc3f8342019f4777d85c56fdda9df460ad4.png",
+                "那兔-好滴": "https://i0.hdslb.com/bfs/emote/6d292369dc9d578da241b3e5680d4e2fa95b9aeb.png",
+                "那兔-讲道理": "https://i0.hdslb.com/bfs/emote/29643a9f37d2b8981c50741fe6943947f9f31661.png",
+                "那兔-懒得理你": "https://i0.hdslb.com/bfs/emote/3e1c2e302a52f7b03e9fda5ed37cc00844ba62bb.png",
+                "那兔-奈我何": "https://i0.hdslb.com/bfs/emote/a6e38393214099abe9d402070d67d7747150cbbd.png",
+                "那兔-你丫试试": "https://i0.hdslb.com/bfs/emote/0802020cec4543e96256d7dfadfd3cef9662aae0.png",
+                "那兔-深思": "https://i0.hdslb.com/bfs/emote/44bde865b0954e1230caaa545ea91a5b6d90e424.png",
+                "那兔-恶代官": "https://i0.hdslb.com/bfs/emote/91bcc90beb6f9cd1c7b3da4011f68d1ee7ab7132.png",
+                "那兔-说什么喵": "https://i0.hdslb.com/bfs/emote/adca5e0ea594bcfd1d6480a6755f1bec3984811e.png",
+                "那兔-心碎": "https://i0.hdslb.com/bfs/emote/f016a83fcdb0dbb5738e2f9fb62efd1f0971d17f.png",
+                "那兔-一见钟情": "https://i0.hdslb.com/bfs/emote/cd6ae74fe5dd1b1252a1603af0a34c94b9ba931e.png",
+                "那兔-痴呆": "https://i0.hdslb.com/bfs/emote/6a7020931d20380be2fb50a8d8c2e582f6d8ff89.png",
+                "那兔-找事儿": "https://i0.hdslb.com/bfs/emote/55022a863de195f355394296647a8cea2ad69d57.png",
+                "那兔-呃": "https://i0.hdslb.com/bfs/emote/06105d9eafe0316d69453da63b05ae76fdfa9a8a.png",
+                "那兔-擦": "https://i0.hdslb.com/bfs/emote/db5d5e113501e2ec8ea51dee1c716a932d929949.png",
+                "我家大师兄脑子有坑-比心": "https://i0.hdslb.com/bfs/emote/d675489bfcfdbac9734cc0760fd25b1cb1b57ba2.png",
+                "我家大师兄脑子有坑-吃瓜": "https://i0.hdslb.com/bfs/emote/816198d849984d510a1713c3d6426754475f8ddd.png",
+                "我家大师兄脑子有坑-大笑": "https://i0.hdslb.com/bfs/emote/1af457c164e174376c558e62f26b86ca18d67844.png",
+                "我家大师兄脑子有坑-汗": "https://i0.hdslb.com/bfs/emote/834905aff2a69e52eed7d8f48cb0344b600829b0.png",
+                "我家大师兄脑子有坑-机智": "https://i0.hdslb.com/bfs/emote/a56e6a8d21498abac50f886559767172934262da.png",
+                "我家大师兄脑子有坑-哭": "https://i0.hdslb.com/bfs/emote/d7d9809e3118b2a57bcf28a4605abfef12359a73.png",
+                "我家大师兄脑子有坑-期待": "https://i0.hdslb.com/bfs/emote/ef74493b15b9029ac73dddcb6fe1fcc265058fb5.png",
+                "我家大师兄脑子有坑-撒花": "https://i0.hdslb.com/bfs/emote/e0755e2432241f9ea5e9b5594a0a59f0ba68455d.png",
+                "我家大师兄脑子有坑-吐魂": "https://i0.hdslb.com/bfs/emote/5e6482f392ee60e1b0bfbf3bb0abf8afe32fb7f6.png",
+                "我家大师兄脑子有坑-晕": "https://i0.hdslb.com/bfs/emote/2f10c278536711e836ec9a3ba77c19c6433b3608.png",
+                "喂，看见耳朵啦！-懵": "https://i0.hdslb.com/bfs/emote/51725a9abd80ce5dca5a31b7d752c61bdc063a44.png",
+                "喂，看见耳朵啦！-嗷": "https://i0.hdslb.com/bfs/emote/203d29bcc8e2ab7ce4a12bc07140403390f4b2e6.png",
+                "喂，看见耳朵啦！-抱大腿": "https://i0.hdslb.com/bfs/emote/d5eebcecad919c86d68ae495f39743fc80b20ad9.png",
+                "喂，看见耳朵啦！-抱走": "https://i0.hdslb.com/bfs/emote/0576f4f1463f6757101a236c10049ed40ba748cb.png",
+                "喂，看见耳朵啦！-壁咚": "https://i0.hdslb.com/bfs/emote/759a8a54f10767bdc40fd014b70a783ae0e568ef.png",
+                "喂，看见耳朵啦！-冷漠": "https://i0.hdslb.com/bfs/emote/edb3d7e86fd768b55c50588110a765e3d9cafd4b.png",
+                "喂，看见耳朵啦！-嘤嘤嘤": "https://i0.hdslb.com/bfs/emote/d061ef8b91ca866fc6ce3ac0eaaf831457e08c52.png",
+                "喂，看见耳朵啦！-吓": "https://i0.hdslb.com/bfs/emote/9ed824796f9494f8ef4adadb68f271cbf1790dcf.png",
+                "喂，看见耳朵啦！-chu": "https://i0.hdslb.com/bfs/emote/912c436fee4d16f94cc5f794abc6a6edf3beda4d.png",
+                "喂，看见耳朵啦！-爱你": "https://i0.hdslb.com/bfs/emote/68fb8141a242cdcde94ba12e91dee1ad6b37978e.png",
+                "喂，看见耳朵啦！-舔": "https://i0.hdslb.com/bfs/emote/c57b984be871913cd502e9bb6b971ce311229d99.png",
+                "喂，看见耳朵啦！-睡觉觉": "https://i0.hdslb.com/bfs/emote/9adec4fb28034e50dde7a2ca5de234c80f95dc04.png",
+                "喂，看见耳朵啦！-举高高": "https://i0.hdslb.com/bfs/emote/a413e5eeeec632074b6c01274bf8fcb510991e0e.png",
+                "喂，看见耳朵啦！-不可描述": "https://i0.hdslb.com/bfs/emote/fda54b79413faa735b1c96eb9acd497e3207ba4d.png",
+                "喂，看见耳朵啦！-摔倒啦": "https://i0.hdslb.com/bfs/emote/cb626004cd67af4a48fd48f15a9f36f564052082.png",
+                "喂，看见耳朵啦！-说什么都对": "https://i0.hdslb.com/bfs/emote/4bddfe880ce46bd46b39b3f7a3f45300cbd330f9.png",
+                "小绿和小蓝-不想说话": "https://i0.hdslb.com/bfs/emote/eb0e4730ecb42c342e1507330ce495deef0128bd.png",
+                "小绿和小蓝-吵架": "https://i0.hdslb.com/bfs/emote/420d20935484170ac24c67872f29458bc0c79f5a.png",
+                "小绿和小蓝-得意脸": "https://i0.hdslb.com/bfs/emote/ef7c7605c4975f89896f3ed37c4e097c4e1713d7.png",
+                "小绿和小蓝-高兴": "https://i0.hdslb.com/bfs/emote/614798a8c875540d417b7200b9ea1ac3e1a934a3.png",
+                "小绿和小蓝-哦": "https://i0.hdslb.com/bfs/emote/dab5061b6f299a5f38b85a115da8eab8024426e8.png",
+                "小绿和小蓝-捂脸": "https://i0.hdslb.com/bfs/emote/7108030a92e01945817e2e73cc9206cfed4069a3.png",
+                "小绿和小蓝-邪恶脸": "https://i0.hdslb.com/bfs/emote/da35ac592ab48d23d299034315eb3b4efe15015b.png",
+                "小绿和小蓝-要哭了": "https://i0.hdslb.com/bfs/emote/f1c4d2b6cfcf43b985af38da8dc5a4fcdfbcc600.png",
+                "小绿和小蓝-疑问": "https://i0.hdslb.com/bfs/emote/80d7b4f10cd51dee05c0e307169aab9e9c2ea37e.png",
+                "小绿和小蓝-打滚": "https://i0.hdslb.com/bfs/emote/a0523e55635cf3e09dc286e2042fbbac6b50409c.png",
+                "小绿和小蓝-诶": "https://i0.hdslb.com/bfs/emote/302e36652f710d0e7a8260090eaf63eac3bd28bf.png",
+                "小绿和小蓝-机智一比": "https://i0.hdslb.com/bfs/emote/54816a3dd363e620e5d999f1bdf75290645bd35e.png",
+                "小绿和小蓝-喵喵喵": "https://i0.hdslb.com/bfs/emote/a2019a775d69b7888d663e82b3c29bd0c2281188.png",
+                "小绿和小蓝-跑": "https://i0.hdslb.com/bfs/emote/a73a2d7b884e735ab26ee1f871dd38c499f7b84a.png",
+                "小绿和小蓝-喂": "https://i0.hdslb.com/bfs/emote/707e9e784b745fad291ab15d9a31a24c7efa6c1f.png",
+                "小绿和小蓝-已关机": "https://i0.hdslb.com/bfs/emote/ea0769dadca17598873306ab8500aab1dd8994bd.png",
+                "小绿和小蓝-直接躺平": "https://i0.hdslb.com/bfs/emote/92a77c53d7a66763d2bd9dab80ddd2afa6cf6387.png",
+                "小绿和小蓝-呆住": "https://i0.hdslb.com/bfs/emote/978ab4d7ea39f7428fc945ba68c96b2291d26751.png",
+                "小绿和小蓝-哈哈": "https://i0.hdslb.com/bfs/emote/22144e5e3ea83b587483ea473c2e191284d64b44.png",
+                "小绿和小蓝-喝水": "https://i0.hdslb.com/bfs/emote/1e5592c8200419164f5730a0de6c30281a5c5a57.png",
+                "小绿和小蓝-生气": "https://i0.hdslb.com/bfs/emote/a9cc35254663a736cbd0e020634765b5f147fcdd.png",
+                "小绿和小蓝-哇啊啊啊": "https://i0.hdslb.com/bfs/emote/d67db235a945fdbd0b537aebddb4abc5ffc01184.png",
+                "小绿和小蓝-一本正经": "https://i0.hdslb.com/bfs/emote/822a803bf5b340090c9c7053a74aa43c1b527c27.png",
+                "小绿和小蓝-惊呆": "https://i0.hdslb.com/bfs/emote/15091032588cf3ccf2a7969460fe7705ec00e9c7.png",
+                "小绿和小蓝-开心": "https://i0.hdslb.com/bfs/emote/08dab1d9250043f97273b211253d0341f92fb0f8.png",
+                "小绿和小蓝-苦恼": "https://i0.hdslb.com/bfs/emote/14a0716224369f5211d5c69c249354f11f5026cb.png",
+                "小绿和小蓝-灵光乍现": "https://i0.hdslb.com/bfs/emote/dc3fae4b42056970f5aa407e8297e96cd2ede2b2.png",
+                "小绿和小蓝-思考": "https://i0.hdslb.com/bfs/emote/aecd0b1b0a5848765f002c857b73092677dec31f.png",
+                "一人之下-机智": "https://i0.hdslb.com/bfs/emote/afdcd367d011fbe5b78032daf519689c0bbcdc5e.png",
+                "一人之下-刀": "https://i0.hdslb.com/bfs/emote/68036be8868b42a6cbdb61327cfdb50bedde1a38.png",
+                "一人之下-埋了": "https://i0.hdslb.com/bfs/emote/2784a335e41ac4cdf2ec94bf430a906f933f11f4.png",
+                "一人之下-蟑螂": "https://i0.hdslb.com/bfs/emote/a95014fff53b7921b5f1850781ccf5af5ef73234.png",
+                "一人之下-抽打": "https://i0.hdslb.com/bfs/emote/a6a0a0a20019de939232bdaf3f1882e6d8ffd75e.png",
+                "一人之下-燃": "https://i0.hdslb.com/bfs/emote/f2a78e0e05bb90b38b550f57355173f8e9e32a7f.png",
+                "一人之下-超凶": "https://i0.hdslb.com/bfs/emote/aea3aa73a14350613628a0dac83e77c6c8fa9d68.png",
+                "一人之下-干翻苍穹": "https://i0.hdslb.com/bfs/emote/e5de003a4eb9fef32fe722cd06ad2abc9a3d4ec3.png",
+                "一人之下-糟了": "https://i0.hdslb.com/bfs/emote/45ad7c1b87cf95743a2ad000b8dd2eedfcf73107.png",
+                "一人之下-孙贼": "https://i0.hdslb.com/bfs/emote/a689c37d5779cda0774d6f4be65cd587c4d0e27f.png",
+                "一人之下-养生": "https://i0.hdslb.com/bfs/emote/32adfeb34ecc2e4ab9702813ab547fc0bb09aac7.png",
+                "一人之下-瘫": "https://i0.hdslb.com/bfs/emote/721c2b271d9edbb937c6dec61ba25568797b27aa.png",
+                "一人之下-打call": "https://i0.hdslb.com/bfs/emote/7f979ab31d61e09acb3da46b52c52376e1131abe.png",
+                "一人之下-比心": "https://i0.hdslb.com/bfs/emote/fafec3459f631f0ba76adde9faf8aa112469e9c4.png",
+                "一人之下-摸头": "https://i0.hdslb.com/bfs/emote/500171557765a27c500a7024888c698680c73653.png",
+                "一人之下-八卦": "https://i0.hdslb.com/bfs/emote/5be05cddd588d7b635cd55501b9b7a47af5dc5bc.png",
+                "一人之下-狐狸": "https://i0.hdslb.com/bfs/emote/022b95f086cd4469aec2a44045729bfda6fd8c95.png",
+                "一人之下-承让": "https://i0.hdslb.com/bfs/emote/6a21366ea70b7369b1d3c867f04bf8932e7c9be4.png",
+                "一人之下-哎？": "https://i0.hdslb.com/bfs/emote/ece804d0f852c6c6c9ae280dca523de672d5631d.png",
+                "一人之下-叹气": "https://i0.hdslb.com/bfs/emote/f5c79a00613d3e1f71d18332d474c7c0af31e4b2.png",
+                "一人之下-雷": "https://i0.hdslb.com/bfs/emote/75bbf0f391e8136d79109ff1d6904b688555b49b.png",
+                "狐妖-不服憋着": "https://i0.hdslb.com/bfs/emote/d3633ea35afac42d46679a3d31775a9860e63c2d.png",
+                "狐妖-吃瓜": "https://i0.hdslb.com/bfs/emote/8c5ad49f83b29262e2e785124bec6651670ae36b.png",
+                "狐妖-不明嚼栗": "https://i0.hdslb.com/bfs/emote/71601899fe445454c3593e7d82e4ea01f980b230.png",
+                "狐妖-抽打": "https://i0.hdslb.com/bfs/emote/43bb8e363f6c94c97a396a68852c8f2182651fc0.png",
+                "狐妖-吃我安利": "https://i0.hdslb.com/bfs/emote/3a0bf7d0320a84002ea8b4907e6c3baa97ec0dd0.png",
+                "狐妖-伐开心": "https://i0.hdslb.com/bfs/emote/01f6b69d1f69e8ea879569827e7363f4da630cba.png",
+                "狐妖-惊": "https://i0.hdslb.com/bfs/emote/e1c6e6aca03b634f32bc71762015c44431dafd74.png",
+                "狐妖-大笑": "https://i0.hdslb.com/bfs/emote/38bc9f4e39c2ec9d7442f2d67e13092fd535846b.png",
+                "狐妖-震惊": "https://i0.hdslb.com/bfs/emote/83361a40f6fd010e6da88825aa27320189ad2df5.png",
+                "狐妖-脸红": "https://i0.hdslb.com/bfs/emote/79175b3bc469061020d15114e22ac261b0668819.png",
+                "狐妖-冷漠": "https://i0.hdslb.com/bfs/emote/842b69b5c3e98d11292edd4f4cf6abb8504c18bc.png",
+                "狐妖-哭": "https://i0.hdslb.com/bfs/emote/29de352176c8ead5b301212aa61facb5e3abcd55.png",
+                "狐妖-目瞪口呆": "https://i0.hdslb.com/bfs/emote/c75e6841c81a5c020971debe394334d8b2700151.png",
+                "狐妖-前排": "https://i0.hdslb.com/bfs/emote/4d2702f9383dec00c7c77ff026768c3ddaaf6d60.png",
+                "狐妖-沙发": "https://i0.hdslb.com/bfs/emote/5ff883da9618dfd9740256e569279244bbff03b1.png",
+                "狐妖-掀桌": "https://i0.hdslb.com/bfs/emote/f0917c6d982a86c2ab02c979359226f761581c37.png",
+                "狐妖-心": "https://i0.hdslb.com/bfs/emote/77123fd85c11478b46d762a1c8553328013637ef.png",
+                "狐妖-晕": "https://i0.hdslb.com/bfs/emote/64702d1fc92c44e8aaa39ffdacdc87aaa6d38d3d.png",
+                "狐妖-吃药": "https://i0.hdslb.com/bfs/emote/059d810cbc5ad4df4f9bbf08e44643b022a2354f.png",
+                "狐妖-mdzz": "https://i0.hdslb.com/bfs/emote/e68fd21a5bcfa50b6d45f2a8f5926f992f484ae3.png",
+                "战双帕弥什-吃瓜": "https://i0.hdslb.com/bfs/emote/8541c44effd3f69a71b1e96a586ac0fe5b765c45.png",
+                "战双帕弥什-哼": "https://i0.hdslb.com/bfs/emote/59748ef499690a7931c198cd4e0343d5a05d63da.png",
+                "战双帕弥什-抱抱": "https://i0.hdslb.com/bfs/emote/83a6ae3a34c54e6ebef7d0ca5ad540f61c1df678.png",
+                "战双帕弥什-画圈圈": "https://i0.hdslb.com/bfs/emote/167a9b59900ef721dd3fd19e6216a71d4eb85dfb.png",
+                "战双帕弥什-痴汉": "https://i0.hdslb.com/bfs/emote/9987980413cc6f550ea7e5f071fe1166cef729b7.png",
+                "战双帕弥什-挠头": "https://i0.hdslb.com/bfs/emote/b1930eefe111a6e140f17669368aed831aeab5f4.png",
+                "战双帕弥什-肥宅": "https://i0.hdslb.com/bfs/emote/3ac9e30424ff0122d4ca274cac3ed236d2853e46.png",
+                "战双帕弥什-柠檬茶": "https://i0.hdslb.com/bfs/emote/02180f96d9b38797873286035dcfe738ad382cbb.png",
+                "战双帕弥什-诶嘿": "https://i0.hdslb.com/bfs/emote/98c27f2281019fa5ef0872da88401d03313463b2.png",
+                "战双帕弥什-拍桌": "https://i0.hdslb.com/bfs/emote/2bd9551d81a1edf8013dc75ca18b875050db9dd3.png",
+                "战双帕弥什-哭哭": "https://i0.hdslb.com/bfs/emote/71e7feb027f42ec299a440c3031534d6bdc4e604.png",
+                "战双帕弥什-吐血": "https://i0.hdslb.com/bfs/emote/3b53c31e32cf8806770f760a74b167b14610df8c.png",
+                "战双帕弥什-凉了": "https://i0.hdslb.com/bfs/emote/142bcb77a9564db8ab5f429ad1e623c9fa446abd.png",
+                "战双帕弥什-托腮": "https://i0.hdslb.com/bfs/emote/e196eeadb34eb7238206d606b801ef8e0516d00a.png",
+                "战双帕弥什-喷了": "https://i0.hdslb.com/bfs/emote/5424a9d241653492c296d8c8b4c889f2202fac8a.png",
+                "战双帕弥什-星星眼": "https://i0.hdslb.com/bfs/emote/1595f4072f90b756f15834f70bb188872c107a37.png",
+                "战双帕弥什-我即天命": "https://i0.hdslb.com/bfs/emote/2dd6a60bcdce44e54f07c090b1b8849ee76ae4a0.png",
+                "战双帕弥什-作战预备": "https://i0.hdslb.com/bfs/emote/82d3b0c747cff3e8523cfd10e0e58c03dac885a3.png",
+                "大王不高兴-开心": "https://i0.hdslb.com/bfs/emote/cb17a1a0b113c1b2c4a42c273d0e9a434289a95c.png",
+                "大王不高兴-生气": "https://i0.hdslb.com/bfs/emote/5c3aa8d501c1a1a3c3e627edfc98703c1066e91b.png",
+                "大王不高兴-哭": "https://i0.hdslb.com/bfs/emote/f0677bb46861c5b03137e356d06a51a562fd0a59.png",
+                "大王不高兴-比心": "https://i0.hdslb.com/bfs/emote/0ce7501326cdf4be8c81a106054680458d4fa247.png",
+                "大王不高兴-疑问": "https://i0.hdslb.com/bfs/emote/3e0ebc9bd1cb54a2ceed82a90a3fdd2586a517ae.png",
+                "大王不高兴-我好了": "https://i0.hdslb.com/bfs/emote/997095a106b2fb7319f07c6f9260468410734a56.png",
+                "大王不高兴-汗": "https://i0.hdslb.com/bfs/emote/7b02c3d608f3ca9cdc6b46d64f06f8909017f164.png",
+                "大王不高兴-点赞": "https://i0.hdslb.com/bfs/emote/f85e02492f0f87ee94f274f1684787170ceefcdb.png",
+                "大王不高兴-害怕": "https://i0.hdslb.com/bfs/emote/461eff396cde49246614731caacef13200730709.png",
+                "大王不高兴-滑稽": "https://i0.hdslb.com/bfs/emote/0004ca2d9be95b769d8a9778aaee3a07482550ba.png",
+                "大王不高兴-目瞪口呆": "https://i0.hdslb.com/bfs/emote/83d687d404ce04c68cf5f968a74a2d936097486e.png",
+                "大王不高兴-前排": "https://i0.hdslb.com/bfs/emote/8b02d412a194f8c424c12c0c9f22159f3a1895f8.png",
+                "崩坏3-点赞": "https://i0.hdslb.com/bfs/emote/055a130541fe95e20aa541db5a5a48d0cbc728b6.png",
+                "崩坏3-入欧": "https://i0.hdslb.com/bfs/emote/5d532eab104881e7dd63be1083a78ab36878c3b4.png",
+                "崩坏3-脱非": "https://i0.hdslb.com/bfs/emote/ac31b7219032b6e714c189d65a669ca3ca2d3e77.png",
+                "崩坏3-快乐": "https://i0.hdslb.com/bfs/emote/a3ec46f1255dbf96d413231862399b939dc2110e.png",
+                "崩坏3-注入灵魂": "https://i0.hdslb.com/bfs/emote/5bf261f6fb91463e1ff1c80dd0fefd6bcd31aedf.png",
+                "崩坏3-危险": "https://i0.hdslb.com/bfs/emote/3a6af29282b6e09ce7881c9aebc187d03268b25f.png",
+                "崩坏3-吃瓜": "https://i0.hdslb.com/bfs/emote/9ecead2805adf05a308e1093fb8d4941d0366189.png",
+                "崩坏3-糖葫芦": "https://i0.hdslb.com/bfs/emote/f54e160beaf3f7b55a87d0da9a6eccefc7bd70d6.png",
+                "崩坏3-路过": "https://i0.hdslb.com/bfs/emote/13a7f9e81f4005c29466e8d65eabbf3167902f9d.png",
+                "崩坏3-魔法少女": "https://i0.hdslb.com/bfs/emote/da063804b5b8d44c288dd2c45f472741c00c8625.png",
+                "崩坏3-特效": "https://i0.hdslb.com/bfs/emote/a1bb1caf129b5e28f2c331667f9e38808050e8a8.png",
+                "崩坏3-唢呐": "https://i0.hdslb.com/bfs/emote/032301ad0e61395a266e7f9b4ebcf83bd2acca03.png",
+                "崩坏3-琵琶": "https://i0.hdslb.com/bfs/emote/13c3e61eec3a61a3e0ae2883a488ce9b45cddecc.png",
+                "崩坏3-二胡": "https://i0.hdslb.com/bfs/emote/b2e3acfba545c61c334eacf5a5b7694e071d834f.png",
+                "崩坏3-笛子": "https://i0.hdslb.com/bfs/emote/3dae79d5ce1d826d6d16404dff7bf22474c7015b.png",
+                "崩坏3-镲": "https://i0.hdslb.com/bfs/emote/dcce1ad4d53a25c52946821c0d3a4b7dd80e5a42.png",
+                "崩坏3-红包": "https://i0.hdslb.com/bfs/emote/4bd80539d828ad6894ccb099b5b04769820d49d6.png",
+                "崩坏3-谈话": "https://i0.hdslb.com/bfs/emote/4794f82d166b1f8bfae7783859913e03fe42ae81.png",
+                "崩坏3-无辜": "https://i0.hdslb.com/bfs/emote/4e1f4e9a375beaa4e93d057a4e285c924635235f.png",
+                "崩坏3-星星眼": "https://i0.hdslb.com/bfs/emote/b5fffeead2dc05c7f902f1c7136178c6a63e508a.png",
+                "崩坏3-微笑": "https://i0.hdslb.com/bfs/emote/c2c6c0604af985b745322954814863e47f6fb6d5.png",
+                "崩坏3-开心": "https://i0.hdslb.com/bfs/emote/3657a825b87ec063d6e2a3c201da2056e45db938.png",
+                "崩坏3-幸福": "https://i0.hdslb.com/bfs/emote/714cc90d3485a003f53eecec336bea8a0b2dc12d.png",
+                "崩坏3-吃": "https://i0.hdslb.com/bfs/emote/c26ae762270b756b68a7f5c63d43078e874fbead.png",
+                "崩坏3-口水": "https://i0.hdslb.com/bfs/emote/7a66d7e1902b766a2b930009687be5171018f1ff.png",
+                "崩坏3-惊": "https://i0.hdslb.com/bfs/emote/672ab0cac8e29270a0ea1788df5711ce716b6942.png",
+                "崩坏3-哭哭": "https://i0.hdslb.com/bfs/emote/f432d349d44aad9873da18b27a6367c3ea7cfebc.png",
+                "崩坏3-纠结": "https://i0.hdslb.com/bfs/emote/864ff2ef1546534f5b53b279332e3950a86cf008.png",
+                "崩坏3-疑问": "https://i0.hdslb.com/bfs/emote/bdda506f56f5a42e365b6f2f8d2128f799f8310e.png",
+                "崩坏3-有主意了": "https://i0.hdslb.com/bfs/emote/38676ebb4c51fdda6302a5cb131ae94d35be4f8b.png",
+                "阴阳师缘结神-你高尚": "https://i0.hdslb.com/bfs/emote/f88abffb5a8d570b1efc68cd5440d9515b8a45e6.png",
+                "阴阳师缘结神-菜哭": "https://i0.hdslb.com/bfs/emote/5c9907d23378704942227aa5a2834ff35f2e425d.png",
+                "阴阳师缘结神-姐妹！": "https://i0.hdslb.com/bfs/emote/972913308e0633454e382e6e1c01b810c24cd574.png",
+                "阴阳师缘结神-我身体好": "https://i0.hdslb.com/bfs/emote/1852865c39b446a63ecb07da68a196dc4dd2c96e.png",
+                "阴阳师缘结神-我磕到了": "https://i0.hdslb.com/bfs/emote/5f59b958267f9441d82956071586fa25c9ee5e7c.png",
+                "阴阳师缘结神-爱心发射": "https://i0.hdslb.com/bfs/emote/25cdfac5b23e5cb007d1fa643b82751c9b07d31a.png",
+                "阴阳师缘结神-快去结婚": "https://i0.hdslb.com/bfs/emote/90402b80a3fd1ab81c9d78a31354f00f0a0cb1ba.png",
+                "阴阳师缘结神-亲一个": "https://i0.hdslb.com/bfs/emote/611591c16d0e621b21e035045c026e2039e52c29.png",
+                "阴阳师缘结神-KWSL": "https://i0.hdslb.com/bfs/emote/8bddeede5426262701d09a9bdffd3cc7a89bee69.png",
+                "阴阳师缘结神-缘结神哒": "https://i0.hdslb.com/bfs/emote/f7a03dfd13018213d210d4de8467e51f8b9d91e3.png",
+                "阴阳师缘结神-该结婚了": "https://i0.hdslb.com/bfs/emote/c7b591beb0e613e0a9f95fc5becf42d7896a5869.png",
+                "阴阳师缘结神-兄弟情？": "https://i0.hdslb.com/bfs/emote/2606e0614cd56d7d9c3a5c8e4ed6d96ef9eea888.png",
+                "阴阳师缘结神-别骚了": "https://i0.hdslb.com/bfs/emote/fb58e9683265087ad8bdbe3e834f7813cf72f990.png",
+                "阴阳师缘结神-开心": "https://i0.hdslb.com/bfs/emote/f1a2a63ef7a89eae87da511f5de5b04d0e9ae06c.png",
+                "阴阳师缘结神-在一起": "https://i0.hdslb.com/bfs/emote/4ccc36204a64787b0fb67d47edcffaf3c45acc42.png",
+                "阴阳师缘结神-期待": "https://i0.hdslb.com/bfs/emote/b80475b53b481f3d11ec05b07c55ad390f091b35.png",
+                "阴阳师缘结神-多喝热水": "https://i0.hdslb.com/bfs/emote/b6f923ac40cf7faf24d3bc8ca6ebcdf6425a876f.png",
+                "阴阳师缘结神-有粮不": "https://i0.hdslb.com/bfs/emote/6fdd3e5e15dc307c3c6990a621df860634527f47.png",
+                "阴阳师缘结神-等粮中": "https://i0.hdslb.com/bfs/emote/0126cb6e58fa39fbd0f2e5242461ae0e101ea904.png",
+                "阴阳师缘结神-求你产粮": "https://i0.hdslb.com/bfs/emote/95011ad80649de14a966c827db305579a8311b63.png",
+                "阴阳师缘结神-我不活啦": "https://i0.hdslb.com/bfs/emote/48de67de9c96dc5340af62ccc76200e07ceaffda.png",
+                "公主连结-不错": "https://i0.hdslb.com/bfs/emote/e0ac5fff71fd2aabd8c20505a548f5bca36bc7a5.png",
+                "公主连结-鼓气": "https://i0.hdslb.com/bfs/emote/a3fb7d3a867ba3523e6a0faa2ca42af797328d6d.png",
+                "公主连结-害怕": "https://i0.hdslb.com/bfs/emote/c305b2bd36063b700fd9fac093c21639c0806138.png",
+                "公主连结-惊吓": "https://i0.hdslb.com/bfs/emote/57ad87c4e597a366dac713ad4800cecbd520175e.png",
+                "公主连结-来啊": "https://i0.hdslb.com/bfs/emote/a82ab04d1a10c742b5eadafb2a0e04d77daa84d4.png",
+                "公主连结-累死了": "https://i0.hdslb.com/bfs/emote/8c68c16f8f4c79f14bb16c6ea64378d77abdf0d0.png",
+                "公主连结-冷漠": "https://i0.hdslb.com/bfs/emote/04a257a00ae097d61498db6118f6da393d4c85b7.png",
+                "公主连结-厉害了": "https://i0.hdslb.com/bfs/emote/066c5c59e39f163345d2a41123d53596b39a2ce3.png",
+                "公主连结-你干嘛": "https://i0.hdslb.com/bfs/emote/422897481963e6efdd93dce8581c112e7af80a1e.png",
+                "公主连结-扭扭捏捏": "https://i0.hdslb.com/bfs/emote/4c20cd2aed2598dd18507fdd03c7d39b6eb7842c.png",
+                "公主连结-祈祷": "https://i0.hdslb.com/bfs/emote/a63b3da12e46314470413fea6975579b0871d1f8.png",
+                "公主连结-思索": "https://i0.hdslb.com/bfs/emote/3c6741be302ec54f152093ab00f950b00a083d6d.png",
+                "公主连结-投币": "https://i0.hdslb.com/bfs/emote/6bd0c47917f94d510990db020ce3a7c07ed698e9.png",
+                "公主连结-无奈": "https://i0.hdslb.com/bfs/emote/7f78404ee98cc8738b9b738f7e4446a6fdbaff00.png",
+                "公主连结-邪恶": "https://i0.hdslb.com/bfs/emote/97d25106924c7f3db1fe26ed7d67db943ffcc92e.png",
+                "公主连结-阴谋": "https://i0.hdslb.com/bfs/emote/705f87da382b4c46d6bf19579b62c88bf4aa702c.png",
+                "公主连结-怎么这样": "https://i0.hdslb.com/bfs/emote/7461756bf9c49c4b48d1c26083695044b468ad7c.png",
+                "公主连结-emmm": "https://i0.hdslb.com/bfs/emote/99ca73b1f486042cd8ab6b17fd5ad638ed777899.png",
+                "2020拜年祭-哈气": "https://i0.hdslb.com/bfs/emote/464fb79ad8dc0b8ba192bef47e03c044fc8ec8ac.png",
+                "2020拜年祭-期待": "https://i0.hdslb.com/bfs/emote/34d9883978304d61b0a6bfe4dc5ed3cce849a954.png",
+                "2020拜年祭-吸欧气": "https://i0.hdslb.com/bfs/emote/d7d2033c871fbe06747c6ca93a7856f27765d9e7.png",
+                "2020拜年祭-领红包": "https://i0.hdslb.com/bfs/emote/d8425bcf66fe383d0c693c41678202bb2167f476.png",
+                "2020拜年祭-谢谢老板": "https://i0.hdslb.com/bfs/emote/2aa0fef536c594d29b8936c2e7be0e68decd44a8.png",
+                "2020拜年祭-灯笼": "https://i0.hdslb.com/bfs/emote/814b999e584f93769a5c6a0285c91ab3c2f57002.png",
+                "2020拜年祭-火锅": "https://i0.hdslb.com/bfs/emote/2bfbeb3a1502187b0c505e49a460be1dbffd3df0.png",
+                "2020拜年祭-2020": "https://i0.hdslb.com/bfs/emote/5f28eb21ed39a86e369d5316579573b285ccf34f.png",
+                "2020拜年祭-红包": "https://i0.hdslb.com/bfs/emote/cebc5603f3ff1df7f9f2e67c8c7e6309da0b506c.png",
+                "2020拜年祭-新年好": "https://i0.hdslb.com/bfs/emote/9da7e2f2fd6187c506423398dc22f7bf5ba814f4.png",
+                "Cat-escort": "https://i0.hdslb.com/bfs/emote/81784f53f5ca7004a90d316c81889d8161dc05a6.png",
+                "Cat-coffeebath": "https://i0.hdslb.com/bfs/emote/f80cfd44e0f216f4171a549e869aab32d80d4c39.png",
+                "Cat-stealth": "https://i0.hdslb.com/bfs/emote/21f7d24b1e8de29f2c61f64e70af9f6aec14e394.png",
+                "Cat-hightouch": "https://i0.hdslb.com/bfs/emote/3d7264b8349bc1be6d45beebbcfab69e7b9895fc.png",
+                "Cat-lonely": "https://i0.hdslb.com/bfs/emote/72a9d2f20fb79883bbed3cac914187545ac3a0cc.png",
+                "Cat-heart": "https://i0.hdslb.com/bfs/emote/3f98c4debfe792a1969b99ae71f7f5d4bf00c3d5.png",
+                "Cat-slip": "https://i0.hdslb.com/bfs/emote/a6e45e065ed17e2af03f7263784bc36d94b25e74.png",
+                "Cat-chips": "https://i0.hdslb.com/bfs/emote/12d2d3ce0e72749c45706444cca580dc22148876.png",
+                "Cat-study": "https://i0.hdslb.com/bfs/emote/9f6d28ecd7e33c3f5e7cd74cc36f4feedb42e995.png",
+                "Cat-dash": "https://i0.hdslb.com/bfs/emote/0f2d1f99efd5df816c694da76e91a173fa643589.png",
+                "Cat-pressure": "https://i0.hdslb.com/bfs/emote/c6c270e9989e7152457b907595a6e34064d0c1b2.png",
+                "Cat-hibye": "https://i0.hdslb.com/bfs/emote/9e4955f479a1211d401fbaa71ceaf5186b9e57bd.png",
+                "Cat-confuse": "https://i0.hdslb.com/bfs/emote/107ebcbd4dd5895f4595ea6db963dc4566809c6e.png",
+                "Cat-ignore": "https://i0.hdslb.com/bfs/emote/94de4f63a5f965ee8312a88e4c57c07c0174acce.png",
+                "Cat-agree": "https://i0.hdslb.com/bfs/emote/48b00f75518a727d64c385fe8ca2fa49aeb08c77.png",
+                "Cat-fight": "https://i0.hdslb.com/bfs/emote/e39c491906d0fcd0176eede702305655d44044c5.png",
+                "Cat-splash": "https://i0.hdslb.com/bfs/emote/9513157fed2425ed2caa4eb9bc84a0bca80df9bc.png",
+                "Cat-calledme": "https://i0.hdslb.com/bfs/emote/aacb6fb852f6acbbc8386ecef76c98b77178e23e.png",
+                "Cat-sleep": "https://i0.hdslb.com/bfs/emote/39b964d10bde1634f136b662f5b624fcb3bcedb8.png",
+                "Cat-congrats": "https://i0.hdslb.com/bfs/emote/98f6e73340d9ed43403242fc842e42508d38bba6.png",
+                "最强蜗牛西能-Hi": "https://i0.hdslb.com/bfs/emote/cacd7cd54a1d210cfacd79f5b1f061708c3dba4e.png",
+            }
+        });
+
+        function debounce(fn) {
+            var timerID = null
+            return function() {
+                var arg = arguments[0] //获取事件
+                if (timerID) {
+                    clearTimeout(timerID)
+                }
+                timerID = setTimeout(function() {
+                    fn(arg) //事件传入函数
+                }, 200)
+            }
+        }
+        //查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+        let themeDanmu = eval('false');
+        let themeLoop = eval('false');
+        let themeLooperTime = '5000' || 5000;
+        let speed = '20' || 20;
+        let isBarrager = true;
+        if (themeDanmu == true) {
+            do_barrager();
+            $('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+            $('.danmuBtn').on('click', debounce(
+                function() {
+                    if ($('.danmuBtn').hasClass('open')) {
+                        $('.danmuBtn').removeClass('open')
+                        clearInterval(looper);
+                        $.fn.barrager.removeAll();
+                    } else {
+                        $('.danmuBtn').addClass("open");
+                        do_barrager();
+                    }
+                }
+            ))
+        }
+
+        function do_barrager() {
+            isBarrager && valine.Q(window.location.pathname).find().then(function(comments) {
+                // let num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+                let run_once = true;
+                let looper_time = themeLooperTime;
+                let total = comments.length;
+                let index = 0;
+                if (total > 0) {
+                    barrager();
+                } else {
+                    // 当评论数为0的时候，自动关闭弹幕
+                    // $('.danmuBtn').removeClass('open');
+                }
+
+                function barrager() {
+                    if (run_once) {
+                        //如果是首次执行,则设置一个定时器,并且把首次执行置为false
+                        looper = setInterval(barrager, looper_time);
+                        run_once = false;
+                    }
+                    let content = comments[index]._serverData.comment;
+                    let email = comments[index]._serverData.mail;
+                    let link = comments[index]._serverData.link;
+                    let newcontent = content.substring(0, 50).replace(/<[^>]+>/g, "");
+                    //发布一个弹幕
+                    const item = {
+                        img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+                        info: newcontent, //文字 
+                        href: link, //链接 
+                        close: true, //显示关闭按钮 
+                        speed: speed, //延迟,单位秒,默认6 
+                        color: '#fff', //颜色,默认白色 
+                        old_ie_color: '#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+                    }
+                    $('body').barrager(item);
+                    //索引自增
+                    index++;
+                    //所有弹幕发布完毕，清除计时器。
+                    if (index == total) {
+                        clearInterval(looper);
+                        if (themeLoop === true) {
+                            setTimeout(function() {
+                                do_barrager();
+                            }, 5000);
+                        } else {
+                            $('.danmuBtn').removeClass('open');
+                        }
+                        return false;
+                    }
+
+                }
+            })
+        }
+    </script>
+</section>
+<style>
+    input::-webkit-input-placeholder {
+        color: purple;
+    }
+    
+    textarea::-webkit-input-placeholder {
+        color: purple;
+    }
+    
+    #comments {
+        background: transparent;
+        border-radius: 20px;
+    }
+    
+    #veditor {
+        background-image: url('/../image/20.gif');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: rgba(255, 255, 255, 0);
+        color: purple;
+        font-size: large;
+        resize: vertical;
+    }
+    
+    #veditor:focus {
+        background-position-y: 200px;
+        transition: all 0.2s ease-in-out 0s;
+    }
+    
+    #vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+        background-color: #42b983;
+    }
+    
+    .v[data-class=v] .vbtn:active,
+    .v[data-class=v] .vbtn:hover {
+        color: #42b983;
+        border-color: #42b983;
+    }
+    
+    #vcomment .vcards .vcard .vhead .vsys i {
+        display: none;
+    }
+    /* 底部valine链接 */
+    
+    #vcomment .vpower {
+        display: none;
+    }
+    /* 底下注释是修改 名称和邮箱和网址输入框的样式 */
+    
+    #vcomment .vheader {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #vcomment .vheader .vnick {
+        width: 31%;
+        border: 2px solid #dedede;
+        color: rgb(0, 0, 0);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px
+    }
+    
+    #vcomment .vheader .vmail {
+        width: 31%;
+        border: 2px solid #dedede;
+        color: rgb(0, 0, 0);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px
+    }
+    
+    #vcomment .vheader .vlink {
+        width: 31%;
+        border: 2px solid #dedede;
+        color: rgb(0, 0, 0);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px
+    }
+    
+    img.vimg {
+        transition: all 1s;
+        /* 头像旋转时间为 1s */
+    }
+    
+    img.vimg:hover {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+    }
+    
+    #vcomment .vcards .vcard {
+        padding: 15px 20px 0 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+        transition: all .3s
+    }
+    
+    #vcomment .vcards .vcard:hover {
+        box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12);
+    }
+    
+    #vcomment .vcards .vcard .vh .vcard {
+        border: none;
+        box-shadow: none;
+    }
+</style>
+</style>
+          
+        </div>
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+          <div class="toc-open-close">catalog</div>
+        </div>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: -($(window).height() * 0.4 - 45),
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:sticky !important;
+  top: 74px;
+}
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+.toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+}
+</style>
+        </div>
+      </div>
+    </div>
+
+    
+      <script>
+        $(".toc-aside").css({'width': 0, 'padding': 0});
+        $(".toc-content").css({'width': 0});
+        $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+        $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+      </script>
+    
+
+    <script>
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'false');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    </script>
+  
+
+
+</div>
+
+
+                </main>
+                <div class="footer bg-color">
+    <div class="footer-main">
+        <div class="link">
+            <a target="_blank" rel="noopener" href="https://github.com">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:1773326851@qq.com">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+            <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1773326851">
+                <i class="fa fa-qq" aria-hidden="true"></i>
+            </a>
+            <a href="/atom.xml" target="_blank">
+                <i class="fa fa-rss" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="footer-copyright">
+            Copyright © 2021
+            <a target="_blank" rel="noopener" href="https://github.com">github</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com">Bamboo</a>
+        </div>
+        
+    </div>
+</div>
+
+                    
+                        <div class="goTop top-btn-color border-color">
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+                            
+                                
+                                    <div class="goBottom top-btn-color border-color">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+<script src="/js/goBottom.js"></script>
+                                        
+
+                                            
+                                                <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+<style>
+.aplayer .aplayer-lrc p {
+  
+  display: none;
+  
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  
+  display: none;
+  
+  font-size: 15px;
+  color: #42b983;
+}
+
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+
+
+</style>
+<meting-js  
+  class=""
+  server="tencent"
+  type="playlist"
+  id="7996637954"
+  fixed='true'
+  autoplay='false'
+  theme='#42b983'
+  loop='all'
+  order='list'
+  preload='auto'
+  volume='0.7'
+  list-folded='true'
+>
+</meting-js>
+
+<!-- <style>
+  #aplayer {
+    position: fixed;
+    left: 0;
+    bottom: 300px;
+  }
+</style> -->
+<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+                                                    
+
+                                                        <!-- 图片放大 -->
+                                                        
+                                                            <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+                                                            
+
+                                                                <script src="/js/wrapImage.js"></script>
+
+                                                                <!-- 爱心点击 -->
+                                                                
+                                                                    
+                                                                                <script src="/js/cursor/clicklove.js"></script>
+                                                                                
+                                                                                        
+
+                                                                                            <!-- Baidu Analytics -->
+
+                                                                                                <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+                                                                                                    <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+                                                                                                    
+                                                                                                        <script src="/js/aos/aos.js"></script>
+                                                                                                        <script>
+                                                                                                            // https://github.com/michalsnik/aos
+                                                                                                            const themeOffset = parseInt('120') || 120;
+                                                                                                            const themeDelay = parseInt('0') || 0;
+                                                                                                            const themeDuration = parseInt('400') || 400;
+                                                                                                            const themeEasing = 'ease' || 'ease';
+                                                                                                            const themeOnce = eval('true') || false;
+                                                                                                            const themeMirror = eval('false') || false;
+                                                                                                            const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+                                                                                                            AOS.init({
+                                                                                                                // Global settings:
+                                                                                                                disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                                                                                                                startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                                                                                                                initClassName: 'aos-init', // class applied after initialization
+                                                                                                                animatedClassName: 'aos-animate', // class applied on animation
+                                                                                                                useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                                                                                                                disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                                                                                                                debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                                                                                                                throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+                                                                                                                // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                                                                                                                offset: themeOffset, // offset (in px) from the original trigger point
+                                                                                                                delay: themeDelay, // values from 0 to 3000, with step 50ms
+                                                                                                                duration: themeDuration, // values from 0 to 3000, with step 50ms
+                                                                                                                easing: themeEasing, // default easing for AOS animations
+                                                                                                                once: themeOnce, // whether animation should happen only once - while scrolling down
+                                                                                                                mirror: themeMirror, // whether elements should animate out while scrolling past them
+                                                                                                                anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+
+                                                                                                            });
+                                                                                                        </script>
+                                                                                                        
+
+                                                                                                            
+                                                                                                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+<script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+<div id="appCopy">
+</div>
+<script>
+  var vm = new Vue({
+    el: '#appCopy',
+    data: {
+    },
+    computed: {
+    },
+    mounted() {
+      const that = this;
+      //  监听 ctrl + c事件  
+      $(document).unbind('keypress').bind('keypress', function (e) {
+        if (e.ctrlKey && e.keyCode == 67) {
+          doSomething();
+          // 返回false, 防止重复触发copy事件  
+          return false;
+        }
+      })
+
+      // 鼠标右键的复制事件  
+      $(document).unbind('copy').bind('copy', function (e) {
+        doSomething();
+        // console.log('右键复制 监听成功');
+      });
+
+      function doSomething() {
+        that.$notify({
+          title: "复制成功",
+          content: "代码已复制，请遵守相关授权协议。",
+          type: 'success'
+        })
+        // console.log('ctrl + c 监听成功');  
+      }
+    },
+    methods: {
+    },
+    created() { }
+  })
+</script>
+                                                                                                                    
+
+                                                                                                                        <!-- 输入框打字特效 -->
+                                                                                                                        
+                                                                                                                            <script src="/js/activate-power-mode.js"></script>
+                                                                                                                            <script>
+                                                                                                                                POWERMODE.colorful = true; // 打开随机颜色特效
+                                                                                                                                POWERMODE.shake = false; // 关闭输入框抖动
+                                                                                                                                document.body.addEventListener('input', POWERMODE); //监听打字事件
+                                                                                                                            </script>
+                                                                                                                            
+
+                                                                                                                                <!-- markdown代码一键复制功能 -->
+                                                                                                                                <script src="/js/clipboard/clipboard.min.js"></script>
+                                                                                                                                <script>
+                                                                                                                                    ! function(e, t, a) {
+                                                                                                                                        var copy = 'copy';
+                                                                                                                                        /* code */
+                                                                                                                                        var initCopyCode = function() {
+                                                                                                                                            var copyHtml = '';
+                                                                                                                                            copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+                                                                                                                                            copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+                                                                                                                                            copyHtml += '</button>';
+                                                                                                                                            $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+                                                                                                                                            $(".post-detail pre").not('.gutter pre').before(copyHtml);
+                                                                                                                                            new ClipboardJS('.btn-copy', {
+                                                                                                                                                target: function(trigger) {
+                                                                                                                                                    return trigger.nextElementSibling;
+                                                                                                                                                }
+                                                                                                                                            });
+                                                                                                                                        }
+                                                                                                                                        initCopyCode();
+                                                                                                                                    }(window, document);
+                                                                                                                                </script>
+
+                                                                                                                                <script src="/js/lazyload/lazyload@1.9.1.js"></script>
+                                                                                                                                <script>
+                                                                                                                                    $(function() {
+                                                                                                                                        $("div.lazyload, img.lazyload, a.lazyload").lazyload({
+                                                                                                                                            effect: "fadeIn",
+                                                                                                                                            placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif" //图片未加载出来时显示的占位图
+                                                                                                                                        });
+                                                                                                                                    });
+                                                                                                                                </script>
+
+                                                                                                                                <script src="/js/app.js"></script>
+    </body>
+
+</html>
