@@ -70,7 +70,14 @@
                 }
             </script>
 
+
+
+
             
+                        < <main class="main" style="margin-top: 0;
+                ">
+                            
+    
 <header class="header " id="navHeader"
   style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -97,8 +104,6 @@
             
               <a href="/" class="drawer-menu-item-link">
                 
-                  <i class="fa fa-home" aria-hidden="true"></i>
-                
                 <span class="name">首页</span>
               </a>
             
@@ -106,16 +111,23 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(1)">
+              <a href="/login" class="drawer-menu-item-link">
+                
+                <span class="name">登录</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
                 <span>
-                  
-                    <i class="fa fa-archive"></i>
                   
                   <span class="name">归档</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(1)">
+              <ul class="drawer-sub-menu" v-if="isOpen(2)">
                 
                 <li>
                   <a href="/archives">
@@ -138,22 +150,27 @@
                   </a>
                 </li>
                 
+                <li>
+                  <a href="/login">
+                    
+                    <span>login</span>
+                  </a>
+                </li>
+                
               </ul>
             
           </li>
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
                 <span>
-                  
-                    <i class="fa fa-tags"></i>
                   
                   <span class="name">标签</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(2)">
+              <ul class="drawer-sub-menu" v-if="isOpen(3)">
                 
                 <li>
                   <a href="/tags">
@@ -203,16 +220,14 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(4)">
                 <span>
-                  
-                    <i class="fa fa-list"></i>
                   
                   <span class="name">分类</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(4)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(3)">
+              <ul class="drawer-sub-menu" v-if="isOpen(4)">
                 
                 <li>
                   <a href="/categories">
@@ -285,14 +300,23 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
+              <a href="/comments" class="drawer-menu-item-link">
+                
+                <span class="name">留言</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
                 <span>
                   
                   <span class="name">BLOG</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(5)">
+              <ul class="drawer-sub-menu" v-if="isOpen(7)">
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://aatrowen.gitee.io/">
@@ -328,14 +352,14 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
                 <span>
                   
                   <span class="name">社区</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+              <ul class="drawer-sub-menu" v-if="isOpen(8)">
                 
                 <li>
                   <a target="_blank" rel="noopener" href="https://www.chzu.edu.cn/">
@@ -406,14 +430,14 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(9)">
                 <span>
                   
                   <span class="name">娱乐</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(9)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(7)">
+              <ul class="drawer-sub-menu" v-if="isOpen(9)">
                 
                 <li>
                   <a target="_blank" rel="noopener" href="https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2Fu%2F7479361306%2Fhome%3Fwvr%3D5">
@@ -442,14 +466,14 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(10)">
                 <span>
                   
                   <span class="name">视频</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(10)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(8)">
+              <ul class="drawer-sub-menu" v-if="isOpen(10)">
                 
                 <li>
                   <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
@@ -471,14 +495,14 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(9)">
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(11)">
                 <span>
                   
                   <span class="name">游戏</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(9)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(11)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(9)">
+              <ul class="drawer-sub-menu" v-if="isOpen(11)">
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
@@ -521,14 +545,14 @@
         
           <li class="drawer-box-content_item" style="position: relative;">
             
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(10)">
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(12)">
                 <span>
                   
                   <span class="name">more</span>
                 </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(10)}" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(12)}" aria-hidden="true"></i>
               </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(10)">
+              <ul class="drawer-sub-menu" v-if="isOpen(12)">
                 
                 <li>
                   <a target="_blank" rel="noopener" href="https://www.iloveimg.com/zh-cn">
@@ -669,8 +693,6 @@
             
               <a href="/" class="menu-item-link">
                 
-                  <i class="fa fa-home" aria-hidden="true"></i>
-                
                 <span class="name">首页</span>
               </a>
             
@@ -678,9 +700,16 @@
         
           <li class="menu-item" style="position: relative;">
             
-              <a href="javascript:;" class="menu-item-link">
+              <a href="/login" class="menu-item-link">
                 
-                  <i class="fa fa-archive"></i>
+                <span class="name">登录</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
                 
                 <span class="name">归档</span>
                 <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
@@ -708,6 +737,13 @@
                   </a>
                 </li>
                 
+                <li>
+                  <a href="/login">
+                    
+                    <span>login</span>
+                  </a>
+                </li>
+                
               </ul>
             
           </li>
@@ -715,8 +751,6 @@
           <li class="menu-item" style="position: relative;">
             
               <a href="javascript:;" class="menu-item-link">
-                
-                  <i class="fa fa-tags"></i>
                 
                 <span class="name">标签</span>
                 <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
@@ -772,8 +806,6 @@
           <li class="menu-item" style="position: relative;">
             
               <a href="javascript:;" class="menu-item-link">
-                
-                  <i class="fa fa-list"></i>
                 
                 <span class="name">分类</span>
                 <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
@@ -845,6 +877,15 @@
               <a href="/about" class="menu-item-link">
                 
                 <span class="name">关于</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/comments" class="menu-item-link">
+                
+                <span class="name">留言</span>
               </a>
             
           </li>
@@ -1313,619 +1354,632 @@
       <script src="/js/header/index.js"></script>
     
 </header>
-                <main class="main" style="margin-top: 0;">
-                    
+        
+            
+                
+                    <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+                    <div class="lazyload tag-header" data-original="/../image/ma52.png">
+                        <div class="tag-header-title">
+                            tag
+                        </div>
+                        <div class="tag-header-desc">
+                            
+                                <span class="title" id="tag-header-desc"></span>
+                                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                                <script>
+                                    var typed = new Typed("#tag-header-desc", {
+                                        strings: ['热爱世间万物，无最爱，无例外'],
+                                        startDelay: 100,
+                                        typeSpeed: 100,
+                                        loop: true,
+                                        backSpeed: 50,
+                                        showCursor: true
+                                    });
+                                </script>
+                                
+                        </div>
+                        <div class="mask-box"></div>
+                    </div>
 
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="lazyload tag-header" data-original="/../image/ma52.png">
-  <div class="tag-header-title">
-    tag
-  </div>
-  <div class="tag-header-desc">
-  
-    <span class="title" id="tag-header-desc"></span>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-        <script>
-        var typed = new Typed("#tag-header-desc", {
-            strings: ['热爱世间万物，无最爱，无例外'],
-            startDelay: 100,
-            typeSpeed: 100,
-            loop: true,
-            backSpeed: 50,
-            showCursor: true
-        });
-        </script>
-    
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<div class="tag-video">
-  <video class="full-video" autoplay loop muted>
+                    <div class="tag-video">
+                        <video class="full-video" autoplay loop muted>
       <source style="width: 100%;height: 100vh;" src="/">
   </video>
-  <div class="video-header-title">
-    tag
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="video-header-desc"></span>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-          <script>
-          var typed = new Typed("#video-header-desc", {
-              strings: ['热爱世间万物，无最爱，无例外'],
-              startDelay: 100,
-              typeSpeed: 100,
-              loop: true,
-              backSpeed: 50,
-              showCursor: true
-          });
-          </script>
-      
-  </div>
-  <div class="mask-box"></div>
-</div>
+                        <div class="video-header-title">
+                            tag
+                        </div>
+                        <div class="video-header-desc">
+                            
+                                <span class="title" id="video-header-desc"></span>
+                                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                                <script>
+                                    var typed = new Typed("#video-header-desc", {
+                                        strings: ['热爱世间万物，无最爱，无例外'],
+                                        startDelay: 100,
+                                        typeSpeed: 100,
+                                        loop: true,
+                                        backSpeed: 50,
+                                        showCursor: true
+                                    });
+                                </script>
+                                
+                        </div>
+                        <div class="mask-box"></div>
+                    </div>
 
-<div class="tag">
-  <div class="tag-name">
-    <div class="name" style="background-color: #F8F9F9;">文学 category</div>
-  </div>
-  <section class="posts">
-    
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/">东北之光拉皮</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                    <div class="tag">
+                        <div class="tag-name">
+                            <div class="name" style="background-color: #F8F9F9;">
+                                文学
+                                    category
+                            </div>
+                        </div>
+                        <section class="posts">
+                            
+                                <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/">
+                                                    东北之光拉皮
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/" class="lazyload" data-original="/../image/b28.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/" class="lazyload" data-original="/../image/b28.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            某个晚上，日本原乒乓球运动员福原爱，通过社交平台晒出东北拉皮，并喊话老公江宏杰，写道：“东北大拉皮。”照片中的美食晶莹剔透，看着十分诱人。这位出產于中国东北的日本运动员，十分熟悉中国，也讲着一口流利的东北话，她对东北的爱，远不止于这一盘拉皮
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/">
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                某个晚上，日本原乒乓球运动员福原爱，通过社交平台晒出东北拉皮，并喊话老公江宏杰，写道：“东北大拉皮。”照片中的美食晶莹剔透，看着十分诱人。这位出產于中国东北的日本运动员，十分熟悉中国，也讲着一口流利的东北话，她对东北的爱，远不止于这一盘拉皮
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/">
             <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/" class="lazyload" data-original="/../image/b28.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%9C%E5%8C%97%E4%B9%8B%E5%85%89%E6%8B%89%E7%9A%AE/" class="lazyload" data-original="/../image/b28.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/">这些玄学现场，没人可以躲得过</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/">
+                                                    这些玄学现场，没人可以躲得过
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/" class="lazyload" data-original="/../image/a56.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/" class="lazyload" data-original="/../image/a56.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            　玄学是玄之又玄的一门人间学问，是面对复杂境遇与不确定性时的一颗小糖果，它无处不在，说不清、道不明、理不顺、扯不清。玄学，贯穿在当代生活中，处处上演着或大型或小型的玄学场景。1.在办公室永远找不到笔
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                　玄学是玄之又玄的一门人间学问，是面对复杂境遇与不确定性时的一颗小糖果，它无处不在，说不清、道不明、理不顺、扯不清。玄学，贯穿在当代生活中，处处上演着或大型或小型的玄学场景。1.在办公室永远找不到笔
 　　除了笔，一转眼就会丢的小物件包括且不
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/">
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/">
             <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/" class="lazyload" data-original="/../image/a56.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%BF%99%E4%BA%9B%E7%8E%84%E5%AD%A6%E7%8E%B0%E5%9C%BA%EF%BC%8C%E6%B2%A1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E8%BA%B2%E5%BE%97%E8%BF%87/" class="lazyload" data-original="/../image/a56.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/">我们不能打败时间，但腊肉可以</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/">
+                                                    我们不能打败时间，但腊肉可以
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/" class="lazyload" data-original="/../image/a95.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/" class="lazyload" data-original="/../image/a95.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            寒风盈窗，叶枯草黄，萧瑟天地间唯余一群鸟声在叽叽啾啾，欢悦不宁，家乡又到了忙腌腊的时节。房檐上袅袅出一缕青烟，很好闻，我爱那种柴火炊煮的浓郁气息，一种万物明媚的自然风光，恬静沉着，每个人诚心虔敬交给苍茫大地，交给质朴生活的样子。
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                寒风盈窗，叶枯草黄，萧瑟天地间唯余一群鸟声在叽叽啾啾，欢悦不宁，家乡又到了忙腌腊的时节。房檐上袅袅出一缕青烟，很好闻，我爱那种柴火炊煮的浓郁气息，一种万物明媚的自然风光，恬静沉着，每个人诚心虔敬交给苍茫大地，交给质朴生活的样子。
 　　隆重年
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/">
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/">
             <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/" class="lazyload" data-original="/../image/a95.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E6%89%93%E8%B4%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BD%86%E8%85%8A%E8%82%89%E5%8F%AF%E4%BB%A5/" class="lazyload" data-original="/../image/a95.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/">用不了多久，人类可能就要“变凉”了</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/">
+                                                    用不了多久，人类可能就要“变凉”了
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/" class="lazyload" data-original="/../image/a18.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/" class="lazyload" data-original="/../image/a18.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            37℃从何而来
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                37℃从何而来
 　　一百多年前，大家还不太清楚人体的平均体温具体是多少。直到1851年，一位名叫卡尔·莱因霍尔德·奥古斯特·温德利希的德国医生首次做了一个大规模的统计。
 　　他在莱比锡的医院中收集了大约2500名病人的数百万个温度数据，测量
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/">
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/">
             <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/" class="lazyload" data-original="/../image/a18.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E7%94%A8%E4%B8%8D%E4%BA%86%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E5%B0%B1%E8%A6%81%E2%80%9C%E5%8F%98%E5%87%89%E2%80%9D%E4%BA%86/" class="lazyload" data-original="/../image/a18.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/">南北相济，中国580多个“菜篮子”是如何炼成的</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/">
+                                                    南北相济，中国580多个“菜篮子”是如何炼成的
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/" class="lazyload" data-original="/../image/c37.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/" class="lazyload" data-original="/../image/c37.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            　01.中国的580多个“菜篮子”，都在哪里
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                　01.中国的580多个“菜篮子”，都在哪里
 　　超市里的蔬菜区，货架上各色蔬菜永远满满当当，这是年轻人的“蔬菜观”。
 　　而在老一辈——尤其是北方老一辈人眼里，这却多少有些“不可思议”，毕竟十多年前，一到冬天，他们就要疯狂抢购和囤积大白菜
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/">
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/">
             <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/" class="lazyload" data-original="/../image/c37.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8D%97%E5%8C%97%E7%9B%B8%E6%B5%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD580%E5%A4%9A%E4%B8%AA%E2%80%9C%E8%8F%9C%E7%AF%AE%E5%AD%90%E2%80%9D%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84/" class="lazyload" data-original="/../image/c37.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/">另类锦衣卫</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/">
+                                                    另类锦衣卫
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/" class="lazyload" data-original="/../image/b73.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/" class="lazyload" data-original="/../image/b73.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            最近热播的古装剧《大明风华》《锦衣之下》，男主锦衣卫的装束闪亮登场，引发了粉丝们对锦衣卫的高度关注。
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                最近热播的古装剧《大明风华》《锦衣之下》，男主锦衣卫的装束闪亮登场，引发了粉丝们对锦衣卫的高度关注。
 　　作为明朝专有的特务机构，锦衣卫不仅承担着巡察缉捕的工作，也充任皇家仪仗队，因此他们的装备都非常拉风。每当皇上外出时，随行的锦衣卫身穿华
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/">
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/">
             <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/" class="lazyload" data-original="/../image/b73.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E5%8F%A6%E7%B1%BB%E9%94%A6%E8%A1%A3%E5%8D%AB/" class="lazyload" data-original="/../image/b73.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/">谁更痛苦</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/">
+                                                    谁更痛苦
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/" class="lazyload" data-original="/../image/c29.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/" class="lazyload" data-original="/../image/c29.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            前两天我去深圳一家公司讲课，课后，一位女士说她爸爸痴迷于彩票，问我该怎么办。她的意思是有没有办法可以消除老人家痴迷于彩票这个痛苦。我先问她有没有办法做到这一点，她说试了种种办法，都没效果。因为我课上讲了“接受”的办法，所以她说，她和家人也试
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/">
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                前两天我去深圳一家公司讲课，课后，一位女士说她爸爸痴迷于彩票，问我该怎么办。她的意思是有没有办法可以消除老人家痴迷于彩票这个痛苦。我先问她有没有办法做到这一点，她说试了种种办法，都没效果。因为我课上讲了“接受”的办法，所以她说，她和家人也试
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/">
             <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/" class="lazyload" data-original="/../image/c29.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E8%B0%81%E6%9B%B4%E7%97%9B%E8%8B%A6/" class="lazyload" data-original="/../image/c29.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/">你永远无法叫醒一个装睡的美国人，除非给他叫一辆救护车</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/">
+                                                    你永远无法叫醒一个装睡的美国人，除非给他叫一辆救护车
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/" class="lazyload" data-original="/../image/a57.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/" class="lazyload" data-original="/../image/a57.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            　同學在美国，说有次半夜肚子特别疼叫了辆救护车，医生的结论是没毛病，最后叫他回家蹲厕所，还收了两千美元。
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                　同學在美国，说有次半夜肚子特别疼叫了辆救护车，医生的结论是没毛病，最后叫他回家蹲厕所，还收了两千美元。
 　　现在他摔一跤都不敢在美国看，千里迢迢忍痛坐飞机回来，在国内医治。“我实在是急救不起了，坐趟国际航班也没这玩意贵啊！”同学说道。
 　
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/">
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/">
             <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/" class="lazyload" data-original="/../image/a57.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%BD%A0%E6%B0%B8%E8%BF%9C%E6%97%A0%E6%B3%95%E5%8F%AB%E9%86%92%E4%B8%80%E4%B8%AA%E8%A3%85%E7%9D%A1%E7%9A%84%E7%BE%8E%E5%9B%BD%E4%BA%BA%EF%BC%8C%E9%99%A4%E9%9D%9E%E7%BB%99%E4%BB%96%E5%8F%AB%E4%B8%80%E8%BE%86%E6%95%91%E6%8A%A4%E8%BD%A6/" class="lazyload" data-original="/../image/a57.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/">一个殡葬人眼中的死亡</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/">
+                                                    一个殡葬人眼中的死亡
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/" class="lazyload" data-original="/../image/c95.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/" class="lazyload" data-original="/../image/c95.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            三年前，父亲死在佛罗里达湾的一座岛上，那时他和一位女友合住在一套公寓里。
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                三年前，父亲死在佛罗里达湾的一座岛上，那时他和一位女友合住在一套公寓里。
 　　在找到女伴后的两年里，他的心脏病每半年大发作一次，像时钟一样准。他每次都安然无恙，除了最后一次。我能听到他这么说：“四次躲过三次，到头来你还是完蛋。”
 　　我们兄
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/">
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/">
             <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/" class="lazyload" data-original="/../image/c95.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E4%B8%80%E4%B8%AA%E6%AE%A1%E8%91%AC%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%AD%BB%E4%BA%A1/" class="lazyload" data-original="/../image/c95.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-05-20</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/">饭不厌诈</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                                <article class="post" data-aos="fade-up" style="">
+                                    <div class="post-main">
+                                        <div class="post-info">
+                                            <div class="post-time">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                <span class="post-time">2021-05-20</span>
+                                            </div>
+                                            <div class="post-title">
+                                                <a class="post-title-link" href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/">
+                                                    饭不厌诈
+                                                </a>
+                                            </div>
+                                            <div class="post-meta">
+                                                <div class="post-tags">
+                                                    
     <i class="iconfont icontag"></i>
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%8F%E6%9E%972020-7/" rel="tag">意林2020-7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
+                                                </div>
+                                                <div class="post-categories">
+                                                    
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
   <a class="article-category-link" href="/categories/%E6%84%8F%E6%9E%97/">意林</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/" class="lazyload" data-original="/../image/c79.jpeg" style="background-size: cover; 
+                                                </div>
+                                            </div>
+                                            <div class="post-img-mobile">
+                                                
+                                                        
+                                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/" class="lazyload" data-original="/../image/c79.jpeg" style="background-size: cover; 
                 background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            明朝发生了土木堡之变。通州当时是京城的粮仓，众大臣抱着宁可饿死，也不能资敌的想法，建议先把通州的粮仓全烧掉。工部左侍郎周忱听到要烧粮食，连说不可。他想出的办法是：在北京所有的官员、军人，都到通州去预支自己一年的粮食，条件是自己运回来。于是大
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/">
+                                                            </a>
+                                                            
+                                            </div>
+                                            <div class="post-content">
+                                                明朝发生了土木堡之变。通州当时是京城的粮仓，众大臣抱着宁可饿死，也不能资敌的想法，建议先把通州的粮仓全烧掉。工部左侍郎周忱听到要烧粮食，连说不可。他想出的办法是：在北京所有的官员、军人，都到通州去预支自己一年的粮食，条件是自己运回来。于是大
+                                            </div>
+                                        </div>
+                                        <div class="post-more">
+                                            <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/">
             <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/" class="lazyload" data-original="/../image/c79.jpeg" style="background-size: cover; 
+                                        </div>
+                                    </div>
+                                    <div class="post-img">
+                                        
+                                                <a href="/2021/05/20/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/%E6%84%8F%E6%9E%97/2020-7/%E9%A5%AD%E4%B8%8D%E5%8E%8C%E8%AF%88/" class="lazyload" data-original="/../image/c79.jpeg" style="background-size: cover; 
             background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-    
-  </section>
-</div>
-
+                                                </a>
+                                                
+                                    </div>
+                                </article>
+                                
+                        </section>
+                    </div>
+                    
     <nav class="page-nav">
 
         <a class="extend prev" rel="prev" href="/tags/%E6%96%87%E5%AD%A6/page/20/">上一页</a><a class="page-number" href="/tags/%E6%96%87%E5%AD%A6/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/%E6%96%87%E5%AD%A6/page/19/">19</a><a class="page-number" href="/tags/%E6%96%87%E5%AD%A6/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/tags/%E6%96%87%E5%AD%A6/page/22/">22</a><a class="page-number" href="/tags/%E6%96%87%E5%AD%A6/page/23/">23</a><span class="space">&hellip;</span><a class="page-number" href="/tags/%E6%96%87%E5%AD%A6/page/56/">56</a><a class="extend next" rel="next" href="/tags/%E6%96%87%E5%AD%A6/page/22/">下一页</a>
@@ -1952,8 +2006,9 @@
                 
                     </div>-->
     
-                </main>
-                <div class="footer bg-color">
+                                </main>
+                                //
+                                <div class="footer bg-color">
     <div class="footer-main">
         <div class="link">
             <a target="_blank" rel="noopener" href="https://github.com">
@@ -1977,28 +2032,28 @@
     </div>
 </div>
 
-                    
-                        <div class="goTop top-btn-color border-color">
+                                    
+                                        <div class="goTop top-btn-color border-color">
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/goTop.js"></script>
-                            
-                                
-                                    <div class="goDisplay top-btn-color border-color">
+                                            
+                                                
+                                                    <div class="goDisplay top-btn-color border-color">
     <i class="fa fa-home" aria-hidden="true"></i>
 </div>
 <script src="/js/goDisplay.js"></script>
-                                        
-                                            
-                                                <div class="goBottom top-btn-color border-color">
+                                                        
+                                                            
+                                                                <div class="goBottom top-btn-color border-color">
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
 </div>
 <script src="/js/goBottom.js"></script>
-                                                    
+                                                                    
 
 
-                                                        
-                                                            <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+                                                                        
+                                                                            <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         color: purple;
@@ -2033,25 +2088,25 @@
 </style> -->
 <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-                                                                
-
-                                                                    <!-- 图片放大 -->
-                                                                    
-                                                                        <script src="/js/fancybox/jquery.fancybox.min.js"></script>
-                                                                        
-
-                                                                            <script src="/js/wrapImage.js"></script>
-
-                                                                            <!-- 爱心点击 -->
-                                                                            
                                                                                 
-                                                                                            <script src="/js/cursor/clicklove.js"></script>
+
+                                                                                    <!-- 图片放大 -->
+                                                                                    
+                                                                                        <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+                                                                                        
+
+                                                                                            <script src="/js/wrapImage.js"></script>
+
+                                                                                            <!-- 爱心点击 -->
                                                                                             
-                                                                                                    
+                                                                                                
+                                                                                                            <script src="/js/cursor/clicklove.js"></script>
+                                                                                                            
+                                                                                                                    
 
-                                                                                                        <!-- Baidu Analytics -->
+                                                                                                                        <!-- Baidu Analytics -->
 
-                                                                                                            <!-- Baidu Push -->
+                                                                                                                            <!-- Baidu Push -->
 
 <script>
     (function () {
@@ -2068,44 +2123,44 @@
 </script>
 
 
-                                                                                                                <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
-                                                                                                                
-                                                                                                                    <script src="/js/aos/aos.js"></script>
-                                                                                                                    <script>
-                                                                                                                        // https://github.com/michalsnik/aos
-                                                                                                                        const themeOffset = parseInt('120') || 120;
-                                                                                                                        const themeDelay = parseInt('0') || 0;
-                                                                                                                        const themeDuration = parseInt('400') || 400;
-                                                                                                                        const themeEasing = 'ease' || 'ease';
-                                                                                                                        const themeOnce = eval('true') || false;
-                                                                                                                        const themeMirror = eval('false') || false;
-                                                                                                                        const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-                                                                                                                        AOS.init({
-                                                                                                                            // Global settings:
-                                                                                                                            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-                                                                                                                            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-                                                                                                                            initClassName: 'aos-init', // class applied after initialization
-                                                                                                                            animatedClassName: 'aos-animate', // class applied on animation
-                                                                                                                            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-                                                                                                                            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-                                                                                                                            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-                                                                                                                            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+                                                                                                                                <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+                                                                                                                                
+                                                                                                                                    <script src="/js/aos/aos.js"></script>
+                                                                                                                                    <script>
+                                                                                                                                        // https://github.com/michalsnik/aos
+                                                                                                                                        const themeOffset = parseInt('120') || 120;
+                                                                                                                                        const themeDelay = parseInt('0') || 0;
+                                                                                                                                        const themeDuration = parseInt('400') || 400;
+                                                                                                                                        const themeEasing = 'ease' || 'ease';
+                                                                                                                                        const themeOnce = eval('true') || false;
+                                                                                                                                        const themeMirror = eval('false') || false;
+                                                                                                                                        const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+                                                                                                                                        AOS.init({
+                                                                                                                                            // Global settings:
+                                                                                                                                            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                                                                                                                                            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                                                                                                                                            initClassName: 'aos-init', // class applied after initialization
+                                                                                                                                            animatedClassName: 'aos-animate', // class applied on animation
+                                                                                                                                            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                                                                                                                                            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                                                                                                                                            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                                                                                                                                            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-                                                                                                                            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-                                                                                                                            offset: themeOffset, // offset (in px) from the original trigger point
-                                                                                                                            delay: themeDelay, // values from 0 to 3000, with step 50ms
-                                                                                                                            duration: themeDuration, // values from 0 to 3000, with step 50ms
-                                                                                                                            easing: themeEasing, // default easing for AOS animations
-                                                                                                                            once: themeOnce, // whether animation should happen only once - while scrolling down
-                                                                                                                            mirror: themeMirror, // whether elements should animate out while scrolling past them
-                                                                                                                            anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+                                                                                                                                            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                                                                                                                                            offset: themeOffset, // offset (in px) from the original trigger point
+                                                                                                                                            delay: themeDelay, // values from 0 to 3000, with step 50ms
+                                                                                                                                            duration: themeDuration, // values from 0 to 3000, with step 50ms
+                                                                                                                                            easing: themeEasing, // default easing for AOS animations
+                                                                                                                                            once: themeOnce, // whether animation should happen only once - while scrolling down
+                                                                                                                                            mirror: themeMirror, // whether elements should animate out while scrolling past them
+                                                                                                                                            anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-                                                                                                                        });
-                                                                                                                    </script>
-                                                                                                                    
+                                                                                                                                        });
+                                                                                                                                    </script>
+                                                                                                                                    
 
-                                                                                                                        
-                                                                                                                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+                                                                                                                                        
+                                                                                                                                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
 <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
 <div id="appCopy">
 </div>
@@ -2147,52 +2202,52 @@
     created() { }
   })
 </script>
-                                                                                                                                
+                                                                                                                                                
 
-                                                                                                                                    <!-- 输入框打字特效 -->
-                                                                                                                                    
-                                                                                                                                        <script src="/js/activate-power-mode.js"></script>
-                                                                                                                                        <script>
-                                                                                                                                            POWERMODE.colorful = true; // 打开随机颜色特效
-                                                                                                                                            POWERMODE.shake = false; // 关闭输入框抖动
-                                                                                                                                            document.body.addEventListener('input', POWERMODE); //监听打字事件
-                                                                                                                                        </script>
-                                                                                                                                        
+                                                                                                                                                    <!-- 输入框打字特效 -->
+                                                                                                                                                    
+                                                                                                                                                        <script src="/js/activate-power-mode.js"></script>
+                                                                                                                                                        <script>
+                                                                                                                                                            POWERMODE.colorful = true; // 打开随机颜色特效
+                                                                                                                                                            POWERMODE.shake = false; // 关闭输入框抖动
+                                                                                                                                                            document.body.addEventListener('input', POWERMODE); //监听打字事件
+                                                                                                                                                        </script>
+                                                                                                                                                        
 
-                                                                                                                                            <!-- markdown代码一键复制功能 -->
-                                                                                                                                            <script src="/js/clipboard/clipboard.min.js"></script>
-                                                                                                                                            <script>
-                                                                                                                                                ! function(e, t, a) {
-                                                                                                                                                    var copy = 'copy';
-                                                                                                                                                    /* code */
-                                                                                                                                                    var initCopyCode = function() {
-                                                                                                                                                        var copyHtml = '';
-                                                                                                                                                        copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
-                                                                                                                                                        copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
-                                                                                                                                                        copyHtml += '</button>';
-                                                                                                                                                        $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-                                                                                                                                                        $(".post-detail pre").not('.gutter pre').before(copyHtml);
-                                                                                                                                                        new ClipboardJS('.btn-copy', {
-                                                                                                                                                            target: function(trigger) {
-                                                                                                                                                                return trigger.nextElementSibling;
-                                                                                                                                                            }
-                                                                                                                                                        });
-                                                                                                                                                    }
-                                                                                                                                                    initCopyCode();
-                                                                                                                                                }(window, document);
-                                                                                                                                            </script>
+                                                                                                                                                            <!-- markdown代码一键复制功能 -->
+                                                                                                                                                            <script src="/js/clipboard/clipboard.min.js"></script>
+                                                                                                                                                            <script>
+                                                                                                                                                                ! function(e, t, a) {
+                                                                                                                                                                    var copy = 'copy';
+                                                                                                                                                                    /* code */
+                                                                                                                                                                    var initCopyCode = function() {
+                                                                                                                                                                        var copyHtml = '';
+                                                                                                                                                                        copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+                                                                                                                                                                        copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+                                                                                                                                                                        copyHtml += '</button>';
+                                                                                                                                                                        $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+                                                                                                                                                                        $(".post-detail pre").not('.gutter pre').before(copyHtml);
+                                                                                                                                                                        new ClipboardJS('.btn-copy', {
+                                                                                                                                                                            target: function(trigger) {
+                                                                                                                                                                                return trigger.nextElementSibling;
+                                                                                                                                                                            }
+                                                                                                                                                                        });
+                                                                                                                                                                    }
+                                                                                                                                                                    initCopyCode();
+                                                                                                                                                                }(window, document);
+                                                                                                                                                            </script>
 
-                                                                                                                                            <script src="/js/lazyload/lazyload@1.9.1.js"></script>
-                                                                                                                                            <script>
-                                                                                                                                                $(function() {
-                                                                                                                                                    $("div.lazyload, img.lazyload, a.lazyload").lazyload({
-                                                                                                                                                        effect: "fadeIn",
-                                                                                                                                                        placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif" //图片未加载出来时显示的占位图
-                                                                                                                                                    });
-                                                                                                                                                });
-                                                                                                                                            </script>
+                                                                                                                                                            <script src="/js/lazyload/lazyload@1.9.1.js"></script>
+                                                                                                                                                            <script>
+                                                                                                                                                                $(function() {
+                                                                                                                                                                    $("div.lazyload, img.lazyload, a.lazyload").lazyload({
+                                                                                                                                                                        effect: "fadeIn",
+                                                                                                                                                                        placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif" //图片未加载出来时显示的占位图
+                                                                                                                                                                    });
+                                                                                                                                                                });
+                                                                                                                                                            </script>
 
-                                                                                                                                            <script src="/js/app.js"></script>
+                                                                                                                                                            <script src="/js/app.js"></script>
     </body>
 
 </html>
