@@ -241,12 +241,7 @@
                                     
                                         <div class="post-tags-categories">
                                             
-                                                <div class="tags">
-                                                    <i class="iconfont icontag"></i>
-                                                    
 
-                                                        
-                                                </div>
                                                 
                                                     
                                         </div>
@@ -1783,8 +1778,49 @@ Scene 01
 
             </div>
                         </main>
-
-                        <div class="footer bg-color">
+                        <script>
+    setInterval(() => {
+        let create_time = Math.round(new Date('2021-05-05 00:00:00').getTime() / 1000); //在此行修改建站时间
+        let timestamp = Math.round((new Date().getTime()) / 1000);
+        let second = timestamp - create_time;
+        let time = new Array(0, 0, 0, 0, 0);
+        //格式规范化，个位数前面加0
+        var nol = function(h) {
+            return h > 9 ? h : '0' + h;
+        }
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        } //年
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        } //天
+        if (second >= 3600) {
+            time[2] = nol(parseInt(second / 3600));
+            second %= 3600;
+        } //时
+        if (second >= 60) {
+            time[3] = nol(parseInt(second / 60));
+            second %= 60;
+        } //分
+        if (second > 0) {
+            time[4] = nol(second);
+        } //秒
+        //早上7点到晚上10点营业
+        if ((Number(time[2]) < 22) && (Number(time[2]) > 7)) {
+            currentTimeHtml = "<img class='boardsign' src='https://img.shields.io/badge/秋萘站-营业中-6adea8?style=social&logo=cakephp' title='今天辛苦你了，谢谢你哦~'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ': ' + time[3] + ': ' + time[4] + ' </div>';
+        } //徽标内容参考站内教程
+        //其余时间打烊
+        else {
+            currentTimeHtml = "<img class='boardsign' src='https://img.shields.io/badge/秋萘站-打烊了-6adea8?style=social&logo=coffeescript' title='这个点了应该去睡觉啦，熬夜对身体不好哦'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>'; //徽标内容参考站内教程
+        }
+        //覆写挂载标签的内容
+        document.getElementById("workboard").innerHTML = currentTimeHtml;
+    }, 1000);
+</script>
+<div id="workboard" style="text-align: center;"></div>
+                            <div class="footer bg-color">
     <div class="footer-main">
         <div class="link">
             <a target="_blank" rel="noopener" href="https://github.com">
@@ -1808,28 +1844,28 @@ Scene 01
     </div>
 </div>
 
-                            
-                                <div class="goTop top-btn-color border-color">
+                                
+                                    <div class="goTop top-btn-color border-color">
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/goTop.js"></script>
-                                    
                                         
-                                            <div class="goDisplay top-btn-color border-color">
+                                            
+                                                <div class="goDisplay top-btn-color border-color">
     <i class="fa fa-home" aria-hidden="true"></i>
 </div>
 <script src="/js/goDisplay.js"></script>
-                                                
                                                     
-                                                        <div class="goBottom top-btn-color border-color">
+                                                        
+                                                            <div class="goBottom top-btn-color border-color">
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
 </div>
 <script src="/js/goBottom.js"></script>
-                                                            
-
-
                                                                 
-                                                                    <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+
+
+                                                                    
+                                                                        <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         color: purple;
@@ -1864,25 +1900,25 @@ Scene 01
 </style> -->
 <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-                                                                        
-
-                                                                            <!-- 图片放大 -->
                                                                             
-                                                                                <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+
+                                                                                <!-- 图片放大 -->
                                                                                 
-
-                                                                                    <script src="/js/wrapImage.js"></script>
-
-                                                                                    <!-- 爱心点击 -->
+                                                                                    <script src="/js/fancybox/jquery.fancybox.min.js"></script>
                                                                                     
+
+                                                                                        <script src="/js/wrapImage.js"></script>
+
+                                                                                        <!-- 爱心点击 -->
                                                                                         
-                                                                                                    <script src="/js/cursor/clicklove.js"></script>
-                                                                                                    
-                                                                                                            
+                                                                                            
+                                                                                                        <script src="/js/cursor/clicklove.js"></script>
+                                                                                                        
+                                                                                                                
 
-                                                                                                                <!-- Baidu Analytics -->
+                                                                                                                    <!-- Baidu Analytics -->
 
-                                                                                                                    <!-- Baidu Push -->
+                                                                                                                        <!-- Baidu Push -->
 
 <script>
     (function () {
@@ -1899,44 +1935,44 @@ Scene 01
 </script>
 
 
-                                                                                                                        <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
-                                                                                                                        
-                                                                                                                            <script src="/js/aos/aos.js"></script>
-                                                                                                                            <script>
-                                                                                                                                // https://github.com/michalsnik/aos
-                                                                                                                                const themeOffset = parseInt('120') || 120;
-                                                                                                                                const themeDelay = parseInt('0') || 0;
-                                                                                                                                const themeDuration = parseInt('400') || 400;
-                                                                                                                                const themeEasing = 'ease' || 'ease';
-                                                                                                                                const themeOnce = eval('true') || false;
-                                                                                                                                const themeMirror = eval('false') || false;
-                                                                                                                                const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-                                                                                                                                AOS.init({
-                                                                                                                                    // Global settings:
-                                                                                                                                    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-                                                                                                                                    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-                                                                                                                                    initClassName: 'aos-init', // class applied after initialization
-                                                                                                                                    animatedClassName: 'aos-animate', // class applied on animation
-                                                                                                                                    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-                                                                                                                                    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-                                                                                                                                    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-                                                                                                                                    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-                                                                                                                                    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-                                                                                                                                    offset: themeOffset, // offset (in px) from the original trigger point
-                                                                                                                                    delay: themeDelay, // values from 0 to 3000, with step 50ms
-                                                                                                                                    duration: themeDuration, // values from 0 to 3000, with step 50ms
-                                                                                                                                    easing: themeEasing, // default easing for AOS animations
-                                                                                                                                    once: themeOnce, // whether animation should happen only once - while scrolling down
-                                                                                                                                    mirror: themeMirror, // whether elements should animate out while scrolling past them
-                                                                                                                                    anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
-
-                                                                                                                                });
-                                                                                                                            </script>
+                                                                                                                            <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
                                                                                                                             
+                                                                                                                                <script src="/js/aos/aos.js"></script>
+                                                                                                                                <script>
+                                                                                                                                    // https://github.com/michalsnik/aos
+                                                                                                                                    const themeOffset = parseInt('120') || 120;
+                                                                                                                                    const themeDelay = parseInt('0') || 0;
+                                                                                                                                    const themeDuration = parseInt('400') || 400;
+                                                                                                                                    const themeEasing = 'ease' || 'ease';
+                                                                                                                                    const themeOnce = eval('true') || false;
+                                                                                                                                    const themeMirror = eval('false') || false;
+                                                                                                                                    const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+                                                                                                                                    AOS.init({
+                                                                                                                                        // Global settings:
+                                                                                                                                        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                                                                                                                                        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                                                                                                                                        initClassName: 'aos-init', // class applied after initialization
+                                                                                                                                        animatedClassName: 'aos-animate', // class applied on animation
+                                                                                                                                        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                                                                                                                                        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                                                                                                                                        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                                                                                                                                        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
+                                                                                                                                        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                                                                                                                                        offset: themeOffset, // offset (in px) from the original trigger point
+                                                                                                                                        delay: themeDelay, // values from 0 to 3000, with step 50ms
+                                                                                                                                        duration: themeDuration, // values from 0 to 3000, with step 50ms
+                                                                                                                                        easing: themeEasing, // default easing for AOS animations
+                                                                                                                                        once: themeOnce, // whether animation should happen only once - while scrolling down
+                                                                                                                                        mirror: themeMirror, // whether elements should animate out while scrolling past them
+                                                                                                                                        anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+
+                                                                                                                                    });
+                                                                                                                                </script>
                                                                                                                                 
-                                                                                                                                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+
+                                                                                                                                    
+                                                                                                                                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
 <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
 <div id="appCopy">
 </div>
@@ -1978,52 +2014,53 @@ Scene 01
     created() { }
   })
 </script>
-                                                                                                                                        
-
-                                                                                                                                            <!-- 输入框打字特效 -->
                                                                                                                                             
-                                                                                                                                                <script src="/js/activate-power-mode.js"></script>
-                                                                                                                                                <script>
-                                                                                                                                                    POWERMODE.colorful = true; // 打开随机颜色特效
-                                                                                                                                                    POWERMODE.shake = false; // 关闭输入框抖动
-                                                                                                                                                    document.body.addEventListener('input', POWERMODE); //监听打字事件
-                                                                                                                                                </script>
+
+                                                                                                                                                <!-- 输入框打字特效 -->
                                                                                                                                                 
-
-                                                                                                                                                    <!-- markdown代码一键复制功能 -->
-                                                                                                                                                    <script src="/js/clipboard/clipboard.min.js"></script>
+                                                                                                                                                    <script src="/js/activate-power-mode.js"></script>
                                                                                                                                                     <script>
-                                                                                                                                                        ! function(e, t, a) {
-                                                                                                                                                            var copy = 'copy';
-                                                                                                                                                            /* code */
-                                                                                                                                                            var initCopyCode = function() {
-                                                                                                                                                                var copyHtml = '';
-                                                                                                                                                                copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
-                                                                                                                                                                copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
-                                                                                                                                                                copyHtml += '</button>';
-                                                                                                                                                                $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-                                                                                                                                                                $(".post-detail pre").not('.gutter pre').before(copyHtml);
-                                                                                                                                                                new ClipboardJS('.btn-copy', {
-                                                                                                                                                                    target: function(trigger) {
-                                                                                                                                                                        return trigger.nextElementSibling;
-                                                                                                                                                                    }
+                                                                                                                                                        POWERMODE.colorful = true; // 打开随机颜色特效
+                                                                                                                                                        POWERMODE.shake = false; // 关闭输入框抖动
+                                                                                                                                                        document.body.addEventListener('input', POWERMODE); //监听打字事件
+                                                                                                                                                    </script>
+                                                                                                                                                    
+
+                                                                                                                                                        <!-- markdown代码一键复制功能 -->
+                                                                                                                                                        <script src="/js/clipboard/clipboard.min.js"></script>
+                                                                                                                                                        <script>
+                                                                                                                                                            ! function(e, t, a) {
+                                                                                                                                                                var copy = 'copy';
+                                                                                                                                                                /* code */
+                                                                                                                                                                var initCopyCode = function() {
+                                                                                                                                                                    var copyHtml = '';
+                                                                                                                                                                    copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+                                                                                                                                                                    copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+                                                                                                                                                                    copyHtml += '</button>';
+                                                                                                                                                                    $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+                                                                                                                                                                    $(".post-detail pre").not('.gutter pre').before(copyHtml);
+                                                                                                                                                                    new ClipboardJS('.btn-copy', {
+                                                                                                                                                                        target: function(trigger) {
+                                                                                                                                                                            return trigger.nextElementSibling;
+                                                                                                                                                                        }
+                                                                                                                                                                    });
+                                                                                                                                                                }
+                                                                                                                                                                initCopyCode();
+                                                                                                                                                            }(window, document);
+                                                                                                                                                        </script>
+
+                                                                                                                                                        <script src="/js/lazyload/lazyload@1.9.1.js"></script>
+                                                                                                                                                        <script>
+                                                                                                                                                            $(function() {
+                                                                                                                                                                $("div.lazyload, img.lazyload, a.lazyload").lazyload({
+                                                                                                                                                                    effect: "fadeIn",
+                                                                                                                                                                    placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif" //图片未加载出来时显示的占位图
                                                                                                                                                                 });
-                                                                                                                                                            }
-                                                                                                                                                            initCopyCode();
-                                                                                                                                                        }(window, document);
-                                                                                                                                                    </script>
-
-                                                                                                                                                    <script src="/js/lazyload/lazyload@1.9.1.js"></script>
-                                                                                                                                                    <script>
-                                                                                                                                                        $(function() {
-                                                                                                                                                            $("div.lazyload, img.lazyload, a.lazyload").lazyload({
-                                                                                                                                                                effect: "fadeIn",
-                                                                                                                                                                placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif" //图片未加载出来时显示的占位图
                                                                                                                                                             });
-                                                                                                                                                        });
-                                                                                                                                                    </script>
+                                                                                                                                                        </script>
 
-                                                                                                                                                    <script src="/js/app.js"></script>
+                                                                                                                                                        <script src="/js/app.js"></script>
+
     </body>
 
 </html>
