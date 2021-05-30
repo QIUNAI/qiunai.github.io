@@ -7,14 +7,15 @@ $(function() {
 
     });
     $("#bt1").click(function() {
-        if ($("#in1").val() == "qiunai" || "qiu" && $("#pwd").val() == "20010120" || $("#in1").val() == "liang" && $("#pwd").val() == "20010808") {
+        if ($("#in1").val() == "qiunai" && $("#pwd").val() == "20010120" || $("#in1").val() == "lks" && $("#pwd").val() == "20010808") {
             $('.ui.basic.modal')
                 .modal('show');
+
         } else {
             $("#in1").val("");
             $("#pwd").val("");
             //$('#navHeader').removeClass('header1');
-            alert("登录失败,请重新登录。");
+            alert("兄弟，这么拉了，密码账号都记不住了？再试一下吧！");
         }
 
     });
@@ -32,5 +33,11 @@ $(function() {
         // right button
 
 
+    });
+    $("#a1").click(function() {
+        alert("别磨磨蹭蹭的了，快点进站，喂，你老婆丢了！");
+    });
+    $("#a2").click(function() {
+        alert("欢迎进站，老婆没丢吧？");
     });
 });
