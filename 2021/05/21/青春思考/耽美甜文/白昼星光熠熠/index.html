@@ -78,9 +78,1281 @@
                 ">
                              <!-- prismjs 代码高亮 -->
  
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/../image/purpose.jpg" alt="logo">
+      <h3 class="drawer-box-head_title">Qiunai Monster</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/mainindex" class="drawer-menu-item-link">
+                
+                <span class="name">首页</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(1)">
+                <span>
+                  
+                  <span class="name">归档</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(1)">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
+                <span>
+                  
+                  <span class="name">标签</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(2)">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85">
+                    
+                    <span>青春爱情</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F">
+                    
+                    <span>故事人生</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F">
+                    
+                    <span>人生感悟</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87">
+                    
+                    <span>耽美甜文</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%96%87%E5%AD%A6">
+                    
+                    <span>文学</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
+                <span>
+                  
+                  <span class="name">分类</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(3)">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%9B%BE%E5%BA%93">
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B">
+                    
+                    <span>亲情故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%BA%E7%94%9F%E6%95%85%E4%BA%8B">
+                    
+                    <span>人生故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C">
+                    
+                    <span>未解之谜</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                <span class="name">关于</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/comments" class="drawer-menu-item-link">
+                
+                <span class="name">留言</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                  <span class="name">BLOG</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://aatrowen.gitee.io/">
+                    
+                    <span>Aattrowen</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.zwying.com/">
+                    
+                    <span>秦枫鸢梦</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.cutewo.com">
+                    
+                    <span>萌宇</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://shoka.lostyu.me/">
+                    
+                    <span>Yume Shoke</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+                <span>
+                  
+                  <span class="name">社区</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(7)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.chzu.edu.cn/">
+                    
+                    <span>滁州学院</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://210.45.160.108/">
+                    
+                    <span>CHZUOJ</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://github.com/">
+                    
+                    <span>github</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://gitee.com/">
+                    
+                    <span>gitee</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
+                    
+                    <span>简书</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.csdn.net/">
+                    
+                    <span>CSDN</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.oschina.net/">
+                    
+                    <span>OSCHINA</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
+                    
+                    <span>尚源码</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://segmentfault.com/">
+                    
+                    <span>segmentfault</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://juejin.cn/">
+                    
+                    <span>掘金</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
+                <span>
+                  
+                  <span class="name">娱乐</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(8)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2Fu%2F7479361306%2Fhome%3Fwvr%3D5">
+                    
+                    <span>微博</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://javasoho.com/">
+                    
+                    <span>前站导航</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.imcloudapp.com/">
+                    
+                    <span>云上应用</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/">
+                    
+                    <span>w3cschool</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.runoob.com/">
+                    
+                    <span>菜鸟编程</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(9)">
+                <span>
+                  
+                  <span class="name">视频</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(9)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(9)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://video.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(10)">
+                <span>
+                  
+                  <span class="name">游戏</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(10)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(10)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>游侠网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.962.net/">
+                    
+                    <span>乐游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://2048game.com/">
+                    
+                    <span>2048</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(11)">
+                <span>
+                  
+                  <span class="name">more</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(11)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(11)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.iloveimg.com/zh-cn">
+                    
+                    <span>iloveimg</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ilovepdf.com/zh-cn">
+                    
+                    <span>ilovepdf</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.addog.vip/">
+                    
+                    <span>addog</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wannengrun.com/zh/#seeSome">
+                    
+                    <span>工具</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wht.im/">
+                    
+                    <span>万花筒</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ifanr.com">
+                    
+                    <span>爱范儿</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://m.zcool.com.cn">
+                    
+                    <span>站酷</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.uisdc.com/">
+                    
+                    <span>优设</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+        <li class="drawer-box-content_item">
+          <a target="_blank" rel="noopener" href="https://github.com">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span>Github</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-    <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
-    <div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/../image/purpose.jpg" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">Qiunai Monster</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/mainindex" class="menu-item-link">
+                
+                <span class="name">首页</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">归档</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/archives">
+                    
+                    <span>全部归档</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2021/05">
+                    
+                    <span>2021.05</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/archives/2020">
+                    
+                    <span>2020</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">标签</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/tags">
+                    
+                    <span>全部标签</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85">
+                    
+                    <span>青春爱情</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F">
+                    
+                    <span>故事人生</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F">
+                    
+                    <span>人生感悟</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87">
+                    
+                    <span>耽美甜文</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/%E6%96%87%E5%AD%A6">
+                    
+                    <span>文学</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">分类</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories">
+                    
+                    <span>全部分类</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%9B%BE%E5%BA%93">
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                    
+                    <span>小说</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                    
+                    <span>校园故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                    
+                    <span>励志故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B">
+                    
+                    <span>亲情故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E4%BA%BA%E7%94%9F%E6%95%85%E4%BA%8B">
+                    
+                    <span>人生故事</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C">
+                    
+                    <span>未解之谜</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                <span class="name">关于</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/comments" class="menu-item-link">
+                
+                <span class="name">留言</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">BLOG</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://aatrowen.gitee.io/">
+                    
+                    <span>Aattrowen</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.zwying.com/">
+                    
+                    <span>秦枫鸢梦</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://blog.cutewo.com">
+                    
+                    <span>萌宇</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://shoka.lostyu.me/">
+                    
+                    <span>Yume Shoke</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">社区</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.chzu.edu.cn/">
+                    
+                    <span>滁州学院</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://210.45.160.108/">
+                    
+                    <span>CHZUOJ</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://github.com/">
+                    
+                    <span>github</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://gitee.com/">
+                    
+                    <span>gitee</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
+                    
+                    <span>简书</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.csdn.net/">
+                    
+                    <span>CSDN</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.oschina.net/">
+                    
+                    <span>OSCHINA</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
+                    
+                    <span>尚源码</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://segmentfault.com/">
+                    
+                    <span>segmentfault</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://juejin.cn/">
+                    
+                    <span>掘金</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">娱乐</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2Fu%2F7479361306%2Fhome%3Fwvr%3D5">
+                    
+                    <span>微博</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://javasoho.com/">
+                    
+                    <span>前站导航</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.imcloudapp.com/">
+                    
+                    <span>云上应用</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/">
+                    
+                    <span>w3cschool</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.runoob.com/">
+                    
+                    <span>菜鸟编程</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">视频</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.bilibili.com/">
+                    
+                    <span>哔哩哔哩</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://video.kuaishou.com/">
+                    
+                    <span>快手</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">游戏</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.yxdown.com/">
+                    
+                    <span>单机游</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>迅游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ali213.net/">
+                    
+                    <span>游侠网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://www.962.net/">
+                    
+                    <span>乐游网</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://2048game.com/">
+                    
+                    <span>2048</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                <span class="name">more</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.iloveimg.com/zh-cn">
+                    
+                    <span>iloveimg</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ilovepdf.com/zh-cn">
+                    
+                    <span>ilovepdf</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.addog.vip/">
+                    
+                    <span>addog</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wannengrun.com/zh/#seeSome">
+                    
+                    <span>工具</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://wht.im/">
+                    
+                    <span>万花筒</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.ifanr.com">
+                    
+                    <span>爱范儿</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://m.zcool.com.cn">
+                    
+                    <span>站酷</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.uisdc.com/">
+                    
+                    <span>优设</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+      </ul>
+      
+        <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+        
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <!-- <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div> -->
+        <h2>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">Search</span>
+          </span>
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="Please enter keywords"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+  <a target="_blank" rel="noopener" href="https://github.com" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
+</header>
+        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+        <div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
     <transition-group tag="ul" :name="names">
         <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
             <img :src="image" class="bg-swiper-img">
@@ -196,7 +1468,7 @@
         height: 100%;
     }
 </style>
-        
+            
 
 
 
@@ -229,24 +1501,31 @@
 </div>
 
 
-            <div class="row justify-position">
-                <div class="main-content">
-                    <article class="post post-detail">
-                        
-                                
-                                    <div class="post-meta">
-                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                        <span class="post-time">2021-05-21</span>
-                                    </div>
+                <div class="row justify-position">
+                    <div class="main-content">
+                        <article class="post post-detail">
+                            
                                     
-                                        <div class="post-tags-categories">
-                                            
-
-                                                
-                                                    
+                                        <div class="post-meta">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <span class="post-time">2021-05-21</span>
                                         </div>
-                                        <div class="post-content">
-                                            <p>文|默默安然</p>
+                                        
+                                            <div class="post-tags-categories">
+                                                
+                                                    <div class="tags">
+                                                        <i class="iconfont icontag"></i>
+                                                        
+                                                            <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87/" class="">
+                                                                耽美甜文
+                                                            </a>
+                                                            
+                                                    </div>
+                                                    
+                                                        
+                                            </div>
+                                            <div class="post-content">
+                                                <p>文|默默安然</p>
 <p>新浪微博|默默安然L</p>
 <p>1.</p>
 <p>门口没有任何招牌，门内被竹帘遮了一半，从外面什么都看不见。祝西在外面徘徊了好一阵，才鼓足勇气推开了门。</p>
@@ -424,9 +1703,9 @@
 <p>“如果有天他问你有没有把信封交给我，你就跟他说，我看都没看就丢进垃圾桶了。拜托了。”</p>
 <p>就在刚刚，秦依是这样对学长说的。</p>
 
-                                        </div>
-                                        
-                                            <div class="copyright">
+                                            </div>
+                                            
+                                                <div class="copyright">
   <ul class="post-copyright">
     <li class="post-copyright-author">
     <strong>author:  </strong>Qiunai Monster</a>
@@ -442,11 +1721,11 @@
     </li>
   </ul>
 <div>
-                                                
-                    </article>
-                    <!-- 上一篇文章和下一篇文章 -->
-                    
+                                                    
+                        </article>
+                        <!-- 上一篇文章和下一篇文章 -->
                         
+                            
 <div class="post-nav">
 
 
@@ -494,12 +1773,12 @@
 
 </div>
 
-                            
-
-
-                                <!-- 打赏 -->
                                 
-                                    <div id="appDonate" class="post-donate">
+
+
+                                    <!-- 打赏 -->
+                                    
+                                        <div id="appDonate" class="post-donate">
   <div id="donate_board" class="donate_bar center" ref="donate">
     <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
   </div>
@@ -581,11 +1860,11 @@
     created() {}
   })
 </script>
-                                        
-
-                                            <!-- 分享 -->
                                             
-                                                <!-- https://github.com/overtrue/share.js -->
+
+                                                <!-- 分享 -->
+                                                
+                                                    <!-- https://github.com/overtrue/share.js -->
 
 <div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
 
@@ -599,13 +1878,13 @@
 </style>
 
 
-                                                    
-
-                                                        <!-- 评论 -->
                                                         
-                                                            <div id="myComment">
-                                                                
-                                                                    <section id="comments" style="padding: 1em; margin: 15px auto;" class="animated bounceInUp">
+
+                                                            <!-- 评论 -->
+                                                            
+                                                                <div id="myComment">
+                                                                    
+                                                                        <section id="comments" style="padding: 1em; margin: 15px auto;" class="animated bounceInUp">
     <div id="vcomment" class="comment"></div>
     <script src="/js/valine/av-min@3.0.4.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
@@ -1509,22 +2788,22 @@
     }
 </style>
 </style>
-                                                                        
-                                                            </div>
-                                                            
-                </div>
+                                                                            
+                                                                </div>
+                                                                
+                    </div>
 
-                
-                    <div class="toc-aside">
-                        <div class="toc-main">
-                            <div class="toc-aside-title">
-                                <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
-                                <div class="toc-open-close">
-                                    catalog
+                    
+                        <div class="toc-aside">
+                            <div class="toc-main">
+                                <div class="toc-aside-title">
+                                    <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+                                    <div class="toc-open-close">
+                                        catalog
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="toc-content">
-                                <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+                                <div class="toc-content">
+                                    <link href="/js/tocbot/tocbot.css" rel="stylesheet">
 <script src="/js/tocbot/tocbot.min.js"></script>
 <div class="toc"></div>
 
@@ -1595,73 +2874,73 @@
   padding-left: 25px;
 }
 </style>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    
-                        <script>
-                            $(".toc-aside").css({
-                                'width': 0,
-                                'padding': 0
-                            });
-                            $(".toc-content").css({
-                                'width': 0
-                            });
-                            $(".toc-aside-title span, .toc-aside-title i").css({
-                                'display': 'none'
-                            });
-                            $(".main-content").css({
-                                'width': '75%',
-                                'margin': '10px auto'
-                            });
-                        </script>
                         
-
                             <script>
-                                let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-                                let open = eval('' || 'false');
-                                openOrCloseBtn.click(function() {
-                                    if (open === true) {
-                                        $(".toc-aside").css({
-                                            'width': 0,
-                                            'padding': 0
-                                        });
-                                        $(".toc-content").css({
-                                            'width': 0
-                                        });
-                                        $(".toc-aside-title span, .toc-aside-title i").css({
-                                            'display': 'none'
-                                        });
-                                        $(".main-content").css({
-                                            'width': '75%',
-                                            'margin': '10px auto'
-                                        });
-                                        open = false;
-                                    } else {
-                                        $(".toc-aside").css({
-                                            'width': '300px',
-                                            'padding': '0 10px'
-                                        });
-                                        $(".toc-content").css({
-                                            'width': '300px'
-                                        });
-                                        $(".toc-aside-title span, .toc-aside-title i").css({
-                                            'display': 'inline-block'
-                                        });
-                                        $(".main-content").css({
-                                            'width': '65%',
-                                            'margin-right': '10px',
-                                            'margin-left': 'calc(35% - 350px)'
-                                        });
-                                        open = true;
-                                    }
+                                $(".toc-aside").css({
+                                    'width': 0,
+                                    'padding': 0
+                                });
+                                $(".toc-content").css({
+                                    'width': 0
+                                });
+                                $(".toc-aside-title span, .toc-aside-title i").css({
+                                    'display': 'none'
+                                });
+                                $(".main-content").css({
+                                    'width': '75%',
+                                    'margin': '10px auto'
                                 });
                             </script>
                             
 
+                                <script>
+                                    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+                                    let open = eval('' || 'false');
+                                    openOrCloseBtn.click(function() {
+                                        if (open === true) {
+                                            $(".toc-aside").css({
+                                                'width': 0,
+                                                'padding': 0
+                                            });
+                                            $(".toc-content").css({
+                                                'width': 0
+                                            });
+                                            $(".toc-aside-title span, .toc-aside-title i").css({
+                                                'display': 'none'
+                                            });
+                                            $(".main-content").css({
+                                                'width': '75%',
+                                                'margin': '10px auto'
+                                            });
+                                            open = false;
+                                        } else {
+                                            $(".toc-aside").css({
+                                                'width': '300px',
+                                                'padding': '0 10px'
+                                            });
+                                            $(".toc-content").css({
+                                                'width': '300px'
+                                            });
+                                            $(".toc-aside-title span, .toc-aside-title i").css({
+                                                'display': 'inline-block'
+                                            });
+                                            $(".main-content").css({
+                                                'width': '65%',
+                                                'margin-right': '10px',
+                                                'margin-left': 'calc(35% - 350px)'
+                                            });
+                                            open = true;
+                                        }
+                                    });
+                                </script>
+                                
 
-            </div>
+
+                </div>
                         </main>
                         <script src="/js/semantic.min.js"></script>
 <link href="/css/semantic.min.css" rel="stylesheet">
@@ -1777,13 +3056,15 @@
 <style>
     .aplayer .aplayer-lrc p {
         color: purple;
-        font-size: 20px;
+        display: none;
+            font-size: 20px;
         font-weight: 500;
         line-height: 35px !important;
     }
     
     .aplayer .aplayer-lrc p .aplayer-lrc-current {
-        font-size: 15px;
+        display: none;
+            font-size: 15px;
         color: #42b983;
     }
     
