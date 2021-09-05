@@ -12,6 +12,10 @@ $(window).on('scroll', function() {
             nav.removeClass('header1');
             //nav.removeClass('header2');
         }*/
+    if(winTop_2==0)
+    {
+        $('header').fadeOut(500);
+    }
     var scrollFunc = function(e) {
         e = e || window.event;
         if (e.wheelDelta) { //第一步：先判断浏览器IE，谷歌滑轮事件    
@@ -25,14 +29,18 @@ $(window).on('scroll', function() {
 
                 //nav.removeClass('header2');
             }
-            if (e.wheelDelta < 0) { //当滑轮向下滚动时 
+            
+                
+                if (e.wheelDelta < 0) { //当滑轮向下滚动时 
 
                 //nav.addClass('header-bg-color');
                 nav.addClass('header1');
                 //nav.addClass('header2');
-                $('header').fadeOut(1000);
+                $('header').fadeOut(500);
                 //nav.addClass('header2');
             }
+            
+            
         }
     }
     window.onmousewheel = document.onmousewheel = scrollFunc;
