@@ -12,10 +12,10 @@ $(window).on('scroll', function() {
             nav.removeClass('header1');
             //nav.removeClass('header2');
         }*/
-    if(winTop_2==0)
+    /*if(winTop_2==0)
     {
         $('header').fadeOut(500);
-    }
+    }*/
     var scrollFunc = function(e) {
         e = e || window.event;
         if (e.wheelDelta) { //第一步：先判断浏览器IE，谷歌滑轮事件    
