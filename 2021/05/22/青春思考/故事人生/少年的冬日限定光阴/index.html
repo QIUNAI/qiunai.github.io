@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <title>少年的冬日限定光阴 | Qiu Monster</title>
+
+  <link rel="icon" type="image/jpeg" href="/../image/2.jpg">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+        <script src="/js/valine/av-min@3.0.4.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+    
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Qiu Monster" type="application/atom+xml">
+</head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  <script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 头部导航等 -->
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/../image/3.jpg" alt="logo">
+      <h3 class="drawer-box-head_title">Qiu Monster</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(1)">
+                  <span>
+                    
+                    <span class="name">归档</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(1)">
+                  
+                  <li>
+                    <a href="/archives">
+                      
+                      <span>全部归档</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/archives/2021/08">
+                      
+                      <span>2021.08</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/archives/2021/05">
+                      
+                      <span>2021.05</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
+                  <span>
+                    
+                    <span class="name">标签</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(2)">
+                  
+                  <li>
+                    <a href="/tags">
+                      
+                      <span>全部标签</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85">
+                      
+                      <span>青春爱情</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F">
+                      
+                      <span>故事人生</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F">
+                      
+                      <span>人生感悟</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87">
+                      
+                      <span>耽美甜文</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E6%96%87%E5%AD%A6">
+                      
+                      <span>文学</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
+                  <span>
+                    
+                    <span class="name">分类</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(3)">
+                  
+                  <li>
+                    <a href="/categories">
+                      
+                      <span>全部分类</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E5%9B%BE%E5%BA%93">
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                      
+                      <span>小说</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                      
+                      <span>校园故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                      
+                      <span>励志故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B">
+                      
+                      <span>亲情故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E4%BA%BA%E7%94%9F%E6%95%85%E4%BA%8B">
+                      
+                      <span>人生故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C">
+                      
+                      <span>未解之谜</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                  <span class="name">音乐测试</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/comments" class="drawer-menu-item-link">
+                  
+                  <span class="name">留言</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/img" class="drawer-menu-item-link">
+                  
+                  <span class="name">图片</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
+                  <span>
+                    
+                    <span class="name">社区</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(8)">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://github.com/">
+                      
+                      <span>github</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://gitee.com/">
+                      
+                      <span>gitee</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
+                      
+                      <span>简书</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.csdn.net/">
+                      
+                      <span>CSDN</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.oschina.net/">
+                      
+                      <span>OSCHINA</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
+                      
+                      <span>尚源码</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://segmentfault.com/">
+                      
+                      <span>segmentfault</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://juejin.cn/">
+                      
+                      <span>掘金</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/../image/3.jpg" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">Qiu Monster</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="归档">
+                  
+                  <span class="name">归档</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/archives">
+                      
+                      <span>全部归档</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/archives/2021/08">
+                      
+                      <span>2021.08</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/archives/2021/05">
+                      
+                      <span>2021.05</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="标签">
+                  
+                  <span class="name">标签</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/tags">
+                      
+                      <span>全部标签</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85">
+                      
+                      <span>青春爱情</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F">
+                      
+                      <span>故事人生</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F">
+                      
+                      <span>人生感悟</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87">
+                      
+                      <span>耽美甜文</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/tags/%E6%96%87%E5%AD%A6">
+                      
+                      <span>文学</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="分类">
+                  
+                  <span class="name">分类</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/categories">
+                      
+                      <span>全部分类</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E5%9B%BE%E5%BA%93">
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E5%B0%8F%E8%AF%B4">
+                      
+                      <span>小说</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
+                      
+                      <span>校园故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B">
+                      
+                      <span>励志故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B">
+                      
+                      <span>亲情故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E4%BA%BA%E7%94%9F%E6%95%85%E4%BA%8B">
+                      
+                      <span>人生故事</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C">
+                      
+                      <span>未解之谜</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="音乐测试">
+                  
+                  <span class="name">音乐测试</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/comments" class="menu-item-link" title="留言">
+                  
+                  <span class="name">留言</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/img" class="menu-item-link" title="图片">
+                  
+                  <span class="name">图片</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="社区">
+                  
+                  <span class="name">社区</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://github.com/">
+                      
+                      <span>github</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://gitee.com/">
+                      
+                      <span>gitee</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
+                      
+                      <span>简书</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.csdn.net/">
+                      
+                      <span>CSDN</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.oschina.net/">
+                      
+                      <span>OSCHINA</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
+                      
+                      <span>尚源码</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://segmentfault.com/">
+                      
+                      <span>segmentfault</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://juejin.cn/">
+                      
+                      <span>掘金</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <!-- <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div> -->
+        <h2>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">Search</span>
+          </span>
+          <i class="fa fa-close close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="Please enter keywords"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js" data-pjax></script>
+    
+</header>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+    function loadScript(src, cb) {
+        setTimeout(function () {
+            var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            if (cb) script.onload = cb;
+            script.setAttribute('src', src);
+            HEAD.appendChild(script);
+        });
+    }
+
+    //https://github.com/filamentgroup/loadCSS
+    var loadCSS = function (href, before, media, attributes) {
+        var doc = window.document;
+        var ss = doc.createElement("link");
+        var ref;
+        if (before) {
+            ref = before;
+        }
+        else {
+            var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+            ref = refs[refs.length - 1];
+        }
+        var sheets = doc.styleSheets;
+        if (attributes) {
+            for (var attributeName in attributes) {
+                if (attributes.hasOwnProperty(attributeName)) {
+                    ss.setAttribute(attributeName, attributes[attributeName]);
+                }
+            }
+        }
+        ss.rel = "stylesheet";
+        ss.href = href;
+        ss.media = "only x";
+        function ready(cb) {
+            if (doc.body) {
+                return cb();
+            }
+            setTimeout(function () {
+                ready(cb);
+            });
+        }
+        ready(function () {
+            ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+        });
+        var onloadcssdefined = function (cb) {
+            var resolvedHref = ss.href;
+            var i = sheets.length;
+            while (i--) {
+                if (sheets[i].href === resolvedHref) {
+                    return cb();
+                }
+            }
+            setTimeout(function () {
+                onloadcssdefined(cb);
+            });
+        };
+        function loadCB() {
+            if (ss.addEventListener) {
+                ss.removeEventListener("load", loadCB);
+            }
+            ss.media = media || "all";
+        }
+        if (ss.addEventListener) {
+            ss.addEventListener("load", loadCB);
+        }
+        ss.onloadcssdefined = onloadcssdefined;
+        onloadcssdefined(loadCB);
+        return ss;
+    };
+    
+</script>
+ 
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
+    <!-- 内容区域 -->
+    <div id="safearea">
+      <main class="main" id="pjax-container" style="margin-top: 0;">
+        
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/../image/n185.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        少年的冬日限定光阴
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fa fa-calendar"></i> Published in：2021-05-22 |
+        </span>
+      
+
+      
+
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-content">
+        <p>文/纪南方（此间少年）</p>
+<p>新浪微博/@纪南方70，查看更多请点击 花火目录，立即看更多好文章</p>
+<p>冬日的光阴是限定的，可爱或沉默的少年是限定的，他们的喜欢也是限定的，只有短短的一辈子。</p>
+<p>作者有话说：我很久没写过青春校园类的故事了，干净明亮的少年一直是我心里的白月光，因为追了个限定男团，所以写到了关于限定的故事——光阴是限定的，但是，我喜欢你的心不是。好久不见！</p>
+<p>01</p>
+<p>“澄子，你快来分析，陈熠今天在国旗下的讲话是什么意思啊？”</p>
+<p>刚一下课，前桌便急不可待地把笔一丢，转过身碰了碰云澄的桌子。云澄的手一颤，笔尖在纸上滑出一道长痕。</p>
+<p>她用手托起下巴，声音有气无力：“我怎么知道？”</p>
+<p>这个反问问得好。</p>
+<p>她怎么知道早上陈熠发什么神经，竟然当着全校学生的面，立下誓言：这次月考考不过云澄，免费给她拍一组夏日vlog（影像日志）。</p>
+<p>彼时，少年穿着校服，笔直地站在升旗台上，袖子卷起，露出白皙的手腕，初春的阳光全方位地笼罩在他的身上，本就是顶好看的模样，又积极向上，好一个天不怕地不怕的十八岁少年郎。</p>
+<p>……谁稀罕啊！</p>
+<p>想到这里，云澄忍不住翻了个小小的白眼，眼看其他同学八卦的眼神一一投来，非要她分析出个所以然来。她只好猜道：“可能是上次没考过我，觉得没面子吧。”</p>
+<p>有人发出疑问：“上次陈熠不是生病了，缺考了一门吗？”</p>
+<p>言下之意，要不是缺考了那门，年级第一名哪里轮得到你？！</p>
+<p>云澄听了，也不反驳，语气淡淡的：“那就祝他这次身体健康。”</p>
+<p>本是一句好话，但由于云澄和陈熠班级不在同一层，传来传去，传到陈熠的耳里就变成了“云澄说了，你这次月考的时候肯定又生病，休想考过她”。</p>
+<p>陈熠哀怨：“澄子，我平日待你不薄，你怎么可以这样？！”</p>
+<p>他压低了声音，在人不多的教室里还是有点吵人。云澄把下午刚发下来的试卷折成飞机，送到嘴边，哈了口气，直直地飞向少年的臂弯。</p>
+<p>纸飞机碰上陈熠的胸口，然后轻飘飘地落在他干净修长的手上。</p>
+<p>他低哼：“折得太丑。”</p>
+<p>听到少年的话，云澄挑眉：“你待我不薄？是指参加不了考试，非得让我把你缺考的那门试卷背下来，还是用你那烂到爆的摄像技术把我拍得胖了三圈，还发到朋友圈？还是说——说好上了高中，你维持你的高冷人设，我维持我的乖乖女人设，结果，不到一周，你就把咱俩的人设一起搞崩了这件事？”</p>
+<p>她种种“罪状”列下来，陈熠怎么也该走个流程羞愧一下，可他偏不，还眨着一双桃花眼看着她，眼波流转间还有点可爱。</p>
+<p>云澄一时没承受住，先移开了目光，陈熠笑了起来，刚过变声期的嗓音低沉悦耳。她恼了，耳根渐渐泛红，手在他的腰上拧了一把。</p>
+<p>陈熠倒吸一口凉气，正准备控诉她。</p>
+<p>“闭嘴吧你。”云澄小声说，顿了顿，若有所思道，“陈熠，你太瘦了。”</p>
+<p>话一出口，她就后悔了。</p>
+<p>果然，在自主晚自习大家都在努力刻苦的静谧里，陈熠趴在桌上，冰凉的脸贴紧课桌，说：“云澄，你看吧，明明是你放心不下我，怎么能说我弄崩了你的人设呢。”</p>
+<p>云澄想了想，好像是这样的。</p>
+<p>02</p>
+<p>云澄曾经以为，跟陈熠一起长大，是她十五年来最幸运的事情。因为陈熠是标准的“别人家的孩子”，打小走哪就把她带到哪，管吃、管玩、管学习，直到升高中的那年暑假，他大病了一场。</p>
+<p>他病恹恹地靠在床上：“澄……喀喀，澄子，你一个人上高中要好好的，没有我……”</p>
+<p>“别演了。”云澄啃着苹果，口齿不清地拆他的台，“我都看你的报告了，耽误不了军训。”</p>
+<p>陈熠顿时收声，一会儿后，懒散地扯了扯嘴角：“你该配合我演一下。”</p>
+<p>云澄专心啃苹果。</p>
+<p>陈熠不爽：“喂！”</p>
+<p>“分好班了。”云澄岔开话题，说，“你在一班，我在二班。”</p>
+<p>陈熠迟疑：“那……计划开始？”</p>
+<p>说起这个计划，是陈熠在刚刚手术完时提出来的。彼时夏日炎炎，云澄穿了身碎花小裙子，坐在床头乖巧地对他笑。</p>
+<p>陈熠恍惚：“澄子，我是不是已经到了平行时空？”</p>
+<p>云澄笑容一僵：“何出此言？”</p>
+<p>“不然，你怎么跟个姑娘似的。”</p>
+<p>他说得不留情面，不过是仗着刚做完手术，云澄不敢拿他怎么样罢了。</p>
+<p>云澄在心底暗暗记下一笔，听他继续胡扯。</p>
+<p>据说，陈熠做手术时因为是局部麻醉，所以有空想东想西。他想，如果这次活着回去，等上了高中一定好好学习，不辜负所有人的期望，做个高冷男神。</p>
+<p>云澄默然，她和陈熠在初中时一身反骨，怼天怼地，干什么坏事都在一起，而高中换了个学校，同学都不是原来那一拨了，想换人设也不是不可以。</p>
+<p>她举手：“我也加入。”</p>
+<p>于是，两个人约定，计划从九月一号开始，谁先崩了人设，谁是狗。</p>
+<p>起初倒还好，陈熠身材挺拔，穿了身军装站在太阳底下像棵小白杨似的，又生了张好看的脸，冷淡下来时倒也像那么回事。</p>
+<p>他私下里跟云澄嘚瑟：“学霸加高冷，标准的小说男主角。”</p>
+<p>不待云澄反驳他，他笑嘻嘻地问：“你说呢，女主角？”</p>
+<p>云澄跟他击掌：“你说得对。”</p>
+<p>但是，她怎么也没想到，陈熠会突然受了刺激，当着全年级的面跟人打架，等她反应过来的时候，已经冲了过去。</p>
+<p>一片混乱后，她听到教官冷冷地呵斥：“所有人今天加训跑步十圈！”</p>
+<p>九月傍晚的天又闷又热，陈熠跑完十圈后，往草坪上一躺，汗珠顺着脸颊滴落下来。云澄拿脚轻轻踢了踢他的胳膊：“喂，现在全校园都知道咱俩的真实面目了。”</p>
+<p>陈熠动了动手指，没搭理她。</p>
+<p>“高冷男神会打架，乖乖女力大无穷。”云澄盘腿坐到他的旁边，不厌其烦地戳他，“所以，你到底为什么打架啊？别人说什么，你忍一忍不就过去了吗！忍一时……”</p>
+<p>“不能忍。”陈熠开口打断她，喉咙口灌了风，声音嘶哑得厉害。</p>
+<p>他坐起来，直直地看着她，是属于少年人的清澈明亮的瞳孔，眼底闪着光像是星辰：“他们说你看起来乖乖巧巧，肯定很好欺负。”</p>
+<p>云澄一愣：“我？”</p>
+<p>“嗯。”陈熠坐起身，“所以，人设崩了，咱俩都有错，我先来。”</p>
+<p>“来什么？”</p>
+<p>“汪。”</p>
+<p>“……”</p>
+<p>03</p>
+<p>新一次的月考陈熠屈居第二，到底没能考过云澄。趁着午休，他拿着摄影机偷偷摸摸地溜过来，小声地喊她：“澄子，我来愿赌服输了。”</p>
+<p>闷热的六月，稍微动一动就是一身汗，云澄懒得抬头，声音闷在臂弯里：“不用，别麻烦了。”</p>
+<p>陈熠不甘心：“别跟我客气。”</p>
+<p>云澄闭了闭眼，陈熠想错了，真的不是她跟他客气，而是——他的拍摄技术确实不怎么样。偏偏他没事就喜欢拍vlog，还美其名曰“保存生活里的一切美好”。</p>
+<p>云澄反驳他：“你的生活除了我之外，就没有别的美好了吗？”</p>
+<p>话说出口，她才觉得有歧义，眼看就要被陈熠怼过来，她正想着措辞，便见他一本正经地点点头：“可不是吗，你是我贫瘠生活里的最美好。”</p>
+<p>云澄的心猛地一跳，埋在臂弯里的脸红了红，缓了缓，抬起头白了他一眼：“为了找个拍摄对象，你也是很拼了。”</p>
+<p>陈熠晃了晃手上的摄影机：“跟我走吧。”</p>
+<p>夏日寂寂的午后，知了在窗外的梧桐树上聒噪地叫着，头顶的风扇转呀转，阵阵热风吹动粉色的窗帘，再加上眼前穿着白衬衫的少年，符合校园剧里所有的配置。</p>
+<p>只要她伸出手，就能拉住整个青春。</p>
+<p>云澄看出陈熠眼中的热切，又想起他的死亡拍摄手法，心里打了个突，又坐了回去：“时候不早了，你们没作业吗？”</p>
+<p>陈熠眼里的光顿时灭了，他回过身，嘴里念念有词：“我知道了，厌倦了是吗？！好，我走还不行吗。”</p>
+<p>他们这边动静有点大，没午休的同学看过来，云澄顿时觉得如芒刺在背，好像辜负了什么一样。</p>
+<p>她认命地扯住陈熠的校服：“下午放学别走。”</p>
+<p>其实，比起静态照片，陈熠拍摄短片的手法还算高明，至少傍晚时分取景操场，色调也暧昧得刚好。云澄满意地把短片看了一遍，问：“主题是什么？”</p>
+<p>陈熠拍的时候上蹿下跳，早就累了，恹恹地道：“你觉得呢？”</p>
+<p>云澄脱口而出：“少女情怀总是诗。”</p>
+<p>陈熠否定：“俗。”</p>
+<p>云澄来了气，给他发言的机会，他却始终没想出主题。</p>
+<p>离晚自习还有一段时间，云澄百无聊赖地摆弄着摄影机，镜头晃晃悠悠地落在陈熠的身上：他坐在台阶上，两条长腿随意地晃荡，手掌撑地，往后靠着，目光通过镜头望着她，又移开。</p>
+<p>云澄逗他：“说两句话。”</p>
+<p>“我之前在微博上看过一句话。”陈熠懒懒散散地开口，“‘我一直在旷野里举着火把，等待另一簇星火来相遇。’哼，我才不，累了，我就吹灭它，谁都别想找到我。”</p>
+<p>画面晃来晃去，在少年白皙的手上停留，摄影机放得低，明明是死亡角度，他却显得清爽，好看得不像话。</p>
+<p>陈熠忽然抬手，双手扶住摄像机，专注地盯着镜头：“云澄，你珍惜夏天活力四射的我吧，等到了冬天，我才不搭理你。”</p>
+<p>云澄微怔，半晌，她讷讷地开口：“其实我更喜欢冬天的你。”</p>
+<p>04</p>
+<p>这倒是句实话。</p>
+<p>自从大病一场后，陈熠的身体便时好时坏，夏天还好，一到冬日，病情反复，把自己裹成球，还冻得瑟瑟发抖，懒怠得连眼珠子都不动一下。</p>
+<p>而这时便是他最乖的时候了，只要暖和，让他干什么就干什么，甚至发起脾气来也有气无力的。</p>
+<p>云澄碰了碰他的胳膊：“你还记得吗，有次下雪，我出来晚了，你可生气了。”</p>
+<p>陈熠黑了脸：“你还好意思说。”</p>
+<p>那是去年冬天，雪纷纷扬扬地下了一夜，云澄起晚了，出门便见陈熠坐在她家门口的台阶上。听到开门声，他仰起头看向她，毛茸茸的、雪白的帽子、口罩、耳护全戴上，只露出一双眼睛，目光哀哀怨怨，有点无辜。</p>
+<p>北方的雪松散，大片大片地在衣服上铺散开来，衬得他的眉清目秀，她看得呆了，一时忘了动。</p>
+<p>陈熠默默地伸出手，将软绵绵的手套摊开，露出一袋热腾腾的牛奶，声音闷在口罩里，软软糯糯的：“喏。”</p>
+<p>云澄在袋子上咬了一个口子，叼在嘴里，蹲下来拍打他身上的雪，说：“你不会一晚上都在看雪，所以没睡吧。陈熠，你多大的人了，又怕冷，还爱看雪，你能不能成熟点啊。”</p>
+<p>陈熠始终默不作声，她抬眼：“怎么不说话？”</p>
+<p>陈熠瞪了她一眼，把口罩往下拉了拉，让声音清晰一点，小气又傲娇：“生气了呗。”</p>
+<p>云澄扑哧笑出了声。陈熠生气起来不得了，尤其是冬天，本就懒得说话，别人温言哄一天，可能都哄不好的那种，所以，她干脆就没哄，只是在下晚自习后堆了个小雪人送到他面前。</p>
+<p>教室里开着暖气，小雪人以肉眼可见的速度在陈熠的手心里融化着，化成水珠，穿过他的指缝滴答滴答地落在地板上。</p>
+<p>陈熠垂着眼，睫毛乌黑纤长，表情乖巧认真，好一会儿，他才说：“真脆弱。”</p>
+<p>云澄没听清楚，随口问：“什么？”</p>
+<p>白炽灯的光影里，陈熠动了动手指，答非所问：“我想打雪仗。”</p>
+<p>彼时已经下了晚自习，云澄再厉害，也找不到人陪陈熠打雪仗。再说——她瞥了他一眼：“上次陪你打雪仗，你高烧一整夜这件事你又忘了？！”</p>
+<p>陈熠讪讪的，全副武装出门后，又是一副爱搭不理的样子了。路灯亮起长长的一排，路两旁的绿化带被覆上一层新雪，映得长街又亮了几分。</p>
+<p>“云澄。”陈熠拉住她的手，她没戴手套，他手上的温度隔着毛茸茸的手套传来。明明不是真正意义上的牵手，她的脸却还是热了热，连他说了什么都没听清，便慌乱地点头答应了。</p>
+<p>陈熠问：“那你写什么？”</p>
+<p>云澄茫然：“啊？”</p>
+<p>晚自习上课的铃声响起，把云澄从回忆中拉了回来，天色尚且残存着些许光亮，路灯还没开，眼前的少年跳下台阶，白衬衫被晚风吹起，像那年的雪色般令人惊艳。</p>
+<p>云澄跟着跳了下来，问：“你还记得去年我们在雪地里写了什么吗？”</p>
+<p>“当然记得啊。”陈熠把汗湿的刘海往后拢了拢，露出额头，说，“我写的是冬天快乐，你写的是——我好想你，在起风的夜里。”</p>
+<p>他啧了一声，上下打量着她：“我一直想问你呢，我就在你的身边，起风的夜里，你想谁啊？”</p>
+<p>05</p>
+<p>陈熠的问题被云澄轻易地糊弄过去，直到回了教室，都没问出个所以然。他站在楼梯口，悻悻地抱着肩膀，抬高声音：“你有小秘密了是吗？”</p>
+<p>云澄把棒棒糖丢到他的怀里：“吃点糖，晚自习的时候抽出空好好想vlog的标题。”</p>
+<p>陈熠不服气：“那你呢？”</p>
+<p>云澄理所当然：“我好好学习。”</p>
+<p>虽然这般告诉陈熠，云澄却也没有好好学习，正巧同桌在聊限定偶像男团的事情，同桌感慨：“虽然知道早晚会散，但还是忍不住真心喜欢。”她说，“你不追星不知道，意难平的事情太多了。”</p>
+<p>云澄目光落在讲台上，有人正在擦黑板，雪白的粉末簌簌地落下。</p>
+<p>她小声说：“意难平的事情，也不是没有。”</p>
+<p>仔细想想，她所有的意难平都跟陈熠有关。</p>
+<p>云澄偷偷拿出手机，给陈熠发消息：“vlog的标题叫‘限定时光’怎么样？”</p>
+<p>陈熠比她想得要刻苦，一直到放学，才回她的消息，说的却是“校合唱团彩排，你先回家，别等我了”。</p>
+<p>陈熠从小就开始学大提琴，刚开始是不愿意学，小正太每天抱着巷口的电线杆大哭，被人拖着去上课，后来是不愿意回家，哪怕上完了课，也要在练习室练到很晚，人只比大提琴高一点，背着琴盒像个童工。</p>
+<p>云澄打趣他，说他不像拉大提琴的，像是去打架的。小少年一言不发地走到她的窗前，就地坐下，开始演奏。</p>
+<p>一曲完了，他奶声奶气地凶她：“你就知道做数学题！”</p>
+<p>小云澄也来了气，撸起袖子跟他狠狠吵了一架。但是，她怎么也没有想到，她差点因为比赛把他弄丢了。</p>
+<p>陈熠高一那年拜师，老师是国际上顶尖的大提琴手，唯一的不好就是他太忙，只有冬季才回国，以至于每逢三九天，陈熠便要背着大提琴去深山别墅上课。</p>
+<p>云澄曾劝他，既然天这么冷，不如就别去了。</p>
+<p>偏偏陈熠在这件事情上极其较真，一节课也不肯落下，甚至在巡演开始前仅穿着单薄的西装进行彩排。那天正巧云澄要去参加奥数比赛，两人在门口撞见，听他说起，她大惊失色：“你不要命了？！”</p>
+<p>陈熠在西装外面套了厚重的羽绒服，半张脸都藏在围巾里，他看向她：“比赛什么时候结束？”</p>
+<p>“十二点。”</p>
+<p>陈熠点了点头，说：“好。”临上车时，他似乎又不放心，顿住脚步，“云澄，你想不想看我穿白色西装的样子？”</p>
+<p>云澄愣了愣：“想啊。”</p>
+<p>“可是巡演的地点不在这里，在南方，你看不到。”</p>
+<p>云澄急着走，象征性地惋惜了一下，便匆忙地上了车。等比赛结束回家睡了一觉，她才后知后觉地反应过来——陈熠是不是想让她去看他的彩排？！</p>
+<p>她刚意识到这点，家里的电话就响了，一会儿后，妈妈匆忙地推开门：“澄子，走，去医院。”</p>
+<p>在云澄的记忆里，医院这个词始终和陈熠挂钩，这次也不例外，陈熠在山顶排练三个小时，下场后直接被抬上了救护车。</p>
+<p>后来，云澄看过他那天的照片，少年穿着白色西装，挺拔而冷然地坐在雪地里，背景是绵延不绝的雪松林，风刮起飞雪，似有若无地飘在镜头前，他垂着眼，专注而认真。</p>
+<p>雪色、山色、天色全是陪衬，独独他夺目而耀眼。</p>
+<p>也是从那时开始，云澄再也没有错过陈熠任何一场彩排，但她压根没听，而是坐在学校礼堂外面写作业。</p>
+<p>“我就知道你不会听话。”不知道过了多久，陈熠的声音在头顶响起，“现在是夏天，没关系的。”</p>
+<p>云澄抬起头，陈熠倚着墙，漫不经心地把玩着手机，见她看过来，他打开短片，问：“为什么要叫限定时光？”</p>
+<p>视频里，穿着制服短裙的十八岁女孩，不施粉黛的脸干干净净，在夏日傍晚的霞光里，有种不属于她本人的不真实的美好。</p>
+<p>云澄沉默了一会儿，说：“你看，这个视频里的一切都已经过去了，不可能再回来了。”她站起来，跟他比肩看着星光闪闪，“当时的我是限定的，晚霞是限定的，就连穿堂而过的风也是限定的。”</p>
+<p>陈熠侧过脸，一字一顿地说：“但我不是。”</p>
+<p>06</p>
+<p>陈熠给云澄拍的vlog从夏天拖到秋天，直到秋天接近尾声时，才剪辑完成，而名字则采用了云澄取的“少女情怀总是诗”。</p>
+<p>云澄看着名字愣了一会儿：“你不是说俗吗？”</p>
+<p>“谁说的？！”陈熠坐在落地窗边擦拭琴身，干枯的梧桐叶在风中盘旋，晃晃悠悠地飘落在雨后的青石板上，伴随着少年俏皮的语气，不觉得凉，反倒觉得添了几分暖意，他义正词严地说，“大俗即大雅！”</p>
+<p>云澄干脆转了身不理他。</p>
+<p>陈熠专心地擦干净琴身，把它放进琴盒中，推给云澄：“好好对它。”</p>
+<p>云澄不在意地嗯了一声：“放在墙角，我不会动它一下的。”</p>
+<p>陈熠提意见：“它待在墙角多孤独，你要陪它说说话。”</p>
+<p>“陈熠——”云澄扬手，眼看巴掌就要落在他的身上，气势却弱了下来，最后在他的头顶胡乱地揉了揉，“在医院顺便把脑子也看一下吧。”</p>
+<p>陈熠眨巴着眼睛，好一会儿才说：“学业再重，也记得要多来看看我。”</p>
+<p>云澄的手微微一顿，她的指尖轻颤，迟疑地收了回来，在他着急之前含糊地应了下来：“知道了。”</p>
+<p>陈熠之前病发时，因为没满十八周岁，没办法进行这类大型手术，才拖至现在，即便如此，成功率仍然不高。</p>
+<p>云澄心里没底，在他手术当天，更是心神不宁，甚至在考试前十分钟手机被收走的情况下，冒着大雨跑到校外给他打电话。</p>
+<p>公共电话亭有点破，不间断的雨冲刷着灰尘，电话铃声响了半分钟，才被接起。</p>
+<p>陈熠的语气有点迟疑：“……澄子？”</p>
+<p>“陈熠。”云澄看着时间，离考试还有两分钟，她攥紧了话筒，语气轻颤，“你的大提琴，我好好地在保管，也偶尔跟它说话，我甚至学了首《小星星》。你……你活着出来，我就拉给你听好不好？”</p>
+<p>秋日的雨愈下愈大，溅起大片的水花。雨声喧嚣里，预备铃声模模糊糊地响起，她听到陈熠笑了笑，说：“好啊。”</p>
+<p>后来，云澄把大提琴背到病房给陈熠拉《小星星》时，算了一下，那天下午她考了两门课，总共四个小时。结束后，她沿着马路从学校走到医院，数着路灯，一盏又一盏，在昏暗的雨中有种令人安心的静谧、温柔。</p>
+<p>“然后你就走了？！”陈熠靠在病床上，苍白的脸上略有愤怒，“居然不等我。”</p>
+<p>病房里没开灯，借着夕阳的微光一切都看得不甚清晰。云澄握紧琴弓，一个音落下来，开口：“因为赶着回家练琴。”</p>
+<p>陈熠微怔，随即一扬眉：“那快开始吧。”</p>
+<p>入门的曲目，不是很复杂，随着晚霞渐渐消失在云层后，女孩轻轻的哼唱声与琴声交织在一起，终至尾声。</p>
+<p>病房陷入寂静。</p>
+<p>“云澄。”</p>
+<p>终于，寂寂的黑暗里，云澄听到陈熠开了口，以至于她胸腔里鼓噪不安的心跳声愈发震耳欲聋，他低哑的声音就在耳边，一贯的散漫、随意。</p>
+<p>他问：“喜欢我这件事，是从什么时候开始的？”</p>
+<p>07</p>
+<p>云澄也不止一次地想过，喜欢陈熠这件事是从什么时候开始的呢？</p>
+<p>年少时的喜欢就是这样，在某个不被人记得的时刻怦然心动，在漫长的岁月里将它转换成更深的喜欢，藏不住，便被人发现了。</p>
+<p>可哪怕如此，这份喜欢依然光明磊落。</p>
+<p>所以，在陈熠问过这句话后，云澄也仅仅怔了一下，她张了张嘴，还没说话，便被买饭回来的陈妈妈打断了。</p>
+<p>灯光铺满整个病房，云澄站起来，说“我先回去了”，便几乎仓皇而逃。</p>
+<p>电梯一路顺畅，云澄靠着角落，冰冷的金属隔着薄薄的外套贴着她的皮肤。她突然想起有一年初夏，他们两家一起去踏青，陈熠跑出去好远又折了回来，拉她的手，咧开嘴对她笑得灿烂：“澄子，那边花开得特别好，过来，过来。”</p>
+<p>明明不是第一次跟陈熠拉手，明明不是第一次看花，明明，明明眼前这个人已经看了十几年，可是在这一刻，鬼使神差地，她红了脸。</p>
+<p>叮。电梯到达一楼，云澄想，等下次陈熠再问她这样的问题，她就大声告诉他那个时间是他最喜欢的夏日。</p>
+<p>可陈熠没给她这个机会，他出了院后，在家从晚秋休养到了隆冬，两人的唯一交集就是她放学后给他送试卷。他卧室的窗户对着巷子，她懒得进门，回回都选择敲窗。</p>
+<p>陈熠怕冷，开窗开得不情不愿。云澄也索性厚了脸皮，凶他：“要不是看在喜欢你的分上，你以为我想给你送吗？！”</p>
+<p>陈熠愣了一下，扒了扒胡乱围上去的浅灰色围巾，露出整张脸来。</p>
+<p>云澄的语气依旧凶巴巴的：“又不怕冷了？”</p>
+<p>“你好凶！哪有人对自己喜欢的人这么凶的？！”窗外的寒风阵阵吹来，陈熠瑟缩了一下，还是把围巾取了下来，“也就是我人好，让你有机会看看你喜欢的人。”</p>
+<p>云澄被他气笑了，把试卷袋往屋里一丢，转身就要走。她走得慢，他关窗的声音却始终没传来。脚步微微一顿，她回头。</p>
+<p>陈熠站在白炽灯下对她笑，嘴上却不饶人：“不是走吗？”</p>
+<p>云澄压抑住狂跳的心：“我多看两眼再走。”</p>
+<p>不等陈熠再说话，她也只多看了两眼便转身走了。刚走到家门口，她便听到他的声音传来，颇有些恼羞成怒的意味：“云澄！你学坏了！”</p>
+<p>云澄逗他一时爽，万万没想到他第二天会在门口等她。</p>
+<p>高三上学早，凌晨五点的天才蒙蒙亮，陈熠坐在门口的台阶上，吓了她一跳。等看清是他了，她松了口气：“怎么？你要跟我一起上学？”</p>
+<p>陈熠依旧裹得严严实实的，寒气在两人之间蔓延，他沉默地摊开手掌，热腾腾的牛奶散发出香气，安静乖巧的少年，是她曾经最喜欢的冬日限定的光阴。</p>
+<p>“澄子。”陈熠的声音闷闷地隔着口罩传来，“你学习那么好，为什么喜欢一个人那么不合格？”</p>
+<p>云澄看向他。</p>
+<p>他继续说：“你难道没有什么想问我的吗？”</p>
+<p>“有。”云澄抬起眼，浸了风霜的睫毛轻颤，“你上次说你举着火把在旷野里等着人找你，如果累了，你就吹灭。那如果我一直找不到你怎么办？</p>
+<p>“如果我一直找不到你，我怎么办啊，陈熠。”</p>
+<p>“去年冬天你给我堆了个小雪人，可它很快就融化了，我觉得它很脆弱。”陈熠答非所问，“可是后来我想，它真的脆弱吗，也许它明知道会有阳光、大风、雨水把它融化，可它还是选择来人间走一趟。我也一样，哪怕是限定的，也要来走一趟。”</p>
+<p>“所以你看好了。”陈熠轻声说，“云澄，在你找到我之前，我是不会吹灭它的。”</p>
+<p>08</p>
+<p>陈熠的身体在春日渐近时好了起来，每周会去学校上两天课。倒春寒的天里，他依旧不爱说话，缩在教室的角落里做题，倒是云澄偶尔趁着晚自习还没上课，跑去他教室拿着摄影机胡乱拍些东西。</p>
+<p>“陈熠，马上毕业了。”她将镜头对着他的脸，“说点什么吧。”</p>
+<p>少年低着头在做题，眉头皱得紧。听到她的声音，他愣了一下，眉头舒展开来，却没有抬头，漫不经心地把笔放在一边：“这位同学想听什么？”</p>
+<p>云澄长长地嗯了一声：“想听你说这周末会陪云澄同学去看日出。”</p>
+<p>“很冷。”</p>
+<p>“那看日落吧。”云澄很好说话。</p>
+<p>陈熠抬眼，初春的阳光穿过门上的小窗打在他的侧脸上，她的心慌了慌，等反应过来的时候，已经越过镜头抓住了他的手。</p>
+<p>回来的同学看不下去了，起哄声阵阵，云澄闹了个脸红，把摄影机一关，塞到陈熠的手里便跑了。</p>
+<p>她有时候觉得自己喜欢一个很熟的人实在是太占便宜了，陈熠习惯有她，自然不会拒绝她，只能任她撒野。</p>
+<p>再等等，等到毕业了，如果陈熠还没喜欢她，她就离他远远的。爬山的时候，云澄看着陈熠的背影暗暗叮嘱自己。</p>
+<p>她想得太入神，以至于陈熠突然停下来也没发现，一头撞到了他的背上。</p>
+<p>陈熠回身扶住她，带着笑意的声音在头顶响起：“这一撞还挺像言情小说里的剧情。”他伸出手在她的额头上弹了一下，“想什么呢？”</p>
+<p>云澄摸了摸头，蒙了一会儿，问了句更有言情小说感觉的话。</p>
+<p>她问：“陈熠，你相信有平行时空吗？”</p>
+<p>女孩清越的声音落在寂静深山中很清晰，明明不是逼问的语气，气氛却忽然沉默了下来。她打了个哈哈，率先往前走去：“太矫情了，快爬山吧，不然要赶不上日落了。”</p>
+<p>这天的天气不是特别好，傍晚起了点雾，无精打采的太阳藏在云层后面往地平线坠落，云澄愤然：“白爬了两个小时的山！”</p>
+<p>陈熠慢吞吞地把围巾取下来，露出干净好看的脸。他坐在落了一层薄薄的霜的岩石上，说：“云澄，我来回答你的问题。”</p>
+<p>“啊？”</p>
+<p>“我相信有平行时空。可能在那个时空里，陈熠是个健健康康的小孩，可以理直气壮地去回应他喜欢的女孩子的告白。”陈熠侧过脸，看着她，“但可能他就不喜欢你了。”</p>
+<p>云澄的心顿时漏跳了两拍。</p>
+<p>陈熠笑了笑，说：“也可能在那个时空里，你也变了。每个时空都是限定的，得到些就会失去些，所以，我很满足了。”</p>
+<p>冬日的光阴是限定的，可爱或沉默的少年是限定的，他们的喜欢也是限定的，只有短短的一辈子。</p>
+<p>在他炽热的注视下，云澄忽然想起那天陈熠说她不会喜欢人，让她问他一个问题，也许他让她问的是那句——“陈熠，你也一样吗”。</p>
+<p>她后知后觉，到现在才明白他胆怯却直白的心思。</p>
+<p>“陈熠。”云澄伸出手拉住他的衣角，小声说，“下辈子你要让我喜欢你，一定要很努力很努力追我才行。”</p>
+<p>“嗯。”陈熠仰着头看着天空，山风吹散了浓雾与乌云，傍晚的天终于云兴霞蔚，铺天盖地的美好，像他们即将远去却璀璨的少年时代。</p>
+<p>他想了想，不放心地叮嘱：“那到时候，你可要好好地长大。”</p>
+<p>“嗯。”</p>
+<p>“好好地爱我。”</p>
+<p>“……好。”</p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/" class="">
+              故事人生
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>author:  </strong>Qiu Monster</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>link:  </strong>
+    <a href="/2021/05/22/青春思考/故事人生/少年的冬日限定光阴/" target="_blank" title="少年的冬日限定光阴">http://example.com/2021/05/22/青春思考/故事人生/少年的冬日限定光阴/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright notice:   </strong>
+      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      reprint policy. If reproduced, please indicate source!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/../image/mobileimg/mf32.png" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/%E4%B8%8D%E8%88%8D%E5%BE%97%E8%B7%AF%E8%BF%87%E4%BD%A0/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> Prev:
+        <div class="title-text">不舍得路过你</div>
+      </div>
+      
+      <!-- <div class="content">
+        文/路满满（萌心花园）
+新浪微博/@LU路满满，查看更多请点击 花火目录，立即看更多好文章
+我们扯平了，就能心平气和地再
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/../image/n63.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/%E6%98%A5%E7%94%9F%E8%AE%B0%E4%BA%86%E5%BE%88%E5%A4%9A%E5%B9%B4/" class="post-nav-link">
+      <div class="title">
+        Next: <i class="fa fa-angle-right"></i>
+        <div class="title-text">春生记了很多年</div>
+      </div>
+      <!-- <div class="content">
+        文/葵葵子
+新浪微博/@喜鹊麻花儿，查看更多请点击 花火目录，立即看更多好文章。
+当年台上眉眼桀骜的少年，
+春生一记便是
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          谢谢你的赏识！
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/../image/alipay.jpg" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/../image/wechat.png" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    
+    
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+        
+          <div class="toc-open-close">catalog</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
+  
+    <style>
+      .toc-aside {
+        width: 0;
+        padding: 0;
+      }
+      .toc-aside .toc-content {
+        width: 0;
+      }
+      .toc-aside-title span, .toc-aside-title i {
+        display: none;
+      }
+      .main-content {
+        width: 75%;
+        margin: 10px auto;
+      }
+    </style>
+  
+
+  <script>
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'false');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+  </script>
+
+
+  
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'scale' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '600000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| '../image/c44.jpeg';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+      </main>
+    </div>
+    <script src="/js/semantic.min.js"></script>
+<link href="/css/semantic.min.css" rel="stylesheet">
+<style>
+    body {
+        background: url('../c44.jpeg');
+    }
+</style>
+<script>
+    setInterval(() => {
+        let create_time = Math.round(new Date('2021-05-05 00:00:00').getTime() / 1000); //在此行修改建站时间
+        let timestamp = Math.round((new Date().getTime()) / 1000);
+        let second = timestamp - create_time;
+        let time = new Array(0, 0, 0, 0, 0);
+        //格式规范化，个位数前面加0
+        var nol = function(h) {
+            return h > 9 ? h : '0' + h;
+        }
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        } //年
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        } //天
+        if (second >= 3600) {
+            time[2] = nol(parseInt(second / 3600));
+            second %= 3600;
+        } //时
+        if (second >= 60) {
+            time[3] = nol(parseInt(second / 60));
+            second %= 60;
+        } //分
+        if (second > 0) {
+            time[4] = nol(second);
+        } //秒
+        //早上7点到晚上10点营业
+        if ((Number(time[2]) < 22) && (Number(time[2]) > 7)) {
+            currentTimeHtml = "<img class='boardsign' src='https://img.shields.io/badge/秋萘站-营业中-6adea8?style=social&logo=cakephp' title='今天辛苦你了，谢谢你哦~'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ': ' + time[3] + ': ' + time[4] + ' </div>';
+        } //徽标内容参考站内教程
+        //其余时间打烊
+        else {
+            currentTimeHtml = "<img class='boardsign' src='https://img.shields.io/badge/秋萘站-打烊了-6adea8?style=social&logo=coffeescript' title='这个点了应该去睡觉啦，熬夜对身体不好哦'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>'; //徽标内容参考站内教程
+        }
+        //覆写挂载标签的内容
+        document.getElementById("workboard").innerHTML = currentTimeHtml;
+    }, 1000);
+</script>
+<div id="workboard" style="text-align: center;padding:50px 0px 0px 0px;"></div>
+<div style="text-align: center;margin-top: 20px; ">
+    <a style="display: none;" target="_blank" rel="noopener" href="https://runoob.com" class="ui red label ">菜鸟</a>
+    <a style="display: none;" class="ui orange label ">橘黄</a>
+    <a target="_blank" rel="noopener" href="https://m.w3cschool.cn" class="ui teal label ">3c</a>
+    <a style="display: none;"  class="ui yellow label "></a>
+    <a style="display: none;" class="ui olive label ">橄榄绿</a>
+    <a target="_blank" rel="noopener" href="https://csdn.net" class="ui green label ">CSDN</a>
+    
+    <a target="_blank" rel="noopener" href="https://oschina.net" class="ui blue label ">开源中国</a>
+    <a target="_blank" rel="noopener" href="https://shangmayuan.com" class="ui violet label ">尚码园</a>
+    <a target="_blank" rel="noopener" href="https://juejin.cn" class="ui purple label ">掘金</a>
+    <a target="_blank" rel="noopener" href="https://www.androiddevtools.cn/" class="ui pink label ">安卓</a>
+    <a style="display: none;" class="ui brown label ">棕色</a>
+    <a style="display: none;" class="ui grey label ">灰色</a>
+    <a style="display: none;" class="ui black label ">黑色</a><br>
+
+</div>
+    <!-- 页脚 -->
+    
+  
+  <div class="footer bg-color">
+    <div class="footer-main">
+      
+        
+          <div class="link">
+            
+              
+                <a href="/atom.xml" class="social">
+                  
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="mailto:1773326851@qq.com" class="social">
+                  
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a target="_blank" rel="noopener" href="https://github.com" class="social">
+                  
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=1773326851" class="social">
+                  
+                    <i class="fa fa-qq" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2021 <a target="_blank" rel="noopener" href="https://github.com">github</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/">Bamboo</a> </p>
+
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<!--<span id="busuanzi_container_site_pv">
+      <i class="fa fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fa fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
+</span>-->
+
+
+<div style="text-align: center;padding-top: 20px;padding-bottom: 10px;color: rgb(1, 170, 9);">
+        <span id="busuanzi_container_site_pv">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          总阅读：<span id="busuanzi_value_page_pv"></span>
+          times
+        </span>
+    <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_pv">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+          总浏览：<span id="busuanzi_value_site_pv"></span>
+          times
+        </span>
+    <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">
+          <i class="fa fa-users" aria-hidden="true"></i>
+          浏览人数：<span id="busuanzi_value_site_uv"></span>
+              people
+        </span>
+  </div>
+  
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
+  </div>
+
+
+    
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color border-color">
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+    
+    
+      <div class="goBottom top-btn-color border-color">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+<script src="/js/goBottom.js"></script>
+    
+    
+      <div class="goDisplay top-btn-color border-color">
+    <i class="fa fa-home" aria-hidden="true"></i>
+</div>
+<script src="/js/goDisplay.js"></script>
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        color: purple;
+        display: none;
+            font-size: 20px;
+        font-weight: 500;
+        line-height: 35px !important;
+    }
+    
+    .aplayer .aplayer-lrc p .aplayer-lrc-current {
+        display: none;
+            font-size: 15px;
+        color: #42b983;
+    }
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+            left: -66px !important;
+        }
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+            left: 0px !important;
+        }
+        
+</style>
+<meting-js class="" server="tencent" type="playlist" id="7996637954" fixed=' true ' autoplay='false' theme='#42b983' loop='all'
+    order='random' preload='auto' volume='0.7' list-folded=' true '>
+</meting-js>
+
+<!-- <style>
+  #aplayer {
+    position: fixed;
+    left: 0;
+    bottom: 300px;
+  }
+</style> -->
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <!-- 背景彩带 -->
+    
+    
+    <script src="/js/app.js" data-pjax></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init(option);
+    
+  }
+
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+    }
+  });
+
+  
+</script>
+
+<style>
+.is-position-fixed {
+  position:sticky !important;
+  top: 74px;
+}
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+/* .toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+} */
+</style> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = 'copy';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+            // 返回false, 防止重复触发copy事件  
+            // return false;
+          }
+        })
+        //  监听 ctrl + c事件  
+        // $(document).unbind('keypress').bind('keypress', function (e) {
+        //   if (e.ctrlKey && e.keyCode == 67) {
+        //     doSomething();
+        //     // 返回false, 防止重复触发copy事件  
+        //     return false;
+        //   }
+        // })
+
+        // // 鼠标右键的复制事件  
+        // $(document).unbind('copy').bind('copy', function (e) {
+        //   doSomething();
+        // });
+
+        function doSomething() {
+          that.$notify({
+            title: "复制成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+
+
+<!-- 图片懒加载 -->
+<script src="/js/lazyload/lazyload@1.9.1.js"></script>
+<script data-pjax>
+  $(function () {
+    $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+      {
+        effect: "show",
+        placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
+      }
+    );
+  });
+</script>
+
+<!-- 卡片滚动动画 -->
+   
+
+<!-- 评论所需js -->
+
+    
+        <!-- 弹幕所需的css和js -->
+        
+<!-- 具体js，请前往valine/script.ejs查看 -->
+
+        <script>
+  var requiredFields = 'nick,mail';
+  requiredFields = requiredFields.split(',');
+  comment_el = '.comment';
+  let looperValine = null;
+  load_valine = function () {
+    if ($(comment_el).length) {
+      var valine = new Valine({
+        el: '#vcomment',
+        path: window.location.pathname,
+        notify: false,
+        verify: false,
+        app_id: "qeoYFrrgRoq2HupjYtriKdyx-gzGzoHsz",
+        app_key: "guT4E386tr6xRAkbu99AfDn0",
+        placeholder: "客官，说点什么吧",
+        avatar: "",
+        master: "",   //博主邮箱md5
+        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+        friends: "",
+        metaPlaceholder: { "nick": "昵称/QQ号", "mail": "邮箱" },
+        requiredFields: requiredFields,
+        enableQQ: true,
+      });
+      function debounce(fn) {
+        var timerID = null
+        return function () {
+          var arg = arguments[0]   //获取事件
+          if (timerID) {
+            clearTimeout(timerID)
+          }
+          timerID = setTimeout(function () {
+            fn(arg)              //事件传入函数
+          }, 200)
+        }
+      }
+      //查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+      var themeDanmu = eval('false');
+      var themeLoop = eval('false');
+      var themeLooperTime = '5000' || 5000;
+      var speed = '20' || 20;
+      var isBarrager = true;
+      if (themeDanmu == true) {
+        do_barrager();
+        if ($('.danmuBox').length <= 0) {
+          $('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+        }
+        $('.danmuBtn').on('click', debounce(
+          function () {
+            if ($('.danmuBtn').hasClass('open')) {
+              $('.danmuBtn').removeClass('open')
+              clearInterval(looperValine);
+              $.fn.barrager.removeAll();
+            } else {
+              $('.danmuBtn').addClass("open");
+              do_barrager();
+            }
+          }
+        ))
+      }
+      function do_barrager() {
+        isBarrager && valine.Q(window.location.pathname).find().then(function (comments) {
+          // var num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+          var run_once = true;
+          var looper_time = themeLooperTime;
+          var total = comments.length;
+          // var looper = null;
+          var index = 0;
+          if (total > 0) {
+            barrager();
+          } else {
+            // 当评论数为0的时候，自动关闭弹幕
+            // $('.danmuBtn').removeClass('open');
+          }
+          function barrager() {
+            if (run_once) {
+              //如果是首次执行,则设置一个定时器,并且把首次执行置为false
+              looperValine = setInterval(barrager, looper_time);
+              run_once = false;
+            }
+            var content = comments[index]._serverData.comment;
+            var email = comments[index]._serverData.mail;
+            var link = comments[index]._serverData.link;
+            var newcontent = content.substring(0, 50).replace(/<[^>]+>/g, "");
+            //发布一个弹幕
+            const item = {
+              img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+              info: newcontent, //文字 
+              href: link, //链接 
+              close: true, //显示关闭按钮 
+              speed: speed, //延迟,单位秒,默认6 
+              color: '#fff', //颜色,默认白色 
+              old_ie_color: '#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+            }
+            $('body').barrager(item);
+            //索引自增
+            index++;
+            //所有弹幕发布完毕，清除计时器。
+            if (index == total) {
+              clearInterval(looperValine);
+              if (themeLoop === true) {
+                setTimeout(function () {
+                  do_barrager();
+                }, 5000);
+              } else {
+                $('.danmuBtn').removeClass('open');
+              }
+              return false;
+            }
+
+          }
+        })
+      }
+    }
+  };
+  $(document).ready(load_valine);
+  document.addEventListener('pjax:send', function (e) {
+    
+  })
+  document.addEventListener('pjax:complete', function () {
+    load_valine();
+  });
+</script>
+    
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+	 
+		<script src="/js/cursor/clicklove.js"></script> 
+	
+
+
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
+    })
+  </script>
+
+
+
+  </body>
+</html>
