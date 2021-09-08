@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" >
 
 
 <head>
@@ -17,7 +17,7 @@
 
 
     <title>About | Qiu Monster</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/jpeg" href="/image/2.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -33,9 +33,36 @@
 </head>
 
 
-
+<script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  
 <body>
-    <header class="navbar-fixed">
+    <link rel="stylesheet" href="/css/dark.css">
+<!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script><!--判断暗黑模式-->
+    <style>
+    @media screen and (max-width:1000px) {
+           .brand-logo{
+               display: none!important;
+           }
+           #headNav{
+             background-color: transparent!important;
+             background-image: none!important;
+             box-shadow: none!important;
+           }
+            nav a{
+               color: rgb(29, 225, 231)!important;
+           }
+       }
+</style>
+
+<header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -177,20 +204,6 @@
       </li>
       
       <li>
-        <a href="/categories/%E5%9B%BE%E5%BA%93">
-          
-          <span>图库</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/categories/%E5%B0%8F%E8%AF%B4">
-          
-          <span>小说</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
           
           <span>校园故事</span>
@@ -242,7 +255,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/comments" class="waves-effect waves-light">
+    <a href="/contact" class="waves-effect waves-light">
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
@@ -285,48 +298,6 @@
         <a target="_blank" rel="noopener" href="https://gitee.com/">
           
           <span>gitee</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
-          
-          <span>简书</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.csdn.net/">
-          
-          <span>CSDN</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.oschina.net/">
-          
-          <span>OSCHINA</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
-          
-          <span>尚源码</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://segmentfault.com/">
-          
-          <span>segmentfault</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://juejin.cn/">
-          
-          <span>掘金</span>
         </a>
       </li>
       
@@ -546,22 +517,6 @@
               
                 <li>
 
-                  <a href="/categories/%E5%9B%BE%E5%BA%93 " style="margin-left:75px">
-				  
-		          <span>图库</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/categories/%E5%B0%8F%E8%AF%B4 " style="margin-left:75px">
-				  
-		          <span>小说</span>
-                  </a>
-                </li>
-              
-                <li>
-
                   <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B " style="margin-left:75px">
 				  
 		          <span>校园故事</span>
@@ -617,7 +572,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/comments" class="waves-effect waves-light">
+		<a href="/contact" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
@@ -661,54 +616,6 @@
                   <a target="_blank" rel="noopener" href="https://gitee.com/ " style="margin-left:75px">
 				  
 		          <span>gitee</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/ " style="margin-left:75px">
-				  
-		          <span>简书</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.csdn.net/ " style="margin-left:75px">
-				  
-		          <span>CSDN</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.oschina.net/ " style="margin-left:75px">
-				  
-		          <span>OSCHINA</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/ " style="margin-left:75px">
-				  
-		          <span>尚源码</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://segmentfault.com/ " style="margin-left:75px">
-				  
-		          <span>segmentfault</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://juejin.cn/ " style="margin-left:75px">
-				  
-		          <span>掘金</span>
                   </a>
                 </li>
               
@@ -783,7 +690,8 @@
 
 </header>
 
-    <style type="text/css">
+    
+<style type="text/css">
     /* don't remove. */
     .about-cover {
         height: 75vh;
@@ -795,16 +703,16 @@
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
 <div class="bg-light-floor-about" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 <link rel="stylesheet" href="/css/about.css">
-
+<script src="/js/bubble.js"></script>
+<script src="/js/js/homeBubble.js"></script>
 <div class="lazyload about-header "  data-original="/../image/mobileimg/mf20.png">
 	<div class="about-header-title">
 		about
 	</div>
 	<div class="about-header-desc">
 	
-		<span class="title">
-		这是我的秘密 这里是我的家
-		</span>
+	<span class="title" id="about-header-desc"></span>
+	
 	
 	</div>
 	<div class="mask-box"></div>
@@ -822,16 +730,15 @@
 	</div>
 	<div class="video-header-desc">
 	
-		<span class="title">
-		这是我的秘密 这里是我的家
-		</span>
+		<span class="title" id="about-video-header-desc"></span>
+		
 	
 	</div>
 	<div class="mask-box"></div>
     <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
 </div>
 
-<script src="/js/bubble.js"></script>
+
 
 <main class="content">
 
@@ -842,21 +749,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">1207</a></span>
+    <span class="count"><a href="/">123</a></span>
     <span class="name">Posts</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">10</a></span>
+    <span class="count"><a href="/categories">8</a></span>
     <span class="name">Categories</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">26</a></span>
+    <span class="count"><a href="/tags">10</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -865,28 +772,28 @@
                     <div class="col s12 m12 l4">
                         <div class="profile center-align">
                             <div class="avatar">
-                                <img src="/medias/avatar.jpg" alt="Qiu Monster"
+                                <img src="/image/2.jpg" alt="Qiu Monster"
                                      class="circle responsive-img avatar-img">
                             </div>
                             <div class="author">
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">1207</a></span>
+    <span class="count"><a href="/">123</a></span>
     <span class="name">Posts</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">10</a></span>
+    <span class="count"><a href="/categories">8</a></span>
     <span class="name">Categories</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">26</a></span>
+    <span class="count"><a href="/tags">10</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -896,13 +803,13 @@
                                 <div class="career">Software Engineer</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1773326851@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -912,7 +819,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1773326851" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1773326851" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -921,10 +828,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 
                                 </div>
@@ -934,13 +837,13 @@
                     <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
                         <div class="social-link">
                             
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1773326851@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -950,7 +853,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1773326851" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1773326851" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -959,10 +862,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 
                         </div>
@@ -1030,7 +929,7 @@
                 name: 'Number of posts',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,1202,0,0,5,0],
+                data: [0,0,0,0,0,0,0,0,118,0,0,5,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -1072,7 +971,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"未解之谜","value":13},{"name":"读者","value":23},{"name":"亲情故事","value":12},{"name":"人生故事","value":13},{"name":"校园故事","value":10},{"name":"励志故事","value":12},{"name":"意林","value":530},{"name":"校园灵异","value":21},{"name":"灵异事件","value":5},{"name":"鬼故事","value":5}],
+                data: [{"name":"未解之谜","value":13},{"name":"人生故事","value":13},{"name":"亲情故事","value":12},{"name":"励志故事","value":12},{"name":"校园故事","value":10},{"name":"校园灵异","value":21},{"name":"灵异事件","value":5},{"name":"鬼故事","value":5}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -1096,7 +995,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["文学","青春爱情","故事人生","耽美甜文","意林2020-10","意林2020-6","意林2020-7","意林2020-9","意林2020-11","意林2020-5"]
+                data: ["腾讯传","神秘","人生","亲情","励志","青春","恐怖","电脑山庄杀人事件","感人","灵异"]
             }
         ],
         yAxis: [
@@ -1109,7 +1008,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [553,219,170,102,52,52,51,49,48,48],
+                data: [20,13,13,12,11,10,10,8,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -1140,7 +1039,7 @@
 
 
                 
-                
+                <!--
 <div class="my-projects">
     <div class="title center-align" data-aos="zoom-in-up">
         <i class="fas fa-gift"></i>&nbsp;&nbsp;My Projects
@@ -1150,12 +1049,12 @@
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="http://github.com/blinkfox/hexo-theme-matery" class="icon"
+                <a href="http://github.com/" class="icon"
                    style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" target="_blank">
                     <i class="fas fa-file-alt"></i>
                 </a>
                 <div class="info-title">
-                    <a href="http://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>
+                    <a href="http://github.com/" target="_blank">hexo-theme-matery</a>
                 </div>
                 <div class="info-desc">This is a Hexo blog theme with &#39;Material Design&#39; and responsive design.</div>
             </div>
@@ -1163,12 +1062,12 @@
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="https://github.com/blinkfox/fenix" class="icon"
+                <a href="https://github.com/" class="icon"
                    style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" target="_blank">
                     <i class="fas fa-database"></i>
                 </a>
                 <div class="info-title">
-                    <a href="https://github.com/blinkfox/fenix" target="_blank">Fenix</a>
+                    <a href="https://github.com/" target="_blank">Fenix</a>
                 </div>
                 <div class="info-desc">这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。</div>
             </div>
@@ -1176,12 +1075,12 @@
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="https://github.com/blinkfox/typora-vue-theme" class="icon"
+                <a href="https://github.com/" class="icon"
                    style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" target="_blank">
                     <i class="fas fa-file-alt"></i>
                 </a>
                 <div class="info-title">
-                    <a href="https://github.com/blinkfox/typora-vue-theme" target="_blank">typora-vue-theme</a>
+                    <a href="https://github.com/" target="_blank">typora-vue-theme</a>
                 </div>
                 <div class="info-desc">This is a typora theme inspired by Vue document style.</div>
             </div>
@@ -1190,7 +1089,7 @@
         
     </div>
 </div>
-
+-->
                 
 
                 
@@ -1285,32 +1184,14 @@
             
             
             
-            <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BC%A0/">
-                <span class="chip center-align waves-effect waves-light chip-default">腾讯传</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%96%87%E5%AD%A6/">
-                <span class="chip center-align waves-effect waves-light chip-default">文学</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E4%BA%B2%E6%83%85/">
-                <span class="chip center-align waves-effect waves-light chip-default">亲情</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E4%BA%BA%E7%94%9F/">
                 <span class="chip center-align waves-effect waves-light chip-default">人生</span>
             </a>
             
             
             
-            <a href="/tags/%E9%9D%92%E6%98%A5/">
-                <span class="chip center-align waves-effect waves-light chip-default">青春</span>
+            <a href="/tags/%E4%BA%B2%E6%83%85/">
+                <span class="chip center-align waves-effect waves-light chip-default">亲情</span>
             </a>
             
             
@@ -1327,92 +1208,14 @@
             
             
             
-            <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/">
-                <span class="chip center-align waves-effect waves-light chip-default">人生感悟</span>
+            <a href="/tags/%E9%9D%92%E6%98%A5/">
+                <span class="chip center-align waves-effect waves-light chip-default">青春</span>
             </a>
             
             
             
-            <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87/">
-                <span class="chip center-align waves-effect waves-light chip-default">耽美甜文</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/">
-                <span class="chip center-align waves-effect waves-light chip-default">故事人生</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/">
-                <span class="chip center-align waves-effect waves-light chip-default">青春爱情</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-1/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-1</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-10/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-10</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-11/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-11</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-3/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-3</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-2/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-2</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-4/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-4</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-5/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-5</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-7/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-7</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-8/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-8</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-6/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-6</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%84%8F%E6%9E%972020-9/">
-                <span class="chip center-align waves-effect waves-light chip-default">意林2020-9</span>
+            <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BC%A0/">
+                <span class="chip center-align waves-effect waves-light chip-default">腾讯传</span>
             </a>
             
             
@@ -1443,7 +1246,7 @@
                 
 
                 
-                
+                <!--
 <div id="myGallery" class="my-gallery">
     <div class="title center-align" data-aos="zoom-in-up">
         <i class="far fa-image"></i>&nbsp;&nbsp;Gallery
@@ -1452,20 +1255,596 @@
         
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/0.jpg">
-                <img src="/medias/featureimages/0.jpg" class="responsive-img">
+            <div class="img-item" data-src="../image/a1.jpeg">
+                <img src="/../image/a1.jpeg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/1.jpg">
-                <img src="/medias/featureimages/1.jpg" class="responsive-img">
+            <div class="img-item" data-src="../image/a2.jpeg">
+                <img src="/../image/a2.jpeg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/2.jpg">
-                <img src="/medias/featureimages/2.jpg" class="responsive-img">
+            <div class="img-item" data-src="../image/a3.jpeg">
+                <img src="/../image/a3.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a4.jpeg">
+                <img src="/../image/a4.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a5.jpeg">
+                <img src="/../image/a5.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a6.jpeg">
+                <img src="/../image/a6.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a7.jpeg">
+                <img src="/../image/a7.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a8.jpeg">
+                <img src="/../image/a8.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a9.jpeg">
+                <img src="/../image/a9.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a10.jpeg">
+                <img src="/../image/a10.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a11.jpeg">
+                <img src="/../image/a11.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a12.jpeg">
+                <img src="/../image/a12.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a13.jpeg">
+                <img src="/../image/a13.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a14.jpeg">
+                <img src="/../image/a14.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a15.jpeg">
+                <img src="/../image/a15.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a16.jpeg">
+                <img src="/../image/a16.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a17.jpeg">
+                <img src="/../image/a17.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a18.jpeg">
+                <img src="/../image/a18.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a19.jpeg">
+                <img src="/../image/a19.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a20.jpeg">
+                <img src="/../image/a20.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a21.jpeg">
+                <img src="/../image/a21.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a22.jpeg">
+                <img src="/../image/a22.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a23.jpeg">
+                <img src="/../image/a23.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a24.jpeg">
+                <img src="/../image/a24.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a25.jpeg">
+                <img src="/../image/a25.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a26.jpeg">
+                <img src="/../image/a26.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a27.jpeg">
+                <img src="/../image/a27.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a28.jpeg">
+                <img src="/../image/a28.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a29.jpeg">
+                <img src="/../image/a29.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a30.jpeg">
+                <img src="/../image/a30.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a31.jpeg">
+                <img src="/../image/a31.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a32.jpeg">
+                <img src="/../image/a32.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a33.jpeg">
+                <img src="/../image/a33.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a34.jpeg">
+                <img src="/../image/a34.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a35.jpeg">
+                <img src="/../image/a35.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a36.jpeg">
+                <img src="/../image/a36.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a37.jpeg">
+                <img src="/../image/a37.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a38.jpeg">
+                <img src="/../image/a38.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a39.jpeg">
+                <img src="/../image/a39.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a40.jpeg">
+                <img src="/../image/a40.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a41.jpeg">
+                <img src="/../image/a41.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a42.jpeg">
+                <img src="/../image/a42.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a43.jpeg">
+                <img src="/../image/a43.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a44.jpeg">
+                <img src="/../image/a44.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a45.jpeg">
+                <img src="/../image/a45.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a46.jpeg">
+                <img src="/../image/a46.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a47.jpeg">
+                <img src="/../image/a47.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a48.jpeg">
+                <img src="/../image/a48.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a49.jpeg">
+                <img src="/../image/a49.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a50.jpeg">
+                <img src="/../image/a50.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a51.jpeg">
+                <img src="/../image/a51.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a52.jpeg">
+                <img src="/../image/a52.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a53.jpeg">
+                <img src="/../image/a53.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a54.jpeg">
+                <img src="/../image/a54.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a55.jpeg">
+                <img src="/../image/a55.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a56.jpeg">
+                <img src="/../image/a56.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a57.jpeg">
+                <img src="/../image/a57.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a58.jpeg">
+                <img src="/../image/a58.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a59.jpeg">
+                <img src="/../image/a59.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a60.jpeg">
+                <img src="/../image/a60.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a61.jpeg">
+                <img src="/../image/a61.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a62.jpeg">
+                <img src="/../image/a62.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a63.jpeg">
+                <img src="/../image/a63.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a64.jpeg">
+                <img src="/../image/a64.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a65.jpeg">
+                <img src="/../image/a65.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a66.jpeg">
+                <img src="/../image/a66.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a67.jpeg">
+                <img src="/../image/a67.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a68.jpeg">
+                <img src="/../image/a68.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a69.jpeg">
+                <img src="/../image/a69.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a70.jpeg">
+                <img src="/../image/a70.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a71.jpeg">
+                <img src="/../image/a71.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a72.jpeg">
+                <img src="/../image/a72.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a73.jpeg">
+                <img src="/../image/a73.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a74.jpeg">
+                <img src="/../image/a74.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a75.jpeg">
+                <img src="/../image/a75.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a76.jpeg">
+                <img src="/../image/a76.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a77.jpeg">
+                <img src="/../image/a77.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a78.jpeg">
+                <img src="/../image/a78.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a79.jpeg">
+                <img src="/../image/a79.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a80.jpeg">
+                <img src="/../image/a80.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a81.jpeg">
+                <img src="/../image/a81.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a82.jpeg">
+                <img src="/../image/a82.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a83.jpeg">
+                <img src="/../image/a83.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a84.jpeg">
+                <img src="/../image/a84.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a85.jpeg">
+                <img src="/../image/a85.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a86.jpeg">
+                <img src="/../image/a86.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a87.jpeg">
+                <img src="/../image/a87.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a88.jpeg">
+                <img src="/../image/a88.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a89.jpeg">
+                <img src="/../image/a89.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a90.jpeg">
+                <img src="/../image/a90.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a91.jpeg">
+                <img src="/../image/a91.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a92.jpeg">
+                <img src="/../image/a92.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a93.jpeg">
+                <img src="/../image/a93.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a94.jpeg">
+                <img src="/../image/a94.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a95.jpeg">
+                <img src="/../image/a95.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a96.jpeg">
+                <img src="/../image/a96.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a97.jpeg">
+                <img src="/../image/a97.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a98.jpeg">
+                <img src="/../image/a98.jpeg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="../image/a99.jpeg">
+                <img src="/../image/a99.jpeg" class="responsive-img">
             </div>
         </div>
         
@@ -1483,7 +1862,7 @@
         });
     });
 </script>
-
+-->
                 
                 
                 
@@ -1497,17 +1876,20 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             <a href="/about" target="_blank">Qiu Monster</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">446.1k</span>
             
             
             
@@ -1529,17 +1911,71 @@
 
             <!-- 运行天数提醒. -->
             
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1773326851@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1549,7 +1985,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1773326851" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1773326851" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1558,10 +1994,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
@@ -1679,7 +2111,6 @@ $(function () {
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/go/goTop.js"></script>
-<link rel="stylesheet" href="/css/goTop.css">
 
     <div class="goBottom top-btn-color border-color">
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -1691,15 +2122,86 @@ $(function () {
 </div>
 <script src="/js/go/goDisplay.js"></script>
 <link rel="stylesheet" href="/css/goDisplay.css">
-   
+    <link rel="stylesheet" href="/css/dark.css">
+<div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
 
+<script>
+  $(function() {
+    let isDark =localStorage.getItem('dark'); //JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    //alert(isDark);
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        //alert("white");
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+<style>
+  
+</style>
+   <link rel="stylesheet" href="/css/goTop.css">
+   <link rel="stylesheet" href="/css/goBottom.css">
+   <link rel="stylesheet" href="/css/goDisplay.css">
+  
+   <style>
+      /* .content{
+           background-image: url('../image/c44.jpeg')!important;
+       }*/
+       .container .card{
+        background-color: transparent!important;
+       }
+       
+   </style>
+<script>
+    $(function(){
+      $(".dark").click(function(){
+        //$(document.body).addClass('bodys');
+
+      });
+    });
+</script>
+    
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
+    
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" >
 
 
 <head>
@@ -17,7 +17,7 @@
 
 
     <title>Qiu Monster</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/jpeg" href="/image/2.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -33,9 +33,36 @@
 </head>
 
 
-
+<script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  
 <body>
-    <header class="navbar-fixed">
+    <link rel="stylesheet" href="/css/dark.css">
+<!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script><!--判断暗黑模式-->
+    <style>
+    @media screen and (max-width:1000px) {
+           .brand-logo{
+               display: none!important;
+           }
+           #headNav{
+             background-color: transparent!important;
+             background-image: none!important;
+             box-shadow: none!important;
+           }
+            nav a{
+               color: rgb(29, 225, 231)!important;
+           }
+       }
+</style>
+
+<header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -177,20 +204,6 @@
       </li>
       
       <li>
-        <a href="/categories/%E5%9B%BE%E5%BA%93">
-          
-          <span>图库</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/categories/%E5%B0%8F%E8%AF%B4">
-          
-          <span>小说</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
           
           <span>校园故事</span>
@@ -242,7 +255,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/comments" class="waves-effect waves-light">
+    <a href="/contact" class="waves-effect waves-light">
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
@@ -285,48 +298,6 @@
         <a target="_blank" rel="noopener" href="https://gitee.com/">
           
           <span>gitee</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
-          
-          <span>简书</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.csdn.net/">
-          
-          <span>CSDN</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.oschina.net/">
-          
-          <span>OSCHINA</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
-          
-          <span>尚源码</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://segmentfault.com/">
-          
-          <span>segmentfault</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://juejin.cn/">
-          
-          <span>掘金</span>
         </a>
       </li>
       
@@ -546,22 +517,6 @@
               
                 <li>
 
-                  <a href="/categories/%E5%9B%BE%E5%BA%93 " style="margin-left:75px">
-				  
-		          <span>图库</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/categories/%E5%B0%8F%E8%AF%B4 " style="margin-left:75px">
-				  
-		          <span>小说</span>
-                  </a>
-                </li>
-              
-                <li>
-
                   <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B " style="margin-left:75px">
 				  
 		          <span>校园故事</span>
@@ -617,7 +572,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/comments" class="waves-effect waves-light">
+		<a href="/contact" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
@@ -661,54 +616,6 @@
                   <a target="_blank" rel="noopener" href="https://gitee.com/ " style="margin-left:75px">
 				  
 		          <span>gitee</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/ " style="margin-left:75px">
-				  
-		          <span>简书</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.csdn.net/ " style="margin-left:75px">
-				  
-		          <span>CSDN</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.oschina.net/ " style="margin-left:75px">
-				  
-		          <span>OSCHINA</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/ " style="margin-left:75px">
-				  
-		          <span>尚源码</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://segmentfault.com/ " style="margin-left:75px">
-				  
-		          <span>segmentfault</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://juejin.cn/ " style="margin-left:75px">
-				  
-		          <span>掘金</span>
                   </a>
                 </li>
               
@@ -820,12 +727,23 @@
         </div>
     </div>
 </div>
-
+<style>
+    @media screen and (max-width:1000px) {
+        .bg-cover{
+            background-image:url(../image/mobileimg/ma48.png);
+        }
+    }
+    @media screen and (min-width:1000px) {
+        .bg-cover{
+            background-image:url(../image/f1.jpg);
+        }
+    }
+</style>
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+   // var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    //$('.bg-cover').css('background-image', 'url(../image/f1.jpg)');
 </script>
 
 
@@ -845,33 +763,34 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/%E4%B8%8D%E8%88%8D%E5%BE%97%E8%B7%AF%E8%BF%87%E4%BD%A0/">
+                    <a href="/2021/05/17/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2/%E4%BA%BA%E7%B1%BB%E6%8E%A2%E7%B4%A2/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/%E9%9F%A9%E5%9B%BD%E5%AE%A2%E6%9C%BA%E5%9D%A0%E8%90%BD/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/e46.jpeg" class="responsive-img" alt="不舍得路过你">
+                            <img src="/../image/j65.jpg" class="responsive-img" alt="韩国客机坠落">
                             
-                            <span class="card-title">不舍得路过你</span>
+                            <span class="card-title">韩国客机坠落</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/路满满（萌心花园）
-新浪微博/@LU路满满，查看更多请点击 花火目录，立即看更多好文章
-我们扯平了，就能心平气和地再见面了。
-作者有话说：前几天毕业设计在市中心走秀，我忽然在万千灯火下想起小学同桌的男生来。想起他穿学校让管弦乐队穿的猩红
+                                一架从汉城飞往关岛的韩国大韩航空公司的波音747客机于当地时间1997年8月6日凌晨在关岛国际机场附近坠毁，200多人遇难。当时天降暴雨，气候恶劣，飞机在飞临关岛国际机场约5公里处时，突然从雷达屏幕上消失，并与地面指挥塔失去了联系。据目击者
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" class="post-category">
+                                    未解之谜
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -880,8 +799,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/">
-                            <span class="chip bg-color">故事人生</span>
+                        <a href="/tags/%E7%A5%9E%E7%A7%98/">
+                            <span class="chip bg-color">神秘</span>
                         </a>
                         
                     </div>
@@ -893,33 +812,34 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/%E5%B0%91%E5%B9%B4%E7%9A%84%E5%86%AC%E6%97%A5%E9%99%90%E5%AE%9A%E5%85%89%E9%98%B4/">
+                    <a href="/2021/05/17/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2/%E4%BA%BA%E7%B1%BB%E6%8E%A2%E7%B4%A2/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/UFO%E4%B9%8B%E8%B0%9C/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/n185.jpg" class="responsive-img" alt="少年的冬日限定光阴">
+                            <img src="/../image/h47.jpg" class="responsive-img" alt="UFO之谜">
                             
-                            <span class="card-title">少年的冬日限定光阴</span>
+                            <span class="card-title">UFO之谜</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/纪南方（此间少年）
-新浪微博/@纪南方70，查看更多请点击 花火目录，立即看更多好文章
-冬日的光阴是限定的，可爱或沉默的少年是限定的，他们的喜欢也是限定的，只有短短的一辈子。
-作者有话说：我很久没写过青春校园类的故事了，干净明亮的少年一
+                                1.美国著名的罗斯维尔事件至今仍是UFO的一个经典案例！2.国防情报处是美国五角大楼内部的一个秘密情报机构，它负责协调全美陆海空三军的情报活动。国防情报处不仅仅为五角大楼，而且也为中央情报局工作。70年代末，美国的不明飞行物研究组织——“公
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" class="post-category">
+                                    未解之谜
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -928,8 +848,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/">
-                            <span class="chip bg-color">故事人生</span>
+                        <a href="/tags/%E7%A5%9E%E7%A7%98/">
+                            <span class="chip bg-color">神秘</span>
                         </a>
                         
                     </div>
@@ -941,35 +861,34 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/%E6%98%A5%E7%94%9F%E8%AE%B0%E4%BA%86%E5%BE%88%E5%A4%9A%E5%B9%B4/">
+                    <a href="/2021/05/17/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2/%E4%BA%BA%E7%B1%BB%E6%8E%A2%E7%B4%A2/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/%E5%B0%BC%E6%96%AF%E6%B9%96%E6%B0%B4%E6%80%AA/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/n63.jpg" class="responsive-img" alt="春生记了很多年">
+                            <img src="/../image/o2.jpg" class="responsive-img" alt="尼斯湖水怪">
                             
-                            <span class="card-title">春生记了很多年</span>
+                            <span class="card-title">尼斯湖水怪</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/葵葵子
-新浪微博/@喜鹊麻花儿，查看更多请点击 花火目录，立即看更多好文章。
-当年台上眉眼桀骜的少年，
-春生一记便是许多年，
-从此一生不敢忘。
-作者有话说：激动的心，颤抖的手，没想到，我居然过稿了。有一就有二。这是我分享给大家的第一个故
+                                尼斯湖水怪，是地球上最神秘也最吸引人的谜之一。尼斯湖位于英国苏格兰高原北部的大峡谷中，湖长39公里，宽2.4公里。面积并不大，却深。平均深度达200米，最深处有293米。该湖终年不冻，两岸陡峭，树林茂密。湖北端有河流与北海相通。关于水怪的最
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" class="post-category">
+                                    未解之谜
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -978,8 +897,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/">
-                            <span class="chip bg-color">故事人生</span>
+                        <a href="/tags/%E7%A5%9E%E7%A7%98/">
+                            <span class="chip bg-color">神秘</span>
                         </a>
                         
                     </div>
@@ -991,33 +910,34 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/%E6%88%91%E6%80%80%E5%BF%B5%E7%9A%84%E4%BD%A0/">
+                    <a href="/2021/05/17/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2/%E4%BA%BA%E7%B1%BB%E6%8E%A2%E7%B4%A2/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/%E7%A7%A6%E5%A7%8B%E7%9A%87%E5%85%B5%E9%A9%AC%E4%BF%91/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/i122.jpg" class="responsive-img" alt="我怀念的你">
+                            <img src="/../image/n11.jpg" class="responsive-img" alt="秦始皇兵马俑">
                             
-                            <span class="card-title">我怀念的你</span>
+                            <span class="card-title">秦始皇兵马俑</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/方可奕
-新浪微博/@方可奕，查看更多请点击 花火目录，立即看更多好文章
-毕竟，能在何子瑞面前得罪了他，又全身而退的人，也就林殊寒了。
-作者有话说：第一次在A版和大家见面，也是过终审最快的一次。超级超级兴奋！！这是一个有关成长的故事，希望
+                                1994年3月1日，举世闻名的“世界第八大奇迹”——秦始皇兵马俑二号俑坑正式开始挖掘。这是20世纪以来巨大的考古发现之一。在二号俑坑内已出土有铜矛、铜弩机、铜镞、残剑等，其中还发现了一批青铜剑，长度为86厘米，剑身上共有八个棱面。考古学家用
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" class="post-category">
+                                    未解之谜
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1026,8 +946,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/">
-                            <span class="chip bg-color">故事人生</span>
+                        <a href="/tags/%E7%A5%9E%E7%A7%98/">
+                            <span class="chip bg-color">神秘</span>
                         </a>
                         
                     </div>
@@ -1039,33 +959,34 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/%E4%BB%96%E7%9D%A1%E5%9C%A8%E4%B9%9D%E6%9C%88%E7%9A%84%E6%98%99%E8%8A%B1%E9%87%8C/">
+                    <a href="/2021/05/17/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2/%E4%BA%BA%E7%B1%BB%E6%8E%A2%E7%B4%A2/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/%E8%82%AF%E5%B0%BC%E8%BF%AA%E4%B9%8B%E6%AD%BB/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/c41.jpeg" class="responsive-img" alt="他睡在九月的昙花里">
+                            <img src="/../image/h133.jpg" class="responsive-img" alt="肯尼迪之死">
                             
-                            <span class="card-title">他睡在九月的昙花里</span>
+                            <span class="card-title">肯尼迪之死</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/姜南歌
-新浪微博/@姜南歌keung，查看更多请点击 花火目录，立即看更多好文章
-见过他的眼泪，又怎么舍得他再受委屈？
-作者有话说：很高兴我能带着稿子在《花火》和大家见面，一个关于花和波丽露的故事，希望你们会喜欢，也期待我们能再次见面啦
+                                自1865年林肯总统被人暗杀以来，美国总统不断遭人暗算，他们头上的权力光环几乎成了一些“狂人”眼中的靶标。然而，肯尼迪枪击案的背景却显得格外扑朔迷离。美国公众百思不得其解的是：凶手李·哈维·奥斯瓦尔德竟在联邦特工的眼皮底下，当着摄影记者的面
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" class="post-category">
+                                    未解之谜
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1074,8 +995,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/">
-                            <span class="chip bg-color">故事人生</span>
+                        <a href="/tags/%E7%A5%9E%E7%A7%98/">
+                            <span class="chip bg-color">神秘</span>
                         </a>
                         
                     </div>
@@ -1087,33 +1008,34 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/%E4%BD%99%E7%94%9F%E8%8A%B1%E6%9C%89%E7%BC%BA/">
+                    <a href="/2021/05/17/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2/%E4%BA%BA%E7%B1%BB%E6%8E%A2%E7%B4%A2/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E6%B2%89%E6%B2%A1/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/o189.jpg" class="responsive-img" alt="余生花有缺">
+                            <img src="/../image/f26.jpg" class="responsive-img" alt="泰坦尼克号沉没">
                             
-                            <span class="card-title">余生花有缺</span>
+                            <span class="card-title">泰坦尼克号沉没</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/林桑榆
-新浪微博|@林桑榆real（本文出自花火杂志2019年08B）
-幸运的是，这个连他自己都没弄懂的秘密，或许大脑如今已一字一句地讲给他的心听。不管是那句肉麻的“明天还想再见你”，还是简单的一句“我爱你”。
-作者有话说：勇敢的表现并
+                                1912年4月12日是个悲惨的日子——这一天，英国豪华客轮泰坦尼克号在驶往北美洲的处女航行中不幸沉没。这次沉船事件致使1523人葬身鱼腹，是人类航海史上最大的灾难，震惊世界。这么多年来，泰坦尼克号沉没的真正原因，一直是人们探索的焦点。198
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" class="post-category">
+                                    未解之谜
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1122,8 +1044,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/">
-                            <span class="chip bg-color">青春爱情</span>
+                        <a href="/tags/%E7%A5%9E%E7%A7%98/">
+                            <span class="chip bg-color">神秘</span>
                         </a>
                         
                     </div>
@@ -1135,33 +1057,35 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/%E6%9C%9D%E6%9D%A5%E6%99%A8%E9%9B%A8%E6%99%9A%E6%9D%A5%E9%A3%8E/">
+                    <a href="/2021/05/17/%E6%95%85%E4%BA%8B%E9%9B%86/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/%E5%A6%88%E5%A6%88%E7%9A%84%E7%88%B1/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/g132.jpg" class="responsive-img" alt="朝来晨雨晚来风">
+                            <img src="/../image/e27.jpeg" class="responsive-img" alt="妈妈的爱">
                             
-                            <span class="card-title">朝来晨雨晚来风</span>
+                            <span class="card-title">妈妈的爱</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/繁浅
-新浪微博|@繁浅浅浅（查看更多花火杂志2019年08B）
-好像……薛清让就是一颗流星，璀璨耀眼，这一刻落进她的心里。
-编辑推荐：这是一个又甜又温暖的故事。希望所有看到这个故事的人，都能有一个可爱的江若词或者温柔的薛清让陪你踏过时间
+                                这年夏天黎晓明回齐鲁老家岳山军队干休所探望八十六岁的老母，给母亲过“八一”建军节。
+　　“八一”清晨晓明起了个大早，冒雨去菜市场采购物品谁承想被淋了个落汤鸡。当晓明浑身湿透透回到家走进客厅，一眼就瞅见老母亲依靠在沙发上闭目养神，顾不得浑身的
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/" class="post-category">
+                                    亲情故事
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1170,8 +1094,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/">
-                            <span class="chip bg-color">青春爱情</span>
+                        <a href="/tags/%E4%BA%B2%E6%83%85/">
+                            <span class="chip bg-color">亲情</span>
                         </a>
                         
                     </div>
@@ -1183,33 +1107,34 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87/%E4%B8%8D%E8%B4%9F%E6%98%A5%E6%BD%AE%E5%B9%B3%E5%9C%B0%E8%B5%B7/">
+                    <a href="/2021/05/17/%E6%95%85%E4%BA%8B%E9%9B%86/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/%E7%99%BE%E8%8A%B1%E6%B7%B1%E5%A4%84%E7%9A%84%E7%9F%B3%E5%A4%B4%E6%88%BF/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/b78.jpeg" class="responsive-img" alt="不负春潮平地起">
+                            <img src="/../image/n153.jpg" class="responsive-img" alt="百花深处的石头房">
                             
-                            <span class="card-title">不负春潮平地起</span>
+                            <span class="card-title">百花深处的石头房</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/檐萧
-新浪微博|@檐萧啊（查看更多花火杂志2019年08B）
-“你问我是不是喜欢你，我说是，那么你呢？”
-作者有话说：男主的原型是我最近很喜欢的一位歌手，故事里，我偷偷地搬了好几处梗，动笔的时候，甚至想为自己的机智鼓掌，直到稿子交上去…
+                                有句英文这样说：“Now sleeps the crimson petal，now the white”，意即“绯红的花瓣和雪白的花瓣如今都睡着了”。我喜欢这句话，是因为这意象像极了爹爹为我们建造的石头房子的门廊——我永远都记得每到春天来临
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/" class="post-category">
+                                    亲情故事
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1218,8 +1143,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87/">
-                            <span class="chip bg-color">耽美甜文</span>
+                        <a href="/tags/%E4%BA%B2%E6%83%85/">
+                            <span class="chip bg-color">亲情</span>
                         </a>
                         
                     </div>
@@ -1231,33 +1156,37 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/%E7%AD%89%E6%98%A5%E5%A4%A9/">
+                    <a href="/2021/05/17/%E6%95%85%E4%BA%8B%E9%9B%86/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/%E7%88%B8%E7%9A%84%E8%80%81%E4%B8%AB%E5%A4%B4/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/j178.jpg" class="responsive-img" alt="等春天">
+                            <img src="/../image/k5.jpg" class="responsive-img" alt="爸的老丫头">
                             
-                            <span class="card-title">等春天</span>
+                            <span class="card-title">爸的老丫头</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/乔绥（本文出自 花火）
-新浪微博|@乔绥
-在初恋这场寒冬里，一场籍籍无名的雪和苏小祁的眼泪同时跌落。它们都是零零落落的，落下来也没人在意。它们只能聚在一起，慢慢地等待春天来临。
-作者有话说：我想写一个很简单的小故事，简单到概括起来就两句
+                                在他心里，我永远是他最心疼的小女儿。
+　　一、
+　　“吹牛王”这个名字是我给他取的，因为他太喜欢吹牛，无边无际的，常常让我啼笑皆非。
+　　比如，小学六年里，我唯一得过一次奖状，是在作文比赛中得了三等奖，可他却把那奖状裱起来，中规中矩地挂在墙
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/" class="post-category">
+                                    亲情故事
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1266,8 +1195,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/">
-                            <span class="chip bg-color">青春爱情</span>
+                        <a href="/tags/%E4%BA%B2%E6%83%85/">
+                            <span class="chip bg-color">亲情</span>
                         </a>
                         
                     </div>
@@ -1279,33 +1208,35 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/22/%E9%9D%92%E6%98%A5%E6%80%9D%E8%80%83/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/%E4%BD%A0%E5%BD%92%E6%9D%A5%E6%98%AF%E8%AF%97/">
+                    <a href="/2021/05/17/%E6%95%85%E4%BA%8B%E9%9B%86/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/%E4%BA%B2%E6%83%85%E8%B1%86%E8%85%90/">
                         <div class="card-image">
                             
                             
-                            <img src="/../image/n49.jpg" class="responsive-img" alt="你归来是诗">
+                            <img src="/../image/e33.jpeg" class="responsive-img" alt="亲情豆腐">
                             
-                            <span class="card-title">你归来是诗</span>
+                            <span class="card-title">亲情豆腐</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文/声声慢
-新浪微博|@声声慢mio（本文出自花火）
-“你是不是叫食用盐？先前那姑娘说，如果有个丑丑的男生跟我说起她，就让我把这个盒子给他呢。”
-作者有话说：所有的坚持努力和善意都不会被辜负的，就像我高考失利回去复读的朋友，就像我不放弃的写
+                                公司对面的一家餐馆开张，热热闹闹地放鞭炮，从办公室里看过去，是一家规模中等的家常餐馆。中午下班，几个同事约在一起，过去吃午饭。
+　　亲情豆腐一进门，一个女孩笑意盈盈地迎上前来，领我们入座。女孩穿蓝色碎花上衣，蓝布裤，宽宽的裤脚，黑布鞋，蓝头
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Qiunai Monster
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E4%BA%B2%E6%83%85%E6%95%85%E4%BA%8B/" class="post-category">
+                                    亲情故事
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1314,8 +1245,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/">
-                            <span class="chip bg-color">青春爱情</span>
+                        <a href="/tags/%E4%BA%B2%E6%83%85/">
+                            <span class="chip bg-color">亲情</span>
                         </a>
                         
                     </div>
@@ -1339,7 +1270,7 @@
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">7 / 121</div>
+            <div class="center-align b-text-gray">7 / 13</div>
         </div>
         <div class="col s6 m4 l4">
             
@@ -1358,17 +1289,20 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             <a href="/about" target="_blank">Qiu Monster</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">446.1k</span>
             
             
             
@@ -1390,17 +1324,71 @@
 
             <!-- 运行天数提醒. -->
             
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1773326851@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1410,7 +1398,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1773326851" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1773326851" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1419,10 +1407,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
@@ -1540,7 +1524,6 @@ $(function () {
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/go/goTop.js"></script>
-<link rel="stylesheet" href="/css/goTop.css">
 
     <div class="goBottom top-btn-color border-color">
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -1552,15 +1535,86 @@ $(function () {
 </div>
 <script src="/js/go/goDisplay.js"></script>
 <link rel="stylesheet" href="/css/goDisplay.css">
-   
+    <link rel="stylesheet" href="/css/dark.css">
+<div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
 
+<script>
+  $(function() {
+    let isDark =localStorage.getItem('dark'); //JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    //alert(isDark);
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        //alert("white");
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+<style>
+  
+</style>
+   <link rel="stylesheet" href="/css/goTop.css">
+   <link rel="stylesheet" href="/css/goBottom.css">
+   <link rel="stylesheet" href="/css/goDisplay.css">
+  
+   <style>
+      /* .content{
+           background-image: url('../image/c44.jpeg')!important;
+       }*/
+       .container .card{
+        background-color: transparent!important;
+       }
+       
+   </style>
+<script>
+    $(function(){
+      $(".dark").click(function(){
+        //$(document.body).addClass('bodys');
+
+      });
+    });
+</script>
+    
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
+    
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->

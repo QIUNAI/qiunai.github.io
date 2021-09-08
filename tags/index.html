@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" >
 
 
 <head>
@@ -17,7 +17,7 @@
 
 
     <title>Tags | Qiu Monster</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/jpeg" href="/image/2.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -33,9 +33,36 @@
 </head>
 
 
-
+<script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  
 <body>
-    <header class="navbar-fixed">
+    <link rel="stylesheet" href="/css/dark.css">
+<!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script><!--判断暗黑模式-->
+    <style>
+    @media screen and (max-width:1000px) {
+           .brand-logo{
+               display: none!important;
+           }
+           #headNav{
+             background-color: transparent!important;
+             background-image: none!important;
+             box-shadow: none!important;
+           }
+            nav a{
+               color: rgb(29, 225, 231)!important;
+           }
+       }
+</style>
+
+<header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -177,20 +204,6 @@
       </li>
       
       <li>
-        <a href="/categories/%E5%9B%BE%E5%BA%93">
-          
-          <span>图库</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/categories/%E5%B0%8F%E8%AF%B4">
-          
-          <span>小说</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
           
           <span>校园故事</span>
@@ -242,7 +255,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/comments" class="waves-effect waves-light">
+    <a href="/contact" class="waves-effect waves-light">
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
@@ -285,48 +298,6 @@
         <a target="_blank" rel="noopener" href="https://gitee.com/">
           
           <span>gitee</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
-          
-          <span>简书</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.csdn.net/">
-          
-          <span>CSDN</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.oschina.net/">
-          
-          <span>OSCHINA</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
-          
-          <span>尚源码</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://segmentfault.com/">
-          
-          <span>segmentfault</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://juejin.cn/">
-          
-          <span>掘金</span>
         </a>
       </li>
       
@@ -546,22 +517,6 @@
               
                 <li>
 
-                  <a href="/categories/%E5%9B%BE%E5%BA%93 " style="margin-left:75px">
-				  
-		          <span>图库</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/categories/%E5%B0%8F%E8%AF%B4 " style="margin-left:75px">
-				  
-		          <span>小说</span>
-                  </a>
-                </li>
-              
-                <li>
-
                   <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B " style="margin-left:75px">
 				  
 		          <span>校园故事</span>
@@ -617,7 +572,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/comments" class="waves-effect waves-light">
+		<a href="/contact" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
@@ -661,54 +616,6 @@
                   <a target="_blank" rel="noopener" href="https://gitee.com/ " style="margin-left:75px">
 				  
 		          <span>gitee</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/ " style="margin-left:75px">
-				  
-		          <span>简书</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.csdn.net/ " style="margin-left:75px">
-				  
-		          <span>CSDN</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.oschina.net/ " style="margin-left:75px">
-				  
-		          <span>OSCHINA</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/ " style="margin-left:75px">
-				  
-		          <span>尚源码</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://segmentfault.com/ " style="margin-left:75px">
-				  
-		          <span>segmentfault</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://juejin.cn/ " style="margin-left:75px">
-				  
-		          <span>掘金</span>
                   </a>
                 </li>
               
@@ -783,7 +690,9 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    
+
+<!--<div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -819,21 +728,80 @@
         </div>
     </div>
 </div>
-
+<style>
+    @media screen and (max-width:1000px) {
+        .bg-cover{
+            background-image:url(../image/mobileimg/ma48.png);
+        }
+    }
+    @media screen and (min-width:1000px) {
+        .bg-cover{
+            background-image:url(../image/f1.jpg);
+        }
+    }
+</style>
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+   // var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    //$('.bg-cover').css('background-image', 'url(../image/f1.jpg)');
 </script>
 
 
     </div>
-</div>
+</div>-->
 
 <main class="content">
 
-    
+    <style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 75vh;
+    }
+</style>
+<script src="/js/jquery3.5.1.js"></script>
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-about" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+<link rel="stylesheet" href="/css/about.css">
+<script src="/js/bubble.js"></script>
+<script src="/js/js/homeBubble.js"></script>
+<div class="lazyload about-header "  data-original="/../image/mobileimg/mf20.png">
+	<div class="about-header-title">
+		about
+	</div>
+	<div class="about-header-desc">
+	
+	<span class="title" id="about-header-desc"></span>
+	
+	
+	</div>
+	<div class="mask-box"></div>
+</div>
+
+
+<div class="about-video">
+	<!--<video class="full-video" autoplay loop muted>
+		<source style="width: 100%;height: 100vh;" src="https://qiunai.github.io">	
+	</video>-->
+	<!--由video换成了img-->
+	<img class="full-video" style="width: 100%;height:100vh;margin-top: -64px;" src="/../image/a6.jpeg">
+	<div class="video-header-title">
+		about
+	</div>
+	<div class="video-header-desc">
+	
+		<span class="title" id="about-video-header-desc"></span>
+		
+	
+	</div>
+	<div class="mask-box"></div>
+    <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
+</div>
+
+
+
+
 
 <div id="tags" class="container chip-container">
     <div class="card">
@@ -853,20 +821,11 @@
                 </a>
                 
                 
-                <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BC%A0/" title="腾讯传: 20">
+                <a href="/tags/%E4%BA%BA%E7%94%9F/" title="人生: 13">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="腾讯传" style="background-color: #F5EEF8;">腾讯传
-                        <span class="tag-length">20</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%96%87%E5%AD%A6/" title="文学: 553">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="文学" style="background-color: #D5F5E3;">文学
-                        <span class="tag-length">553</span>
+                            data-tagname="人生" style="background-color: #F5EEF8;">人生
+                        <span class="tag-length">13</span>
                     </span>
                 </a>
                 
@@ -874,17 +833,26 @@
                 <a href="/tags/%E4%BA%B2%E6%83%85/" title="亲情: 12">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="亲情" style="background-color: #E8F8F5;">亲情
+                            data-tagname="亲情" style="background-color: #D5F5E3;">亲情
                         <span class="tag-length">12</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E4%BA%BA%E7%94%9F/" title="人生: 13">
+                <a href="/tags/%E5%8A%B1%E5%BF%97/" title="励志: 11">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="人生" style="background-color: #FEF9E7;">人生
-                        <span class="tag-length">13</span>
+                            data-tagname="励志" style="background-color: #E8F8F5;">励志
+                        <span class="tag-length">11</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%84%9F%E4%BA%BA/" title="感人: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="感人" style="background-color: #FEF9E7;">感人
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -898,155 +866,11 @@
                 </a>
                 
                 
-                <a href="/tags/%E5%8A%B1%E5%BF%97/" title="励志: 11">
+                <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BC%A0/" title="腾讯传: 20">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="励志" style="background-color: #82E0AA;">励志
-                        <span class="tag-length">11</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%9F%E4%BA%BA/" title="感人: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="感人" style="background-color: #D7BDE2;">感人
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/" title="人生感悟: 40">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="人生感悟" style="background-color: #A3E4D7;">人生感悟
-                        <span class="tag-length">40</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%80%BD%E7%BE%8E%E7%94%9C%E6%96%87/" title="耽美甜文: 102">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="耽美甜文" style="background-color: #85C1E9;">耽美甜文
-                        <span class="tag-length">102</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%95%85%E4%BA%8B%E4%BA%BA%E7%94%9F/" title="故事人生: 170">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="故事人生" style="background-color: #F8C471;">故事人生
-                        <span class="tag-length">170</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9D%92%E6%98%A5%E7%88%B1%E6%83%85/" title="青春爱情: 219">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="青春爱情" style="background-color: #F9E79F;">青春爱情
-                        <span class="tag-length">219</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-1/" title="意林2020-1: 47">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-1" style="background-color: #F8F9F9;">意林2020-1
-                        <span class="tag-length">47</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-10/" title="意林2020-10: 52">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-10" style="background-color: #F8C471;">意林2020-10
-                        <span class="tag-length">52</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-11/" title="意林2020-11: 48">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-11" style="background-color: #F9E79F;">意林2020-11
-                        <span class="tag-length">48</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-3/" title="意林2020-3: 45">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-3" style="background-color: #E8F8F5;">意林2020-3
-                        <span class="tag-length">45</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-2/" title="意林2020-2: 46">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-2" style="background-color: #FEF9E7;">意林2020-2
-                        <span class="tag-length">46</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-4/" title="意林2020-4: 44">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-4" style="background-color: #D5F5E3;">意林2020-4
-                        <span class="tag-length">44</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-5/" title="意林2020-5: 48">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-5" style="background-color: #F5EEF8;">意林2020-5
-                        <span class="tag-length">48</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-7/" title="意林2020-7: 51">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-7" style="background-color: #FFF;">意林2020-7
-                        <span class="tag-length">51</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-8/" title="意林2020-8: 48">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-8" style="background-color: #F9E79F;">意林2020-8
-                        <span class="tag-length">48</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-6/" title="意林2020-6: 52">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-6" style="background-color: #F9EBEA;">意林2020-6
-                        <span class="tag-length">52</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%84%8F%E6%9E%972020-9/" title="意林2020-9: 49">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="意林2020-9" style="background-color: #F8C471;">意林2020-9
-                        <span class="tag-length">49</span>
+                            data-tagname="腾讯传" style="background-color: #82E0AA;">腾讯传
+                        <span class="tag-length">20</span>
                     </span>
                 </a>
                 
@@ -1054,7 +878,7 @@
                 <a href="/tags/%E7%94%B5%E8%84%91%E5%B1%B1%E5%BA%84%E6%9D%80%E4%BA%BA%E4%BA%8B%E4%BB%B6/" title="电脑山庄杀人事件: 8">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="电脑山庄杀人事件" style="background-color: #D5F5E3;">电脑山庄杀人事件
+                            data-tagname="电脑山庄杀人事件" style="background-color: #D7BDE2;">电脑山庄杀人事件
                         <span class="tag-length">8</span>
                     </span>
                 </a>
@@ -1072,7 +896,7 @@
                 <a href="/tags/%E6%81%90%E6%80%96/" title="恐怖: 10">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="恐怖" style="background-color: #E8F8F5;">恐怖
+                            data-tagname="恐怖" style="background-color: #85C1E9;">恐怖
                         <span class="tag-length">10</span>
                     </span>
                 </a>
@@ -1101,7 +925,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"神秘","weight":13,"link":"/tags/神秘/"},{"text":"腾讯传","weight":20,"link":"/tags/腾讯传/"},{"text":"文学","weight":553,"link":"/tags/文学/"},{"text":"亲情","weight":12,"link":"/tags/亲情/"},{"text":"人生","weight":13,"link":"/tags/人生/"},{"text":"青春","weight":10,"link":"/tags/青春/"},{"text":"励志","weight":11,"link":"/tags/励志/"},{"text":"感人","weight":1,"link":"/tags/感人/"},{"text":"人生感悟","weight":40,"link":"/tags/人生感悟/"},{"text":"耽美甜文","weight":102,"link":"/tags/耽美甜文/"},{"text":"故事人生","weight":170,"link":"/tags/故事人生/"},{"text":"青春爱情","weight":219,"link":"/tags/青春爱情/"},{"text":"意林2020-1","weight":47,"link":"/tags/意林2020-1/"},{"text":"意林2020-10","weight":52,"link":"/tags/意林2020-10/"},{"text":"意林2020-11","weight":48,"link":"/tags/意林2020-11/"},{"text":"意林2020-3","weight":45,"link":"/tags/意林2020-3/"},{"text":"意林2020-2","weight":46,"link":"/tags/意林2020-2/"},{"text":"意林2020-4","weight":44,"link":"/tags/意林2020-4/"},{"text":"意林2020-5","weight":48,"link":"/tags/意林2020-5/"},{"text":"意林2020-7","weight":51,"link":"/tags/意林2020-7/"},{"text":"意林2020-8","weight":48,"link":"/tags/意林2020-8/"},{"text":"意林2020-6","weight":52,"link":"/tags/意林2020-6/"},{"text":"意林2020-9","weight":49,"link":"/tags/意林2020-9/"},{"text":"电脑山庄杀人事件","weight":8,"link":"/tags/电脑山庄杀人事件/"},{"text":"灵异","weight":1,"link":"/tags/灵异/"},{"text":"恐怖","weight":10,"link":"/tags/恐怖/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"神秘","weight":13,"link":"/tags/神秘/"},{"text":"人生","weight":13,"link":"/tags/人生/"},{"text":"亲情","weight":12,"link":"/tags/亲情/"},{"text":"励志","weight":11,"link":"/tags/励志/"},{"text":"感人","weight":1,"link":"/tags/感人/"},{"text":"青春","weight":10,"link":"/tags/青春/"},{"text":"腾讯传","weight":20,"link":"/tags/腾讯传/"},{"text":"电脑山庄杀人事件","weight":8,"link":"/tags/电脑山庄杀人事件/"},{"text":"灵异","weight":1,"link":"/tags/灵异/"},{"text":"恐怖","weight":10,"link":"/tags/恐怖/"}], {
         autoResize: true
     });
 </script>
@@ -1114,17 +938,20 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             <a href="/about" target="_blank">Qiu Monster</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">446.1k</span>
             
             
             
@@ -1146,17 +973,71 @@
 
             <!-- 运行天数提醒. -->
             
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1773326851@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1166,7 +1047,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1773326851" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1773326851" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1175,10 +1056,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
@@ -1296,7 +1173,6 @@ $(function () {
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/go/goTop.js"></script>
-<link rel="stylesheet" href="/css/goTop.css">
 
     <div class="goBottom top-btn-color border-color">
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -1308,15 +1184,86 @@ $(function () {
 </div>
 <script src="/js/go/goDisplay.js"></script>
 <link rel="stylesheet" href="/css/goDisplay.css">
-   
+    <link rel="stylesheet" href="/css/dark.css">
+<div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
 
+<script>
+  $(function() {
+    let isDark =localStorage.getItem('dark'); //JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    //alert(isDark);
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        //alert("white");
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+<style>
+  
+</style>
+   <link rel="stylesheet" href="/css/goTop.css">
+   <link rel="stylesheet" href="/css/goBottom.css">
+   <link rel="stylesheet" href="/css/goDisplay.css">
+  
+   <style>
+      /* .content{
+           background-image: url('../image/c44.jpeg')!important;
+       }*/
+       .container .card{
+        background-color: transparent!important;
+       }
+       
+   </style>
+<script>
+    $(function(){
+      $(".dark").click(function(){
+        //$(document.body).addClass('bodys');
+
+      });
+    });
+</script>
+    
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
+    
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->

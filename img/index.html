@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" >
 
 
 <head>
@@ -17,7 +17,7 @@
 
 
     <title>img | Qiu Monster</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/jpeg" href="/image/2.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -33,9 +33,36 @@
 </head>
 
 
-
+<script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  
 <body>
-    <header class="navbar-fixed">
+    <link rel="stylesheet" href="/css/dark.css">
+<!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script><!--判断暗黑模式-->
+    <style>
+    @media screen and (max-width:1000px) {
+           .brand-logo{
+               display: none!important;
+           }
+           #headNav{
+             background-color: transparent!important;
+             background-image: none!important;
+             box-shadow: none!important;
+           }
+            nav a{
+               color: rgb(29, 225, 231)!important;
+           }
+       }
+</style>
+
+<header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -177,20 +204,6 @@
       </li>
       
       <li>
-        <a href="/categories/%E5%9B%BE%E5%BA%93">
-          
-          <span>图库</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/categories/%E5%B0%8F%E8%AF%B4">
-          
-          <span>小说</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B">
           
           <span>校园故事</span>
@@ -242,7 +255,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/comments" class="waves-effect waves-light">
+    <a href="/contact" class="waves-effect waves-light">
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
@@ -285,48 +298,6 @@
         <a target="_blank" rel="noopener" href="https://gitee.com/">
           
           <span>gitee</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.jianshu.com/">
-          
-          <span>简书</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.csdn.net/">
-          
-          <span>CSDN</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.oschina.net/">
-          
-          <span>OSCHINA</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/">
-          
-          <span>尚源码</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://segmentfault.com/">
-          
-          <span>segmentfault</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://juejin.cn/">
-          
-          <span>掘金</span>
         </a>
       </li>
       
@@ -546,22 +517,6 @@
               
                 <li>
 
-                  <a href="/categories/%E5%9B%BE%E5%BA%93 " style="margin-left:75px">
-				  
-		          <span>图库</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/categories/%E5%B0%8F%E8%AF%B4 " style="margin-left:75px">
-				  
-		          <span>小说</span>
-                  </a>
-                </li>
-              
-                <li>
-
                   <a href="/categories/%E6%A0%A1%E5%9B%AD%E6%95%85%E4%BA%8B " style="margin-left:75px">
 				  
 		          <span>校园故事</span>
@@ -617,7 +572,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/comments" class="waves-effect waves-light">
+		<a href="/contact" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
@@ -661,54 +616,6 @@
                   <a target="_blank" rel="noopener" href="https://gitee.com/ " style="margin-left:75px">
 				  
 		          <span>gitee</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.jianshu.com/ " style="margin-left:75px">
-				  
-		          <span>简书</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.csdn.net/ " style="margin-left:75px">
-				  
-		          <span>CSDN</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.oschina.net/ " style="margin-left:75px">
-				  
-		          <span>OSCHINA</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://www.shangmayuan.com/ " style="margin-left:75px">
-				  
-		          <span>尚源码</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://segmentfault.com/ " style="margin-left:75px">
-				  
-		          <span>segmentfault</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://juejin.cn/ " style="margin-left:75px">
-				  
-		          <span>掘金</span>
                   </a>
                 </li>
               
@@ -783,18 +690,27 @@
 
 </header>
 
-    <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+    <style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 75vh;
+    }
+</style>
+<script src="/js/jquery3.5.1.js"></script>
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
 <div class="bg-light-floor-about" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 <link rel="stylesheet" href="/css/about.css">
-<div class="lazyload about-header" data-original="/../image/mobileimg/mf20.png">
+
+<div class="lazyload about-header "  data-original="/../image/mobileimg/mb36.png">
 	<div class="about-header-title">
-		about
+		img
 	</div>
 	<div class="about-header-desc">
 	
-		<span class="title">
-		这是我的秘密 这里是我的家
-		</span>
+	<span class="title" id="about-header-desc"></span>
+	
 	
 	</div>
 	<div class="mask-box"></div>
@@ -806,346 +722,781 @@
 		<source style="width: 100%;height: 100vh;" src="https://qiunai.github.io">	
 	</video>-->
 	<!--由video换成了img-->
-	<img class="full-video" style="width: 100%;height:100vh;margin-top: -64px;" src="/../image/a6.jpeg">
+	<img class="full-video" style="width: 100%;height:100vh;margin-top: -64px;" src="/../image/highimg/pexels133.jpg">
 	<div class="video-header-title">
-		about
+		img
 	</div>
 	<div class="video-header-desc">
 	
-		<span class="title">
-		这是我的秘密 这里是我的家
-		</span>
+		<span class="title" id="about-video-header-desc"></span>
+		
 	
 	</div>
-	<div class="mask-box"></div>
+	<!--<div class="mask-box"></div>-->
+    <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
 </div>
 
+<script src="/js/bubble.js"></script>
 
+<main class="content">
 
-    <link rel="stylesheet" href="/css/post-detail-header.css">
-<!-- 文章详情页顶部图片和标题 -->
-
-
-
-
-
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/../image/i137.jpg" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image: url('/../image/i137.jpg');">
-  <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
-  
-  <div class="post-detail-header_info-box">
-    <div class="title-box">
-      <span class="title">
-        img
-      </span>
-    </div>
-    
-    
-      
-        <span class="post-detail-header_date">
-          <i class="fa fa-calendar">
-
-          </i> 发布于：2020-09-14
-        </span>
-      
-
-      
-
-      
-    
-  </div>
-  
-  
-    <script src="/js/bubble/bubble.js"></script>
-
-</div>
-
-
-    <!--
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/../image/i137.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">img</h1>
+    <div id="aboutme" class="container about-container">
+        <div class="card">
+            <div class="card-content">
+               
+                
+                <div id="myGallery" class="my-gallery">
+                    <div class="title center-align" data-aos="zoom-in-up">
+                        <i class="far fa-image"></i>&nbsp;&nbsp;图片
+                    </div>
+                    <div class="row">
+                        
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a1.jpeg">
+                                <img src="/../image/a1.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a2.jpeg">
+                                <img src="/../image/a2.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a3.jpeg">
+                                <img src="/../image/a3.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a4.jpeg">
+                                <img src="/../image/a4.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a5.jpeg">
+                                <img src="/../image/a5.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a6.jpeg">
+                                <img src="/../image/a6.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a7.jpeg">
+                                <img src="/../image/a7.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a8.jpeg">
+                                <img src="/../image/a8.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a9.jpeg">
+                                <img src="/../image/a9.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a10.jpeg">
+                                <img src="/../image/a10.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a11.jpeg">
+                                <img src="/../image/a11.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a12.jpeg">
+                                <img src="/../image/a12.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a13.jpeg">
+                                <img src="/../image/a13.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a14.jpeg">
+                                <img src="/../image/a14.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a15.jpeg">
+                                <img src="/../image/a15.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a16.jpeg">
+                                <img src="/../image/a16.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a17.jpeg">
+                                <img src="/../image/a17.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a18.jpeg">
+                                <img src="/../image/a18.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a19.jpeg">
+                                <img src="/../image/a19.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a20.jpeg">
+                                <img src="/../image/a20.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a21.jpeg">
+                                <img src="/../image/a21.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a22.jpeg">
+                                <img src="/../image/a22.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a23.jpeg">
+                                <img src="/../image/a23.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a24.jpeg">
+                                <img src="/../image/a24.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a25.jpeg">
+                                <img src="/../image/a25.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a26.jpeg">
+                                <img src="/../image/a26.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a27.jpeg">
+                                <img src="/../image/a27.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a28.jpeg">
+                                <img src="/../image/a28.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a29.jpeg">
+                                <img src="/../image/a29.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a30.jpeg">
+                                <img src="/../image/a30.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a31.jpeg">
+                                <img src="/../image/a31.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a32.jpeg">
+                                <img src="/../image/a32.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a33.jpeg">
+                                <img src="/../image/a33.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a34.jpeg">
+                                <img src="/../image/a34.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a35.jpeg">
+                                <img src="/../image/a35.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a36.jpeg">
+                                <img src="/../image/a36.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a37.jpeg">
+                                <img src="/../image/a37.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a38.jpeg">
+                                <img src="/../image/a38.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a39.jpeg">
+                                <img src="/../image/a39.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a40.jpeg">
+                                <img src="/../image/a40.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a41.jpeg">
+                                <img src="/../image/a41.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a42.jpeg">
+                                <img src="/../image/a42.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a43.jpeg">
+                                <img src="/../image/a43.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a44.jpeg">
+                                <img src="/../image/a44.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a45.jpeg">
+                                <img src="/../image/a45.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a46.jpeg">
+                                <img src="/../image/a46.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a47.jpeg">
+                                <img src="/../image/a47.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a48.jpeg">
+                                <img src="/../image/a48.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a49.jpeg">
+                                <img src="/../image/a49.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a50.jpeg">
+                                <img src="/../image/a50.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a51.jpeg">
+                                <img src="/../image/a51.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a52.jpeg">
+                                <img src="/../image/a52.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a53.jpeg">
+                                <img src="/../image/a53.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a54.jpeg">
+                                <img src="/../image/a54.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a55.jpeg">
+                                <img src="/../image/a55.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a56.jpeg">
+                                <img src="/../image/a56.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a57.jpeg">
+                                <img src="/../image/a57.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a58.jpeg">
+                                <img src="/../image/a58.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a59.jpeg">
+                                <img src="/../image/a59.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a60.jpeg">
+                                <img src="/../image/a60.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a61.jpeg">
+                                <img src="/../image/a61.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a62.jpeg">
+                                <img src="/../image/a62.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a63.jpeg">
+                                <img src="/../image/a63.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a64.jpeg">
+                                <img src="/../image/a64.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a65.jpeg">
+                                <img src="/../image/a65.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a66.jpeg">
+                                <img src="/../image/a66.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a67.jpeg">
+                                <img src="/../image/a67.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a68.jpeg">
+                                <img src="/../image/a68.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a69.jpeg">
+                                <img src="/../image/a69.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a70.jpeg">
+                                <img src="/../image/a70.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a71.jpeg">
+                                <img src="/../image/a71.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a72.jpeg">
+                                <img src="/../image/a72.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a73.jpeg">
+                                <img src="/../image/a73.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a74.jpeg">
+                                <img src="/../image/a74.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a75.jpeg">
+                                <img src="/../image/a75.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a76.jpeg">
+                                <img src="/../image/a76.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a77.jpeg">
+                                <img src="/../image/a77.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a78.jpeg">
+                                <img src="/../image/a78.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a79.jpeg">
+                                <img src="/../image/a79.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a80.jpeg">
+                                <img src="/../image/a80.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a81.jpeg">
+                                <img src="/../image/a81.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a82.jpeg">
+                                <img src="/../image/a82.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a83.jpeg">
+                                <img src="/../image/a83.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a84.jpeg">
+                                <img src="/../image/a84.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a85.jpeg">
+                                <img src="/../image/a85.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a86.jpeg">
+                                <img src="/../image/a86.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a87.jpeg">
+                                <img src="/../image/a87.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a88.jpeg">
+                                <img src="/../image/a88.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a89.jpeg">
+                                <img src="/../image/a89.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a90.jpeg">
+                                <img src="/../image/a90.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a91.jpeg">
+                                <img src="/../image/a91.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a92.jpeg">
+                                <img src="/../image/a92.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a93.jpeg">
+                                <img src="/../image/a93.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a94.jpeg">
+                                <img src="/../image/a94.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a95.jpeg">
+                                <img src="/../image/a95.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a96.jpeg">
+                                <img src="/../image/a96.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a97.jpeg">
+                                <img src="/../image/a97.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a98.jpeg">
+                                <img src="/../image/a98.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="photo col s12 m6 l4" data-aos="fade-up">
+                            <div class="img-item" data-src="../image/a99.jpeg">
+                                <img src="/../image/a99.jpeg" class="responsive-img">   
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
                 </div>
+                <style>
+                    @media screen and (max-width:1000px) {
+                       .img-item img{
+                            height: 20%!important;
+                        }
+                        .row .col.s12{
+                            width: 130%!important;
+                            margin-left: -15%!important;
+                        }
+                    }
+                </style>
+                <script>
+                    $(function () {
+                        let animateClass = 'animated pulse';
+                        $('#myGallery .photo').hover(function () {
+                            $(this).addClass(animateClass);
+                        }, function () {
+                            $(this).removeClass(animateClass);
+                        });
+                    });
+                </script>
+                
+                
+                
+                
+                
             </div>
         </div>
     </div>
-</div>
--->
-    
-    
-    
-    <main class="post-container content">
-    
-        <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
+</main>
 
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-       <!-- 文章内容详情 -->
-<div id="artDetail" style="margin-top:0px;">
-    <div class="card">
-        <div class="card-content article-info">
-           
-            <div class="post-info">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-                <img src="../image/f1.jpg" style="width: 200px;" alt="">
-            </div>
-        </div>
-       
-
-        
-
-        
-    </div>
-
-    
-
-    
-
-    
-
-    
-</div>
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-       
-    
-    </main>
-    
-    
-    
     <footer class="page-footer bg-color">
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             <a href="/about" target="_blank">Qiu Monster</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">446.1k</span>
             
             
             
@@ -1167,17 +1518,71 @@
 
             <!-- 运行天数提醒. -->
             
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1773326851@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1187,7 +1592,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1773326851" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1773326851" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1196,10 +1601,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
@@ -1317,7 +1718,6 @@ $(function () {
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/go/goTop.js"></script>
-<link rel="stylesheet" href="/css/goTop.css">
 
     <div class="goBottom top-btn-color border-color">
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -1329,15 +1729,86 @@ $(function () {
 </div>
 <script src="/js/go/goDisplay.js"></script>
 <link rel="stylesheet" href="/css/goDisplay.css">
-   
+    <link rel="stylesheet" href="/css/dark.css">
+<div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
 
+<script>
+  $(function() {
+    let isDark =localStorage.getItem('dark'); //JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    //alert(isDark);
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        //alert("white");
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+<style>
+  
+</style>
+   <link rel="stylesheet" href="/css/goTop.css">
+   <link rel="stylesheet" href="/css/goBottom.css">
+   <link rel="stylesheet" href="/css/goDisplay.css">
+  
+   <style>
+      /* .content{
+           background-image: url('../image/c44.jpeg')!important;
+       }*/
+       .container .card{
+        background-color: transparent!important;
+       }
+       
+   </style>
+<script>
+    $(function(){
+      $(".dark").click(function(){
+        //$(document.body).addClass('bodys');
+
+      });
+    });
+</script>
+    
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
+    
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
