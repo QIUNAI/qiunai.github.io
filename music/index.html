@@ -327,6 +327,15 @@
       </li>
       
       <li>
+        <a href="/localmusic">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>localmusic</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/movies">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -646,6 +655,16 @@
               
                 <li>
 
+                  <a href="/localmusic " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>localmusic</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/movies " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
@@ -750,8 +769,9 @@
 </div>
 
 <main class="content">
-
+    <script src="/js/jquery3.5.1.js"></script>
     <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+    
 <style>
    
    
@@ -783,8 +803,19 @@
     
     
     @media screen and (min-width:1000px) {
-       
-        .music-player .row{
+    .content{
+        
+      position: sticky!important;
+       top: 0!important;
+    }
+    .music-player{
+        height: 580px;
+    }
+    .aplayer{
+        height: 585px!important;
+        margin-bottom: -5px;
+    }
+    .music-player .row{
         width: 1600px;
         margin-left: -165px!important;
         height: 500px!important;
@@ -792,7 +823,10 @@
     
     } 
     .aplayer-info{
-          border-bottom:0px;
+        border-bottom:0px!important;
+        height: 250px!important;
+        width: 50%;
+        float: right;
     }
     .goTop{
         display: none!important;
@@ -838,42 +872,38 @@
        min-height:578px!important;  
        
     }
-    .aplayer-info{
-        height: 250px!important;
-        width: 50%;
-        float: right;
-    }
-    .content{
-        display: block!important;
-      position: sticky!important;
-       top: 0!important;
-      
-    }
     footer{
         display: none!important;
     }
     }
     
     @media screen and (max-width:1000px) {
-        .music-player .row{
+    .music-player .row{
         height: 500px!important;
        
+    }
+    .music-player{
+        height: 580px;
+        border-radius: 10px;
+    }
+    .aplayer{
+        height:600px!important;
+        margin-bottom: -5px;
+    }
+    .aplayer .aplayer-info .aplayer-controller {
+      
+       margin-top: 30px;
     }
     .content{
         display: block!important;
       position: sticky!important;
        top: 0!important;
     }
-    .aplayer{
-        height:520px!important;
-    }
     .aplayer-list{
-        min-height:200px!important;
-        
+        min-height:200px;  
     }
     .aplayer-list ol{
-       min-height:200px!important;  
-       
+       min-height:200px;        
     }
     .aplayer-lrc{
         position: absolute!important;
@@ -881,9 +911,9 @@
         left:0!important;
         width: 100%!important;
         height:300px!important;
-        margin-top: -30px!important;
-        padding:20px 0 0px!important;  
+        padding:100px 0 0px!important;  
     }
+
     footer{
         display: none!important;
     }
@@ -930,10 +960,8 @@
         
     </div>
 </div>
-
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
 
 </main>
 
@@ -1176,6 +1204,7 @@ $(function () {
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/go/goTop.js"></script>
+<link rel="stylesheet" href="/css/goTop.css">
 
     <div class="goBottom top-btn-color border-color">
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -1238,16 +1267,25 @@ $(function () {
 <style>
   
 </style>
-   <link rel="stylesheet" href="/css/goTop.css">
-   <link rel="stylesheet" href="/css/goBottom.css">
-   <link rel="stylesheet" href="/css/goDisplay.css">
+
   
    <style>
-      /* .content{
-           background-image: url('../image/c44.jpeg')!important;
-       }*/
+       @media screen and (max-width:800px) {
+        body{
+           background-image: url('../image/mobileimg/md25.png');
+           background-size: 100%;      
+           background-attachment: fixed;
+       }
+       }
+       @media screen and (min-width:800px) {
+        body{
+           background-image: url('../image/c44.jpeg'); 
+           background-size: 100%;      
+           background-attachment: fixed;
+       }
+       }
        .container .card{
-        background-color: transparent!important;
+        background-color: transparent;
        }
        
    </style>
